@@ -29,6 +29,7 @@
           "type": "numeric",
           "hint": "Optional hint for numeric questions.",
           "answer": "3.14",
+          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
           "tolerance": 0.01
         },
         {
@@ -65,6 +66,15 @@
               "tolerance": 0
             }
           ]
+        },
+        {
+          "id": "question-06",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "type": "numeric",
+          "units": "m s^-2",
+          "answer": "9.81",
+          "answerInfo": "This is the conventional standard gravity.",
+          "tolerance": 0.01
         }
       ]
     }

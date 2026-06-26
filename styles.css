@@ -124,6 +124,21 @@ body {
   margin-right: 0.5rem;
 }
 
+.numeric-units {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  color: #5f6270;
+}
+
+.numeric-answer-value {
+  font-weight: 700;
+}
+
+.numeric-answer-info {
+  font-weight: 400;
+}
+
 .mcq-result,
 .numeric-result {
   margin: 0.4rem 0 0;

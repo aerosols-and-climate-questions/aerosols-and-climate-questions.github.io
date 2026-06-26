@@ -13,7 +13,7 @@ A prototype website for questions associated with the topics discussed in the bo
 ## Supported question templates
 - `basic`: prompt with optional hint and revealable answer.
 - `multiple-choice`: option buttons + submit check + revealable answer.
-- `numeric`: numeric input + submit check + revealable answer.
+- `numeric`: numeric input + optional units label + submit check + revealable answer + optional answer info.
 
 LaTeX in prompts/answers is rendered via MathJax using `\\(...\\)`/`\\[...\\]` syntax.
 
@@ -29,6 +29,8 @@ Each question should include a stable `id` and a `prompt`. Supported fields are:
 - `parts`: nested list of subquestions, each following the same rules.
 - `options` and `correctIndex`: required for `multiple-choice`.
 - `tolerance`: optional for `numeric`.
+- `answerInfo`: numeric-only; optional extra text appended after the numeric answer when it is revealed or when a correct answer is submitted.
+- `units`: numeric-only; optional static label shown between the numeric answer box and the submit button.
 
 ## Authoring workflow
 1. Copy `data/source/chapter-template.yml` to a new file such as `data/source/chapter-02.yml`.
@@ -59,11 +61,13 @@ For all questions, you can split them into multipart-ers.
 - `correctIndex` is zero-based.
 
 ### `numeric`
-- These are questions with a numerical answer. At the moment we don't have suffixes for units, so you will want to specify.
+- These are questions with a numerical answer.
 - Required: `prompt`, `answer`.
-- Optional: `hint`, `image`, `parts`, `tolerance`.
+- Optional: `hint`, `image`, `parts`, `tolerance`, `answerInfo`, `units`.
 - `answer` must parse as a number.
 - `tolerance` defaults to `0` if omitted.
+- `answerInfo` is shown after the numeric value in the reveal box and in the positive submit feedback.
+- `units` is a noninteractive label rendered between the answer box and the submit button.
 
 ## Images
 If a question uses an image, put the asset in `imgs/` and reference it from the question file.

@@ -146,7 +146,7 @@
       answerButton.type = "button";
       answerButton.textContent = "Show answer";
 
-      const answerBox = createToggleBox("answer-box", question.answer);
+      const answerBox = createToggleBox("answer-box", renderAnswerContent(question));
       answerButton.addEventListener("click", () => {
         toggleBox(answerBox, answerButton, "Show answer", "Hide answer");
       });
@@ -267,6 +267,15 @@
     input.className = "numeric-input";
     input.setAttribute("aria-label", "Numeric answer");
 
+    wrapper.appendChild(input);
+
+    if (question.units) {
+      const units = document.createElement("span");
+      units.className = "numeric-units";
+      units.textContent = question.units;
+      wrapper.appendChild(units);
+    }
+
     const submitButton = document.createElement("button");
     submitButton.type = "button";
     submitButton.className = "question-button";
@@ -286,16 +295,32 @@
       }
 
       if (Math.abs(typed - rawAnswer) <= tolerance) {
-        result.textContent = "Correct.";
+        result.innerHTML = renderNumericFeedback(question, "Correct.");
+        renderMath();
       } else {
         result.textContent = "Not quite. Try again or reveal the answer.";
       }
     });
 
-    wrapper.appendChild(input);
     wrapper.appendChild(submitButton);
     wrapper.appendChild(result);
     return wrapper;
+  }
+
+  function renderAnswerContent(question) {
+    if (question.type === "numeric") {
+      return renderNumericFeedback(question);
+    }
+
+    return question.answer;
+  }
+
+  function renderNumericFeedback(question, prefix = "") {
+    const answer = `<span class="numeric-answer-value">${question.answer}</span>`;
+    const info = question.answerInfo
+      ? `<span class="numeric-answer-info"> ${question.answerInfo}</span>`
+      : "";
+    return `${prefix ? `${prefix} ` : ""}${answer}${info}`;
   }
 
   function renderMath() {

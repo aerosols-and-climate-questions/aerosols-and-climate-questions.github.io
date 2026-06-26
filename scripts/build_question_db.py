@@ -149,6 +149,10 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
                 float(str(question["answer"]))
             except ValueError as exc:
                 raise ValidationError(f"{question_path}.answer must be numeric") from exc
+            if "answerInfo" in question:
+                normalized["answerInfo"] = require_string(question, "answerInfo", path, question_path)
+            if "units" in question:
+                normalized["units"] = require_string(question, "units", path, question_path)
             if "tolerance" in question:
                 tolerance = question["tolerance"]
                 if not isinstance(tolerance, (int, float)):
@@ -203,6 +207,11 @@ def normalize_parts(parts: Any, path: Path, question_path: str) -> list[dict[str
             if not isinstance(tolerance, (int, float)):
                 raise ValidationError(f"{part_path}.tolerance must be numeric")
             normalized_part["tolerance"] = tolerance
+
+        if part.get("type") == "numeric" and "answerInfo" in part:
+            normalized_part["answerInfo"] = require_string(part, "answerInfo", path, part_path)
+        if part.get("type") == "numeric" and "units" in part:
+            normalized_part["units"] = require_string(part, "units", path, part_path)
 
         normalized_parts.append(normalized_part)
 
