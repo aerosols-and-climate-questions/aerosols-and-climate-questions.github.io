@@ -1,0 +1,103 @@
+chapterTitle: Chapter 09
+categories:
+  - id: review
+    name: Review
+    questions:
+      - id: question-r01
+        type: multiple-choice
+        prompt: A modeller is searching for available data to evaluate aerosol particle size distributions in their model. Which of these instruments is least likely to be useful? 
+        options:
+          - GRIMM
+          - SMPS
+          - CPC
+          - CDP
+        correctIndex: 2
+        answer: The CDP (cloud droplet probe) is designed to measure cloud droplets, not aerosol particles, so its diameter range is typically too large to be useful. However, some scientists have used the CDP to measure coarse-mode aerosol by changing the assumptions made about the aerosol refractive index (Rosenberg, et al., 2012, AMT)
+        hint: Think about the size range of the instruments.
+      - id: question-r02
+        type: multiple-choice
+        prompt: A modeller is searching for available data to evaluate the amount of soot in their model. Which instrument's data would be most useful?
+        options:
+          - SP2
+          - Nephelometer
+          - AMS
+          - NAIS
+        correctIndex: 0
+        answer: The SP2 (Single Particle Soot Photometer) selectively vaporises black carbon.
+      - id: question-r03
+        type: multiple-choice
+        prompt: Which combination of instruments would be most appropriate for measuring new particle formation
+        options:
+          - An OPC and an AMS
+          - A CPC and an SMPS
+          - A CPC and an AMS
+        correctIndex: 2
+        answer: See Sec. 9.1.4 for full details.
+        hint: Consider the size range and capabilities of each instrument.
+      - id: question-r04
+        type: basic
+        prompt: Placeholder question for representation error.
+        answer: Placeholder
+      - id: question-r05
+        type: multiple-choice
+        prompt: An air sampler uses a PM2.5 filter. What proportion of aerosols with diameter 2.5 µm would you expect to pass through this PM2.5 filter?
+        options:
+          - 0%
+          - 50%
+          - 100%
+        hint: Consider how the transmission rate changes as the diameter changes, and how this applies to the PM2.5 filter.
+        correctIndex: 1
+        answer: 50%. People commonly mistakenly think this is 0%.
+      - id: question-r06
+        type: multiple-choice
+        prompt: A technique to measure INPs involves applying droplets of purified water to a filter which collects aerosols. Is this technique online or offline?
+        options:
+          - Online
+          - Offline
+        correctIndex: 1
+        answer: Offline, the analysis is performed after collection.
+      - id: question-r07
+        type: multiple-choice
+        prompt: What is the time resolution of a filter measurement?
+        options:
+          - The length of time each filter is exposed to aerosol
+          - The time between different filter measurements
+          - The time between the collection of the filter and the analysis of the filter
+        correctIndex: 0
+      - id: question-r08
+        parts:
+          - label: (a)
+            type: multiple-choice
+            prompt: Coarse-mode aerosol is measured by an instrument that uses a sampling line. Which are the most likely sources of particle losses?
+            options:
+              - Diffusion and impaction
+              - Diffusion and electrostatic
+              - Electrostatic and impaction
+              - Impaction and gravitational settling
+              - Gravitational settling and diffusion
+            correctIndex: 3
+            answer: Impaction and gravitational settling losses dominate when the particle diameter is large.
+          - label: (b)
+            type: basic
+            prompt: What physical shape of line would mitigate these best?
+            answer: A straight vertical line.
+      - id: question-r09
+        type: multiple-choice
+        prompt: An aerosol-climate model with a precise aerosol emission inventory has too few aerosols in the upper troposphere. What is a plausible reason for this?
+        options:
+          - Aerosol mixes too quickly in a grid-box, so aerosols form droplets too rapidly leading to too-efficient precipitation.
+          - A decoy option
+          - A decoy option
+        correctIndex: 0
+        answer: Need to flesh this out.
+  - id: application
+    name: Application
+    questions:
+      - id: question-a01
+        type: basic
+        prompt: Suggest a list of instruments that could be used on an aircraft campaign to measure aerosol-cloud interactions.
+        answer: TBC.
+      - id: question-a02
+        type: basic
+        prompt: Why might a single air inlet to measure aerosol utilise both a PM2.5 filter and a PM10 filter in series?
+        answer: To avoid larger particles clogging the instrument.
