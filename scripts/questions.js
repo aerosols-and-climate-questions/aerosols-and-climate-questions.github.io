@@ -389,7 +389,7 @@
       // tolerance. If none is supplied, exact numeric equality is
       // required (which is typical for simple integer answers).
       if (Math.abs(typed - rawAnswer) <= tolerance) {
-        result.innerHTML = renderNumericFeedback(question, "Correct.");
+        result.innerHTML = "Correct.";
         renderMath();
       } else {
         result.textContent = "Incorrect. Try again or reveal the answer.";
@@ -418,13 +418,14 @@
    * Produce HTML showing the numeric answer value and optional
    * `answerInfo` string. The optional `prefix` is used for short
    * feedback such as "Correct.".
+   * Currently, the prefix option is not used by numeric, it was
+   * a historic feature.
    */
   function renderNumericFeedback(question, prefix = "") {
-    const answer = `<span class="numeric-answer-value">${question.answer}</span>`;
     const info = question.answerInfo
-      ? `<span class="numeric-answer-info"> ${question.answerInfo}</span>`
+      ? `<span class="numeric-answer-info">${question.answerInfo}</span>`
       : "";
-    return `${prefix ? `${prefix} ` : ""}${answer}${info}`;
+    return `${prefix ? `${prefix} ` : ""}${info}`;
   }
 
   /**
