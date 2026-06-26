@@ -101,3 +101,22 @@ categories:
         type: basic
         prompt: Why might a single air inlet to measure aerosol utilise both a PM2.5 filter and a PM10 filter in series?
         answer: To avoid larger particles clogging the instrument.
+      - id: question-a03
+        prompt: An IAGOS aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 s cm-3.
+        parts:  
+          - label: (a)
+            type: numeric
+            prompt: Given that the measurement was made at 250 hPa and -19.0 °C, calculate the ambient concentration recorded by the instrument. 
+            answer: "40.8"
+            units: cm-3
+            tolerance: 0.1
+            answerInfo: Using the ideal gas law, \(PV=nRT\), the ratio between the volume of ambient air and air at STP is \(T_{\mathrm{amb.}}P_{\mathrm{STP}}/T_{\mathrm{STP}}P_{\mathrm{amb.}}\). To convert between STP and ambient concentrations, divide by this ratio. Since this was IAGOS data, found on EDAS (Sec. 9.3.2), the value of STP is 1013 hPa. If you used the IUPAC value of 1000 hPa, you would have calculated 41.3 cm-3. That's probably close enough for our purposes, but it could lead to confusion in some cases!
+          - label: (b)
+            type: basic
+            prompt: When using these measurements to set a vertical profile of aerosol concentration, a modeller fails to spot that the concentration is in s cm-3, instead thinking it is in cm-3. What would be the consequence of this error?
+            answer: The aerosol concentration would be increasingly overestimated with altitude as the air density decreases.
+        answer: Aerosol measurements cannot be understood independently from the atmospheric conditions they were made in!
+      - id: question-a04
+        type: basic
+        prompt: A scientist wishes to obtain a particle-size distribution of sodium chloride aerosol via an unheated inlet using an online technique. Aside from the ambient temperature and pressure, which atmospheric quantity should they measure?
+        answer: Relative humidity. Sodium chloride is a strongly hygroscopic aerosol and will swell at high humidities. This can be corrected for using the hygroscopic growth factor, but the relative humidity must be known.
