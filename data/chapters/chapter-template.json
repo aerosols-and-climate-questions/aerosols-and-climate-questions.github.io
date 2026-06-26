@@ -1,0 +1,74 @@
+{
+  "chapterTitle": "Chapter Template",
+  "categories": [
+    {
+      "id": "category-name",
+      "name": "Category Name",
+      "questions": [
+        {
+          "id": "template-basic-1",
+          "prompt": "Write your question prompt here.",
+          "hint": "Optional hint text. Remove this field if no hint is needed.",
+          "answer": "Write the answer here."
+        },
+        {
+          "id": "template-mcq-1",
+          "prompt": "Write a multiple-choice question here.",
+          "type": "multiple-choice",
+          "answer": "Optional full explanation shown after submission.",
+          "options": [
+            "Option A",
+            "Option B",
+            "Option C"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "template-numeric-1",
+          "prompt": "Write a numeric-answer question here.",
+          "type": "numeric",
+          "hint": "Optional hint for numeric questions.",
+          "answer": "3.14",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-image-1",
+          "prompt": "This sample uses an uploaded image. Which category looks like the largest positive forcing in the figure?",
+          "type": "multiple-choice",
+          "answer": "Carbon dioxide appears to be the largest positive forcing in the sample figure.",
+          "image": {
+            "src": "../imgs/forcings.png",
+            "alt": "Sample forcing chart used to demonstrate image questions",
+            "caption": "Images stay inside the question box and keep their proportions."
+          },
+          "options": [
+            "Carbon dioxide",
+            "Aerosols",
+            "Contrails",
+            "Land use change"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "template-multipart-1",
+          "prompt": "This sample shows a multi-part question.",
+          "answer": "Part (a) the prompt is split into separate subquestions. Part (b) \\\\(2^3 + 1 = 9\\\\).",
+          "parts": [
+            {
+              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "label": "(a)",
+              "answer": "A multi-part question has two or more subquestions that are answered separately."
+            },
+            {
+              "prompt": "Evaluate \\\\(2^3 + 1\\\\).",
+              "label": "(b)",
+              "type": "numeric",
+              "answer": "9",
+              "tolerance": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
