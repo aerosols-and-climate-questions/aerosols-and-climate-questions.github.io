@@ -65,10 +65,11 @@ categories:
           - The time between the collection of the filter and the analysis of the filter
         correctIndex: 0
       - id: question-r08
+        prompt: A scientist is measuring coarse-mode aerosol using an instrument that uses a sampling line.
         parts:
           - label: (a)
             type: multiple-choice
-            prompt: Coarse-mode aerosol is measured by an instrument that uses a sampling line. Which are the most likely sources of particle losses?
+            prompt: Which are the most likely sources of particle losses?
             options:
               - Diffusion and impaction
               - Diffusion and electrostatic
@@ -81,6 +82,7 @@ categories:
             type: basic
             prompt: What physical shape of line would mitigate these best?
             answer: A straight vertical line.
+        answer: Different physical processes dominate particle losses depending on the particle size.
       - id: question-r09
         type: multiple-choice
         prompt: An aerosol-climate model with a precise aerosol emission inventory has too few aerosols in the upper troposphere. What is a plausible reason for this?
