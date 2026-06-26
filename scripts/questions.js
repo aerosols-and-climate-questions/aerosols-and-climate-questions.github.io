@@ -1,14 +1,37 @@
+/*
+  scripts/questions.js
+
+  Enhances chapter pages by loading question data (JSON) and rendering
+  interactive question cards into the DOM. Supports multiple question
+  types (multiple-choice and numeric), nested question parts, optional
+  media, hints and revealable answers, and MathJax typesetting.
+
+  This file intentionally uses a self-invoking function to avoid
+  leaking variables into the global scope. Public configuration can be
+  supplied via `window.chapterConfig` or the page's `data-chapter` /
+  `?chapter=` query parameter which selects a JSON file under
+  `data/chapters`.
+*/
+
 (function () {
   const titleNode = document.getElementById("chapter-title");
   const root = document.getElementById("question-root");
   const inlineChapterConfig = window.chapterConfig;
 
+  // If the current page doesn't include the expected DOM anchors,
+  // abort quietly (script is safe to include on other pages).
   if (!titleNode || !root) {
     return;
   }
 
+  // Start the async bootstrap flow; `void` silences promise warnings.
   void bootstrap();
 
+  /**
+   * Bootstrap the page by obtaining the chapter config (either from a
+   * global `window.chapterConfig` or by fetching the JSON file),
+   * validating it, and rendering the chapter.
+   */
   async function bootstrap() {
     const chapterConfig = inlineChapterConfig || (await loadChapterConfig());
 
@@ -17,6 +40,7 @@
       return;
     }
 
+    // Basic validation: we require a title and an array of categories.
     if (!chapterConfig.chapterTitle || !Array.isArray(chapterConfig.categories)) {
       renderLoadError("Chapter data is missing a title or categories array.");
       return;
@@ -25,6 +49,12 @@
     renderChapter(chapterConfig);
   }
 
+  /**
+   * Determine the chapter id and fetch the corresponding JSON file.
+   * - Chapter id can come from `data-chapter` on <body> or `?chapter=`.
+   * - Chooses the relative `data/chapters` path depending on the URL.
+   * Returns the parsed JSON or null on any failure.
+   */
   async function loadChapterConfig() {
     const chapterId =
       document.body?.dataset.chapter ||
@@ -34,13 +64,11 @@
       return null;
     }
 
+    // When the page is under `/chapters/` the JSON sits one level up.
     const dataBasePath = window.location.pathname.includes("/chapters/")
       ? "../data/chapters"
       : "data/chapters";
-    const configUrl = new URL(
-      `${dataBasePath}/${chapterId}.json`,
-      window.location.href,
-    );
+    const configUrl = new URL(`${dataBasePath}/${chapterId}.json`, window.location.href);
 
     try {
       const response = await fetch(configUrl);
@@ -51,10 +79,16 @@
 
       return await response.json();
     } catch (_error) {
+      // Network or parse error -> treat as missing config.
       return null;
     }
   }
 
+  /**
+   * Render the chapter: set the page title and create a section for each
+   * category. Each question is rendered into an article with class
+   * `question-card`.
+   */
   function renderChapter(chapterConfig) {
     titleNode.textContent = chapterConfig.chapterTitle + " Questions";
 
@@ -70,6 +104,7 @@
         const card = document.createElement("article");
         card.className = "question-card";
 
+        // Label questions Q1, Q2, ... and pass into the renderer.
         renderQuestionContent(card, question, `Q${index + 1}`);
 
         section.appendChild(card);
@@ -78,9 +113,14 @@
       root.appendChild(section);
     });
 
+    // Typeset any math if MathJax is present.
     renderMath();
   }
 
+  /**
+   * Render a friendly load error into the root container.
+   * This replaces any previously rendered content.
+   */
   function renderLoadError(message) {
     titleNode.textContent = "Questions unavailable";
     root.innerHTML = "";
@@ -99,6 +139,10 @@
     root.appendChild(errorBox);
   }
 
+  /**
+   * Create a hidden toggleable `<div>` with provided HTML content. The
+   * `is-hidden` class is used to control visibility via CSS.
+   */
   function createToggleBox(className, content) {
     const box = document.createElement("div");
     box.className = `${className} is-hidden`;
@@ -106,9 +150,17 @@
     return box;
   }
 
+  /**
+   * Render the content of a single question into the supplied DOM
+   * `container`. The `label` is the human-facing question label (e.g.
+   * "Q1" or "Q2(a)"). This function handles the prompt, optional
+   * media, parts vs standalone interactions, and optional hint/answer
+   * toggle UI.
+   */
   function renderQuestionContent(container, question, label) {
     const prompt = document.createElement("p");
     prompt.className = "question-prompt";
+    // `prompt` may contain HTML (e.g. <em>, <strong>, or math markup).
     prompt.innerHTML = `<strong>${label}.</strong> ${question.prompt}`;
     container.appendChild(prompt);
 
@@ -116,6 +168,8 @@
       container.appendChild(createQuestionMedia(question.image));
     }
 
+    // If the question has explicit parts (a, b, c...) render them as
+    // an ordered list, otherwise render a single interaction block.
     if (Array.isArray(question.parts) && question.parts.length > 0) {
       container.appendChild(createQuestionParts(question.parts, label));
     } else {
@@ -125,6 +179,7 @@
       }
     }
 
+    // Add a toggleable hint panel when present.
     if (question.hint) {
       const hintButton = document.createElement("button");
       hintButton.className = "question-button";
@@ -140,6 +195,7 @@
       container.appendChild(hintBox);
     }
 
+    // Add a toggleable answer panel when an answer is available.
     if (question.answer) {
       const answerButton = document.createElement("button");
       answerButton.className = "question-button";
@@ -156,6 +212,11 @@
     }
   }
 
+  /**
+   * Render an array of `parts` as an ordered list. Each part is a
+   * standalone mini-question and receives a sublabel like `(a)`,
+   * `(b)` unless `part.label` is provided.
+   */
   function createQuestionParts(parts, parentLabel) {
     const list = document.createElement("ol");
     list.className = "question-parts";
@@ -171,6 +232,11 @@
     return list;
   }
 
+  /**
+   * Create a `<figure>` element containing an `<img>` and optional
+   * `<figcaption>` for question media. `media` is expected to contain
+   * `src`, and optionally `alt` and `caption`.
+   */
   function createQuestionMedia(media) {
     const figure = document.createElement("figure");
     figure.className = "question-media";
@@ -191,6 +257,10 @@
     return figure;
   }
 
+  /**
+   * Factory for question-specific interaction blocks. Returns a DOM
+   * element (or null if the type is unsupported).
+   */
   function createQuestionInteraction(question) {
     if (question.type === "multiple-choice") {
       return createMultipleChoice(question);
@@ -203,12 +273,24 @@
     return null;
   }
 
+  /**
+   * Toggle visibility for a box created by `createToggleBox` and swap
+   * the button text. Also triggers math retypesetting since new
+   * content may include math markup.
+   */
   function toggleBox(box, button, closedText, openText) {
     const isHidden = box.classList.toggle("is-hidden");
     button.textContent = isHidden ? closedText : openText;
     renderMath();
   }
 
+  /**
+   * Build a multiple-choice UI block. `question.options` is expected to
+   * be an array of HTML strings for each option and
+   * `question.correctIndex` indicates the correct option index.
+   * The UI supports selecting an option and submitting to receive
+   * feedback. Selection visually highlights the chosen button.
+   */
   function createMultipleChoice(question) {
     const wrapper = document.createElement("div");
     wrapper.className = "mcq";
@@ -222,9 +304,12 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "option-button";
+      // Option may contain simple HTML (e.g. markup or math).
       button.innerHTML = option;
       button.addEventListener("click", () => {
         selectedIndex = idx;
+        // Remove selected class from all siblings then add it to the
+        // clicked button.
         optionList.querySelectorAll("button").forEach((node) => {
           node.classList.remove("selected");
         });
@@ -257,6 +342,12 @@
     return wrapper;
   }
 
+  /**
+   * Create a numeric input interaction. `question.answer` should be a
+   * numeric string/number and `question.tolerance` (optional) is used
+   * to accept values within ±tolerance. If `question.units` is
+   * provided a units label is displayed beside the input.
+   */
   function createNumeric(question) {
     const wrapper = document.createElement("div");
     wrapper.className = "numeric-question";
@@ -294,6 +385,9 @@
         return;
       }
 
+      // Compare against the canonical answer using the supplied
+      // tolerance. If none is supplied, exact numeric equality is
+      // required (which is typical for simple integer answers).
       if (Math.abs(typed - rawAnswer) <= tolerance) {
         result.innerHTML = renderNumericFeedback(question, "Correct.");
         renderMath();
@@ -307,6 +401,11 @@
     return wrapper;
   }
 
+  /**
+   * Returns HTML content for the answer panel. For numeric questions we
+   * render the canonical numeric feedback; for other types we simply
+   * return the stored answer (which may contain HTML).
+   */
   function renderAnswerContent(question) {
     if (question.type === "numeric") {
       return renderNumericFeedback(question);
@@ -315,6 +414,11 @@
     return question.answer;
   }
 
+  /**
+   * Produce HTML showing the numeric answer value and optional
+   * `answerInfo` string. The optional `prefix` is used for short
+   * feedback such as "Correct.".
+   */
   function renderNumericFeedback(question, prefix = "") {
     const answer = `<span class="numeric-answer-value">${question.answer}</span>`;
     const info = question.answerInfo
@@ -323,6 +427,12 @@
     return `${prefix ? `${prefix} ` : ""}${answer}${info}`;
   }
 
+  /**
+   * Helper to typeset math using MathJax if it is loaded. Uses the
+   * promise-based `typesetPromise` API when available and silently
+   * ignores errors (we don't want typesetting failures to break the
+   * page).
+   */
   function renderMath() {
     if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
       window.MathJax.typesetPromise().catch(function () {});
