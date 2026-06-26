@@ -1,5 +1,5 @@
-# prototype-book.github.io
-A prototype website for a textbook question bank.
+# aerosols-and-climate-questions.github.io
+A prototype website for questions associated with the topics discussed in the book "Aerosols and Climate".
 
 ## Structure
 - `/index.html`: homepage linking to chapter pages.
@@ -67,3 +67,4 @@ The renderer also still accepts `window.chapterConfig` for migration compatibili
 
 ## Quirks
 Note that you can't use colons in sentences in the yaml file.
+In JSON files, backslashes need to be escaped. This can mean that in the conversion between yaml and JSON, you might end up with a few too many backslashes in your LaTeX which you'll want to fix.
