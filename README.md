@@ -34,24 +34,32 @@ Each question should include a stable `id` and a `prompt`. Supported fields are:
 1. Copy `data/source/chapter-template.yml` to a new file such as `data/source/chapter-02.yml`.
 2. Fill in the chapter title, category metadata, and questions.
 3. Run `python3 scripts/build_question_db.py --input data/source --output data/chapters`.
+    1. This convert all .yml files to .json - this means it will overwrite any existing jsons with the same basename as a .yml file, so be careful! Check that no changes have been made to other chapters and revert them! We should probably change this at some point.
+    2. This might fail if you have something not compatible with the JSON. That's good! Hopefully it will tell you where you're doing something wrong, e.g. colons.
+    3. You may need to modify your JSON after production, particularly when backslashes are involved.
 4. Open the matching chapter page shell and verify the rendered questions.
+
 
 ## Manual editing workflow
 You can also edit the JSON files directly in `data/chapters/` if you prefer.
 The minimal requirements are stable IDs, category grouping, and valid type-specific fields.
 
 ## Question template details
+For all questions, you can split them into multipart-ers.
 ### `basic`
+- These are basic question and answers with no input from the user.
 - Required: `prompt`, `answer`.
 - Optional: `hint`, `image`, `parts`.
 
 ### `multiple-choice`
+- These are questions with as many answers as wanted.
 - Required: `prompt`, `options`, `correctIndex`.
 - Optional: `answer`, `hint`, `image`, `parts`.
 - `options` must contain at least two strings.
 - `correctIndex` is zero-based.
 
 ### `numeric`
+- These are questions with a numerical answer. At the moment we don't have suffixes for units, so you will want to specify.
 - Required: `prompt`, `answer`.
 - Optional: `hint`, `image`, `parts`, `tolerance`.
 - `answer` must parse as a number.
