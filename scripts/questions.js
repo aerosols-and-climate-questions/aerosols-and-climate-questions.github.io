@@ -332,7 +332,7 @@
       } else if (selectedIndex === question.correctIndex) {
         result.textContent = "Correct.";
       } else {
-        result.textContent = "Not quite. Try again or reveal the answer.";
+        result.textContent = "Incorrect. Try again or reveal the answer.";
       }
     });
 
@@ -392,7 +392,7 @@
         result.innerHTML = renderNumericFeedback(question, "Correct.");
         renderMath();
       } else {
-        result.textContent = "Not quite. Try again or reveal the answer.";
+        result.textContent = "Incorrect. Try again or reveal the answer.";
       }
     });
 
