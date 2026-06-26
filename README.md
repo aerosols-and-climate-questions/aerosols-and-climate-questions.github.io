@@ -80,3 +80,6 @@ The renderer also still accepts `window.chapterConfig` for migration compatibili
 ## Quirks
 Note that you can't use colons in sentences in the yaml file.
 In JSON files, backslashes need to be escaped. This can mean that in the conversion between yaml and JSON, you might end up with a few too many backslashes in your LaTeX which you'll want to fix.
+
+## Testing
+Using Firefox, local testing requires making sure your permissions allow you to run js in local files. In the search bar, type `about:config` and enter. Accept the risk of changing advanced settings, then search for `security.fileuri.strict_origin_policy`. Double click this to toggle to `false`. Close the browser and reopen. Please add method for Chrome if you know how to.
