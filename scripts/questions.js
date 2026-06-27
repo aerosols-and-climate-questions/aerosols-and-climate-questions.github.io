@@ -200,11 +200,11 @@
       const answerButton = document.createElement("button");
       answerButton.className = "question-button";
       answerButton.type = "button";
-      answerButton.textContent = "Show answer";
+      answerButton.textContent = "Show full answer";
 
       const answerBox = createToggleBox("answer-box", renderAnswerContent(question));
       answerButton.addEventListener("click", () => {
-        toggleBox(answerBox, answerButton, "Show answer", "Hide answer");
+        toggleBox(answerBox, answerButton, "Show full answer", "Hide full answer");
       });
 
       container.appendChild(answerButton);
