@@ -158,11 +158,13 @@
    * toggle UI.
    */
   function renderQuestionContent(container, question, label) {
-    const prompt = document.createElement("p");
-    prompt.className = "question-prompt";
-    // `prompt` may contain HTML (e.g. <em>, <strong>, or math markup).
-    prompt.innerHTML = `<strong>${label}.</strong> ${question.prompt}`;
-    container.appendChild(prompt);
+    if (typeof question.prompt === "string" && question.prompt.trim()) {
+      const prompt = document.createElement("p");
+      prompt.className = "question-prompt";
+      // `prompt` may contain HTML (e.g. <em>, <strong>, or math markup).
+      prompt.innerHTML = `<strong>${label}.</strong> ${question.prompt}`;
+      container.appendChild(prompt);
+    }
 
     if (question.image) {
       container.appendChild(createQuestionMedia(question.image));
