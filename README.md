@@ -21,12 +21,12 @@ LaTeX in prompts/answers is rendered via MathJax using `\\(...\\)`/`\\[...\\]` s
 Each chapter JSON file contains a `chapterTitle` and an ordered `categories` array.
 Each category has an `id`, `name`, and ordered `questions` array.
 
-Each question should include a stable `id` and a `prompt`. Supported fields are:
+Each question should include a stable `id`. `prompt` is required unless the question is only a multipart container (it has `parts` and no standalone interaction). Supported fields are:
 - `type`: optional for `basic`, required for `multiple-choice` and `numeric`.
 - `answer`: revealable answer text.
 - `hint`: revealable hint text.
 - `image`: object with `src`, optional `alt`, and optional `caption`.
-- `parts`: nested list of subquestions, each following the same rules.
+- `parts`: nested list of subquestions, each following the same rules (`prompt` is optional for any item that itself has `parts`).
 - `options` and `correctIndex`: required for `multiple-choice`.
 - `tolerance`: optional for `numeric`.
 - `answerInfo`: numeric-only; optional extra text appended after the numeric answer when it is revealed or when a correct answer is submitted.
@@ -51,7 +51,7 @@ The minimal requirements are stable IDs, category grouping, and valid type-speci
 For all questions, you can split them into multipart-ers.
 ### `basic`
 - These are basic question and answers with no input from the user.
-- Required: `prompt`, `answer`.
+- Required: `prompt` unless this is used only as a multipart container.
 - Optional: `hint`, `image`, `parts`.
 
 ### `multiple-choice`
@@ -69,6 +69,8 @@ For all questions, you can split them into multipart-ers.
 - `tolerance` defaults to `0` if omitted.
 - `answerInfo` is shown after the numeric value in the reveal box and in the positive submit feedback.
 - `units` is a noninteractive label rendered between the answer box and the submit button.
+
+For multipart containers, parent `prompt` and `answer` are optional, and the same applies to any nested part that itself only groups further `parts`.
 
 ## Images
 If a question uses an image, put the asset in `imgs/` and reference it from the question file.

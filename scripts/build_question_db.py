@@ -110,10 +110,7 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
             raise ValidationError(f"{question_path}.id must be unique within a category")
         question_ids.add(question_id)
 
-        normalized: dict[str, Any] = {
-            "id": question_id,
-            "prompt": require_string(question, "prompt", path, question_path),
-        }
+        normalized: dict[str, Any] = {"id": question_id}
 
         question_type = question.get("type", "basic")
         if question_type not in {"basic", "multiple-choice", "numeric"}:
@@ -121,6 +118,8 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
         if question_type != "basic":
             normalized["type"] = question_type
 
+        if "prompt" in question:
+            normalized["prompt"] = require_string(question, "prompt", path, question_path)
         if "hint" in question:
             normalized["hint"] = require_string(question, "hint", path, question_path)
         if "answer" in question:
@@ -129,6 +128,8 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
             normalized["image"] = normalize_image(question["image"], question_path)
         if question.get("parts") is not None:
             normalized["parts"] = normalize_parts(question["parts"], path, question_path)
+        elif "prompt" not in question:
+            raise ValidationError(f"{question_path}.prompt is required unless parts are provided")
 
         if question_type == "multiple-choice":
             options = require_list(question, "options", path, question_path)
@@ -174,9 +175,9 @@ def normalize_parts(parts: Any, path: Path, question_path: str) -> list[dict[str
         if not isinstance(part, dict):
             raise ValidationError(f"{part_path} must be a mapping")
 
-        normalized_part: dict[str, Any] = {
-            "prompt": require_string(part, "prompt", path, part_path),
-        }
+        normalized_part: dict[str, Any] = {}
+        if "prompt" in part:
+            normalized_part["prompt"] = require_string(part, "prompt", path, part_path)
         if "label" in part:
             normalized_part["label"] = require_string(part, "label", path, part_path)
         if "type" in part and part["type"] != "basic":
@@ -189,6 +190,8 @@ def normalize_parts(parts: Any, path: Path, question_path: str) -> list[dict[str
             normalized_part["image"] = normalize_image(part["image"], part_path)
         if "parts" in part:
             normalized_part["parts"] = normalize_parts(part["parts"], path, part_path)
+        elif "prompt" not in part:
+            raise ValidationError(f"{part_path}.prompt is required unless parts are provided")
 
         if part.get("type") == "multiple-choice":
             options = require_list(part, "options", path, part_path)
