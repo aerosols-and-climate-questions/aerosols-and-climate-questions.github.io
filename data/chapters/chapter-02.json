@@ -13,8 +13,8 @@
         },
         {
           "id": "question-02",
-          "prompt": "What is the third letter of the Greek alphabet?",
           "type": "multiple-choice",
+          "prompt": "What is the third letter of the Greek alphabet?",
           "answer": "It's \\(\\gamma\\), which is the third letter of the Greek alphabet.",
           "options": [
             "\\(\\alpha\\)",
@@ -25,8 +25,8 @@
         },
         {
           "id": "question-03",
-          "prompt": "What is the value of π (pi)?",
           "type": "numeric",
+          "prompt": "What is the value of π (pi)?",
           "hint": "Optional hint for numeric questions.",
           "answer": "3.14",
           "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
@@ -34,8 +34,8 @@
         },
         {
           "id": "question-04",
-          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
           "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
           "answer": "It's forcings, shown on the x-axis",
           "image": {
             "src": "../imgs/forcings.png",
@@ -50,8 +50,6 @@
         },
         {
           "id": "question-05",
-          "prompt": "This sample shows a multi-part question.",
-          "answer": "Part (a) the prompt is split into separate subquestions. Part (b) \\\\\\\\(2^3 + 1 = 9\\\\\\\\).",
           "parts": [
             {
               "prompt": "Write one short sentence explaining what makes a question multi-part.",
@@ -59,22 +57,13 @@
               "answer": "A multi-part question has two or more subquestions that are answered separately."
             },
             {
-              "prompt": "Evaluate \\(2^3 + 1\\).",
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
               "label": "(b)",
               "type": "numeric",
               "answer": "9",
               "tolerance": 0
             }
           ]
-        },
-        {
-          "id": "question-06",
-          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
-          "type": "numeric",
-          "units": "m s^-2",
-          "answer": "9.81",
-          "answerInfo": "This is the conventional standard gravity.",
-          "tolerance": 0.01
         }
       ]
     }
