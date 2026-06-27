@@ -12,7 +12,7 @@ body {
 .content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .page-header h1 {
