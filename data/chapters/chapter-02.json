@@ -64,6 +64,15 @@
               "tolerance": 0
             }
           ]
+        },
+        {
+          "id": "question-06",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": "9.81",
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
         }
       ]
     }

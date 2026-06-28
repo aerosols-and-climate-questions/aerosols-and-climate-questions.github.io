@@ -46,10 +46,10 @@ categories:
             prompt: Evaluate \(\ 2^3 + 1 \).
             answer: "9"
             tolerance: 0
-      # - id: question-06
-      #   type: numeric
-      #   prompt: What is the standard acceleration due to gravity at Earth's surface?
-      #   units: m s^-2
-      #   answer: "9.81"
-      #   answerInfo: This is the conventional standard gravity.
-      #   tolerance: 0.01
+      - id: question-06
+        type: numeric
+        prompt: What is the standard acceleration due to gravity at Earth's surface?
+        units: m s^-2
+        answer: "9.81"
+        answerInfo: This is the conventional standard gravity.
+        tolerance: 0.01

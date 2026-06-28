@@ -13,6 +13,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+import warnings
 
 try:
     import yaml
@@ -27,21 +28,29 @@ class ValidationError(Exception):
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", required=True, type=Path, help="Folder containing chapter YAML files")
+    # Add input and output arguments. Input can either be a path to a folder or a path to a file.
+    # If a folder is provided, all YAML files in the folder will be processed.
+    # If a file is provided, only that file will be processed.
+    parser.add_argument("--input", required=True, type=Path, help="File/folder containing chapter YAML files")
     parser.add_argument("--output", required=True, type=Path, help="Folder to write canonical JSON files")
     args = parser.parse_args()
 
-    input_dir: Path = args.input
+    input_path: Path = args.input
     output_dir: Path = args.output
 
-    if not input_dir.exists():
-        raise SystemExit(f"Input folder does not exist: {input_dir}")
-
+    if not input_path.exists():
+        raise SystemExit(f"Input path does not exist: {input_path}")
+    yaml_files: list[Path] = []
+    if input_path.is_file() and input_path.suffix in {".yml", ".yaml"}:
+        yaml_files.append(input_path)
+    elif input_path.is_file():
+        raise SystemExit(f"Input file must have a .yml or .yaml extension: {input_path}")
+    elif input_path.is_dir():
+        yaml_files = sorted(input_path.glob("*.yml")) + sorted(input_path.glob("*.yaml"))
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    yaml_files = sorted(input_dir.glob("*.yml")) + sorted(input_dir.glob("*.yaml"))
     if not yaml_files:
-        raise SystemExit(f"No YAML files found in {input_dir}")
+        raise SystemExit(f"No YAML files found in {input_path}")
 
     for yaml_file in yaml_files:
         chapter = load_yaml(yaml_file)
