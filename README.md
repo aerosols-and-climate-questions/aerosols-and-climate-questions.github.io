@@ -40,7 +40,7 @@ Each question should include a stable `id`. `prompt` is required unless the ques
 2. Fill in the chapter title, category metadata, and questions.
 3. Run `python3 scripts/build_question_db.py --input data/source --output data/chapters`.
     1. You will need a python environment with pyyaml to run this.
-    2. This convert all .yml files to .json - this means it will overwrite any existing jsons with the same basename as a .yml file, so be careful! Check that no changes have been made to other chapters and revert them! We should probably change this at some point.
+    2. This convert all .yml files to .json - this means it will overwrite any existing jsons with the same basename as a .yml file, so be careful! Check that no changes have been made to other chapters and revert them if so! (A safer way to do this is to make a new folder called `source_temp` (which is git-ignored), and temporarily move any yamls you're not working on to that while you run the python script before moving them back when you're done.) We should probably change this at some point.
     3. This might fail if you have something not compatible with the JSON. That's good! Hopefully it will tell you where you're doing something wrong, e.g. colons.
     4. You may need to modify your JSON after production, particularly when backslashes are involved.
 4. Open the matching chapter page shell and verify the rendered questions.

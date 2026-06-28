@@ -14,6 +14,9 @@ categories:
         correctIndex: 2
         answer: The CDP (cloud droplet probe) is designed to measure cloud droplets, not aerosol particles, so its diameter range is typically too large to be useful. However, some scientists have used the CDP to measure coarse-mode aerosol by changing the assumptions made about the aerosol refractive index (Rosenberg, et al., 2012, AMT)
         hint: Think about the size range of the instruments.
+        author:
+          - Ken Carslaw
+          - Erin Raif
       - id: question-r02
         type: multiple-choice
         prompt: A modeller is searching for available data to evaluate the amount of soot in their model. Which instrument's data would be most useful?
@@ -24,6 +27,8 @@ categories:
           - NAIS
         correctIndex: 0
         answer: The SP2 (Single Particle Soot Photometer) selectively vaporises black carbon.
+        author: Ken Carslaw
+        reviewer: Erin Raif
       - id: question-r03
         type: multiple-choice
         prompt: Which combination of instruments would be most appropriate for measuring new particle formation
@@ -31,9 +36,15 @@ categories:
           - An OPC and an AMS
           - A CPC and an SMPS
           - A CPC and an AMS
-        correctIndex: 2
+        correctIndex: 1
         answer: See Sec. 9.1.4 for full details.
         hint: Consider the size range and capabilities of each instrument.
+        author:
+          - Ken Carslaw
+          - Erin Raif
+        reviewer:
+          - Ken Carslaw
+          - Erin Raif
       - id: question-r04
         type: basic
         prompt: Placeholder question for representation error.
@@ -48,6 +59,8 @@ categories:
         hint: Consider how the transmission rate changes as the diameter changes, and how this applies to the PM2.5 filter.
         correctIndex: 1
         answer: 50%. People commonly mistakenly think this is 0%.
+        author: Erin Raif
+        reviewer: Ken Carslaw
       - id: question-r06
         type: multiple-choice
         prompt: A technique to measure INPs involves applying droplets of purified water to a filter which collects aerosols. Is this technique online or offline?
@@ -56,6 +69,8 @@ categories:
           - Offline
         correctIndex: 1
         answer: Offline, the analysis is performed after collection.
+        author: Erin Raif
+        reviewer: Ken Carslaw
       - id: question-r07
         type: multiple-choice
         prompt: What is the time resolution of a filter measurement?
@@ -64,6 +79,8 @@ categories:
           - The time between different filter measurements
           - The time between the collection of the filter and the analysis of the filter
         correctIndex: 0
+        author: Erin Raif
+        reviewer: Ken Carslaw
       - id: question-r08
         prompt: A scientist is measuring coarse-mode aerosol using an instrument that uses a sampling line.
         parts:
@@ -83,6 +100,8 @@ categories:
             prompt: What physical shape of line would mitigate these best?
             answer: A straight vertical line.
         answer: Different physical processes dominate particle losses depending on the particle size.
+        author: Erin Raif
+        reviewer: Ken Carslaw
       - id: question-r09
         type: multiple-choice
         prompt: An aerosol-climate model with a precise aerosol emission inventory has too few aerosols in the upper troposphere. What is a plausible reason for this?
@@ -92,6 +111,7 @@ categories:
           - A decoy option
         correctIndex: 0
         answer: Need to flesh this out.
+        author: Erin Raif
   - id: application
     name: Application
     questions:
@@ -99,11 +119,14 @@ categories:
         type: basic
         prompt: Suggest a list of instruments that could be used on an aircraft campaign to measure aerosol-cloud interactions.
         answer: TBC.
+        author: Ken Carslaw
       - id: question-a02
         type: basic
         prompt: Why might a single air inlet to measure aerosol utilise both a PM2.5 filter and a PM10 filter in series?
         answer: To avoid larger particles clogging the instrument.
         lastUpdated: "2026-06-27"
+        author: Erin Raif
+        reviewer: Ken Carslaw
       - id: question-a03
         prompt: An IAGOS aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 s cm-3.
         parts:  
@@ -119,8 +142,12 @@ categories:
             prompt: When using these measurements to set a vertical profile of aerosol concentration, a modeller fails to spot that the concentration is in s cm-3, instead thinking it is in cm-3. What would be the consequence of this error?
             answer: The aerosol concentration would be increasingly overestimated with altitude as the air density decreases.
         answer: Aerosol measurements cannot be understood independently from the atmospheric conditions they were made in!
+        author: Erin Raif
+        reviewer: Ken Carslaw
       - id: question-a04
         type: basic
         prompt: A scientist wishes to obtain a particle-size distribution of sodium chloride aerosol via an unheated inlet using an online technique. Aside from the ambient temperature and pressure, which atmospheric quantity should they measure?
         answer: Relative humidity. Sodium chloride is a strongly hygroscopic aerosol and will swell at high humidities. This can be corrected for using the hygroscopic growth factor, but the relative humidity must be known.
         lastUpdated: "2026-06-27"
+        author: Erin Raif
+        reviewer: Ken Carslaw
