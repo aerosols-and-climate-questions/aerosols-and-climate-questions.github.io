@@ -34,6 +34,8 @@ Each question should include a stable `id`. `prompt` is required unless the ques
 
 ### Metadata
 - `lastUpdated`: The date that the question was last updated on. Ideally, give this in YYYY-MM-DD form, but be careful, anything that could be interpreted as a number (such as this) needs wrapping in ""..
+- `author`: The question author. If there is more than one author, format this as a YAML list.
+- `reviewer`: The question reviewer. If there is more than one author, format this as a YAML list.
 
 ## Creating new questions
 1. Copy `data/source/chapter-template.yml` to a new file such as `data/source/chapter-02.yml`.
