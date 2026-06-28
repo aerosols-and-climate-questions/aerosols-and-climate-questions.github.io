@@ -36,7 +36,19 @@ Each question should include a stable `id`. `prompt` is required unless the ques
 - `lastUpdated`: The date that the question was last updated on. Ideally, give this in YYYY-MM-DD form, but be careful, anything that could be interpreted as a number (such as this) needs wrapping in ""..
 - `author`: The question author. If there is more than one author, format this as a YAML list.
 - `reviewer`: The question reviewer. If there is more than one author, format this as a YAML list.
-
+- `reference`: References used in the question. Please format these like so: `Author list (Surname, I. N. I. T.): Title, Journal, Issue(Vol), Pages, doi. Because these contain colons, you'll need to format this like so:
+```
+reference: >-
+  Reference, M. Y. etc...
+```
+If you need more than one reference, use:
+```
+reference:
+  - >-
+    Reference, M. Y. ...
+  - >-
+    Extra-Source, A. N. ...
+```
 ## Creating new questions
 1. Copy `data/source/chapter-template.yml` to a new file such as `data/source/chapter-02.yml`.
 2. Fill in the chapter title, category metadata, and questions.
@@ -84,10 +96,6 @@ The `src` value should be a relative path that works from the chapter page shell
 ## Chapter loading
 Chapter pages set `data-chapter` on the `<body>` element and load the matching JSON file from `data/chapters/`.
 The renderer also still accepts `window.chapterConfig` for migration compatibility.
-
-## Quirks
-Note that you can't use colons in sentences in the yaml file.
-In JSON files, backslashes need to be escaped. This can mean that in the conversion between yaml and JSON, you might end up with a few too many backslashes in your LaTeX which you'll want to fix.
 
 ## Testing
 Using Firefox, local testing requires making sure your permissions allow you to run js in local files. In the search bar, type `about:config` and enter. Accept the risk of changing advanced settings, then search for `security.fileuri.strict_origin_policy`. Double click this to toggle to `false`. Close the browser and reopen. Please add method for Chrome if you know how to.
