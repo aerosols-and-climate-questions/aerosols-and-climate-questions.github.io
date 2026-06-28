@@ -15,6 +15,10 @@
             "Ken Carslaw",
             "Erin Raif"
           ],
+          "reference": [
+            "Rosenberg, P. D., Dean, A. R., Williams, P. I., Dorsey, J. R., Minikin, A., Pickering, M. A., and Petzold, A.: Particle sizing calibration with refractive index correction for light scattering optical particle counters and impacts upon PCASP and CDP data collected during the Fennec campaign, Atmos. Meas. Tech., 5, 1147-1163, https://doi.org/10.5194/amt-5-1147-2012, 2012. ",
+            "Raif, E. N., Barr, S. L., Tarn, M. D., McQuaid, J. B., Daily, M. I., Abel, S. J., Barrett, P. A., Bower, K. N., Field, P. R., Carslaw, K. S., and Murray, B. J.: High ice-nucleating particle concentrations associated with Arctic haze in springtime cold-air outbreaks, Atmos. Chem. Phys., 24, 14045–14072, https://doi.org/10.5194/acp-24-14045-2024, 2024."
+          ],
           "options": [
             "GRIMM",
             "SMPS",

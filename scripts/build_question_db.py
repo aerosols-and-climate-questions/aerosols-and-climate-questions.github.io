@@ -134,6 +134,9 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
         if "reviewer" in question:
             reviewers = require_list_or_string(question, "reviewer", path, question_path)
             normalized["reviewer"] = [require_plain_string(reviewer, f"{question_path}.reviewer") for reviewer in reviewers]
+        if "reference" in question:
+            references = require_list_or_string(question, "reference", path, question_path)
+            normalized["reference"] = [require_plain_string(reference, f"{question_path}.reference") for reference in references]
         if question.get("parts") is not None:
             normalized["parts"] = normalize_parts(question["parts"], path, question_path)
         elif "prompt" not in question:
