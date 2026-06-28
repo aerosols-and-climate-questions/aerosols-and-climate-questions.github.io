@@ -7,8 +7,8 @@
       "questions": [
         {
           "id": "question-r01",
-          "prompt": "A modeller is searching for available data to evaluate aerosol particle size distributions in their model. Which of these instruments is least likely to be useful?",
           "type": "multiple-choice",
+          "prompt": "A modeller is searching for available data to evaluate aerosol particle size distributions in their model. Which of these instruments is least likely to be useful?",
           "hint": "Think about the size range of the instruments.",
           "answer": "The CDP (cloud droplet probe) is designed to measure cloud droplets, not aerosol particles, so its diameter range is typically too large to be useful. However, some scientists have used the CDP to measure coarse-mode aerosol by changing the assumptions made about the aerosol refractive index (Rosenberg, et al., 2012, AMT)",
           "options": [
@@ -21,8 +21,8 @@
         },
         {
           "id": "question-r02",
-          "prompt": "A modeller is searching for available data to evaluate the amount of soot in their model. Which instrument's data would be most useful?",
           "type": "multiple-choice",
+          "prompt": "A modeller is searching for available data to evaluate the amount of soot in their model. Which instrument's data would be most useful?",
           "answer": "The SP2 (Single Particle Soot Photometer) selectively vaporises black carbon.",
           "options": [
             "SP2",
@@ -34,8 +34,8 @@
         },
         {
           "id": "question-r03",
-          "prompt": "Which combination of instruments would be most appropriate for measuring new particle formation",
           "type": "multiple-choice",
+          "prompt": "Which combination of instruments would be most appropriate for measuring new particle formation",
           "hint": "Consider the size range and capabilities of each instrument.",
           "answer": "See Sec. 9.1.4 for full details.",
           "options": [
@@ -52,8 +52,8 @@
         },
         {
           "id": "question-r05",
-          "prompt": "An air sampler uses a PM2.5 filter. What proportion of aerosols with diameter 2.5 µm would you expect to pass through this PM2.5 filter?",
           "type": "multiple-choice",
+          "prompt": "An air sampler uses a PM2.5 filter. What proportion of aerosols with diameter 2.5 µm would you expect to pass through this PM2.5 filter?",
           "hint": "Consider how the transmission rate changes as the diameter changes, and how this applies to the PM2.5 filter.",
           "answer": "50%. People commonly mistakenly think this is 0%.",
           "options": [
@@ -65,8 +65,8 @@
         },
         {
           "id": "question-r06",
-          "prompt": "A technique to measure INPs involves applying droplets of purified water to a filter which collects aerosols. Is this technique online or offline?",
           "type": "multiple-choice",
+          "prompt": "A technique to measure INPs involves applying droplets of purified water to a filter which collects aerosols. Is this technique online or offline?",
           "answer": "Offline, the analysis is performed after collection.",
           "options": [
             "Online",
@@ -76,8 +76,8 @@
         },
         {
           "id": "question-r07",
-          "prompt": "What is the time resolution of a filter measurement?",
           "type": "multiple-choice",
+          "prompt": "What is the time resolution of a filter measurement?",
           "options": [
             "The length of time each filter is exposed to aerosol",
             "The time between different filter measurements",
@@ -113,8 +113,8 @@
         },
         {
           "id": "question-r09",
-          "prompt": "An aerosol-climate model with a precise aerosol emission inventory has too few aerosols in the upper troposphere. What is a plausible reason for this?",
           "type": "multiple-choice",
+          "prompt": "An aerosol-climate model with a precise aerosol emission inventory has too few aerosols in the upper troposphere. What is a plausible reason for this?",
           "answer": "Need to flesh this out.",
           "options": [
             "Aerosol mixes too quickly in a grid-box, so aerosols form droplets too rapidly leading to too-efficient precipitation.",
@@ -137,7 +137,8 @@
         {
           "id": "question-a02",
           "prompt": "Why might a single air inlet to measure aerosol utilise both a PM2.5 filter and a PM10 filter in series?",
-          "answer": "To avoid larger particles clogging the instrument."
+          "answer": "To avoid larger particles clogging the instrument.",
+          "lastUpdated": "27 June 2026"
         },
         {
           "id": "question-a03",
@@ -163,7 +164,8 @@
         {
           "id": "question-a04",
           "prompt": "A scientist wishes to obtain a particle-size distribution of sodium chloride aerosol via an unheated inlet using an online technique. Aside from the ambient temperature and pressure, which atmospheric quantity should they measure?",
-          "answer": "Relative humidity. Sodium chloride is a strongly hygroscopic aerosol and will swell at high humidities. This can be corrected for using the hygroscopic growth factor, but the relative humidity must be known."
+          "answer": "Relative humidity. Sodium chloride is a strongly hygroscopic aerosol and will swell at high humidities. This can be corrected for using the hygroscopic growth factor, but the relative humidity must be known.",
+          "lastUpdated": "2026-06-27"
         }
       ]
     }

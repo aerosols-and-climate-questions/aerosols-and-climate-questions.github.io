@@ -124,6 +124,8 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
             normalized["hint"] = require_string(question, "hint", path, question_path)
         if "answer" in question:
             normalized["answer"] = require_string(question, "answer", path, question_path)
+        if "lastUpdated" in question:
+            normalized["lastUpdated"] = require_string(question, "lastUpdated", path, question_path)
         if "image" in question:
             normalized["image"] = normalize_image(question["image"], question_path)
         if question.get("parts") is not None:
