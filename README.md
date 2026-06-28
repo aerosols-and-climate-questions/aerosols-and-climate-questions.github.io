@@ -3,6 +3,7 @@ A prototype website for questions associated with the topics discussed in the bo
 
 ## Structure
 - `/index.html`: homepage linking to chapter pages.
+- `/credit.html`: credits page.
 - `/chapters/chapter-01.html`: sample chapter page shell.
 - `/chapters/chapter-template.html`: copy this to create additional chapter shells.
 - `/data/chapters/*.json`: canonical chapter data loaded by the page script.
@@ -52,13 +53,15 @@ reference:
 ## Creating new questions
 1. Copy `data/source/chapter-template.yml` to a new file such as `data/source/chapter-02.yml`.
 2. Fill in the chapter title, category metadata, and questions.
-3. Run `python3 scripts/build_question_db.py --input data/source --output data/chapters`.
+3. Run either (paths shown from root)
+    * `py scripts/build_question_db.py --input data/source/chapter-NN.yml --output data/chapters` to build a JSON database from a single chapter's YAML
+    * `py scripts/build_question_db.py --input data/source --output data/chapters` to build a JSON database for every chapter's YAML.
+4. Notes on (3)
     1. You will need a python environment with pyyaml to run this.
-    2. This convert all .yml files to .json - this means it will overwrite any existing jsons with the same basename as a .yml file, so be careful! Check that no changes have been made to other chapters and revert them if so! (A safer way to do this is to make a new folder called `source_temp` (which is git-ignored), and temporarily move any yamls you're not working on to that while you run the python script before moving them back when you're done.) We should probably change this at some point.
+    2. To convert more than one YAML file at once, but safely ignore some files, temporarily move YAML files that shouldn't be touched to a new folder called `source_temp` (this name is git-ignored), while you run the python script. Don't forget to move them back when you're done!
     3. This might fail if you have something not compatible with the JSON. That's good! Hopefully it will tell you where you're doing something wrong, e.g. colons.
     4. You may need to modify your JSON after production, particularly when backslashes are involved.
-4. Open the matching chapter page shell and verify the rendered questions.
-
+4. Open the matching chapter page shell and verify the rendered questions before you submit a pull request.
 
 ## Manual editing workflow
 You can also edit the JSON files directly in `data/chapters/` if you prefer.
