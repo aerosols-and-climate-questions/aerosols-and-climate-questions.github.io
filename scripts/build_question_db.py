@@ -128,6 +128,12 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
             normalized["lastUpdated"] = require_string(question, "lastUpdated", path, question_path)
         if "image" in question:
             normalized["image"] = normalize_image(question["image"], question_path)
+        if "author" in question:
+            authors = require_list_or_string(question, "author", path, question_path)
+            normalized["author"] = [require_plain_string(author, f"{question_path}.author") for author in authors]
+        if "reviewer" in question:
+            reviewers = require_list_or_string(question, "reviewer", path, question_path)
+            normalized["reviewer"] = [require_plain_string(reviewer, f"{question_path}.reviewer") for reviewer in reviewers]
         if question.get("parts") is not None:
             normalized["parts"] = normalize_parts(question["parts"], path, question_path)
         elif "prompt" not in question:
@@ -252,6 +258,15 @@ def require_list(value: dict[str, Any], key: str, path: Path, context: str | Non
         raise ValidationError(f"{context or path}.{key} must be a list")
     return value[key]
 
+def require_list_or_string(value: dict[str, Any], key: str, path: Path, context: str | None = None) -> list[Any]:
+    if key not in value:
+        raise ValidationError(f"{context or path}.{key} is required")
+    if isinstance(value[key], list):
+        return value[key]
+    elif isinstance(value[key], str):
+        return [value[key]]
+    else:
+        raise ValidationError(f"{context or path}.{key} must be a list or a string")
 
 if __name__ == "__main__":
     try:
