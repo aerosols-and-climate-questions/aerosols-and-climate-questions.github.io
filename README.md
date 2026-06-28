@@ -23,7 +23,7 @@ Each category has an `id`, `name`, and ordered `questions` array.
 
 Each question should include a stable `id`. `prompt` is required unless the question is only a multipart container (it has `parts` and no standalone interaction). Supported fields are:
 - `type`: optional for `basic`, required for `multiple-choice` and `numeric`.
-- `answer`: revealable answer text.
+- `answer`: revealable answer text. If your answer is a number, surround this with ""
 - `hint`: revealable hint text.
 - `image`: object with `src`, optional `alt`, and optional `caption`.
 - `parts`: nested list of subquestions, each following the same rules (`prompt` is optional for any item that itself has `parts`).
@@ -32,7 +32,10 @@ Each question should include a stable `id`. `prompt` is required unless the ques
 - `answerInfo`: numeric-only; optional extra text appended after the numeric answer when it is revealed or when a correct answer is submitted.
 - `units`: numeric-only; optional static label shown between the numeric answer box and the submit button.
 
-## Authoring workflow
+### Metadata
+- `lastUpdated`: The date that the question was last updated on. Ideally, give this in YYYY-MM-DD form, but be careful, anything that could be interpreted as a number (such as this) needs wrapping in ""..
+
+## Creating new questions
 1. Copy `data/source/chapter-template.yml` to a new file such as `data/source/chapter-02.yml`.
 2. Fill in the chapter title, category metadata, and questions.
 3. Run `python3 scripts/build_question_db.py --input data/source --output data/chapters`.

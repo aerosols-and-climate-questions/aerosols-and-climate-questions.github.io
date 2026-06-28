@@ -103,6 +103,7 @@ categories:
         type: basic
         prompt: Why might a single air inlet to measure aerosol utilise both a PM2.5 filter and a PM10 filter in series?
         answer: To avoid larger particles clogging the instrument.
+        lastUpdated: "2026-06-27"
       - id: question-a03
         prompt: An IAGOS aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 s cm-3.
         parts:  
@@ -122,3 +123,4 @@ categories:
         type: basic
         prompt: A scientist wishes to obtain a particle-size distribution of sodium chloride aerosol via an unheated inlet using an online technique. Aside from the ambient temperature and pressure, which atmospheric quantity should they measure?
         answer: Relative humidity. Sodium chloride is a strongly hygroscopic aerosol and will swell at high humidities. This can be corrected for using the hygroscopic growth factor, but the relative humidity must be known.
+        lastUpdated: "2026-06-27"
