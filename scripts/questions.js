@@ -272,6 +272,10 @@
       return createNumeric(question);
     }
 
+    if (question.type === "select-multiple") {
+      return createSelectMultiple(question);
+    }
+
     return null;
   }
 
@@ -336,6 +340,89 @@
       } else {
         result.textContent = "Incorrect. Try again or reveal the answer.";
       }
+    });
+
+    wrapper.appendChild(optionList);
+    wrapper.appendChild(submitButton);
+    wrapper.appendChild(result);
+    return wrapper;
+  }
+
+/**
+   * Build a select-multiple UI block. `question.options` is expected to
+   * be an array of HTML strings for each option and
+   * `question.correctIndex` indicates the correct option indices.
+   * The UI supports selecting multiple options and submitting to receive
+   * feedback. Selection visually highlights the chosen button.
+   */
+  function createSelectMultiple(question) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "smq";
+
+    const optionList = document.createElement("div");
+    optionList.className = "mcq-options";
+
+    const selectedIndices = new Set();
+
+    question.options.forEach((option, idx) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "option-button";
+      // Option may contain simple HTML (e.g. markup or math).
+      button.innerHTML = option;
+      // button.addEventListener("click", () => {
+      //   selectedIndex = idx;
+      //   // Remove selected class from all siblings then add it to the
+      //   // clicked button.
+      //   optionList.querySelectorAll("button").forEach((node) => {
+      //     node.classList.remove("selected");
+      //   });
+      //   button.classList.add("selected");
+      // });
+      button.addEventListener("click", () => {
+        if (selectedIndices.has(idx)) {
+          selectedIndices.delete(idx);
+          button.classList.remove("selected");
+        } else {
+          selectedIndices.add(idx);
+          button.classList.add("selected");
+        }
+      });
+      optionList.appendChild(button);
+    });
+
+    const submitButton = document.createElement("button");
+    submitButton.type = "button";
+    submitButton.className = "question-button";
+    submitButton.textContent = "Submit choice";
+
+    const result = document.createElement("p");
+    result.className = "mcq-result";
+
+    // submitButton.addEventListener("click", () => {
+    //   if (selectedIndex === -1) {
+    //     result.textContent = "Choose an option first.";
+    //   } else if (selectedIndex === question.correctIndex) {
+    //     result.textContent = "Correct.";
+    //   } else {
+    //     result.textContent = "Incorrect. Try again or reveal the answer.";
+    //   }
+    // });
+    submitButton.addEventListener("click", () => {
+      if (selectedIndices.size === 0) {
+          result.textContent = "Choose at least one option first.";
+          return;
+      }
+      
+      const correct = new Set(question.correctIndex);
+      //const correct = new Set(Array.isArray(question.correctIndex) ? question.correctIndex : [question.correctIndex]);
+      const isCorrect =
+        selectedIndices.size === correct.size &&
+        [...selectedIndices].every(i => correct.has(i));
+
+      result.textContent = isCorrect
+        ? "Correct."
+        : "Incorrect. Try again or reveal the answer.";
     });
 
     wrapper.appendChild(optionList);

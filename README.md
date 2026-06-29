@@ -75,11 +75,18 @@ For all questions, you can split them into multipart-ers.
 - Optional: `hint`, `image`, `parts`.
 
 ### `multiple-choice`
-- These are questions with as many answers as wanted.
+- These are questions where only one answer is correct from as many potential answers as wanted.
 - Required: `prompt`, `options`, `correctIndex`.
 - Optional: `answer`, `hint`, `image`, `parts`.
 - `options` must contain at least two strings.
-- `correctIndex` is zero-based.
+- `correctIndex` is the index of the correct answer. It is zero-based, so 0 corresponds to option (a), 1 to option (b), etc.
+
+### `select-multiple`
+- Required: `prompt`, `options`, `correctIndex`.
+- Optional: `answer`, `hint`, `image`, `parts`.
+- `options` must contain at least two strings.
+- `correctIndex` is a list of the indices of the correct answers. It is zero-based, so 0 corresponds to option (a), 1 to option (b), etc.
+- `correctIndex` should be formatted as a short list, e.g. `[0, 1, 3]` would correspond to all of (a), (b) and (d) being correct.
 
 ### `numeric`
 - These are questions with a numerical answer.
