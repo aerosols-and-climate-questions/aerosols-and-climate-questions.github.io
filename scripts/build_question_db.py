@@ -122,8 +122,8 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
         normalized: dict[str, Any] = {"id": question_id}
 
         question_type = question.get("type", "basic")
-        if question_type not in {"basic", "multiple-choice", "numeric"}:
-            raise ValidationError(f"{question_path}.type must be basic, multiple-choice, or numeric")
+        if question_type not in {"basic", "multiple-choice", "numeric", "select-multiple"}:
+            raise ValidationError(f"{question_path}.type must be basic, multiple-choice, numeric, or select-multiple")
         if question_type != "basic":
             normalized["type"] = question_type
 
@@ -161,6 +161,20 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
             correct_index = question["correctIndex"]
             if not isinstance(correct_index, int) or not (0 <= correct_index < len(options)):
                 raise ValidationError(f"{question_path}.correctIndex must point to an option")
+            normalized["correctIndex"] = correct_index
+
+        if question_type == "select-multiple":
+            options = require_list(question, "options", path, question_path)
+            if len(options) < 2:
+                raise ValidationError(f"{question_path}.options must contain at least two entries")
+            normalized["options"] = [require_plain_string(option, f"{question_path}.options") for option in options]
+            if "correctIndex" not in question:
+                raise ValidationError(f"{question_path}.correctIndex is required for select-multiple questions")
+            correct_index = question["correctIndex"]
+            if not isinstance(correct_index, list):
+                raise ValidationError(f"{question_path}.correctIndex must be a list")
+            if not all(isinstance(i, int) and 0 <= i < len(options) for i in correct_index):
+                raise ValidationError(f"{question_path}.correctIndex must point to valid options")
             normalized["correctIndex"] = correct_index
 
         if question_type == "numeric":
