@@ -68,7 +68,7 @@ You can also edit the JSON files directly in `data/chapters/` if you prefer.
 The minimal requirements are stable IDs, category grouping, and valid type-specific fields.
 
 ## Question template details
-For all questions, you can split them into multipart-ers.
+All questions can be split into multiple parts which can also adhere to one of these styles. All the metadata fields can be added to each question type.
 ### `basic`
 - These are basic question and answers with no input from the user.
 - Required: `prompt` unless this is used only as a multipart container.
@@ -81,13 +81,6 @@ For all questions, you can split them into multipart-ers.
 - `options` must contain at least two strings.
 - `correctIndex` is the index of the correct answer. It is zero-based, so 0 corresponds to option (a), 1 to option (b), etc.
 
-### `select-multiple`
-- Required: `prompt`, `options`, `correctIndex`.
-- Optional: `answer`, `hint`, `image`, `parts`.
-- `options` must contain at least two strings.
-- `correctIndex` is a list of the indices of the correct answers. It is zero-based, so 0 corresponds to option (a), 1 to option (b), etc.
-- `correctIndex` should be formatted as a short list, e.g. `[0, 1, 3]` would correspond to all of (a), (b) and (d) being correct.
-
 ### `numeric`
 - These are questions with a numerical answer.
 - Required: `prompt`, `answer`.
@@ -96,6 +89,13 @@ For all questions, you can split them into multipart-ers.
 - `tolerance` defaults to `0` if omitted.
 - `answerInfo` is shown after the numeric value in the reveal box and in the positive submit feedback.
 - `units` is a noninteractive label rendered between the answer box and the submit button.
+
+### `select-multiple`
+- Required: `prompt`, `options`, `correctIndex`.
+- Optional: `answer`, `hint`, `image`, `parts`.
+- `options` must contain at least two strings.
+- `correctIndex` is a list of the indices of the correct answers. It is zero-based, so 0 corresponds to option (a), 1 to option (b), etc.
+- `correctIndex` should be formatted as a short list, e.g. `[0, 1, 3]` would correspond to all of (a), (b) and (d) being correct.
 
 For multipart containers, parent `prompt` and `answer` are optional, and the same applies to any nested part that itself only groups further `parts`.
 
