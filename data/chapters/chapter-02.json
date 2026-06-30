@@ -28,7 +28,7 @@
           "type": "numeric",
           "prompt": "What is the value of π (pi)?",
           "hint": "Optional hint for numeric questions.",
-          "answer": "3.14",
+          "answer": 3.14,
           "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
           "tolerance": 0.01
         },
@@ -60,7 +60,7 @@
               "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
               "label": "(b)",
               "type": "numeric",
-              "answer": "9",
+              "answer": 9,
               "tolerance": 0
             }
           ]
@@ -69,7 +69,7 @@
           "id": "question-06",
           "type": "numeric",
           "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
-          "answer": "9.81",
+          "answer": 9.81,
           "answerInfo": "This is the conventional standard gravity.",
           "units": "m s^-2",
           "tolerance": 0.01
