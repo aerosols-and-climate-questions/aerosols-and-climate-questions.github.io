@@ -69,8 +69,24 @@
         },
         {
           "id": "question-r04",
-          "prompt": "Placeholder question for representation error.",
-          "answer": "Placeholder"
+          "type": "multiple-choice",
+          "prompt": "Which instrument combination would be most appropriate for measuring and understanding aerosol absorption?",
+          "hint": "Consider the size range and capabilities of each instrument.",
+          "answer": "See Sec. 9.1.4 for full details.",
+          "author": [
+            "Ken Carslaw",
+            "Erin Raif"
+          ],
+          "reviewer": [
+            "Ken Carslaw",
+            "Erin Raif"
+          ],
+          "options": [
+            "An OPC and a nephelometer",
+            "An SP2 and an OPC",
+            "An SP2 and a nephelometer"
+          ],
+          "correctIndex": 2
         },
         {
           "id": "question-r05",
