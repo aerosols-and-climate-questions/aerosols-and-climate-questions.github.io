@@ -131,7 +131,7 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
             normalized["prompt"] = require_string(question, "prompt", path, question_path)
         if "hint" in question:
             normalized["hint"] = require_string(question, "hint", path, question_path)
-        if "answer" in question:
+        if "answer" in question and question_type != "numeric":
             normalized["answer"] = require_string(question, "answer", path, question_path)
         if "lastUpdated" in question:
             normalized["lastUpdated"] = require_string(question, "lastUpdated", path, question_path)
@@ -182,6 +182,7 @@ def normalize_questions(questions: list[Any], path: Path, category_path: str) ->
                 raise ValidationError(f"{question_path}.answer is required for numeric questions")
             try:
                 float(str(question["answer"]))
+                normalized["answer"] = question["answer"]
             except ValueError as exc:
                 raise ValidationError(f"{question_path}.answer must be numeric") from exc
             if "answerInfo" in question:
@@ -216,7 +217,7 @@ def normalize_parts(parts: Any, path: Path, question_path: str) -> list[dict[str
             normalized_part["label"] = require_string(part, "label", path, part_path)
         if "type" in part and part["type"] != "basic":
             normalized_part["type"] = part["type"]
-        if "answer" in part:
+        if "answer" in part and part.get("type") != "numeric":
             normalized_part["answer"] = require_string(part, "answer", path, part_path)
         if "hint" in part:
             normalized_part["hint"] = require_string(part, "hint", path, part_path)
@@ -238,6 +239,15 @@ def normalize_parts(parts: Any, path: Path, question_path: str) -> list[dict[str
             if not isinstance(correct_index, int) or not (0 <= correct_index < len(options)):
                 raise ValidationError(f"{part_path}.correctIndex must point to an option")
             normalized_part["correctIndex"] = correct_index
+
+        if part.get("type") == "numeric":
+            if "answer" not in part:
+                raise ValidationError(f"{part_path}.answer is required for numeric questions")
+            try:
+                float(str(part["answer"]))
+                normalized_part["answer"] = part["answer"]
+            except ValueError as exc:
+                raise ValidationError(f"{part_path}.answer must be numeric") from exc
 
         if part.get("type") == "numeric" and "tolerance" in part:
             tolerance = part["tolerance"]
