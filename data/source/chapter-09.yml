@@ -51,9 +51,21 @@ categories:
           - Ken Carslaw
           - Erin Raif
       - id: question-r04
-        type: basic
-        prompt: Placeholder question for representation error.
-        answer: Placeholder
+        type: multiple-choice
+        prompt: Which instrument combination would be most appropriate for measuring and understanding aerosol absorption?
+        options:
+          - An OPC and a nephelometer
+          - An SP2 and an OPC
+          - An SP2 and a nephelometer
+        correctIndex: 2
+        answer: See Sec. 9.1.4 for full details.
+        hint: Consider the size range and capabilities of each instrument.
+        author:
+          - Ken Carslaw
+          - Erin Raif
+        reviewer:
+          - Ken Carslaw
+          - Erin Raif      
       - id: question-r05
         type: multiple-choice
         prompt: An air sampler uses a PM2.5 filter. What proportion of aerosols with diameter 2.5 µm would you expect to pass through this PM2.5 filter?
