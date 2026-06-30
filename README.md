@@ -6,6 +6,7 @@ __Contents__
 2. [I want to contribute a question](#how-to-contribute)
 3. [I want to suggest a correction](#suggest-a-fix)
 4. [Syntax for writing questions](#question-syntax)
+4. [Layout of the YAML files (where questions are written)](#yaml-layout)
 5. [Future plans](#future-plans)
 5. [Other project documentation](#other-project-documentation)
 
@@ -48,8 +49,7 @@ First you need to choose your question `type`. There are four types of questions
 
 Your question needs to be added to the YAML file. It's probably easiest to look at the template questions to get to grips with the syntax you need but a summary is below. Don't forget to add metadata! If you want to use LaTeX in questions or answers, you can render this by surrounding your LaTeX with `\\(...\\)` or `\\[...\\]`.
 
-### General YAML syntax
-To be added later.
+All questions require a unique ID. Our preference is to call these e.g. `c02-r01` for Chapter 2's first review question.
 
 ### `basic`
 __Required__ fields are `prompt` and `answer`.
@@ -59,6 +59,15 @@ __Optional__ fields are `hint` and `image`. Metadata is optional but preferred. 
 - `hint` - a text field for an optional hint which is hidden at first.
 - `image` - data structure for the inclusion of images. See [below](#images)
 - `prompt` - a text field for the question.
+
+Example:
+```
+- id: question-01
+  type: basic
+  prompt: What colour is the sky?
+  answer: Blue.
+  hint: Look up! (Unless you're doing this at night, in which case go to bed.)
+```
 
 ### `multiple-choice`
 __Required__ fields are `prompt`, `options` and `correctIndex`.
@@ -71,16 +80,40 @@ __Optional__ fields are `answer`, `hint` and `image`. Metadata is optional but p
 - `options` - an array with at least two strings. Exactly one must be correct. Include as many as needed. For aesthetic reasons, it's generally better to keep possible answers short.
 - `prompt` - a text field for the question.
 
+Example:
+```
+- id: question-02
+  type: multiple-choice
+  prompt: What is the third letter of the Greek alphabet?
+  options:
+    - \(\alpha\)
+    - \(\beta\)
+    - \(\gamma\)
+  correctIndex: 2
+  answer: It's \(\gamma\), which is the third letter of the Greek alphabet.
+```
+
 ### `numeric`
 __Required__ fields are `prompt` and `answer`.
 __Optional__  fields are `hint`, `image`, `tolerance`, `answerInfo` and `units`.
-- `answer` - a field containing a number representing the correct answer. To ensure this is interpreted correctly, surround it in quotation marks, e.g. `"3.14"`
+- `answer` - a field containing a number representing the correct answer.
 - `answerInfo` - a text field for supplemntary information to the answer. This can be revealed by the user for more information about how the answer was calculated.
 - `hint` - a text field for an optional hint which is hidden at first.
 - `image` - data structure for the inclusion of images. See [below](#images)
 - `prompt` - a text field for the question.
 - `tolerance` - a field containing a number which denotes the size of the tolerance you will permit around the answer, e.g. `0.005`. For some reason, you don't need to surround this in quotes - we'll investigate. Defaults to `0` if omitted.
 - `units` - a text field for a label rendered between the answer box and the submit button.
+
+Example:
+```
+- id: question-03
+  type: numeric
+  prompt: What is the value of π (pi)?
+  answer: 3.14
+  answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
+  tolerance: 0.01
+  hint: Optional hint for numeric questions.
+```
 
 ### `select-multiple`
 __Required__ fields are `prompt`, `options` and `correctIndex`.
@@ -93,8 +126,36 @@ __Optional__ fields are `answer`, `hint` and `image`. Metadata is optional but p
 - `options` - an array with at least two strings. At least one must be correct. Include as many as needed. For aesthetic reasons, it's generally better to keep possible answers short.
 - `prompt` - a text field for the question.
 
+Example:
+```
+- id: question-07
+  type: select-multiple
+  prompt: Which of the following are greenhouse gases?
+  options:
+    - Carbon dioxide (\(\mathrm{CO}_2\))
+    - Methane (\(\mathrm{CH}_4\))
+    - Oxygen (\(\mathrm{O}_2\))
+    - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
+  correctIndex: [0, 1, 3]
+  answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.
+```
+
 ### Multi-part questions
 Questions can also be split into multiple parts using the `parts` keyword. See the template for an implementation.
+
+Example:
+```
+- id: question-05
+  parts:
+    - label: (a)
+      prompt: Write one short sentence explaining what makes a question multi-part.
+      answer: A multi-part question has two or more subquestions that are answered separately.
+    - label: (b)
+      type: numeric
+      prompt: Evaluate \(\ 2^3 + 1 \).
+      answer: 9
+      tolerance: 0
+```
 
 ### Images
 If a question uses an image, put the asset in `imgs/` and reference it from the question file. Please consider accessibility and add alt text. 
@@ -105,6 +166,22 @@ __Optional__ fields: `alt` and `caption`.
 - `alt` - alt text for screen readers.
 - `caption` - a caption displayed below the image.
 - `src` - a relative path to the image which works from the chapter page shell. e.g. `../imgs/my_image.jpg`
+
+Example:
+```
+- id: question-04
+  type: multiple-choice
+  prompt: Is this chart about radiative forcings or climate feedbacks?
+  image:
+    src: ../imgs/forcings.png
+    alt: Sample forcing chart used to demonstrate image questions
+    caption: Images stay inside the question box and keep their proportions.
+  options:
+    - Feedbacks
+    - Forcings
+  correctIndex: 1
+  answer: It's forcings, shown on the x-axis
+```
 
 ### Metadata
 - `lastUpdated`: The date that the question was last updated on. Ideally, give this in YYYY-MM-DD form, but be careful, anything that could be interpreted as a number (such as this) needs wrapping in ""..
@@ -122,6 +199,27 @@ reference:
     Reference, M. Y. ...
   - >-
     Extra-Source, A. N. ...
+```
+## YAML layout
+The YAML files are designed to be human readable and is formed of indented blocks with variables. Here's an example of a part of a block below, but it's probably easiest to look at a template to work out what to do.
+```
+chapterTitle: Chapter 02
+categories:
+  - id: review
+    name: Review
+    questions:
+      - id: question-r01
+        type: basic
+        prompt: What colour is the sky?
+        answer: Blue.
+        hint: Look up! (Unless you're doing this at night, in which case go to bed.)
+```
+`key:value` pairs in a dictionary are split by a colon. Each new item starts with a hyphen and space. If that item is a dictionary, new `key:value` pairs do not have a hyphen.
+Make sure your question is in the right part of the nest. If it's a "review" question, it needs to be under "review".
+YAML is quite smart and will work out whether you've written a string or a number. One thing you have to watch for though is that it won't automatically parse `:`. It's best to wrap any text with a colon in `""`, or put it on a new, indented line using `>-`, e.g.
+```
+reference: >-
+  Reference, M. Y. etc...
 ```
 
 ## Future plans
