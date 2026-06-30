@@ -138,10 +138,10 @@ categories:
           - label: (a)
             type: numeric
             prompt: Given that the measurement was made at 250 hPa and -19.0 °C, calculate the ambient concentration recorded by the instrument. 
-            answer: "40.8"
+            answer: 40.8
             units: cm-3
             tolerance: 0.1
-            answerInfo: Using the ideal gas law, \(PV=nRT\), the ratio between the volume of ambient air and air at STP is \(T_{\mathrm{amb.}}P_{\mathrm{STP}}/T_{\mathrm{STP}}P_{\mathrm{amb.}}\). To convert between STP and ambient concentrations, divide by this ratio. Since this was IAGOS data, found on EDAS (Sec. 9.3.2), the value of STP is 1013 hPa. If you used the IUPAC value of 1000 hPa, you would have calculated 41.3 cm-3. That's probably close enough for our purposes, but it could lead to confusion in some cases!
+            answerInfo: 40.8 cm\(^{-3}\). Using the ideal gas law, \(PV=nRT\), the ratio between the volume of ambient air and air at STP is \(T_{\mathrm{amb.}}P_{\mathrm{STP}}/T_{\mathrm{STP}}P_{\mathrm{amb.}}\). To convert between STP and ambient concentrations, divide by this ratio. Since this was IAGOS data, found on EDAS (Sec. 9.3.2), the value of STP is 1013 hPa. If you used the IUPAC value of 1000 hPa, you would have calculated 41.3 cm-3. That's probably close enough for our purposes, but it could lead to confusion in some cases!
           - label: (b)
             type: basic
             prompt: When using these measurements to set a vertical profile of aerosol concentration, a modeller fails to spot that the concentration is in s cm-3, instead thinking it is in cm-3. What would be the consequence of this error?
