@@ -2,57 +2,66 @@
   "chapterTitle": "Chapter Template",
   "categories": [
     {
-      "id": "category-name",
-      "name": "Category Name",
+      "id": "review",
+      "name": "Review",
       "questions": [
         {
-          "id": "template-basic-1",
-          "prompt": "Write your question prompt here.",
-          "hint": "Optional hint text. Remove this field if no hint is needed.",
-          "answer": "Write the answer here."
+          "id": "template-r01",
+          "prompt": "What colour is the sky?",
+          "hint": "Look up! (Unless you're doing this at night, in which case go to bed.)",
+          "answer": "Blue."
         },
         {
-          "id": "template-mcq-1",
-          "prompt": "Write a multiple-choice question here.",
+          "id": "template-r02",
           "type": "multiple-choice",
-          "answer": "Optional full explanation shown after submission.",
+          "prompt": "What is the third letter of the Greek alphabet?",
+          "answer": "It's \\(\\gamma\\), which is the third letter of the Greek alphabet.",
           "options": [
-            "Option A",
-            "Option B",
-            "Option C"
+            "\\(\\alpha\\)",
+            "\\(\\beta\\)",
+            "\\(\\gamma\\)"
           ],
-          "correctIndex": 1
-        },
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "name": "Application",
+      "questions": [
         {
-          "id": "template-numeric-1",
-          "prompt": "Write a numeric-answer question here.",
+          "id": "template-a01",
           "type": "numeric",
+          "prompt": "What is the value of π (pi)?",
           "hint": "Optional hint for numeric questions.",
-          "answer": "3.14",
+          "answer": 3.14,
+          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
           "tolerance": 0.01
         },
         {
-          "id": "template-image-1",
-          "prompt": "This sample uses an uploaded image. Which category looks like the largest positive forcing in the figure?",
+          "id": "template-a02",
           "type": "multiple-choice",
-          "answer": "Carbon dioxide appears to be the largest positive forcing in the sample figure.",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
           "image": {
             "src": "../imgs/forcings.png",
             "alt": "Sample forcing chart used to demonstrate image questions",
             "caption": "Images stay inside the question box and keep their proportions."
           },
           "options": [
-            "Carbon dioxide",
-            "Aerosols",
-            "Contrails",
-            "Land use change"
+            "Feedbacks",
+            "Forcings"
           ],
-          "correctIndex": 0
-        },
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "mastery",
+      "name": "Mastery",
+      "questions": [
         {
-          "id": "template-multipart-1",
-          "prompt": "This sample shows a multi-part question.",
-          "answer": "Part (a) the prompt is split into separate subquestions. Part (b) \\\\(2^3 + 1 = 9\\\\).",
+          "id": "template-m01",
           "parts": [
             {
               "prompt": "Write one short sentence explaining what makes a question multi-part.",
@@ -60,12 +69,38 @@
               "answer": "A multi-part question has two or more subquestions that are answered separately."
             },
             {
-              "prompt": "Evaluate \\\\(2^3 + 1\\\\).",
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
               "label": "(b)",
               "type": "numeric",
-              "answer": "9",
+              "answer": 9,
               "tolerance": 0
             }
+          ]
+        },
+        {
+          "id": "template-m02",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": 9.81,
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-m03",
+          "type": "select-multiple",
+          "prompt": "Which of the following are greenhouse gases?",
+          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
+          "options": [
+            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
+            "Methane (\\(\\mathrm{CH}_4\\))",
+            "Oxygen (\\(\\mathrm{O}_2\\))",
+            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
           ]
         }
       ]
