@@ -6,9 +6,9 @@ __Contents__
 2. [I want to contribute a question](#how-to-contribute)
 3. [I want to suggest a correction](#suggest-a-fix)
 4. [Syntax for writing questions](#question-syntax)
-4. [Layout of the YAML files (where questions are written)](#yaml-layout)
-5. [Future plans](#future-plans)
-5. [Other project documentation](#other-project-documentation)
+5. [Layout of the YAML files (where questions are written)](#yaml-layout)
+6. [Future plans](#future-plans)
+7. [Other project documentation](#other-project-documentation)
 
 ## About the project
 Inspired by the textbook _Aerosols and Climate_ (Ken Carslaw, 2022, Elsevier), we wanted to produce an open-source bank of questions which test understanding and tackle problems in aerosols and climate. Structurally, these questions follow the book, with topics arranged in the order of the chapters of the book, allowing this to form a companion to students and researchers following the text as part of their studies. However, some questions expand beyond upon the scope of the book text.
