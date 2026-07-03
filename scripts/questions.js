@@ -99,17 +99,22 @@
       const heading = document.createElement("h2");
       heading.textContent = category.name;
       section.appendChild(heading);
+      
+      if (category.questions.length === 0) {
+        const noQuestions = document.createElement("p");
+        noQuestions.textContent = `Sorry, we've not uploaded any ${category.name.toLowerCase()} questions yet!`;
+        section.appendChild(noQuestions);
+      } else {
+        category.questions.forEach((question, index) => {
+          const card = document.createElement("article");
+          card.className = "question-card";
 
-      category.questions.forEach((question, index) => {
-        const card = document.createElement("article");
-        card.className = "question-card";
+          // Label questions Q1, Q2, ... and pass into the renderer.
+          renderQuestionContent(card, question, `Q${index + 1}`);
 
-        // Label questions Q1, Q2, ... and pass into the renderer.
-        renderQuestionContent(card, question, `Q${index + 1}`);
-
-        section.appendChild(card);
-      });
-
+          section.appendChild(card);
+        });
+      }
       root.appendChild(section);
     });
 

@@ -1,0 +1,20 @@
+{
+  "chapterTitle": "Chapter 12",
+  "categories": [
+    {
+      "id": "review",
+      "name": "Review",
+      "questions": []
+    },
+    {
+      "id": "application",
+      "name": "Application",
+      "questions": []
+    },
+    {
+      "id": "mastery",
+      "name": "Mastery",
+      "questions": []
+    }
+  ]
+}
