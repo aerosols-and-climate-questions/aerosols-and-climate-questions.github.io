@@ -47,7 +47,7 @@ First you need to choose your question `type`. There are four types of questions
 - [`numeric`](#numeric): Questions which can be answered with a number. For example, Q: "To the nearest 1%, what mole fraction of dry air is nitrogen?". A: 78. Questions like these can optionally display the units and have a tolerance built in.
 - [`select-multiple`](#select-multiple): Similar to multiple choice, except at least one answer is correct and all correct answers must be selected by the user. For example, Q: "Choose the two greenhouse gases in this list". (a) Nitrogen, (b) Oxygen, (c) Carbon Dioxide, (d) Methane.
 
-Your question needs to be added to the YAML file. It's probably easiest to look at the template questions to get to grips with the syntax you need but a summary is below. Don't forget to add metadata! If you want to use LaTeX in questions or answers, you can render this by surrounding your LaTeX with `\\(...\\)` or `\\[...\\]`.
+Your question needs to be added to the YAML file. It's probably easiest to look at the template questions to get to grips with the syntax you need but a summary is below. Don't forget to add metadata! If you want to use LaTeX in questions or answers, you can render this by surrounding your LaTeX with `\\(...\\)` or `\\[...\\]`. You can also use HTML tags, i.e. `<>`.
 
 All questions require a unique ID. Our preference is to call these e.g. `c02-r01` for Chapter 2's first review question.
 
