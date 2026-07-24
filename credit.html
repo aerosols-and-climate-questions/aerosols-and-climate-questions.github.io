@@ -15,13 +15,21 @@
     <main class="content">
       <section>
         <h2>Author credits</h2>
-            <p>Questions on Aerosols and Climate is a collaborative project. Questions were edited by Ken Carslaw, who wrote many of the questions. Authors of questions in each chapter are listed below. Eventually, we'll turn this into a proper live table of contributors?</p>
-            <ul class="chapter-list">
-                <li><a href="chapters/chapter-01.html">1. Chapter Template (for question writers only).</a> Template questions written by Copilot.</li>
-                <li><a href="chapters/chapter-02.html">2. Aerosol in the climate system.</a> Erin Raif and Ken Carslaw.</li>
-                <li><a href="chapters/chapter-09.html">9. Measurement of ambient aerosol properties.</a> Erin Raif and Ken Carslaw.</li>
-                <!-- <li><a href="chapters/chapter-template.html">Chapter Template (copy for new chapters)</a></li> -->
-            </ul>
+            <p>Questions on Aerosols and Climate is a collaborative project. Expand a contributor to view the questions they authored and reviewed.</p>
+            <table class="credits-table">
+              <thead>
+                <tr>
+                  <th scope="col">Contributor</th>
+                  <th scope="col">Authored</th>
+                  <th scope="col">Reviewed</th>
+                </tr>
+              </thead>
+              <tbody id="credits-contributors">
+                <tr>
+                  <td colspan="3">Loading contributor credits…</td>
+                </tr>
+              </tbody>
+            </table>
         <h2>Image credits</h2>
         <ul class="chapter-list">
             <li>Sample images - Thesis of Erin Raif (2026), based on Forster et al. 2021 Ch7 of IPCC AR6.</li>
@@ -34,5 +42,6 @@
         The questions here are open-source and licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. You are free to share and adapt the questions, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
       </section>
     </main>
+    <script src="scripts/credits.js"></script>
   </body>
 </html>

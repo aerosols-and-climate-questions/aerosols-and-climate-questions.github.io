@@ -28,6 +28,45 @@ body {
   margin: 0.5rem 0;
 }
 
+.credits-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.credits-table th,
+.credits-table td {
+  border-bottom: 1px solid #ececf2;
+  padding: 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.credits-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.credits-toggle {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: #1d3bbf;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.credits-details td {
+  background: #f7f8ff;
+}
+
+.credits-contribution-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
 .category-section {
   background: #ffffff;
   border-radius: 8px;
