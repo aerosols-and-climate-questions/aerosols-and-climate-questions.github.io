@@ -118,8 +118,65 @@
       root.appendChild(section);
     });
 
+    const references = collectChapterReferences(chapterConfig.categories);
+    if (references.length > 0) {
+      root.appendChild(createReferencesSection(references));
+    }
+
     // Typeset any math if MathJax is present.
     renderMath();
+  }
+
+  function collectChapterReferences(categories) {
+    const references = new Set();
+
+    categories.forEach((category) => {
+      if (!Array.isArray(category.questions)) {
+        return;
+      }
+      category.questions.forEach((question) => {
+        collectQuestionReferences(question, references);
+      });
+    });
+
+    return Array.from(references).sort((left, right) =>
+      left.localeCompare(right, undefined, { sensitivity: "base" }),
+    );
+  }
+
+  function collectQuestionReferences(question, referenceSet) {
+    if (Array.isArray(question.reference)) {
+      question.reference.forEach((reference) => {
+        if (typeof reference === "string" && reference.trim()) {
+          referenceSet.add(reference.trim());
+        }
+      });
+    }
+
+    if (Array.isArray(question.parts)) {
+      question.parts.forEach((part) => {
+        collectQuestionReferences(part, referenceSet);
+      });
+    }
+  }
+
+  function createReferencesSection(references) {
+    const section = document.createElement("section");
+    section.className = "category-section";
+
+    const heading = document.createElement("h2");
+    heading.textContent = "References";
+    section.appendChild(heading);
+
+    const list = document.createElement("ol");
+    references.forEach((reference) => {
+      const item = document.createElement("li");
+      item.textContent = reference;
+      list.appendChild(item);
+    });
+    section.appendChild(list);
+
+    return section;
   }
 
   /**
