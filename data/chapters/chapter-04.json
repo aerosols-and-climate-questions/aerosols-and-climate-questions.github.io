@@ -4,17 +4,107 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-r01",
+          "prompt": "What colour is the sky?",
+          "hint": "Look up! (Unless you're doing this at night, in which case go to bed.)",
+          "answer": "Blue."
+        },
+        {
+          "id": "template-r02",
+          "type": "multiple-choice",
+          "prompt": "What is the third letter of the Greek alphabet?",
+          "answer": "It's \\(\\gamma\\), which is the third letter of the Greek alphabet.",
+          "options": [
+            "\\(\\alpha\\)",
+            "\\(\\beta\\)",
+            "\\(\\gamma\\)"
+          ],
+          "correctIndex": 2
+        }
+      ]
     },
     {
       "id": "application",
       "name": "Application",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-a01",
+          "type": "numeric",
+          "prompt": "What is the surface area of an aerosol distribution comprised of an Aitken mode and an accumulation mode (Aitken mode, N = 400 cm\\(^{-3}\\), mode diameter = 20 nm, \\(\\sigma\\) = 1.5; accumulation mode, N = 100 cm\\(^{-3}\\), mode diameter = 200 nm, \\(\\sigma\\) = 1.7)?",
+          "hint": "Optional hint for numeric questions.",
+          "answer": 0.0052,
+          "answerInfo": "Use equation xx to calculate... This answer is not yet correct, but it is a placeholder for now.",
+          "units": "\\(\\mu\\)m\\(^2\\) cm\\(^{-3}\\)",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-a02",
+          "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
+          "image": {
+            "src": "../imgs/forcings.png",
+            "alt": "Sample forcing chart used to demonstrate image questions",
+            "caption": "Images stay inside the question box and keep their proportions."
+          },
+          "options": [
+            "Feedbacks",
+            "Forcings"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-m01",
+          "parts": [
+            {
+              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "label": "(a)",
+              "answer": "A multi-part question has two or more subquestions that are answered separately."
+            },
+            {
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
+              "label": "(b)",
+              "type": "numeric",
+              "answer": 9,
+              "tolerance": 0
+            }
+          ]
+        },
+        {
+          "id": "template-m02",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": 9.81,
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-m03",
+          "type": "select-multiple",
+          "prompt": "Which of the following are greenhouse gases?",
+          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
+          "options": [
+            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
+            "Methane (\\(\\mathrm{CH}_4\\))",
+            "Oxygen (\\(\\mathrm{O}_2\\))",
+            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
+          ]
+        }
+      ]
     }
   ]
 }
