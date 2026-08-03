@@ -25,7 +25,7 @@
           "id": "question-r02",
           "type": "multiple-choice",
           "prompt": "Under cloud-free conditions, aerosol reduces the solar radiation at the surface by approximately 8.5 W m\\(^{-2}\\). Approximately what percentage of this is due to scattering and what percentage is due to absorption?",
-          "answer": ". Note that there is a difference between clear-sky (cloud-free) conditions and all-sky (partly cloudy) conditions (like Earth as a whole). The numbers in Ch 2 are from Fig 2.6 and refer to cloud-free conditions. The quantities are developed further in Ch 11 (sections 11.3.3 for cloud-free and 11.3.4 for all-sky).",
+          "answer": "Note that there is a difference between clear-sky (cloud-free) conditions and all-sky (partly cloudy) conditions (like Earth as a whole). The numbers in Ch 2 are from Fig 2.6 and refer to cloud-free conditions. The quantities are developed further in Ch 11 (sections 11.3.3 for cloud-free and 11.3.4 for all-sky).",
           "author": [
             "Erin Raif"
           ],
