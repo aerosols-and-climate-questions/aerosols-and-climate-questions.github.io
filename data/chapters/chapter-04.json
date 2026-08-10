@@ -2,30 +2,6 @@
   "chapterTitle": "Chapter 04",
   "categories": [
     {
-      "id": "review",
-      "name": "Review",
-      "questions": [
-        {
-          "id": "template-r01",
-          "prompt": "What colour is the sky?",
-          "hint": "Look up! (Unless you're doing this at night, in which case go to bed.)",
-          "answer": "Blue."
-        },
-        {
-          "id": "template-r02",
-          "type": "multiple-choice",
-          "prompt": "What is the third letter of the Greek alphabet?",
-          "answer": "It's \\(\\gamma\\), which is the third letter of the Greek alphabet.",
-          "options": [
-            "\\(\\alpha\\)",
-            "\\(\\beta\\)",
-            "\\(\\gamma\\)"
-          ],
-          "correctIndex": 2
-        }
-      ]
-    },
-    {
       "id": "application",
       "name": "Application",
       "questions": [
@@ -33,27 +9,27 @@
           "id": "question-a01",
           "type": "numeric",
           "prompt": "What is the surface area of an aerosol distribution comprised of an Aitken mode and an accumulation mode (Aitken mode, N = 400 cm\\(^{-3}\\), mode diameter = 20 nm, \\(\\sigma\\) = 1.5; accumulation mode, N = 100 cm\\(^{-3}\\), mode diameter = 200 nm, \\(\\sigma\\) = 1.7)?",
-          "hint": "Optional hint for numeric questions.",
+          "hint": "We're going to write a hint here.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Erin Raif"
+          ],
           "answer": 0.0052,
-          "answerInfo": "Use equation xx to calculate... This answer is not yet correct, but it is a placeholder for now.",
+          "answerInfo": "This isn't the answer. We just let AI hallucinate one as a placeholder because we'll edit this together.",
           "units": "\\(\\mu\\)m\\(^2\\) cm\\(^{-3}\\)",
-          "tolerance": 0.01
+          "tolerance": 0.001
         },
         {
-          "id": "template-a02",
-          "type": "multiple-choice",
-          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
-          "answer": "It's forcings, shown on the x-axis",
-          "image": {
-            "src": "../imgs/forcings.png",
-            "alt": "Sample forcing chart used to demonstrate image questions",
-            "caption": "Images stay inside the question box and keep their proportions."
-          },
-          "options": [
-            "Feedbacks",
-            "Forcings"
-          ],
-          "correctIndex": 1
+          "id": "question-a02",
+          "type": "numeric",
+          "prompt": "(Need to convert to parts). The quantity \\(N_{50}\\) (the number of particles larger than a dry diameter of 50 nm) is often used as a proxy for the cloud condensation nucleus (CCN) concentration. (a) Calculate \\(N_{50}\\) for a lognormal accumulation mode distribution of median diameter = 200 nm, width \\(\\sigma\\) = 1.6 and number concentration = 100 cm\\(^{-3}\\). (b) The N50 concentration assumes that the particles are dry (zero water content) but the particles in the measured size distribution actually contained 30% water by mass. Would this unaccounted-for water increase or decrease N50?",
+          "hint": "Use the erf function defined in table 4.1.",
+          "answer": 25.0,
+          "answerInfo": "Use equation xx to calculate... This answer is not yet correct, but it is a placeholder for now.",
+          "units": "cm\\(^{-3}\\)",
+          "tolerance": 1.9
         }
       ]
     },
@@ -62,47 +38,10 @@
       "name": "Mastery",
       "questions": [
         {
-          "id": "template-m01",
-          "parts": [
-            {
-              "prompt": "Write one short sentence explaining what makes a question multi-part.",
-              "label": "(a)",
-              "answer": "A multi-part question has two or more subquestions that are answered separately."
-            },
-            {
-              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
-              "label": "(b)",
-              "type": "numeric",
-              "answer": 9,
-              "tolerance": 0
-            }
-          ]
-        },
-        {
-          "id": "template-m02",
-          "type": "numeric",
-          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
-          "answer": 9.81,
-          "answerInfo": "This is the conventional standard gravity.",
-          "units": "m s^-2",
-          "tolerance": 0.01
-        },
-        {
-          "id": "template-m03",
-          "type": "select-multiple",
-          "prompt": "Which of the following are greenhouse gases?",
-          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
-          "options": [
-            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
-            "Methane (\\(\\mathrm{CH}_4\\))",
-            "Oxygen (\\(\\mathrm{O}_2\\))",
-            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
-          ],
-          "correctIndex": [
-            0,
-            1,
-            3
-          ]
+          "id": "question-m01",
+          "prompt": "Daily measurements of CCN are available at the surface on Hawaii for a full year. You want to compare these measurements with your model, but you have model output for a different year. Your model is be biased high by a factor of 2 against these measurements. Should you dismiss this finding as statistically unreliable or start investigating the cause of the bias?",
+          "hint": "Think about whether the bias is likely to be significant compared to the uncertainty associated with using measurements from a different year.",
+          "answer": "You should start investigating the cause of the bias. The model and measurements are for different years, so there may be interannual variability in CCN concentrations. However, a factor of 2 bias is significant compared to the expected interannual variability at Hawaii. This is shown in figure 4.12, where the standard deviation of the annual mean CCN concentration is only 15% of the mean. Therefore, the model bias is likely to be real and should be investigated."
         }
       ]
     }
