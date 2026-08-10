@@ -10,6 +10,9 @@
           "type": "numeric",
           "prompt": "What fraction of a gas will be present in the particulate phase if it has an effective Henry’s law constant of 1 mol m\\(^{-3}\\) Pa\\(^{-1}\\), the temperature is 283 K and the particle concentration in air is 10 \\(\\mu\\)g m\\(^{-3}\\)? Assume a particle density of 1400 kg m\\(^{-3}\\).",
           "hint": "See box 5.2",
+          "author": [
+            "Ken Carslaw"
+          ],
           "answer": 0.1
         },
         {
@@ -18,6 +21,9 @@
           "prompt": "Which of the following descriptions of the behaviour of sulphuric acid (H\\(_2\\)SO\\(_4\\)) is correct?",
           "hint": "Equation 5.9 and section 5.2.1.1 will help.",
           "answer": "SO\\(_2\\) oxidation in the gas phase produces H\\(_2\\)SO\\(_4\\) on the timescale of a few days. The H\\(_2\\)SO\\(_4\\) condenses on aerosol particles on the timescale of hours, therefore only a few percent of the H\\(_2\\)SO\\(_4\\) remains in the gas phase in steady state. The balance equations are...",
+          "author": [
+            "Ken Carslaw"
+          ],
           "options": [
             "SO\\(_2\\) oxidation in the gas phase by OH radicals produces gas phase H2SO4 on the timescale of a few days. The H\\(_2\\)SO\\(_4\\) is effectively 100% soluble in aerosol particles, therefore only about 0.00001% of the H\\(_2\\)SO\\(_4\\) remains in the gas phase.",
             "SO\\(_2\\) oxidation in the gas phase by OH radicals produces gas phase H\\(_2\\)SO\\(_4\\) on the timescale of a few days. The H\\(_2\\)SO\\(_4\\) condenses on aerosol particles on the timescale of hours, therefore only a few percent of the H\\(_2\\)SO\\(_4\\) remains in the gas phase in steady state.",
@@ -28,6 +34,9 @@
         },
         {
           "id": "question-r03",
+          "author": [
+            "Ken Carslaw"
+          ],
           "parts": [
             {
               "prompt": "What is the steady state gas phase concentration of H2SO4 if it is produced by reaction of SO2 with OH (rate constant = …, OH concentration = 10^6 cm-3) and condenses on particles with a surface area of xx? Assume that gas-particle transfer is in the kinetic regime.",
@@ -46,6 +55,9 @@
         },
         {
           "id": "question-r04",
+          "author": [
+            "Ken Carslaw"
+          ],
           "parts": [
             {
               "prompt": "What happens to a particle size distribution (particles per size class plotted against linear diameter) when condensation of a gas occurs, assuming no other processes are occurring? Assume the particles are sufficiently small to be in the kinetic regime.",

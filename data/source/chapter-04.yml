@@ -21,6 +21,7 @@ categories:
         answerInfo: Use equation xx to calculate... This answer is not yet correct, but it is a placeholder for now.
         tolerance: 1.9
         hint: Use the erf function defined in table 4.1.
+        author: Ken Carslaw
   - id: mastery
     name: Mastery
     questions:
@@ -29,3 +30,4 @@ categories:
         prompt: Daily measurements of CCN are available at the surface on Hawaii for a full year. You want to compare these measurements with your model, but you have model output for a different year. Your model is be biased high by a factor of 2 against these measurements. Should you dismiss this finding as statistically unreliable or start investigating the cause of the bias?  
         answer: You should start investigating the cause of the bias. The model and measurements are for different years, so there may be interannual variability in CCN concentrations. However, a factor of 2 bias is significant compared to the expected interannual variability at Hawaii. This is shown in figure 4.12, where the standard deviation of the annual mean CCN concentration is only 15% of the mean. Therefore, the model bias is likely to be real and should be investigated.
         hint: Think about whether the bias is likely to be significant compared to the uncertainty associated with using measurements from a different year.
+        author: Ken Carslaw
