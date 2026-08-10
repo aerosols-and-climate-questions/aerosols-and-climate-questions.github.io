@@ -7,9 +7,25 @@ categories:
         type: numeric
         prompt: What is the surface area of an aerosol distribution comprised of an Aitken mode and an accumulation mode (Aitken mode, N = 400 cm\(^{-3}\), mode diameter = 20 nm, \(\sigma\) = 1.5; accumulation mode, N = 100 cm\(^{-3}\), mode diameter = 200 nm, \(\sigma\) = 1.7)?
         answer: 0.0052 
-        units: \(\mu\)m\(^2\) cm\(^{-3}\) 
+        units: \(\mu\)m\(^2\) cm\(^{-3}\)
         answerInfo: This isn't the answer. We just let AI hallucinate one as a placeholder because we'll edit this together.
         tolerance: 0.001
         hint: We're going to write a hint here.
         author: Ken Carslaw
         reviewer: Erin Raif
+      - id: question-a02
+        type: numeric
+        prompt: (Need to convert to parts). The quantity \(N_{50}\) (the number of particles larger than a dry diameter of 50 nm) is often used as a proxy for the cloud condensation nucleus (CCN) concentration. (a) Calculate \(N_{50}\) for a lognormal accumulation mode distribution of median diameter = 200 nm, width \(\sigma\) = 1.6 and number concentration = 100 cm\(^{-3}\). (b) The N50 concentration assumes that the particles are dry (zero water content) but the particles in the measured size distribution actually contained 30% water by mass. Would this unaccounted-for water increase or decrease N50?
+        answer: 25.0 
+        units: cm\(^{-3}\) 
+        answerInfo: Use equation xx to calculate... This answer is not yet correct, but it is a placeholder for now.
+        tolerance: 1.9
+        hint: Use the erf function defined in table 4.1.
+  - id: mastery
+    name: Mastery
+    questions:
+      - id: question-m01
+        type: basic
+        prompt: Daily measurements of CCN are available at the surface on Hawaii for a full year. You want to compare these measurements with your model, but you have model output for a different year. Your model is be biased high by a factor of 2 against these measurements. Should you dismiss this finding as statistically unreliable or start investigating the cause of the bias?  
+        answer: You should start investigating the cause of the bias. The model and measurements are for different years, so there may be interannual variability in CCN concentrations. However, a factor of 2 bias is significant compared to the expected interannual variability at Hawaii. This is shown in figure 4.12, where the standard deviation of the annual mean CCN concentration is only 15% of the mean. Therefore, the model bias is likely to be real and should be investigated.
+        hint: Think about whether the bias is likely to be significant compared to the uncertainty associated with using measurements from a different year.
