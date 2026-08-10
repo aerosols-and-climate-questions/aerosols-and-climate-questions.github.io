@@ -4,17 +4,149 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-r01",
+          "type": "numeric",
+          "prompt": "What fraction of a gas will be present in the particulate phase if it has an effective Henry’s law constant of 1 mol m\\(^{-3}\\) Pa\\(^{-1}\\), the temperature is 283 K and the particle concentration in air is 10 \\(\\mu\\)g m\\(^{-3}\\)? Assume a particle density of 1400 kg m\\(^{-3}\\).",
+          "hint": "See box 5.2",
+          "answer": 0.1
+        },
+        {
+          "id": "question-r02",
+          "type": "multiple-choice",
+          "prompt": "Which of the following descriptions of the behaviour of sulphuric acid (H\\(_2\\)SO\\(_4\\)) is correct?",
+          "hint": "Equation 5.9 and section 5.2.1.1 will help.",
+          "answer": "SO\\(_2\\) oxidation in the gas phase produces H\\(_2\\)SO\\(_4\\) on the timescale of a few days. The H\\(_2\\)SO\\(_4\\) condenses on aerosol particles on the timescale of hours, therefore only a few percent of the H\\(_2\\)SO\\(_4\\) remains in the gas phase in steady state. The balance equations are...",
+          "options": [
+            "SO\\(_2\\) oxidation in the gas phase by OH radicals produces gas phase H2SO4 on the timescale of a few days. The H\\(_2\\)SO\\(_4\\) is effectively 100% soluble in aerosol particles, therefore only about 0.00001% of the H\\(_2\\)SO\\(_4\\) remains in the gas phase.",
+            "SO\\(_2\\) oxidation in the gas phase by OH radicals produces gas phase H\\(_2\\)SO\\(_4\\) on the timescale of a few days. The H\\(_2\\)SO\\(_4\\) condenses on aerosol particles on the timescale of hours, therefore only a few percent of the H\\(_2\\)SO\\(_4\\) remains in the gas phase in steady state.",
+            "SO\\(_2\\) oxidation in the gas phase produces H\\(_2\\)SO\\(_4\\) on the timescale of minutes. The H\\(_2\\)SO\\(_4\\) condenses on aerosol particles on the timescale of seconds, therefore only a few percent of the H\\(_2\\)SO\\(_4\\) remains in the gas phase in steady state.",
+            "SO\\(_2\\) gas is soluble in aerosol particles and therefore condenses rapidly and subsequently undergoes rapid oxidation by hydrogen peroxide in the particles, producing aerosol sulphate."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r03",
+          "parts": [
+            {
+              "prompt": "What is the steady state gas phase concentration of H2SO4 if it is produced by reaction of SO2 with OH (rate constant = …, OH concentration = 10^6 cm-3) and condenses on particles with a surface area of xx? Assume that gas-particle transfer is in the kinetic regime.",
+              "label": "(a)",
+              "type": "numeric",
+              "answer": "1.0e5",
+              "tolerance": 1,
+              "units": "molecules cm^-3"
+            },
+            {
+              "prompt": "For the same surface area, how would the steady state concentration be affected if the particles were sufficiently large for gas transport to be in the diffusive regime?",
+              "label": "(b)",
+              "answer": "The steady state concentration would be higher because the condensation rate would be slower in the diffusive regime."
+            }
+          ]
+        },
+        {
+          "id": "question-r04",
+          "parts": [
+            {
+              "prompt": "What happens to a particle size distribution (particles per size class plotted against linear diameter) when condensation of a gas occurs, assuming no other processes are occurring? Assume the particles are sufficiently small to be in the kinetic regime.",
+              "label": "(a)",
+              "type": "multiple-choice",
+              "answer": "The distribution shifts to larger size and maintains its shape. The condensation of a gas onto particles increases their size. In the kinetic regime, the condensation rate is independent of particle size. Therefore, smaller particles grow at the same rate as larger particles, which maintains the shape of the distribution when plotted on a linear scale. On a logarithmic scale, the distribution width would narrow because the smaller particles grow proportionally more than the larger particles.",
+              "options": [
+                "The distribution shifts to larger size and maintains its shape.",
+                "The distribution shifts to larger size and the distribution width narrows.",
+                "The distribution shifts to larger size, the particle concentration falls, and the distribution width narrows."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "prompt": "What happens to the particle size distribution assuming the particles are sufficiently large for gas transport to be in the diffusive regime?",
+              "label": "(b)",
+              "answer": "The distribution shifts to larger size and the distribution narrows also on a linear size axis. The condensation rate in the diffusive regime is faster for smaller particles than for larger particles, so the smaller particles grow proportionally more than the larger particles. This narrows the distribution width when plotted on a linear scale. On a logarithmic scale, the distribution width would narrow even more."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "application",
       "name": "Application",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-a01",
+          "type": "numeric",
+          "prompt": "What is the value of π (pi)?",
+          "hint": "Optional hint for numeric questions.",
+          "answer": 3.14,
+          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-a02",
+          "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
+          "image": {
+            "src": "../imgs/forcings.png",
+            "alt": "Sample forcing chart used to demonstrate image questions",
+            "caption": "Images stay inside the question box and keep their proportions."
+          },
+          "options": [
+            "Feedbacks",
+            "Forcings"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-m01",
+          "parts": [
+            {
+              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "label": "(a)",
+              "answer": "A multi-part question has two or more subquestions that are answered separately."
+            },
+            {
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
+              "label": "(b)",
+              "type": "numeric",
+              "answer": 9,
+              "tolerance": 0
+            }
+          ]
+        },
+        {
+          "id": "template-m02",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": 9.81,
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-m03",
+          "type": "select-multiple",
+          "prompt": "Which of the following are greenhouse gases?",
+          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
+          "options": [
+            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
+            "Methane (\\(\\mathrm{CH}_4\\))",
+            "Oxygen (\\(\\mathrm{O}_2\\))",
+            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
+          ]
+        }
+      ]
     }
   ]
 }
