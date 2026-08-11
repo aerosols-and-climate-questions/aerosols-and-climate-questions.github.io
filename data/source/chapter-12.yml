@@ -1,0 +1,79 @@
+chapterTitle: Chapter 12
+categories:
+  - id: review
+    name: Review
+    questions:
+      - id: question-r01
+        parts:
+          - label: (a)
+            type: numeric
+            prompt: What is the liquid water content (\(\rho_l\)) of a cloud that has a cloud droplet number concentration of 100 cm\(^{-3}\) and a mean cloud droplet radius of 10 \(\mu\)m?
+            answer: 0.42
+            units: g m\(^{-3}\)
+            tolerance: 0.02 
+            hint: Water content is the concentration of water in a cloud.
+            answerInfo: The liquid water content of a cloud is given by the formula \(\rho_l = \frac{4}{3} \pi r^3 N_d\), where \(r\) is the mean cloud droplet radius and \(N_d\) is the cloud droplet number concentration. Substituting the given values, we get \(\rho_l = \frac{4}{3} \pi (10 \times 10^{-6})^3 (100 \times 10^6) = 0.42\) g m\(^{-3}\).
+          - label: (b)
+            type: numeric
+            prompt: What is the specific water content (\(q_l\)) of this cloud if the air density is 1 kg m\(^{-3}\)?
+            answer: 0.30
+            units: g kg\(^{-1}\)
+            tolerance: 0.02
+            hint: The specific water content is the ratio of the mass of liquid water to the total mass of the air, which includes the dry air, the water vapor and the condensed water. The book presents equations for calculating the specific water content of a cloud using \(\rho_l\) and the density of the air (\(\rho_a\)) at a 'virtual' temperature that accounts for the presence of water.
+            answerInfo: (This answer is wrong and needs to be calculated by the reviewer).
+      - id: question-r02
+        type: basic
+        prompt: List three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number. For each property, state whether it primarily affects terrestrial or solar radiation and whether an increase in the cloud property causes a positive or negative effective radiative forcing at the top of the atmosphere.   
+        answer: Three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number are:- 1) Cloud liquid water content or liquid water path (the vertically integrated water content), which can be affected by changes in precipitation or entrainment. Liquid water path primarily affects solar radiation, and an increase causes a negative effective radiative forcing through an increase in cloud albedo (Eq. 12.13). The effect on terrestrial radiation is generally smaller for optically thick clouds (Eq. 12.26). 2) Cloud height or top temperature, which primarily affects terrestrial radiation (Eq. 12.24) and causes a positive effective radiative forcing. 3) Cloud fraction, which affects solar radiation (through changes in planetary albedo, Eq. 12.16) and terrestrial radiation (Eq. 12.22). The net effect of an increase in cloud fraction depends on the balance between the solar and terrestrial effects.
+  - id: application
+    name: Application
+    questions:
+      - id: question-a01
+        type: numeric
+        prompt: What is the value of π (pi)?
+        answer: 3.14
+        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
+        tolerance: 0.01
+        hint: Optional hint for numeric questions.
+      - id: question-a02
+        type: multiple-choice
+        prompt: Is this chart about radiative forcings or climate feedbacks?
+        image:
+          src: ../imgs/forcings.png
+          alt: Sample forcing chart used to demonstrate image questions
+          caption: Images stay inside the question box and keep their proportions.
+        options:
+          - Feedbacks
+          - Forcings
+        correctIndex: 1
+        answer: It's forcings, shown on the x-axis
+  - id: mastery
+    name: Mastery
+    questions:
+      - id: question-m01
+        parts:
+          - label: (a)
+            prompt: Write one short sentence explaining what makes a question multi-part.
+            answer: A multi-part question has two or more subquestions that are answered separately.
+          - label: (b)
+            type: numeric
+            prompt: Evaluate \(\ 2^3 + 1 \).
+            answer: 9
+            tolerance: 0
+      - id: question-m02
+        type: numeric
+        prompt: What is the standard acceleration due to gravity at Earth's surface?
+        units: m s^-2
+        answer: 9.81
+        answerInfo: This is the conventional standard gravity.
+        tolerance: 0.01
+      - id: question-m03
+        type: select-multiple
+        prompt: Which of the following are greenhouse gases?
+        options:
+          - Carbon dioxide (\(\mathrm{CO}_2\))
+          - Methane (\(\mathrm{CH}_4\))
+          - Oxygen (\(\mathrm{O}_2\))
+          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
+        correctIndex: [0, 1, 3]
+        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.
