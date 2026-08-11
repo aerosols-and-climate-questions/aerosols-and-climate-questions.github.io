@@ -1,0 +1,68 @@
+chapterTitle: Chapter 11
+categories:
+  - id: review
+    name: Review
+    questions:
+      - id: question-r01
+        type: numeric
+        prompt: An aerosol layer with single-scatter albedo of 0.8 above a black surface (albedo of zero) causes a negative radiative effect at the top of the atmosphere (TOA) of -2 W m\(^{-2}\). The cloud fraction is 0.7. What surface albedo would cause this aerosol layer to have a positive radiative forcing? 
+        answer: 0.24
+        tolerance: 0.02
+        hint: Use Fig 11.14
+        answerInfo: This is an approximate answer based on the data in the figure. The figure shows that for a single-scatter albedo of 0.8 and a cloud fraction of 0.7, the surface albedo needs to be greater than approximately 0.24 for the aerosol layer to have a positive radiative effect at the TOA. Any scattering aerosol above a black surface will always cause a negative radiative effect at the TOA (more radiation reflected than by the surface alone). But above cloud, the slightly absorbing aerosol can cause a positive radiative effects.
+
+      - id: question-r02
+        type: numeric
+        prompt: A sulfate aerosol layer with single-scattering albedo of 1.0 above a soil surface (albedo of 0.25) causes a negative radiative effect at TOA of -2 W m\(^{-2}\). The cloud fraction is 0.7. What single-scattering albedo would cause this aerosol layer to have a positive radiative effect? 
+        answer: 0.8
+        tolerance: 0.02
+        hint: Use Fig 11.14
+        answerInfo: This is an approximate answer based on the data in the figure. The figure shows that for a aerosol with a single-scatter albedo of 1.0 (purely scattering) and a cloud fraction of 0.7, the radiative effect at the TOA is about -2 W m\(^{-2}\). Decreasing the single-scatter albedo to 0.8 would cause the aerosol layer to have a positive radiative effect.
+      - id: template-r02
+        type: multiple-choice
+        prompt: What is the third letter of the Greek alphabet?
+        options:
+          - \(\alpha\)
+          - \(\beta\)
+          - \(\gamma\)
+        correctIndex: 2
+        answer: It's \(\gamma\), which is the third letter of the Greek alphabet.
+  - id: application
+    name: Application
+    questions:
+      - id: template-a01
+        type: numeric
+        prompt: What is the value of π (pi)?
+        answer: 3.14
+        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
+        tolerance: 0.01
+        hint: Optional hint for numeric questions.
+      - id: template-a02
+        type: multiple-choice
+        prompt: Is this chart about radiative forcings or climate feedbacks?
+        image:
+          src: ../imgs/forcings.png
+          alt: Sample forcing chart used to demonstrate image questions
+          caption: Images stay inside the question box and keep their proportions.
+        options:
+          - Feedbacks
+          - Forcings
+        correctIndex: 1
+        answer: It's forcings, shown on the x-axis
+  - id: mastery
+    name: Mastery
+    questions:
+      - id: template-m01
+        parts:
+          - label: (a)
+            type: numeric
+            prompt: A sulphate aerosol layer with a single-scatter albedo of 1.0 is measured to transmit 36.8% of the incident solar radiation with the sun directly overhead. What is the intensity of the scattered solar radiation relative to the transmitted solar radiation? Assume an upscatter fraction of 0.5.
+            answer: 88
+            units: "%"
+            tolerance: 2
+            answerInfo: The transmitted solar radiation is 36.8% of the incident solar radiation, so optical depth of the layer is \(\tau = -\ln(0.368)\). The scattered solar radiation below the layer is \((1-\exp(-\tau)) \times (1 - 0.5) = 0.632 \times 0.5 = 0.316\). This is 88% of the transmitted solar radiation.
+            hint: See Fig 11.6.
+          - label: (b)
+            type: basic
+            prompt: How would the intensity of the scattered solar radiation change for a very dense aerosol layer with an optical depth of 5?
+            answer: The transmitted solar radiation would be extremely small (\(\exp(-5)\)). However, the amount of solar radiation scattered downward would still be about 50%. 
