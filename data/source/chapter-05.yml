@@ -49,16 +49,34 @@ categories:
             prompt: What happens to the particle size distribution assuming the particles are sufficiently large for gas transport to be in the diffusive regime?
             answer: The distribution shifts to larger size and the distribution narrows also on a linear size axis. The condensation rate in the diffusive regime is faster for smaller particles than for larger particles, so the smaller particles grow proportionally more than the larger particles. This narrows the distribution width when plotted on a linear scale. On a logarithmic scale, the distribution width would narrow even more.
         author: Ken Carslaw
+      - id: question-r05
+        type: multiple-choice
+        prompt: Put these processes in order of the typical timescale on which they alter the properties of aerosol (fastest first). (1) Growth of the accumulation mode particles, (2) Equilibration of nucleation mode particles with soluble gas phase species, (3) Coagulation of coarse mode particles, (4) Growth of Aitken mode particles.
+        options:
+          - 1,2,3,4
+          - 2,4,1,3
+          - 4,2,1,3
+          - 1,4,2,3 
+        correctIndex: 1
+        answer: The fastest process is equilibration of nucleation mode particles with soluble gas phase species, which occurs on the timescale of seconds to minutes. Growth of Aitken mode particles occurs on the timescale of minutes to hours. Growth of accumulation mode particles occurs on the timescale of hours to days. Coagulation of coarse mode particles occurs on the timescale of days to weeks. See Fig. 5.10 for a summary of the timescales of these processes.  
+
+
   - id: application
     name: Application
     questions:
-      - id: template-a01
-        type: numeric
-        prompt: What is the value of π (pi)?
-        answer: 3.14
-        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
-        tolerance: 0.01
-        hint: Optional hint for numeric questions.
+      - id: question-a01
+        type: select-multiple
+        prompt: In observations, the median diameter of particles in the accumulation mode is found to have increased between a coastal urban area and an inland receptor site. Which of the following could in principle account for the growth?
+        options:
+          - Urban NO\(_2\) emissions
+          - Marine dimethyl sulphide emissions
+          - Volatile organic carbon emissions from land
+          - Primary particle emissions
+          - Coagulation
+        correctIndex: [0,1,2,3,4]
+        answer: The growth of the accumulation mode can be caused by condensation of gases onto the particles. This could be from NO\(_2\) emissions from the urban area, which can be oxidised to nitric acid (HNO\(_3\)) and condense onto particles. It could also be from marine dimethyl sulphide emissions, which can be oxidised to H\(_2\)SO\(_4\) and condense onto particles. Volatile organic carbon emissions from land can also be oxidised to form low volatility products that condense onto particles. Primary particle emissions could also cause growth of the accumulation mode if they are sufficiently large, so it cannot be ruled out. Coagulation is also a possibility, although it is a slow process for accumulation mode-size particles compared to condensation (Fig. 5.10), so the measurements would need to be very precise and reliable to detect it.
+
+        
       - id: template-a02
         type: multiple-choice
         prompt: Is this chart about radiative forcings or climate feedbacks?
