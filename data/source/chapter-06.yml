@@ -36,6 +36,15 @@ categories:
         answer: A model would need to transport 3 quantities for each of the 3 lognormal particle size distributions, totaling 3 * 3 = 9 quantities. However, to specify the size distribution, the model also needs to transport the total number of particles in each distribution, which adds an additional 3 quantities. Therefore, the total number of quantities that need to be transported is 9 + 3 = 12.
       - id: question-r04
         type: multiple-choice
+        prompt: Which of the following describes how aerosols are treated in an atmosphere-only climate model?
+        options:
+          - Aerosols are transported by 3-D wind fields that are read in from reanalysis products. The model calculates the aerosol chemical, microphysical and radiative properties online, which generates 3-D time-resolved model outputs. These calculated properties do not alter the atmospheric dynamics of the model.
+          - Aerosols are transported by 3-D fields of atmospheric motion calculated each time step by the model. The model calculates the aerosol chemical, microphysical and radiative properties online, which generates 3-D time-resolved model outputs. These calculated properties alter the atmospheric dynamics of the model. The ocean is not simulated, so the surface temperature is fixed to a climatology.
+          - Aerosols are transported by 3-D fields of atmospheric motion calculated each time step by the model. The model calculates the aerosol chemical, microphysical and radiative properties online, which generates 3-D time-resolved model outputs. These calculated properties alter the atmospheric dynamics of the model. The ocean is simulated, so the surface temperature is free to evolve and feeds back on the aerosol properties.    
+        correctIndex: 1
+        answer: Aerosols are transported by 3-D fields of atmospheric motion calculated each time step by the model. The first option describes a chemical transport model (CTM) and the third option describes a coupled atmosphere-ocean model.
+      - id: question-r05
+        type: multiple-choice
         prompt: Which of the following is always true of a two-moment cloud microphysics model?
         options:
           - It is needed to calculate aerosol-cloud interaction forcing because a single-moment model cannot calculate the effect of aerosol on droplet number.
@@ -47,14 +56,15 @@ categories:
   - id: application
     name: Application
     questions:
-      - id: template-a01
-        type: numeric
-        prompt: What is the value of π (pi)?
-        answer: 3.14
-        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
-        tolerance: 0.01
-        hint: Optional hint for numeric questions.
-      - id: template-a02
+      - id: question-a01
+        type: basic
+        prompt: You are involved in a field campaign to measure aerosol properties in the Arctic in order to understand their impact on climate. You have a budget to deploy either a single instrument that measures aerosol size distribution or a single instrument that measures aerosol chemical composition. Which would you choose and why?
+        answer: I would choose to deploy the instrument that measures aerosol size distribution. This is because the size distribution of aerosols is a key factor in determining their effect on solar radiation (Figure 2.7, section 4.1.2 and section 11.1.2.2) and their ability to act as cloud condensation nuclei (CCN, section 4.1.2, 5.4.1 and 12.2.1.2). Additionally, the size distribution can provide insights into the sources and processes affecting aerosols in the Arctic, such as long-range transport, local emissions, and atmospheric processing. Chemical composition is also important for particle hygroscopicity and therefore size, scattering efficiency (Fig 5.7) and droplet formation (Fig 5.9), understanding the size distribution is crucial for assessing the overall climate impact of aerosols in this region.
+      - id: question-a02
+        type: basic
+        prompt: As a modeller, you are involved in a field campaign to measure aerosol and cloud properties over a marine region. You aim to use the measurements to evaluate and improve your model and quantify the effect on estimates of global mean aerosol forcing. What modelling approach would you choose and why?
+        answer: I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions and their impact on effective radiative forcing (ERF), while also being computationally efficient and suitable for evaluation against field measurements. The model would need to be run in two different ways. Firstly, for evaluation against measurements made under specific meteorological conditions, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense. For the forcing calculation, this same model could be run without nudging for 5 years. For further information, see section 6.2 and Box 6.1
+      - id: question-a03
         type: multiple-choice
         prompt: Is this chart about radiative forcings or climate feedbacks?
         image:
