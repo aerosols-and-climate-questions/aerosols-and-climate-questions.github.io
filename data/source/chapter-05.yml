@@ -3,13 +3,34 @@ categories:
   - id: review
     name: Review
     questions:
+
       - id: question-r01
+        type: select-multiple
+        prompt: Select which of the following are aerosol precursor gases.
+        options:
+          - SO\(_2\)
+          - NO\(_2\)
+          - NH\(_3\)
+          - O\(_3\)
+          - OH
+        correctIndex: [0, 1, 2]
+        answer: SO\(_2\), NO\(_2\) and NH\(_3\) are aerosol precursor gases. O\(_3\) and OH are not aerosol precursor gases, but they are important oxidants that react with aerosol precursor gases to form condensable species.
+        author: Ken Carslaw
+
+      - id: question-r02
+        type: basic
+        prompt: Formation and initial growth of new particles is often described as 'banana events'. Use information in Sections 5.2.2 and 5.2.3 to explain why this is the case. 
+        answer: Measurements are usually shown as 2-dimensional plots of particle concentration (particles per size class) with a vertical axis of particle log diameter and horizontal axis of time (e.g., Fig. 5.4). For small particles, molecular condensation occurs in the kinetic regime (Eq. 5.6), where the growth rate (\(dr_p/dt) is independent of particle size. When plotted on a log diameter axis, a constant growth rate produces a curved line that looks like a banana. 
+        author: Ken Carslaw
+
+      - id: question-r03
         type: numeric
         prompt: What fraction of a gas will be present in the particulate phase if it has an effective Henry’s law constant of 1 mol m\(^{-3}\) Pa\(^{-1}\), the temperature is 283 K and the particle concentration in air is 10 \(\mu\)g m\(^{-3}\)? Assume a particle density of 1400 kg m\(^{-3}\).
         answer: 0.1
         hint: See box 5.2
         author: Ken Carslaw
-      - id: question-r02
+
+      - id: question-r04
         type: multiple-choice
         prompt: Which of the following descriptions of the behaviour of sulphuric acid (H\(_2\)SO\(_4\)) is correct? 
         options:
@@ -21,19 +42,45 @@ categories:
         answer: SO\(_2\) oxidation in the gas phase produces H\(_2\)SO\(_4\) on the timescale of a few days. The H\(_2\)SO\(_4\) condenses on aerosol particles on the timescale of hours, therefore only a few percent of the H\(_2\)SO\(_4\) remains in the gas phase in steady state. The balance equations are...
         hint: Equation 5.9 and section 5.2.1.1 will help.
         author: Ken Carslaw
-      - id: question-r03
+
+      - id: question-r05
         parts:
           - label: (a)
             type: numeric
-            prompt: What is the steady state gas phase concentration of H2SO4 if it is produced by reaction of SO2 with OH (rate constant = …, OH concentration = 10^6 cm-3) and condenses on particles with a surface area of xx? Assume that gas-particle transfer is in the kinetic regime.
+            prompt: What is the steady state gas phase concentration of H\(_2\)SO\(_4\) if it is produced by reaction of SO\(_2\) with OH (rate constant = …, OH concentration = 10\(^{-6}\) cm\(^{-3}\)) and condenses on particles with a surface area of xx? Assume that gas-particle transfer is in the kinetic regime.
             answer: 1.0e5
             units: molecules cm^-3
             tolerance: 1
           - label: (b) 
             prompt: For the same surface area, how would the steady state concentration be affected if the particles were sufficiently large for gas transport to be in the diffusive regime?
             answer: The steady state concentration would be higher because the condensation rate would be slower in the diffusive regime.
+            author: Ken Carslaw
+
+      - id: question-r06
+        type: numeric
+        prompt: A particle contains 50% by volume of sodium chloride with kappa of 1.3 and 50% by volume of organic compounds with kappa of 0.1. What is the particle diameter growth factor at 90% RH? (Needs an answer) 
+        answer: 1.0
+        tolerance: 0.02
+        units: dimensionless
+        answerInfo: Use Eq. 5.22 to calculate the growth factor (\(g(RH)=(1+\kappa RH/(100-RH))^{1/3}\)).
         author: Ken Carslaw
-      - id: question-r04
+
+
+      - id: question-r07
+        parts:
+          - label: (a)
+            type: numeric
+            prompt: What is the steady state gas phase concentration of H\(_2\)SO\(_4\) if it is produced by reaction of SO\(_2\) with OH (rate constant = …, OH concentration = 10\(^{-6}\) cm\(^{-3}\)) and condenses on particles with a surface area of xx? Assume that gas-particle transfer is in the kinetic regime. (Question needs completing).
+            answer: 1.0e5
+            units: molecules cm\(^{-3}\)
+            tolerance: 1
+          - label: (b) 
+            type: basic
+            prompt: For the same surface area, how would the steady state concentration be affected if the particles were sufficiently large for gas transport to be in the diffusive regime?
+            answer: The steady state concentration would be higher because the condensation rate would be slower in the diffusive regime.
+        author: Ken Carslaw
+
+      - id: question-r08
         parts: 
           - label: (a)
             type: multiple-choice
@@ -49,7 +96,8 @@ categories:
             prompt: What happens to the particle size distribution assuming the particles are sufficiently large for gas transport to be in the diffusive regime?
             answer: The distribution shifts to larger size and the distribution narrows also on a linear size axis. The condensation rate in the diffusive regime is faster for smaller particles than for larger particles, so the smaller particles grow proportionally more than the larger particles. This narrows the distribution width when plotted on a linear scale. On a logarithmic scale, the distribution width would narrow even more.
         author: Ken Carslaw
-      - id: question-r05
+
+      - id: question-r09
         type: multiple-choice
         prompt: Put these processes in order of the typical timescale on which they alter the properties of aerosol (fastest first). (1) Growth of the accumulation mode particles, (2) Equilibration of nucleation mode particles with soluble gas phase species, (3) Coagulation of coarse mode particles, (4) Growth of Aitken mode particles.
         options:
@@ -58,7 +106,50 @@ categories:
           - 4,2,1,3
           - 1,4,2,3 
         correctIndex: 1
-        answer: The fastest process is equilibration of nucleation mode particles with soluble gas phase species, which occurs on the timescale of seconds to minutes. Growth of Aitken mode particles occurs on the timescale of minutes to hours. Growth of accumulation mode particles occurs on the timescale of hours to days. Coagulation of coarse mode particles occurs on the timescale of days to weeks. See Fig. 5.10 for a summary of the timescales of these processes.  
+        answer: The fastest process is equilibration of nucleation mode particles with soluble gas phase species, which occurs on the timescale of seconds to minutes. Growth of Aitken mode particles occurs on the timescale of minutes to hours. Growth of accumulation mode particles occurs on the timescale of hours to days. Coagulation of coarse mode particles occurs on the timescale of days to weeks. See Fig. 5.10 for a summary of the timescales of these processes. 
+        author: Ken Carslaw
+ 
+
+      - id: question-r10
+        type: multiple-choice
+        prompt: Aerosol particles in air containing 1 \(\mu g~m^{-3}\) of aerosol sulfate and 2 \(\mu g~m^{-3}\) of total ammonia (gas plus particle phase) are measured to have a chemical composition of ammonium sulphate (i.e., a molar ratio of 2:1 ammonium to sulphate). Which of the following correctly describes what happens to the particle composition if the total ammonia concentration is reduced to 0.1 \(\mu g~m^{-3}\) and increased to 10 \(\mu g~m^{-3}\)?
+        options:
+          - "Decrease: molar ratio of ammonium to sulphate < 2:1, Increase: molar ratio of ammonium to sulphate > 2:1"
+          - "Decrease: molar ratio of ammonium to sulphate < 2:1, Increase: molar ratio of ammonium to sulphate = 2:1"
+          - "Decrease: molar ratio of ammonium to sulphate = 2:1, Increase: molar ratio of ammonium to sulphate = 2:1"
+          - "Decrease: molar ratio of ammonium to sulphate = 2:1, Increase: molar ratio of ammonium to sulphate > 2:1"
+        correctIndex: 1
+        answer: The particle composition is ammonium sulphate when the total ammonia concentration is 2 \(\mu g~m^{-3}\). If the total ammonia concentration is reduced to 0.1 \(\mu g~m^{-3}\), there is insufficient ammonia to fully neutralise the sulphate, so the molar ratio of ammonium to sulphate will be less than 2:1. If the total ammonia concentration is increased to 10 \(\mu g~m^{-3}\), there is excess ammonia beyond what is required to neutralise the sulphate, so the molar ratio of ammonium to sulphate will remain at 2:1. So for both 2 \(\mu g~m^{-3}\) and 10 \(\mu g~m^{-3}\) of total ammonia, the particle composition is ammonium sulphate (NH\(_4\))\(_2\)SO\(_4\)). Essentially, there is no chemical reason for the excess ammonia to condense onto the particles once the chemical binding with the acidic sulphate is complete. Fig 5.6 shows the relationship between total ammonia and particle composition.
+        author: Ken Carslaw
+
+      - id: question-r11
+        type: multiple-choice
+        prompt: Air at 298 K contains 1 \(\mu g~m^{-3}\) of aerosol sulphate as well as 0.15 \(\mu g~m^{-3}\) of total ammonia (gas plus particle phase). Which of the following most accurately describes the chemical state?
+        options:
+          - Most of the ammonia partitions into the particle phase, leaving only a small percentage in the gas phase.
+          - The particles are composed of aqueous ammonium sulphate (NH\(_4\))\(_2\)SO\(_4\)).
+          - The ammonia stays mostly in the gas phase and the particles are mostly sulphuric acid, with a very small percentage of ammonium sulphate.
+          - When 30 \(\mu g~m^{-3}\) of nitric acid (HNO\(_3\)) is added to the air, most of it partitions into the particles, which become mostly ammonium nitrate.
+        correctIndex: 0
+        answer: Most of the ammonia partitions into the particle phase, leaving only a small percentage in the gas phase. The total ammonia concentration is insufficient to fully neutralise the sulphate, so the particles are mostly sulphuric acid with some ammonium sulphate (close to what is called ammonium bisulphate, NH\(_4\)HSO\(_4\)). To work this out, you need to consider the molar ratio of ammonia to sulphate. Unfortunately, most measurements are reported in \(\mu g~m^{-3}\), which obscures the true chemical composition. 1 \(\mu g~m^{-3}\) of H\(_2\)SO\(_4\) equates to about 0.01 \(\mu mol~m^{-3}\) and 0.15 \(\mu g~m^{-3}\) of ammonia is slightly less than 0.01 \(\mu mol~m^{-3}\) (H\(_2\)SO\(_4\) has a molar mass of 98.08 g/mol and NH\(_3\) has a molar mass of 17.03 g/mol). When nitric acid is added to the air, it does not partition into the particles, which are too acidic and there is no free ammonia to bind to it. Ammonium nitrate would start forming only when NH\(_3~>2~\times\) the H\(_2\)SO\(_4\) concentration (in moles, not \(\mu g~m^{-3}\)), under which conditions there is free ammonia to bind to the HNO\(_3\). See section 5.2.5 and Fig. 5.6 for more details.
+
+      - id: question-r12
+        type: numeric
+        prompt: Calculate the ratio of particle wet to dry diameter for a pure sulphuric acid particle at a relative humidity of 80%.  
+        answer: 1.44
+        tolerance: 0.02
+        units: dimensionless
+        answerInfo: Use the data in Table 5.5 to find the kappa (\(\kappa\)) value for sulphuric acid. Then use Eq. 5.22 to calculate the growth factor (\(g(RH)=(1+\kappa RH/(100-RH))^{1/3}\)).
+        author: Ken Carslaw
+
+      - id: question-r13
+        type: numeric
+        prompt: A particle contains 50% by volume of sodium chloride with kappa of 1.3 and 50% by volume of organic compounds with kappa of 0.1. What is the particle diameter growth factor at 90% RH? (Needs an answer) 
+        answer: 1.0
+        tolerance: 0.02
+        units: dimensionless
+        answerInfo: Use Eq. 5.22 to calculate the growth factor (\(g(RH)=(1+\kappa RH/(100-RH))^{1/3}\)).
+        author: Ken Carslaw
 
 
   - id: application
@@ -75,9 +166,22 @@ categories:
           - Coagulation
         correctIndex: [0,1,2,3,4]
         answer: The growth of the accumulation mode can be caused by condensation of gases onto the particles. This could be from NO\(_2\) emissions from the urban area, which can be oxidised to nitric acid (HNO\(_3\)) and condense onto particles. It could also be from marine dimethyl sulphide emissions, which can be oxidised to H\(_2\)SO\(_4\) and condense onto particles. Volatile organic carbon emissions from land can also be oxidised to form low volatility products that condense onto particles. Primary particle emissions could also cause growth of the accumulation mode if they are sufficiently large, so it cannot be ruled out. Coagulation is also a possibility, although it is a slow process for accumulation mode-size particles compared to condensation (Fig. 5.10), so the measurements would need to be very precise and reliable to detect it.
+        author: Ken Carslaw
 
-        
-      - id: template-a02
+      - id: question-a02
+        type: multiple-choice
+        prompt: Aerosol size distributions were measured at two sites separated by several kilometres, with a transit time between sites of about half a day. Aitken mode and coarse mode particle number concentrations declined substantially between the sites, but accumulation mode was fairly constant. Which single process could account for such a change?
+        options:
+          - Condensation of SOA
+          - Coagulation
+          - Dry deposition
+          - Wet deposition
+          - Cloud processing
+        correctIndex: 2
+        answer: Dry deposition is the most likely process to account for the change in accumulation mode particle concentrations, as it preferentially removes small and large particles from the atmosphere (section 5.3). Condensation of SOA would grow the particles but not affect their number concentration. Coagulation would reduce the number concentration of all modes, but it is a slow process for accumulation and coarse mode-size particles. Wet deposition would remove particles that had been in the cloud droplets, so mainly accumulation and coarse modes. Cloud processing would also mainly affect accumulation and coarse modes, and would not remove Aitken mode particles.
+        author: Ken Carslaw
+
+      - id: question-a03
         type: multiple-choice
         prompt: Is this chart about radiative forcings or climate feedbacks?
         image:
