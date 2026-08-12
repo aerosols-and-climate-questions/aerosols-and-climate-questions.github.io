@@ -15,7 +15,7 @@ categories:
         answer: They neglect longwave absorption and stratospheric heating by sulphate aerosol. Volcanic sulphate aerosol not only reflects solar radiation (causing a cooling effect) but also absorbs terrestrial and near-IR radiation, offsetting part of the cooling effect.
       - id: question-r02
         type: multiple-choice
-        prompt: Two eruptions inject the same mass of SO\(_2\) into the atmosphere. Eruption A occurs in the tropical stratosphere, while Eruption B occurs at high latitude in the Northern Hemisphere. Which is most likely?
+        prompt: Two eruptions inject the same mass of SO\(_2\) into the stratosphere. Eruption A occurs in the tropical stratosphere close to the equator, while Eruption B occurs at high latitude in the Northern Hemisphere. Which is most likely?
         options:
           - Both produce identical global aerosol lifetimes.
           - Eruption B produces a longer-lasting global aerosol perturbation.
