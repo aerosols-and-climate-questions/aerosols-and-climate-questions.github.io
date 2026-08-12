@@ -5,7 +5,7 @@ categories:
     questions:
       - id: question-a01
         type: numeric
-        prompt: An aerosol distribution is comprised of an Aitken mode and an accumulation mode. The Aitken mode has a number concentration of 400 cm\(^{-3}\), median diameter of 20 nm and geometric standard deviation of 1.5. The accumulation mode has a number concentration of 100 cm\(^{-3}\), median diameter of 200 nm and geometric standard deviation of 1.7. What is the surface area of the distribution?
+        prompt: An aerosol distribution is comprised of an Aitken mode and an accumulation mode. The Aitken mode has a number concentration of 400 cm\(^{-3}\), median diameter of 20 nm and geometric standard deviation of 1.5. The accumulation mode has a number concentration of 100 cm\(^{-3}\), median diameter of 200 nm and geometric standard deviation of 1.7. What is the surface area of the aerosol distribution?
         answer: 22.8
         units: \(\mathrm{\mu}\)m\(^2\) cm\(^{-3}\) 
         answerInfo: >-
