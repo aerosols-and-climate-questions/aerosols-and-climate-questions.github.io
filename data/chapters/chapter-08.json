@@ -4,17 +4,24 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
-    },
-    {
-      "id": "application",
-      "name": "Application",
-      "questions": []
-    },
-    {
-      "id": "mastery",
-      "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-r01",
+          "type": "multiple-choice",
+          "prompt": "Most biomass-burning particle mass is:",
+          "answer": "Most of the particulate material (by mass) emitted from fires is organic. Smaller amounts of BC and SO₂ are also emitted.",
+          "author": [
+            "Léa Prévost"
+          ],
+          "options": [
+            "black carbon",
+            "sulfate",
+            "organic matter",
+            "dust"
+          ],
+          "correctIndex": 2
+        }
+      ]
     }
   ]
 }
