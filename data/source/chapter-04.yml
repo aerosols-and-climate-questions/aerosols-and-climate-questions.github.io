@@ -5,12 +5,16 @@ categories:
     questions:
       - id: question-a01
         type: numeric
-        prompt: What is the surface area of an aerosol distribution comprised of an Aitken mode and an accumulation mode (Aitken mode, N = 400 cm\(^{-3}\), mode diameter = 20 nm, \(\sigma\) = 1.5; accumulation mode, N = 100 cm\(^{-3}\), mode diameter = 200 nm, \(\sigma\) = 1.7)?
-        answer: 0.0052 
-        units: \(\mu\)m\(^2\) cm\(^{-3}\)
-        answerInfo: This isn't the answer. We just let AI hallucinate one as a placeholder because we'll edit this together.
-        tolerance: 0.001
-        hint: We're going to write a hint here.
+        prompt: An aerosol distribution is comprised of an Aitken mode and an accumulation mode. The Aitken mode has a number concentration of 400 cm\(^{-3}\), median diameter of 20 nm and geometric standard deviation of 1.5. The accumulation mode has a number concentration of 100 cm\(^{-3}\), median diameter of 200 nm and geometric standard deviation of 1.7. What is the surface area of the distribution?
+        answer: 22.8
+        units: \(\mathrm{\mu}\)m\(^2\) cm\(^{-3}\) 
+        answerInfo: >-
+          <p><b>22.8 \(\mathrm{\mu}\)m\(^2\) cm\(^{-3}\)</b>. The answer is the sum of the surface area of the two modes. The surface area of a lognormal mode is given by:</p>
+          <p>\(A_\mathrm{mode} =  4\pi r_{\mathrm{m}}^2 N_\mathrm{mode} \exp\left[2 \left(\ln{\sigma}^{2}\right) \right]\),</p>
+          <p>where \(N_\mathrm{mode}\) is the number concentration of the mode, \(r_{\mathrm{m}}\) is the median diameter and \(\sigma\) is the geometric standard deviation. For each mode, we can plug the values from the question into the formula, but we need to remember to convert the diameters to radii and ensure they're in units of micrometers rather than nanometers to make our life easier and save converting units at the end.</p>
+          <p>For the Aitken mode, this gives 0.698 \(\mathrm{\mu}\)m\(^2\) cm\(^{-3}\), and for the accumulation mode, this gives 22.1 \(\mathrm{\mu}\)m\(^2\) cm\(^{-3}\), which we sum to get our total. Note that although the Aitken mode has a higher number concentration (80% of the total aerosol concentration), the accumulation mode has a much larger diameter and so dominates the surface area (97% of the total aerosol surface area).</p>
+        tolerance: 0.5
+        hint: Aerosol size modes are approximately lognormally distributed. Be careful to check you're using the correct units and remember that the question has told you the diameter.
         author: Ken Carslaw
         reviewer: Erin Raif
       - id: question-a02
