@@ -74,4 +74,11 @@ categories:
             type: basic
             prompt: Assuming an albedo of the cloud of 0.5, what is the equivalent sensitivity of reflected solar radiation assuming an incoming solar flux of 400 W m\(^{-2}\)? 
             answer: (Need to provide a calculation). The solar sensitivity is much higher than the calculated LW sensitivity, which is why the LW component is often neglected in assessments of aerosol-cloud radiative forcing.
-         
+      
+      - id: question-m04
+        parts:
+          - label: (a)
+            type: basic
+            prompt: Xinyi - this is where the question goes
+            answer: Xinyi - this is where the answer goes
+          
