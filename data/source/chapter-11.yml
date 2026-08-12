@@ -3,7 +3,19 @@ categories:
   - id: review
     name: Review
     questions:
+
       - id: question-r01
+        type: multiple-choice
+        prompt: For solar radiation at the peak of the solar spectrum (0.5 μm), at what approximate particle size is the scattering efficiency maximized? Assume a refractive index for water (1.33).
+        options:
+          - 0.1 μm
+          - 0.3 μm
+          - 1.0 μm
+          - 2.0 μm
+        correctIndex: 1
+        answer: The scattering efficiency is maximized at approximately 0.3 μm for solar radiation at the peak of the solar spectrum (0.5 μm) with a refractive index of 1.33. Depending on the refractive index, the scatterng efficiency has a clear peak for particle radii approximately equal to the wavelength. This is Mie scattering See Fig. 11.1. 
+
+      - id: question-r02
         type: numeric
         prompt: An aerosol layer with single-scatter albedo of 0.8 above a black surface (albedo of zero) causes a negative radiative effect at the top of the atmosphere (TOA) of -2 W m\(^{-2}\). The cloud fraction is 0.7. What surface albedo would cause this aerosol layer to have a positive radiative forcing? 
         answer: 0.24
@@ -11,7 +23,7 @@ categories:
         hint: Use Fig 11.14
         answerInfo: This is an approximate answer based on the data in the figure. The figure shows that for a single-scatter albedo of 0.8 and a cloud fraction of 0.7, the surface albedo needs to be greater than approximately 0.24 for the aerosol layer to have a positive radiative effect at the TOA. Any scattering aerosol above a black surface will always cause a negative radiative effect at the TOA (more radiation reflected than by the surface alone). But above cloud, the slightly absorbing aerosol can cause a positive radiative effects.
 
-      - id: question-r02
+      - id: question-r03
         type: numeric
         prompt: A sulfate aerosol layer with single-scattering albedo of 1.0 above a soil surface (albedo of 0.25) causes a negative radiative effect at TOA of -2 W m\(^{-2}\). The cloud fraction is 0.7. What single-scattering albedo would cause this aerosol layer to have a positive radiative effect? 
         answer: 0.8
