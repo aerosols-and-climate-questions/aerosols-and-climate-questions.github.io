@@ -87,20 +87,14 @@
           "answer": "I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions and their impact on effective radiative forcing (ERF), while also being computationally efficient and suitable for evaluation against field measurements. The model would need to be run in two different ways. Firstly, for evaluation against measurements made under specific meteorological conditions, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense. For the forcing calculation, this same model could be run without nudging for 5 years. For further information, see section 6.2 and Box 6.1"
         },
         {
-          "id": "question-a03",
-          "type": "multiple-choice",
-          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
-          "answer": "It's forcings, shown on the x-axis",
+          "id": "question-a04",
+          "prompt": "You are testing the sensitivity of a cloud model to autoconversion process rate parametrisation. You change the exponent to the droplet number, and conduct some one-at-at-time sensitivity tests. How do you expect the sensitivity of the model output to droplet number will change as you change that exponent?",
+          "answer": "TBC",
           "image": {
             "src": "../imgs/forcings.png",
             "alt": "Sample forcing chart used to demonstrate image questions",
             "caption": "Images stay inside the question box and keep their proportions."
-          },
-          "options": [
-            "Feedbacks",
-            "Forcings"
-          ],
-          "correctIndex": 1
+          }
         }
       ]
     },

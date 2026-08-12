@@ -76,6 +76,10 @@ categories:
           - Forcings
         correctIndex: 1
         answer: It's forcings, shown on the x-axis
+        id: question-a04
+        type: basic
+        prompt: You are testing the sensitivity of a cloud model to autoconversion process rate parametrisation. You change the exponent to the droplet number, and conduct some one-at-at-time sensitivity tests. How do you expect the sensitivity of the model output to droplet number will change as you change that exponent?
+        answer: TBC
   - id: mastery
     name: Mastery
     questions:
