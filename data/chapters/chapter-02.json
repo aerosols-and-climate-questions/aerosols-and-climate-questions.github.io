@@ -105,6 +105,86 @@
             "Their cloud responses must be identical"
           ],
           "correctIndex": 1
+        },
+        {
+          "id": "question-r06",
+          "type": "multiple-choice",
+          "prompt": "Which of the following equations defines the equilibrium climate sensitivity? \\(\\lambda\\) is the climate sensitivity parameter in \\(\\mathrm{K/Wm^{-2}}\\), \\(\\Delta F\\) is a radiative forcing, and \\(\\Delta T\\) is the change in global mean surface temperature.",
+          "answer": "ECS is defined as the change in global mean surface temperature at equilibrium after a doubling of atmospheric CO\\(_2\\) concentration. The radiative forcing associated with a doubling of CO\\(_2\\) is \\(\\Delta F_{2\\times CO_2}\\), and the climate sensitivity parameter \\(\\lambda\\) relates the forcing to the temperature response. ECS is a misonomer in that it is actually a temperature (in K) rather than a sensitivity.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "options": [
+            "\\(ECS = \\lambda \\Delta F\\)",
+            "\\(ECS = \\lambda \\Delta F_{CO_2}\\)",
+            "\\(ECS = \\lambda \\Delta F_{2\\times CO_2}\\)",
+            "\\(ECS = \\frac{\\Delta T}{\\Delta F}\\)"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r07",
+          "type": "multiple-choice",
+          "prompt": "Which of the following equations defines the efficacy of a radiative forcing agent \\(f\\)?",
+          "answer": "The efficacy of a radiative forcing is defined as the change in global mean surface temperature per unit radiative forcing relative to a doubling of CO\\(_2\\).",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "options": [
+            "\\({\\rm Efficacy}_f = \\frac{\\Delta T_f}{\\Delta F_f}\\)",
+            "\\({\\rm Efficacy}_f = \\lambda \\Delta F_f\\)",
+            "\\({\\rm Efficacy}_f = (\\Delta T_f/\\Delta F_f)/(\\Delta T_{2 \\times CO_2}/\\Delta F_{2\\times CO_2})\\)",
+            "\\({\\rm Efficacy}_f = \\frac{\\Delta T_f}{\\Delta T_{2 \\times CO_2}}\\)"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r08",
+          "type": "multiple-choice",
+          "prompt": "The effective radiative forcing of CO\\(_2\\) is approximately 2 W m\\(^2\\) over the industrial period. This is about 5% of the effect of all CO\\(_2\\) in the atmosphere (35 W m\\(^{-2}\\) if all naturally occurring CO\\(_2\\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere?",
+          "answer": "The anthropogenic aerosol radiative forcing under cloud-free conditions is very uncertain, but is of the order -0.4 W m\\(^{-2}\\). In the natural atmosphere, aerosols reflect about 4 W m\\(^{-2}\\) (Fig. 2.6), so the answer is about 10%.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "options": [
+            "0.1%",
+            "1%",
+            "10%",
+            "50%"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r09",
+          "type": "multiple-choice",
+          "prompt": "Long-term measurements of surface solar radiation provide one line of evidence for the effect of anthropogenic aerosols on Earth's energy budget. Over a polluted region like Europe, by approximately how much did surface solar radiation decline from the 1950s to the 1980s?",
+          "answer": "Compilation of long-term measurements over Europe show a decline of a few percent in surface solar radiation. See Fig 2.3.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "options": [
+            "No evidence for a decline",
+            "A possible decline, but difficult to detect above natural variability",
+            "A decline of a fraction of a percent",
+            "A decline of a few percent"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "question-r10",
+          "type": "multiple-choice",
+          "prompt": "At what wavelengths is the scattering effect of aerosols highest?",
+          "answer": "See Fig 2.7. More explanation needed. Explanation is in the book.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "options": [
+            "Ultraviolet and blue wavelengths (0.3-0.4 \\(\\mu\\)m)",
+            "Visible wavelengths (0.5-1.0 \\(\\mu\\)m)",
+            "Near-infrared wavelengths (2-5 \\(\\mu\\)m)",
+            "In the atmospheric window region (8-14 \\(\\mu\\)m)"
+          ],
+          "correctIndex": 1
         }
       ]
     },
