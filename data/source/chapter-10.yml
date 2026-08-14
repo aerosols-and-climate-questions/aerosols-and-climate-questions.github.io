@@ -1,0 +1,137 @@
+chapterTitle: Chapter 10
+categories:
+  - id: review
+    name: Review
+    questions:
+
+      - id: question-r01
+        type: multiple-choice
+        prompt: Why does retrieval of aerosol optical depth remain underdetermined even for a well-calibrated multi-angle, multispectral instrument?
+        options:
+          - Aerosols are vertically distributed
+          - Different aerosol states can produce nearly identical top-of-atmosphere radiances
+          - Radiative transfer depends linearly on aerosol loading
+          - Atmospheric gases dominate all wavelengths
+        correctIndex: 1
+        answer: Answer
+
+      - id: question-r02
+        type: multiple-choice
+        prompt: An investigator uses satellite AOD as a proxy for CCN concentration. Which criticism is strongest?
+        options:
+          - AOD is reliable only above oceans
+          - AOD and CCN have different sensitivities to humidity
+          - CCN concentration depends on aerosol mass but AOD depends on aerosol surface area
+          - Particles below ~200 nm are poorly distinguished from gas molecules
+        correctIndex: 3
+        answer: Much of the CCN-relevant number distribution lies below the range well constrained by satellite remote sensing. See Fig. 5.9 for typical CCN sizes. Aerosol particles need to have an appreciable scattering efficiency at visible wavelengths to be detected in measurements of radiances. Fig 5.11 shows that the scattering efficiency is small for small particles typical of CCN. 
+
+
+      - id: question-r03
+        type: multiple-choice
+        prompt: Why can UV measurements detect absorbing aerosols over land more effectively than visible measurements?
+        options:
+          - UV surface reflectance is often low while Rayleigh scattering is strong
+          - Aerosol over land scatter radiation primarily in the UV
+          - Visible retrievals require polarization
+          - Land is brighter at UV wavelengths than at visible wavelengths
+        correctIndex: 0
+        answer: Answer.
+
+      - id: question-r04
+        type: multiple-choice
+        prompt: Which inference would be least defensible from satellite retrievals alone?
+        options:
+          - Seasonal variations in regional aerosol loading
+          - Long-range transport pathways
+          - Cloud condensation nuclei number concentrations
+          - Distinguishing between dust and smoke
+        correctIndex: 2
+        answer: Answer.        
+
+      - id: question-r05
+        type: multiple-choice
+        prompt: A researcher finds that CALIOP and MISR report different plume heights for the same wildfire. Which explanation is most likely?
+        options:
+          - They are on the same satellite platform and measure in the same way, so an error has likely been made in the data processing
+          - The instruments are sensitive to different portions of the plume
+          - MISR retrieves only cloud height but is unreliable for aerosol plume height
+          - CALIOP cannot reliably detect smoke because the refractive index in the retrieval is different to the training dataset
+        correctIndex: 1
+        answer: Lidar may detect thin elevated layers while MISR tends to track optically prominent portions of the plume.
+
+      - id: question-r06
+        type: multiple-choice
+        prompt: A retrieval algorithm assumes a prior climatology of aerosol microphysical properties. What is the principal risk with this approach?
+        options:
+          - Overfitting radiance noise
+          - Misattributing retrieval errors to aerosol amount when aerosol type is incorrect
+          - Failing to properly calculate scattering angles
+          - Inability to retrieve AOD
+        correctIndex: 1
+        answer: Answer
+
+      - id: question-r07
+        type: multiple-choice
+        prompt: Which statement best captures the chapter's central epistemological challenge for satellite aerosol remote sensing?
+        options:
+          - Aerosol column-average properties can be retrieved accurately, but we lack any information about aerosol vertical profiles
+          - Retrieval algorithms are increasingly unnecessary with modern sensors
+          - Aerosol chemical properties can now be retrieved reliably using multi-sensor retrievals, particularly in the UV
+          - The information content of radiance measurements is insufficient to uniquely determine aerosol state
+        correctIndex: 3
+        answer: Answer
+
+
+  - id: application
+    name: Application
+    questions:
+      - id: template-a01
+        type: numeric
+        prompt: What is the value of π (pi)?
+        answer: 3.14
+        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
+        tolerance: 0.01
+        hint: Optional hint for numeric questions.
+      - id: template-a02
+        type: multiple-choice
+        prompt: Is this chart about radiative forcings or climate feedbacks?
+        image:
+          src: ../imgs/forcings.png
+          alt: Sample forcing chart used to demonstrate image questions
+          caption: Images stay inside the question box and keep their proportions.
+        options:
+          - Feedbacks
+          - Forcings
+        correctIndex: 1
+        answer: It's forcings, shown on the x-axis
+  - id: mastery
+    name: Mastery
+    questions:
+      - id: template-m01
+        parts:
+          - label: (a)
+            prompt: Write one short sentence explaining what makes a question multi-part.
+            answer: A multi-part question has two or more subquestions that are answered separately.
+          - label: (b)
+            type: numeric
+            prompt: Evaluate \(\ 2^3 + 1 \).
+            answer: 9
+            tolerance: 0
+      - id: template-m02
+        type: numeric
+        prompt: What is the standard acceleration due to gravity at Earth's surface?
+        units: m s^-2
+        answer: 9.81
+        answerInfo: This is the conventional standard gravity.
+        tolerance: 0.01
+      - id: template-m03
+        type: select-multiple
+        prompt: Which of the following are greenhouse gases?
+        options:
+          - Carbon dioxide (\(\mathrm{CO}_2\))
+          - Methane (\(\mathrm{CH}_4\))
+          - Oxygen (\(\mathrm{O}_2\))
+          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
+        correctIndex: [0, 1, 3]
+        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.
