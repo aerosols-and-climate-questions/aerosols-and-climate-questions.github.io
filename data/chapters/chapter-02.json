@@ -105,6 +105,101 @@
             "Their cloud responses must be identical"
           ],
           "correctIndex": 1
+        },
+        {
+          "id": "question-r06",
+          "type": "multiple-choice",
+          "prompt": "Which of the following aerosols most strongly causes a fast precipitation response and why?",
+          "answer": "Black carbon aerosol most strongly causes a fast precipitation response because it heats the atmosphere. The fast 'forcing-driven' precipitation response to a change in aerosol occurs without any change in surface temperature (by definition). Heating of the atmosphere, which is very fast, above an unchanged surface stabilises the atmosphere and reduces water vertical transport and precipitation. An alternative explanation is that atmospheric heating from black carbon is balanced by a reduction in latent heating of the atmosphere from water condensation in order to restore atmospheric energy balance. See section 2.5.3 for more discussion on this topic.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Nobody"
+          ],
+          "options": [
+            "Secondary organic aerosol because it cools the land surface",
+            "Black carbon because it heats the atmosphere",
+            "Sulphate aerosol because it most strongly affects cloud droplet concentrations",
+            "Sea spray aerosol because it strongly affects planetary albedo"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r07",
+          "type": "multiple-choice",
+          "prompt": "Two aerosol species produce identical global mean effective radiative forcing. Which statement is most accurate?",
+          "answer": "The same global mean forcing can produce different regional climate responses because aerosol location, absorption characteristics, and atmospheric adjustments influence circulation and precipitation patterns.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Erin Raif"
+          ],
+          "options": [
+            "Their temperature responses must be identical everywhere",
+            "Their regional precipitation responses may differ substantially",
+            "Their forcing efficacies must be identical",
+            "Their cloud responses must be identical"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r08",
+          "type": "multiple-choice",
+          "prompt": "Why did the introduction of Effective Radiative Forcing (ERF) improve comparisons among forcing agents?",
+          "answer": "ERFs take into account atmospheric adjustments. Adjustments are processes that occur on timescales faster than the surface temperature response. For aerosols these are mostly changes in cloud properties, which alter the instantaneous radiative forcing caused by changes in atmospheric radiation and cloud droplet concentrations. This 'adjusted' or effective forcing is what causes the change in temperature, so neglecting them meant that temperature responses were not so comparable across forcing agents. Note that such adjustments don't apply just to aerosols; changes in carbon dioxide can also cause cloud adjustments, as explained in the book. See Box 2.2 and related text.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Nobody"
+          ],
+          "options": [
+            "It removed several sources of model uncertainty",
+            "It removes cloud effects, which were a major source of uncertainty",
+            "It includes atmospheric adjustments occurring before surface warming",
+            "It measures forcing at the top of the atmosphere rather than at the top of the stratosphere"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r09",
+          "type": "multiple-choice",
+          "prompt": "Two climate models reproduce the observed 20th-century warming equally well. Model A has a strongly negative aerosol forcing, while Model B has a weaker aerosol forcing. What is the most likely implication?",
+          "answer": "Model A probably has a higher climate sensitivity. Model A has a strongly negative aerosol radiative forcing, which will offset a larger fraction of the greenhouse gas forcing over the industrial period. Model A therefore has a smaller positive forcing than model B. For model A to simulate the same change in temperature over the industrial period as model B, it must have a higher climate sensitivity (\\(dT/dF\\)) to cause the same \\(\\Delta T\\) with a smaller \\(\\Delta F\\). See section 2.3.5.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Nobody"
+          ],
+          "options": [
+            "Model A probably has a lower climate sensitivity",
+            "Model A probably has a higher climate sensitivity",
+            "Aerosol forcing does not influence temperature simulations",
+            "Future temperature projections of the two models will be very similar"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r10",
+          "type": "multiple-choice",
+          "prompt": "(Needs improvement. Each question needs a 'because...' and the decoys could be better). A climate policy successfully removes anthropogenic aerosol emissions over 20 years and carbon dioxide emission rates stabilise. Which outcome is most likely?",
+          "answer": "Removal of aerosol emissions over 20 years would remove the negative aerosol radiative forcing that are are currently causing. Stabilisation of carbon dioxide emissions would cause atmospheric concentrations to still increase, albeit more slowly. The net effect would be an acceleration of warming.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Nobody"
+          ],
+          "options": [
+            "Gradual global cooling",
+            "No climatic response",
+            "Acceleration of warming as aerosol masking is removed",
+            "Rapid decrease in climate sensitivity"
+          ],
+          "correctIndex": 2
         }
       ]
     },
