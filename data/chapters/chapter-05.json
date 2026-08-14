@@ -274,22 +274,6 @@
             "Cloud processing"
           ],
           "correctIndex": 2
-        },
-        {
-          "id": "question-a03",
-          "type": "multiple-choice",
-          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
-          "answer": "It's forcings, shown on the x-axis",
-          "image": {
-            "src": "../imgs/forcings.png",
-            "alt": "Sample forcing chart used to demonstrate image questions",
-            "caption": "Images stay inside the question box and keep their proportions."
-          },
-          "options": [
-            "Feedbacks",
-            "Forcings"
-          ],
-          "correctIndex": 1
         }
       ]
     },
@@ -315,32 +299,6 @@
               "label": "(c)",
               "answer": "Somewhere new. Would need to be sure that the environmental conditions were likely to be conducive - e.g., sufficient vapours etc."
             }
-          ]
-        },
-        {
-          "id": "template-m02",
-          "type": "numeric",
-          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
-          "answer": 9.81,
-          "answerInfo": "This is the conventional standard gravity.",
-          "units": "m s^-2",
-          "tolerance": 0.01
-        },
-        {
-          "id": "template-m03",
-          "type": "select-multiple",
-          "prompt": "Which of the following are greenhouse gases?",
-          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
-          "options": [
-            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
-            "Methane (\\(\\mathrm{CH}_4\\))",
-            "Oxygen (\\(\\mathrm{O}_2\\))",
-            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
-          ],
-          "correctIndex": [
-            0,
-            1,
-            3
           ]
         }
       ]

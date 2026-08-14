@@ -30,37 +30,6 @@ categories:
         tolerance: 0.02
         hint: Use Fig 11.14
         answerInfo: This is an approximate answer based on the data in the figure. The figure shows that for a aerosol with a single-scatter albedo of 1.0 (purely scattering) and a cloud fraction of 0.7, the radiative effect at the TOA is about -2 W m\(^{-2}\). Decreasing the single-scatter albedo to 0.8 would cause the aerosol layer to have a positive radiative effect.
-      - id: template-r02
-        type: multiple-choice
-        prompt: What is the third letter of the Greek alphabet?
-        options:
-          - \(\alpha\)
-          - \(\beta\)
-          - \(\gamma\)
-        correctIndex: 2
-        answer: It's \(\gamma\), which is the third letter of the Greek alphabet.
-  - id: application
-    name: Application
-    questions:
-      - id: template-a01
-        type: numeric
-        prompt: What is the value of π (pi)?
-        answer: 3.14
-        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
-        tolerance: 0.01
-        hint: Optional hint for numeric questions.
-      - id: template-a02
-        type: multiple-choice
-        prompt: Is this chart about radiative forcings or climate feedbacks?
-        image:
-          src: ../imgs/forcings.png
-          alt: Sample forcing chart used to demonstrate image questions
-          caption: Images stay inside the question box and keep their proportions.
-        options:
-          - Feedbacks
-          - Forcings
-        correctIndex: 1
-        answer: It's forcings, shown on the x-axis
   - id: mastery
     name: Mastery
     questions:
