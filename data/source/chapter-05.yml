@@ -198,19 +198,6 @@ categories:
         answer: Dry deposition is the most likely process to account for the change in accumulation mode particle concentrations, as it preferentially removes small and large particles from the atmosphere (section 5.3). Condensation of SOA would grow the particles but not affect their number concentration. Coagulation would reduce the number concentration of all modes, but it is a slow process for accumulation and coarse mode-size particles. Wet deposition would remove particles that had been in the cloud droplets, so mainly accumulation and coarse modes. Cloud processing would also mainly affect accumulation and coarse modes, and would not remove Aitken mode particles.
         author: Ken Carslaw
 
-      - id: question-a03
-        type: multiple-choice
-        prompt: Is this chart about radiative forcings or climate feedbacks?
-        image:
-          src: ../imgs/forcings.png
-          alt: Sample forcing chart used to demonstrate image questions
-          caption: Images stay inside the question box and keep their proportions.
-        options:
-          - Feedbacks
-          - Forcings
-        correctIndex: 1
-        answer: It's forcings, shown on the x-axis
-
   - id: mastery
     name: Mastery
     questions:
@@ -227,21 +214,3 @@ categories:
           - label: (c)
             prompt: Where would you choose to make the measurements?
             answer: Somewhere new. Would need to be sure that the environmental conditions were likely to be conducive - e.g., sufficient vapours etc.
-              
-      - id: template-m02
-        type: numeric
-        prompt: What is the standard acceleration due to gravity at Earth's surface?
-        units: m s^-2
-        answer: 9.81
-        answerInfo: This is the conventional standard gravity.
-        tolerance: 0.01
-      - id: template-m03
-        type: select-multiple
-        prompt: Which of the following are greenhouse gases?
-        options:
-          - Carbon dioxide (\(\mathrm{CO}_2\))
-          - Methane (\(\mathrm{CH}_4\))
-          - Oxygen (\(\mathrm{O}_2\))
-          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
-        correctIndex: [0, 1, 3]
-        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.
