@@ -210,19 +210,24 @@ categories:
           - Forcings
         correctIndex: 1
         answer: It's forcings, shown on the x-axis
+
   - id: mastery
     name: Mastery
     questions:
-      - id: template-m01
+      - id: question-m01
         parts:
           - label: (a)
-            prompt: Write one short sentence explaining what makes a question multi-part.
-            answer: A multi-part question has two or more subquestions that are answered separately.
+            type: basic
+            prompt: Design a field campaign to study new particle formation and the potential effects on climate. What would you measure?
+            answer: Section 5.2.2 describes the chemical and physical processes involved in nucleation. Depending on the environment of interest, you would want to measure the chemical compounds potentially involved in nucleation and growth, which should include sulphuric acid and volatile organic carbon compounds (VOCs). Etc. You would also need to measure particle size distributions from nanometres up to a few hundred nanometres. You should also measure cloud condensation nuclei to relate the size distribution to the potential of the particles to form cloud droplets. To understand that process, you would also need to measure particle chemical composition. In addition to aerosol particles and chemistry, you would need to measure environmental conditions relevant to the processes, such as temperature and solar radiation fluxes (nucleation is temperature dependent and the precursor gases are produced through photochemical processes). Etc.
           - label: (b)
-            type: numeric
-            prompt: Evaluate \(\ 2^3 + 1 \).
-            answer: 9
-            tolerance: 0
+            type: basic
+            prompt: Using information in Chapter 9, which instruments would you include in your campaign? 
+            answer: Lots (to be completed)
+          - label: (c)
+            prompt: Where would you choose to make the measurements?
+            answer: Somewhere new. Would need to be sure that the environmental conditions were likely to be conducive - e.g., sufficient vapours etc.
+              
       - id: template-m02
         type: numeric
         prompt: What is the standard acceleration due to gravity at Earth's surface?
