@@ -49,6 +49,53 @@
           "answer": "Three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number are:- 1) Cloud liquid water content or liquid water path (the vertically integrated water content), which can be affected by changes in precipitation or entrainment. Liquid water path primarily affects solar radiation, and an increase causes a negative effective radiative forcing through an increase in cloud albedo (Eq. 12.13). The effect on terrestrial radiation is generally smaller for optically thick clouds (Eq. 12.26). 2) Cloud height or top temperature, which primarily affects terrestrial radiation (Eq. 12.24) and causes a positive effective radiative forcing. 3) Cloud fraction, which affects solar radiation (through changes in planetary albedo, Eq. 12.16) and terrestrial radiation (Eq. 12.22). The net effect of an increase in cloud fraction depends on the balance between the solar and terrestrial effects."
         }
       ]
+    },
+    {
+      "id": "application",
+      "name": "Application",
+      "questions": [
+        {
+          "id": "question-a01",
+          "type": "numeric",
+          "prompt": "In an adiabatic cloud with an effective radius of \\(r_e = 10 µm\\) at its top, at which liquid water path \\(L\\) is the albedo most susceptible to perturbations in droplet number concentration\\(N_d\\)?",
+          "hint": "Optional hint for numeric questions.",
+          "answer": 70,
+          "answerInfo": "The most susceptible albedo occurs when the derivative of albedo with respect to droplet number is maximized, which is at \\(A_c = 0.5\\). Then use Eq. 12.10 to translate \\(A_c\\) to \\(\\tau_c\\) assuming g = 0.85 (given in the text). The answer is \\(\\tau_c = 13.3\\). Then use Eq. 12.48 to translate \\(\\tau_c\\) to \\(L\\). The answer is \\(L = 70\\) g m\\(^{-2}\\).",
+          "units": "g m\\(^{-2}\\)",
+          "tolerance": 0.01
+        }
+      ]
+    },
+    {
+      "id": "mastery",
+      "name": "Mastery",
+      "questions": [
+        {
+          "id": "question-m01",
+          "prompt": "Typically, cloud-top droplet effective radius and cloud optical depth are retrieved by satellites (Section 12.3.2). The MODerate Imaging Spectroradiometer retrievals of these are reported at level-3 (aggregate over time and space) as joint-histograms. An example NetCDF file is provided. What is the average drop number concentration in that level-3 pixel when assuming adiabatic clouds?",
+          "answer": "The average drop number concentration in that level-3 pixel is xx cm\\(^{-3}\\)."
+        },
+        {
+          "id": "question-m02",
+          "prompt": "Most assessments of aerosol-cloud radiative forcing assume that the longwave component is negligible compared to the shortwave component. Based on the equations in this chapter, plot \\(dF/dN_d\\) for these two components as a function of cloud optical depth. Based on information you find outside the book, for which kinds of clouds does longwave aerosol forcing become important?",
+          "answer": "Section 12.1.3.1. Quite a low optical depth is needed for the longwave component to become important. The longwave component becomes important for optically thin clouds, such as cirrus clouds, and for clouds with a high cloud-top temperature, such as low-level stratus clouds. (Need to provide a calculation)."
+        },
+        {
+          "id": "question-m03",
+          "parts": [
+            {
+              "prompt": "Most assessments of aerosol-cloud radiative forcing assume that the longwave component is negligible compared to the shortwave component. Based on the equations in this chapter, plot \\(dF/dN_d\\) for these two components as a function of cloud optical depth.",
+              "label": "(a)",
+              "answer": "Section 12.1.3.1. Quite a low optical depth is needed for the longwave component to become important. The longwave component becomes important for optically thin clouds, such as cirrus clouds, and for clouds with a high cloud-top temperature, such as low-level stratus clouds. (Need to provide a calculation)."
+            },
+            {
+              "prompt": "Assuming an albedo of the cloud of 0.5, what is the equivalent sensitivity of reflected solar radiation assuming an incoming solar flux of 400 W m\\(^{-2}\\)?",
+              "label": "(b)",
+              "answer": "(Need to provide a calculation). The solar sensitivity is much higher than the calculated LW sensitivity, which is why the LW component is often neglected in assessments of aerosol-cloud radiative forcing."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
