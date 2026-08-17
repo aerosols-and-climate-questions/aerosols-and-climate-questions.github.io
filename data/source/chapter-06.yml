@@ -82,6 +82,8 @@ categories:
             type: basic
             prompt: Quantifying the effect of the model improvements on estimates of global mean aerosol forcing.
             answer: I would use the same atmosphere-only climate model, but run an ensemble of simulations without nudging for 5 years to quantify the effect of the model improvements on estimates of global mean aerosol forcing. See review question 1 for a reminder of why this is the most suitable model experiment for quantifying aerosol forcing.
+        author: Ken Carslaw
+        reviewer: Erin Raif
       - id: question-m02
         prompt: In a global model, it is common to treat the particle size distribution as modes of varying size and number concentration, with each mode carrying all chemical components. In reality, as air containing sulfate aerosol passes over ocean it picks up sea salt particles that don’t immediately mix with the sulfate particles. Assuming the particles are all the same size, what is the consequence for cloud drop concentrations of treating the particles as an “internal” mixture (all components in the same particles) versus treating it as an “external” mixture?
         answer: Not sure how to answer this.

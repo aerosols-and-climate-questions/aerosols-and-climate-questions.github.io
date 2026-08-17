@@ -110,8 +110,26 @@
       "questions": [
         {
           "id": "question-m01",
-          "prompt": "As a modeller, you are involved in a field campaign to measure aerosol and cloud properties over a marine region. You aim to use the measurements to evaluate and improve your model and quantify the effect on estimates of global mean aerosol forcing. What type of model would you use and how would you run this model to achieve your aims?",
-          "answer": "I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions and their impact on effective radiative forcing (ERF), while also being computationally efficient and suitable for evaluation against field measurements. The model would need to be run in two different ways. Firstly, for evaluation against measurements made under specific meteorological conditions, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense. For the forcing calculation, this same model could be run without nudging for 5 years. For further information, see section 6.2 and Box 6.1"
+          "prompt": "As a modeller, you are involved in a field campaign to measure aerosol and cloud properties over a marine region. What type of model would you use and how would you run this model to achieve the following aims?",
+          "hint": "In each case, you should consider whether or not it would be helpful to use nudging, and whether or not an ensemble would be helpful.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Erin Raif"
+          ],
+          "parts": [
+            {
+              "prompt": "Evaluating the model against the measurements made to improve the model processes.",
+              "label": "(a)",
+              "answer": "I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions while also being computationally efficient and suitable for evaluation against field measurements. For this purpose, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense."
+            },
+            {
+              "prompt": "Quantifying the effect of the model improvements on estimates of global mean aerosol forcing.",
+              "label": "(b)",
+              "answer": "I would use the same atmosphere-only climate model, but run an ensemble of simulations without nudging for 5 years to quantify the effect of the model improvements on estimates of global mean aerosol forcing. See review question 1 for a reminder of why this is the most suitable model experiment for quantifying aerosol forcing."
+            }
+          ]
         },
         {
           "id": "question-m02",
