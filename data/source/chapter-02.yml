@@ -177,7 +177,7 @@ categories:
         correctIndex: 3
         answer: Compilation of long-term measurements over Europe show a decline of a few percent in surface solar radiation. See Fig 2.3.
         author: Ken Carslaw
-        Reviewer: Nobody
+        Reviewer: Erin Raif
 
       - id: question-r15
         type: multiple-choice
@@ -188,10 +188,9 @@ categories:
           - Near-infrared wavelengths (2-5 \(\mu\)m)
           - In the atmospheric window region (8-14 \(\mu\)m)
         correctIndex: 1
-        answer: See Fig 2.7. More explanation needed. Explanation is in the book.
+        answer: Aerosol scattering occurs in the UV and visible wavelengths. However, transmission through of radiation through the atmosphere is much stronger for visible wavelengths than UV, so the scattering effect of aerosols is strongest in the visible.  See Fig 2.7.
         author: Ken Carslaw
-        Reviewer: Nobody
-        
+        Reviewer: Erin Raif
 
   - id: application
     name: Application
@@ -216,6 +215,7 @@ categories:
             answerInfo: "5%"
         answer: >-
           Reflectivity scales with \(\sqrt[3]{N_\mathrm{d}}\). To calculate the fractional change, we can do \(\sqrt[3]{\frac{N_\mathrm{old}+N_\mathrm{new}}{N_\mathrm{old}}}\), where \(N_\mathrm{old}\) is the droplet number before the entrainment and \(N_\mathrm{new}\) is the droplet number after the entrainment.
+        author: Erin Raif
 
 
         
