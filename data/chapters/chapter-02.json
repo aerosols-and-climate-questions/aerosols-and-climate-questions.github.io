@@ -100,7 +100,7 @@
             "Ken Carslaw"
           ],
           "reviewer": [
-            "Nobody"
+            "Erin Raif"
           ],
           "options": [
             "It removed several sources of model uncertainty",
@@ -152,12 +152,12 @@
           "id": "question-r09",
           "type": "multiple-choice",
           "prompt": "Two climate models reproduce the observed 20th-century warming equally well. Model A has a strongly negative aerosol forcing, while Model B has a weaker aerosol forcing. What is the most likely implication?",
-          "answer": "Model A probably has a higher climate sensitivity. Model A has a strongly negative aerosol radiative forcing, which will offset a larger fraction of the greenhouse gas forcing over the industrial period. Model A therefore has a smaller positive forcing than model B. For model A to simulate the same change in temperature over the industrial period as model B, it must have a higher climate sensitivity (\\(dT/dF\\)) to cause the same \\(\\Delta T\\) with a smaller \\(\\Delta F\\). See section 2.3.5.",
+          "answer": "Model A probably has a higher climate sensitivity. Model A has a strongly negative aerosol radiative forcing, which will offset a larger fraction of the greenhouse gas forcing over the industrial period. Model A therefore has a smaller positive forcing than model B. For model A to simulate the same change in temperature over the industrial period as model B, it must have a higher climate sensitivity (\\(\\mathrm{d}T/\\mathrm{d}F\\)) to cause the same \\(\\Delta T\\) with a smaller \\(\\Delta F\\). See section 2.3.5.",
           "author": [
             "Ken Carslaw"
           ],
           "reviewer": [
-            "Nobody"
+            "Erin Raif"
           ],
           "options": [
             "Model A probably has a lower climate sensitivity",
@@ -170,18 +170,18 @@
         {
           "id": "question-r10",
           "type": "multiple-choice",
-          "prompt": "(Needs improvement. Each question needs a 'because...' and the decoys could be better). A climate policy successfully removes anthropogenic aerosol emissions over 20 years and carbon dioxide emission rates stabilise. Which outcome is most likely?",
-          "answer": "Removal of aerosol emissions over 20 years would remove the negative aerosol radiative forcing that are are currently causing. Stabilisation of carbon dioxide emissions would cause atmospheric concentrations to still increase, albeit more slowly. The net effect would be an acceleration of warming.",
+          "prompt": "A proposed climate policy would remove anthropogenic aerosol emissions over 20 years and cause carbon dioxide emission rates to stabilise. Which outcome would be most likely?",
+          "answer": "Removal of aerosol emissions over 20 years would remove the negative aerosol radiative forcing that aerosols are currently causing. Stabilisation of carbon dioxide emissions would cause atmospheric concentrations to still increase, albeit more slowly. The net effect would be an acceleration of warming. Climate sensitivity would be unchanged as this is the response to a given forcing, such as aerosol or CO\\(_2\\) emissions. See section 2.3.5.",
           "author": [
             "Ken Carslaw"
           ],
           "reviewer": [
-            "Nobody"
+            "Erin Raif"
           ],
           "options": [
             "Gradual global cooling",
             "No climatic response",
-            "Acceleration of warming as aerosol masking is removed",
+            "Acceleration of warming",
             "Rapid decrease in climate sensitivity"
           ],
           "correctIndex": 2
