@@ -190,15 +190,15 @@
           "id": "question-r11",
           "type": "multiple-choice",
           "prompt": "Which of the following equations defines the equilibrium climate sensitivity? \\(\\lambda\\) is the climate sensitivity parameter in \\(\\mathrm{K/Wm^{-2}}\\), \\(\\Delta F\\) is a radiative forcing, and \\(\\Delta T\\) is the change in global mean surface temperature.",
-          "answer": "ECS is defined as the change in global mean surface temperature at equilibrium after a doubling of atmospheric CO\\(_2\\) concentration. The radiative forcing associated with a doubling of CO\\(_2\\) is \\(\\Delta F_{2\\times CO_2}\\), and the climate sensitivity parameter \\(\\lambda\\) relates the forcing to the temperature response. ECS is a misonomer in that it is actually a temperature (in K) rather than a sensitivity.",
+          "answer": "ECS is defined as the change in global mean surface temperature at equilibrium after a doubling of atmospheric CO\\(_2\\) concentration. The radiative forcing associated with a doubling of CO\\(_2\\) is \\(\\Delta F_{2\\times \\mathrm{CO_2}}\\), and the climate sensitivity parameter \\(\\lambda\\) relates the forcing to the temperature response. ECS is a misonomer in that it is actually a temperature (in K) rather than a sensitivity.",
           "author": [
             "Ken Carslaw"
           ],
           "options": [
-            "\\(ECS = \\lambda \\Delta F\\)",
-            "\\(ECS = \\lambda \\Delta F_{CO_2}\\)",
-            "\\(ECS = \\lambda \\Delta F_{2\\times CO_2}\\)",
-            "\\(ECS = \\frac{\\Delta T}{\\Delta F}\\)"
+            "\\(\\mathrm{ECS} = \\lambda \\Delta F\\)",
+            "\\(\\mathrm{ECS} = \\lambda \\Delta F_{\\mathrm{CO_2}}\\)",
+            "\\(\\mathrm{ECS} = \\lambda \\Delta F_{2\\times \\mathrm{CO_2}}\\)",
+            "\\(\\mathrm{ECS} = \\frac{\\Delta T}{\\Delta F}\\)"
           ],
           "correctIndex": 2
         },
@@ -213,16 +213,16 @@
           "options": [
             "\\({\\rm Efficacy}_f = \\frac{\\Delta T_f}{\\Delta F_f}\\)",
             "\\({\\rm Efficacy}_f = \\lambda \\Delta F_f\\)",
-            "\\({\\rm Efficacy}_f = (\\Delta T_f/\\Delta F_f)/(\\Delta T_{2 \\times CO_2}/\\Delta F_{2\\times CO_2})\\)",
-            "\\({\\rm Efficacy}_f = \\frac{\\Delta T_f}{\\Delta T_{2 \\times CO_2}}\\)"
+            "\\({\\rm Efficacy}_f = (\\Delta T_f/\\Delta F_f)/(\\Delta T_{2 \\times \\mathrm{CO_2}}/\\Delta F_{2\\times \\mathrm{CO_2}})\\)",
+            "\\({\\rm Efficacy}_f = \\frac{\\Delta T_f}{\\Delta T_{2 \\times \\mathrm{CO_2}}}\\)"
           ],
           "correctIndex": 2
         },
         {
           "id": "question-r13",
           "type": "multiple-choice",
-          "prompt": "The effective radiative forcing of CO\\(_2\\) is approximately 2 W m\\(^2\\) over the industrial period. This is about 5% of the effect of all CO\\(_2\\) in the atmosphere (35 W m\\(^{-2}\\) if all naturally occurring CO\\(_2\\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere?",
-          "answer": "The anthropogenic aerosol radiative forcing under cloud-free conditions is very uncertain, but is of the order -0.4 W m\\(^{-2}\\). In the natural atmosphere, aerosols reflect about 4 W m\\(^{-2}\\) (Fig. 2.6), so the answer is about 10%.",
+          "prompt": "The effective radiative forcing of CO\\(_2\\) is approximately 2 \\(\\mathrm{W m^{-2}}\\) over the industrial period. This is about 5% of the effect of all CO\\(_2\\) in the atmosphere (35 \\(\\mathrm{W m^{-2}}\\)) if all naturally occurring CO\\(_2\\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere?",
+          "answer": "The anthropogenic aerosol radiative forcing under cloud-free conditions is very uncertain, but is of the order -0.4 \\(\\mathrm{W m^{-2}}\\). (This is \\(\\Delta F_{\\mathrm{ari}^{\\mathrm{eff}}\\ in Table 2.1). In the natural atmosphere, aerosols reflect about 4 \\(\\mathrm{W m^{-2}}\\) (Fig. 2.6), so the answer is about 10%.",
           "author": [
             "Ken Carslaw"
           ],
