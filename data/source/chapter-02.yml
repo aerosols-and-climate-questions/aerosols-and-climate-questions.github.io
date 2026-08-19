@@ -90,7 +90,7 @@ categories:
 
       - id: question-r06
         type: multiple-choice
-        prompt: Which of the following aerosols most strongly causes a fast precipitation response and why?
+        prompt: Which one of the following aerosols most strongly causes a fast precipitation response and why?
         options:
           - Secondary organic aerosol because it cools the land surface
           - Black carbon because it heats the atmosphere

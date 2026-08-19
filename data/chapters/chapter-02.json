@@ -132,7 +132,7 @@
         {
           "id": "question-r06",
           "type": "multiple-choice",
-          "prompt": "Which of the following aerosols most strongly causes a fast precipitation response and why?",
+          "prompt": "Which one of the following aerosols most strongly causes a fast precipitation response and why?",
           "answer": "Black carbon aerosol most strongly causes a fast precipitation response because it heats the atmosphere. The fast 'forcing-driven' precipitation response to a change in aerosol occurs without any change in surface temperature (by definition). Heating of the atmosphere, which is very fast, above an unchanged surface stabilises the atmosphere and reduces water vertical transport and precipitation. An alternative explanation is that atmospheric heating from black carbon is balanced by a reduction in latent heating of the atmosphere from water condensation in order to restore atmospheric energy balance. In contrast to black carbon, sulfate is a scattering aerosol, so no additional heat is absorbed in the atmosphere. On longer time scales, sulfate suppresses precipitation by decreasing global temperature. See section 2.5.3 for more discussion on this topic.",
           "author": [
             "Ken Carslaw"
