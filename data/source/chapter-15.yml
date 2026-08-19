@@ -17,12 +17,12 @@ categories:
 
       - id: question-r02
         type: multiple-choice
-        prompt: An increase in INPs causes earlier glaciation of a supercooled cloud. Which radiative consequence is most likely?
+        prompt: An increase in INPs causes earlier glaciation of a shallow supercooled cloud. Which radiative consequence is most likely?
         options:
           - The cloud will reflect more solar radiation because the ice crystals have higher scattering efficiency than liquid droplets
           - The cloud will emit more terrestrial (longwave) radiation because cloud depth is increased
           - The cloud will reflect less solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit less terrestrial (longwave) radiation because cloud cover is decreased
-          - The cloud will reflect more solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit more terrestrial (longwave) radiation because cloud cover is increased
+          - The cloud will reflect more solar radiation because the ice crystals have higher scattering efficiency than liquid droplets and it will emit more terrestrial (longwave) radiation because cloud cover is increased
         correctIndex: 2
         answer: The cloud will reflect less solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit less terrestrial (longwave) radiation because cloud cover is decreased.
 
