@@ -51,14 +51,14 @@ categories:
 
       - id: question-r05
         type: multiple-choice
-        prompt: What is the typical maximum measured concentration of INPs in the atmosphere at temperatures below -20°C?
+        prompt: What is the typical maximum measured concentration of INPs in the atmosphere at temperatures of -20°C?
         options:
           - 100 cm⁻³
           - 10 cm⁻³
           - 1 cm⁻³
           - 0.10 cm⁻³
         correctIndex: 3
-        answer: The typical maximum measured concentration of INPs in the atmosphere at temperatures below -20°C is around 0.10 cm⁻³, or 100 L⁻¹.
+        answer: The typical maximum measured concentration of INPs in the atmosphere at temperatures of -20°C is around 0.10 cm⁻³, or 100 L⁻¹.
 
   - id: application
     name: Application
