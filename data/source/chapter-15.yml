@@ -6,14 +6,14 @@ categories:
 
       - id: question-r01
         type: multiple-choice
-        prompt: Ice nucleation is fundamentall a stochastic time-dependent process. However, models usually do not describe droplet freezing in this way. Why not?
+        prompt: Ice nucleation is fundamentally a stochastic time-dependent process. However, models usually do not describe heterogeneous ice nucleation using a single time-dependent description. Why not?
         options:
-          - Time dependence is not important for cloud microphysics, so it is ignored in models
-          - Atmospheric particles have too much variability in their freezing properties, so a time-dependent description is not feasible
-          - The time dependence is too complex to include in models, so a simpler description is used
-          - Laboratory measurements have been unable to capture time-dependent behavior
+          - Time dependence is not important for ice nucleation, so it is ignored in models
+          - Atmospheric particles have too much variability in their freezing properties, so a single time-dependent description is not adequate
+          - Even a single time-dependent description is too complex to include in models, so a simpler description is used
+          - Laboratory measurements have been unable to capture time-dependent behavior of ice nucleation
         correctIndex: 1
-        answer: Atmospheric particles have too much variability in their freezing properties, so a time-dependent description is not feasible.
+        answer: Atmospheric particles have too much variability in their freezing properties, so a single time-dependent description is not adequate.
 
       - id: question-r02
         type: multiple-choice
