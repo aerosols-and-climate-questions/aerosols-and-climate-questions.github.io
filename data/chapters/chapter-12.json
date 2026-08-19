@@ -47,6 +47,37 @@
           "id": "question-r03",
           "prompt": "List three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number. For each property, state whether it primarily affects terrestrial or solar radiation and whether an increase in the cloud property causes a positive or negative effective radiative forcing at the top of the atmosphere.",
           "answer": "Three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number are:- 1) Cloud liquid water content or liquid water path (the vertically integrated water content), which can be affected by changes in precipitation or entrainment. Liquid water path primarily affects solar radiation, and an increase causes a negative effective radiative forcing through an increase in cloud albedo (Eq. 12.13). The effect on terrestrial radiation is generally smaller for optically thick clouds (Eq. 12.26). 2) Cloud height or top temperature, which primarily affects terrestrial radiation (Eq. 12.24) and causes a positive effective radiative forcing. 3) Cloud fraction, which affects solar radiation (through changes in planetary albedo, Eq. 12.16) and terrestrial radiation (Eq. 12.22). The net effect of an increase in cloud fraction depends on the balance between the solar and terrestrial effects."
+        },
+        {
+          "id": "question-r04",
+          "type": "multiple-choice",
+          "prompt": "Which of the following is a correct statement about the sensitivity of cloud albedo to changes in droplet number concentration?",
+          "answer": "The sensitivity of cloud albedo to changes in droplet number concentration is highest for optically thin clouds, as indicated by Eq. xx and the discussion in Section yy.",
+          "options": [
+            "The sensitivity is independent of cloud optical depth",
+            "The sensitivity is highest for optically thick clouds",
+            "The sensitivity is highest for optically thin clouds",
+            "The sensitivity is highest for clouds with larger droplet radii"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r05",
+          "type": "select-multiple",
+          "prompt": "Which of these creates a major challenge in satellite studies of aerosol-cloud interactions? Select all that apply.",
+          "answer": "Distinguishing aerosol effects from meteorological covariability is one of the central challenges in aerosol-cloud studies. CCN cannot be measured directly from space, and aerosol properties cannot be retrieved in the presence of clouds. Mor explanation needed. See section 12.3.3.",
+          "options": [
+            "CCN cannot be measured directly from space",
+            "Meteorology can covary with both aerosols and clouds",
+            "Aerosol properties cannot be retrieved in the presence of clouds",
+            "The greatest radiative effects occur for clouds that are optically thin, which are difficult to observe from space",
+            "The greatest radiative effects occur over land, where they are difficult to observe from space"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            2
+          ]
         }
       ]
     },
