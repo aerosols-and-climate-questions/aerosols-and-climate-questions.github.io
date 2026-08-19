@@ -118,10 +118,10 @@ categories:
         type: multiple-choice
         prompt: A proposed climate policy would remove anthropogenic aerosol emissions over 20 years and cause carbon dioxide emission rates to stabilise. Which outcome would be most likely?
         options:
-          - Gradual global cooling
-          - No climatic response
-          - Acceleration of warming
-          - Rapid decrease in climate sensitivity
+          - Gradual global cooling as the rate of carbon dioxide emissions has stopped increasing
+          - No climatic response because the two radiative forcings continue to balance
+          - Acceleration of warming as the masking effect of aerosol is removed
+          - Rapid decrease in climate sensitivity as there is a significant change to the Earth system
         correctIndex: 2
         answer: Removal of aerosol emissions over 20 years would remove the negative aerosol radiative forcing that aerosols are currently causing. Stabilisation of carbon dioxide emissions would cause atmospheric concentrations to still increase, albeit more slowly. The net effect would be an acceleration of warming. Climate sensitivity would be unchanged as this is the response to a given forcing, such as aerosol or CO\(_2\) emissions. See section 2.3.5.
         author: Ken Carslaw
