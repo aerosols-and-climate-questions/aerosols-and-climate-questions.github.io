@@ -78,8 +78,8 @@ categories:
         answer: It's forcings, shown on the x-axis
         id: question-a04
         type: basic
-        prompt: You are testing the sensitivity of a cloud model to autoconversion process rate parametrisation. You change the exponent to the droplet number, and conduct some one-at-at-time sensitivity tests. How do you expect the sensitivity of the model output to droplet number will change as you change that exponent?
-        answer: TBC
+        prompt: Equation X on page Y presents the Khairoutdinov and Kogan autoconversion rate parametrisation, in which the autoconversion rate depends on cloud liquid water and cloud droplet number concentration, N<sub>d</sub>. Suppose the exponent controlling the dependence on N<sub>d</sub> is modified, and a series of one-at-a-time sensitivity experiments is performed in which only N<sub>d</sub> is varied while all other variables are held constant. <br> <br> How would you expect the sensitivity of the model output to changes in N<sub>d</sub> to change as the exponent on N<sub>d</sub> becomes more negative (i.e. its magnitude increases), and as it becomes less negative (i.e. moves closer to zero)? Explain your reasoning in terms of the mathematical form of the parametrisation and the physical processes represented.
+        answer: Making the exponent on N<sub>d</sub> more negative increases the sensitivity of the model output to droplet number concentration. For a given increase in N<sub>d</sub>, autoconversion is suppressed more strongly, leading to larger changes in precipitation and cloud water. Making the exponent less negative weakens this dependence, so the same change in N<sub>d</sub> produces a smaller response. As the exponent approaches zero, autoconversion becomes increasingly insensitive to N<sub>d</sub>, and in the limit of a zero exponent the autoconversion rate is independent of droplet number concentration.
   - id: mastery
     name: Mastery
     questions:
