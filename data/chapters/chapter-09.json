@@ -8,30 +8,30 @@
         {
           "id": "question-r01",
           "type": "multiple-choice",
-          "prompt": "A modeller is searching for available data to evaluate aerosol particle size distributions in their model. Which of these instruments is least likely to be useful?",
+          "prompt": "A modeller is searching for available data to evaluate aerosol particle size distributions in their model. Which of these instruments is <i>least</i> likely to be useful?",
           "hint": "Think about the size range of the instruments.",
-          "answer": "The CDP (cloud droplet probe) is designed to measure cloud droplets, not aerosol particles, so its diameter range is typically too large to be useful. However, some scientists have used the CDP to measure coarse-mode aerosol by changing the assumptions made about the aerosol refractive index (Rosenberg, et al., 2012, AMT)",
+          "answer": "The OPC (optical particle counter) is designed to measure particles in the size range of 0.1 to 10 µm, which is suitable for many aerosol studies. The SMPS (Scanning Mobility Particle Sizer), depending on the set-up, is designed to measure particles in the size range of 10 nm to 1 µm, which is suitable for many aerosol studies. The CDP (cloud droplet probe) is designed to measure cloud droplets, not aerosol particles, so its diameter range is typically too large to be useful. However, some scientists have used the CDP to measure coarse-mode aerosol by changing the assumptions made about the aerosol refractive index (Rosenberg, et al., 2012, AMT). However, a single CPC (condensation particle counter) is not able to measure the size distribution of aerosol particles, just the total number of particles above a pre-determined size threshold, so it is the least useful instrument for this purpose.",
           "author": [
-            "Ken Carslaw",
-            "Erin Raif"
+            "Erin Raif",
+            "Ken Carslaw"
           ],
           "reference": [
             "Rosenberg, P. D., Dean, A. R., Williams, P. I., Dorsey, J. R., Minikin, A., Pickering, M. A., and Petzold, A.: Particle sizing calibration with refractive index correction for light scattering optical particle counters and impacts upon PCASP and CDP data collected during the Fennec campaign, Atmos. Meas. Tech., 5, 1147-1163, https://doi.org/10.5194/amt-5-1147-2012, 2012. ",
             "Raif, E. N., Barr, S. L., Tarn, M. D., McQuaid, J. B., Daily, M. I., Abel, S. J., Barrett, P. A., Bower, K. N., Field, P. R., Carslaw, K. S., and Murray, B. J.: High ice-nucleating particle concentrations associated with Arctic haze in springtime cold-air outbreaks, Atmos. Chem. Phys., 24, 14045–14072, https://doi.org/10.5194/acp-24-14045-2024, 2024."
           ],
           "options": [
-            "GRIMM",
+            "OPC",
             "SMPS",
             "CPC",
-            "CDP"
+            "AMS"
           ],
           "correctIndex": 2
         },
         {
           "id": "question-r02",
           "type": "multiple-choice",
-          "prompt": "A modeller is searching for available data to evaluate the amount of soot in their model. Which instrument's data would be most useful?",
-          "answer": "The SP2 (Single Particle Soot Photometer) selectively vaporises black carbon.",
+          "prompt": "A modeller is searching for available data to evaluate the amount of soot in their model. Which instrument would be most useful?",
+          "answer": "The SP2 (Single Particle Soot Photometer) selectively vaporises black carbon in individual particles, making it ideal for measuring soot mass concentrations. A nepelometer measures the scattering of light by particles, which is not specific to soot. An AMS (Aerosol Mass Spectrometer) measures the mass of non-refractory aerosol components (soluble ions), which does not include black carbon. The NAIS (Neutral cluster and Air Ion Spectrometer) measures the size distribution of ions and small aerosol particles, which is not specific to soot.",
           "author": [
             "Ken Carslaw"
           ],
@@ -51,7 +51,7 @@
           "type": "multiple-choice",
           "prompt": "Which combination of instruments would be most appropriate for measuring new particle formation",
           "hint": "Consider the size range and capabilities of each instrument.",
-          "answer": "See Sec. 9.1.4 for full details.",
+          "answer": "An OPC (Optical Particle Counter) and an AMS (Aerosol Mass Spectrometer) are not suitable for measuring new particle formation, as the OPC is not sensitive to particles smaller than 100 nm and the AMS only measures particle composition for particles larger than around 100 nm diameter. A CPC (Condensation Particle Counter) and an SMPS (Scanning Mobility Particle Sizer) are ideal for measuring new particle formation, as the CPC can detect particles down to a few nanometers in diameter and the SMPS can measure the size distribution of particles larger than a few nanometres. A CPC and an AMS would not be suitable for measuring new particle formation because neither instrument measures the size distribution of particles in the relevant size range.",
           "author": [
             "Ken Carslaw",
             "Erin Raif"
@@ -70,23 +70,19 @@
         {
           "id": "question-r04",
           "type": "multiple-choice",
-          "prompt": "Which instrument combination would be most appropriate for measuring and understanding aerosol absorption?",
-          "hint": "Consider the size range and capabilities of each instrument.",
-          "answer": "See Sec. 9.1.4 for full details.",
+          "prompt": "Which instrument combination would be most appropriate for understanding the aerosol processes relevant to aerosol-radiation interaction forcing (ARI)?",
+          "answer": "A PSAP (Particle Soot Absorption Photometer), an SP2 (Single Particle Soot Photometer) and an AMS (Aerosol Mass Spectrometer) are the most appropriate combination of instruments for understanding the aerosol processes relevant to aerosol-radiation interaction forcing (ARI). The PSAP measures the absorption of light by particles, which is important for understanding the direct radiative effect of aerosols. The AMS measures the mass of non-refractory aerosol components (soluble ions), which is important for understanding the chemistry of the particles, which could be linked to the sources. The HTDMA measures the hygroscopic properties of aerosols, which is important for understanding the aerosol-radiation interaction since water uptake strongly affects particle size and light scattering efficiency (Ch. 4 and 5). What's missing in this combination is a instrument that measures the optical properties of aerosols, such as a nephelometer. The next best combination is the HTDMA, a nephelometer and a PSAP. However, this combination misses the measurement of particle composition, which is important for understanding particle sources and processes.",
           "author": [
             "Ken Carslaw",
-            "Erin Raif"
-          ],
-          "reviewer": [
-            "Ken Carslaw",
-            "Erin Raif"
+            "Nobody"
           ],
           "options": [
-            "An OPC and a nephelometer",
-            "An SP2 and an OPC",
-            "An SP2 and a nephelometer"
+            "A PSAP, an AMS and an HTDMA",
+            "A CPC, an SMPS and a CDP",
+            "An SMPS, a CPC and a nephelometer",
+            "An HTDMA, a nephelometer and a PSAP"
           ],
-          "correctIndex": 2
+          "correctIndex": 0
         },
         {
           "id": "question-r05",
@@ -110,7 +106,7 @@
         {
           "id": "question-r06",
           "type": "multiple-choice",
-          "prompt": "A technique to measure INPs involves applying droplets of purified water to a filter which collects aerosols. Is this technique online or offline?",
+          "prompt": "A technique to measure INPs (ice-nucleating particles) involves applying droplets of purified water to a filter which collects aerosols. Is this technique online or offline?",
           "answer": "Offline, the analysis is performed after collection.",
           "author": [
             "Erin Raif"
@@ -172,21 +168,6 @@
               "answer": "A straight vertical line."
             }
           ]
-        },
-        {
-          "id": "question-r09",
-          "type": "multiple-choice",
-          "prompt": "An aerosol-climate model with a precise aerosol emission inventory has too few aerosols in the upper troposphere. What is a plausible reason for this?",
-          "answer": "Need to flesh this out.",
-          "author": [
-            "Erin Raif"
-          ],
-          "options": [
-            "Aerosol mixes too quickly in a grid-box, so aerosols form droplets too rapidly leading to too-efficient precipitation.",
-            "A decoy option",
-            "A decoy option"
-          ],
-          "correctIndex": 0
         }
       ]
     },
@@ -196,7 +177,7 @@
       "questions": [
         {
           "id": "question-a01",
-          "prompt": "Suggest a list of instruments that could be used on an aircraft campaign to measure aerosol-cloud interactions.",
+          "prompt": "Suggest a list of instruments that could be used on an aircraft campaign to measure long-range transport of urban aerosols.",
           "answer": "TBC.",
           "author": [
             "Ken Carslaw"
@@ -216,7 +197,7 @@
         },
         {
           "id": "question-a03",
-          "prompt": "An IAGOS aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 s cm-3.",
+          "prompt": "An IAGOS aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 s cm\\(^{-3}\\).",
           "answer": "Aerosol measurements cannot be understood independently from the atmospheric conditions they were made in!",
           "author": [
             "Erin Raif"
@@ -231,11 +212,11 @@
               "type": "numeric",
               "answer": 40.8,
               "tolerance": 0.1,
-              "answerInfo": "40.8 cm\\(^{-3}\\). Using the ideal gas law, \\(PV=nRT\\), the ratio between the volume of ambient air and air at STP is \\(T_{\\mathrm{amb.}}P_{\\mathrm{STP}}/T_{\\mathrm{STP}}P_{\\mathrm{amb.}}\\). To convert between STP and ambient concentrations, divide by this ratio. Since this was IAGOS data, found on EDAS (Sec. 9.3.2), the value of STP is 1013 hPa. If you used the IUPAC value of 1000 hPa, you would have calculated 41.3 cm-3. That's probably close enough for our purposes, but it could lead to confusion in some cases!",
-              "units": "cm-3"
+              "answerInfo": "40.8 cm\\(^{-3}\\). Using the ideal gas law, \\(PV=nRT\\), the ratio between the volume of ambient air and air at STP is \\(T_{\\mathrm{amb.}}P_{\\mathrm{STP}}/T_{\\mathrm{STP}}P_{\\mathrm{amb.}}\\). To convert between STP and ambient concentrations, divide by this ratio. Since this was IAGOS data, found on EDAS (Sec. 9.3.2), the value of STP is 1013 hPa. If you used the IUPAC value of 1000 hPa, you would have calculated 41.3 cm\\(^{-3}\\). That's probably close enough for our purposes, but it could lead to confusion in some cases!",
+              "units": "cm\\(^{-3}\\)"
             },
             {
-              "prompt": "When using these measurements to set a vertical profile of aerosol concentration, a modeller fails to spot that the concentration is in s cm-3, instead thinking it is in cm-3. What would be the consequence of this error?",
+              "prompt": "When using these measurements to set a vertical profile of aerosol concentration, a modeller fails to spot that the concentration is in s cm\\(^{-3}\\), instead thinking it is in cm\\(^{-3}\\). What would be the consequence of this error?",
               "label": "(b)",
               "answer": "The aerosol concentration would be increasingly overestimated with altitude as the air density decreases."
             }
@@ -243,7 +224,7 @@
         },
         {
           "id": "question-a04",
-          "prompt": "A scientist wishes to obtain a particle-size distribution of sodium chloride aerosol via an unheated inlet using an online technique. Aside from the ambient temperature and pressure, which atmospheric quantity should they measure?",
+          "prompt": "A scientist wishes to obtain a particle size distribution of sodium chloride aerosol via an unheated inlet using an online technique. Aside from the ambient temperature and pressure, which atmospheric quantity should they measure?",
           "answer": "Relative humidity. Sodium chloride is a strongly hygroscopic aerosol and will swell at high humidities. This can be corrected for using the hygroscopic growth factor, but the relative humidity must be known.",
           "lastUpdated": "2026-06-27",
           "author": [
@@ -251,6 +232,17 @@
           ],
           "reviewer": [
             "Ken Carslaw"
+          ]
+        },
+        {
+          "id": "question-a05",
+          "prompt": "An agency is considering placing SP2 instruments (for measuring black carbon) at three locations in Europe. They argue that the measurements will be useful for evaluating the performance of a model because the instrument accuracy and precision are high. What additional information would you need to know before deciding whether this is a good idea?",
+          "answer": "The key missing information is whether the locations are representative of the model domain. If the locations are not representative, then the measurements will not be useful for evaluating the model performance. For example, if the locations are downwind of urban areas then it is likely that the measurements will not be representative of the the model's large grid boxes which will average out such sources (the model would appear to be biased low). The expected representation error for such observations is shwon in Fig. 9.10.",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Nobody"
           ]
         }
       ]
@@ -261,13 +253,13 @@
       "questions": [
         {
           "id": "question-m01",
-          "prompt": "An optical particle counter with high temporal resolution and high size resolution is used to make a particle size distribution measurement of an aerosol species. It is found that the species has an unexpectedly low number concentration. Why might averaging the data over a lower time resolution improve one's confidence in the reported measurement?",
+          "prompt": "An optical particle counter with high temporal resolution and high size resolution is used to make a particle size distribution measurements. It is found that the particle number concentration is an unexpectedly low. Why might averaging the data over a lower time resolution (longer period) improve one's confidence in the reported measurement?",
           "answer": "Optical particle counters count the number of aerosols of a given size observed in a certain time interval. This is then combined with a measurement of the volume of air to calculate the concentration. Since the aerosol is not abundant, at the high time resolution there are likely to be many size bins which report very few counts, often on the order of 0 to 4. Counts of aerosol are subject to the Poisson distribution, where the error on the counted number is its square root. For counts this low, this ranges between 50 and 100%. By decreasing the temporal resolution, there will be more counts per size bin, reducing the error on the counting statistic. Since the magnitude of error on the volume of air typically does not significantly change between measurements, the error on the reported concentration will be smaller at lower time resolution."
         },
         {
           "id": "question-m02",
           "type": "multiple-choice",
-          "prompt": "A mineral dust particle which is known to have a volume-equivalent diameter of a few microns has properties \\(\\rho_{\\mathrm{p}} = 2.6\\ \\mathrm{g\\ cm^{-3}}\\) and \\(\\chi = 2\\) at all pressures. Would its electric mobility diameter (measured at STP) be larger or smaller than its vacuum aerodynamic diameter? Assume that \\(\\rho_{\\mathrm{0}} = 1\\ \\mathrm{g\\ cm^{-3}}\\). <i>You will probably find it useful to use the first-order Taylor approximation,</i> \\(e^{x}= 1+x\\).",
+          "prompt": "A mineral dust particle which is known to have a volume-equivalent diameter of a few microns has properties \\(\\rho_{\\mathrm{p}} = 2.6\\ \\mathrm{g\\ cm^{-3}}\\) and \\(\\chi = 2\\) (a dimensionless shape factor). Would its electric mobility diameter (measured at STP) be larger or smaller than its vacuum aerodynamic diameter? Assume that \\(\\rho_{\\mathrm{0}} = 1\\ \\mathrm{g\\ cm^{-3}}\\). <i>You will probably find it useful to use the first-order Taylor approximation,</i> \\(e^{x}= 1+x\\).",
           "hint": "Take the ratio of the two diameters. After making a Taylor expansion, consider the relative magnitude of the terms in the Taylor expansion and eliminate those which are small.",
           "answer": "<p>The electric mobility diameter (\\(d_{\\mathrm{m}}\\)) is larger than the vacuum aerodynamic diameter (\\(d_{\\mathrm{va}}\\)). Referring to Eq. 9.2 and Eq. 9.4 of the book to take the ratio of the two diameters,</p> <p>\\(\\frac{d_{\\mathrm{m}}}{d_{\\mathrm{va}}} = \\frac{d_{\\mathrm{m}}/d_{\\mathrm{v}}}{d_{\\mathrm{va}}/d_{\\mathrm{v}}} = \\frac{\\chi\\left[C_\\mathrm{c}(d_\\mathrm{m})/C_\\mathrm{c}(d_\\mathrm{v})\\right]}{\\rho_\\mathrm{p}/\\rho_\\mathrm{0}\\chi}\\)</p> <p>where \\(d_{\\mathrm{v}}\\) is the volume-equivalent diameter.</p> <p>\\(\\frac{d_{\\mathrm{m}}}{d_{\\mathrm{va}}} = \\frac{\\chi^{2}\\rho_\\mathrm{0}}{\\rho_\\mathrm{p}}\\left[\\frac{1+\\frac{2\\lambda}{d_\\mathrm{m}}\\left(\\alpha+\\beta\\exp{(-\\gamma d_\\mathrm{m}/2\\lambda)}\\right)}{1+\\frac{2\\lambda}{d_\\mathrm{v}}\\left(\\alpha+\\beta\\exp{(-\\gamma d_\\mathrm{v}/2\\lambda)}\\right)}\\right]. \\)</p> <p>Using the Taylor expansion in the question,</p> <p>\\( \\frac{d_{\\mathrm{m}}}{d_{\\mathrm{va}}} \\approx \\frac{\\chi^{2}\\rho_\\mathrm{0}}{\\rho_\\mathrm{p}}\\left[\\frac{1+\\frac{2\\lambda\\alpha}{d_\\mathrm{m}}+\\frac{2\\lambda\\beta}{d_\\mathrm{m}}-\\beta\\gamma}{1+\\frac{2\\lambda\\alpha}{d_\\mathrm{v}}+\\frac{2\\lambda\\beta}{d_\\mathrm{v}}-\\beta\\gamma}\\right] = \\frac{\\chi^{2}\\rho_\\mathrm{0}}{\\rho_\\mathrm{p}}\\frac{d_\\mathrm{v}}{d_\\mathrm{m}}\\left[\\frac{d_\\mathrm{m}+2\\lambda\\alpha+2\\lambda\\beta-\\beta\\gamma d_\\mathrm{m}}{d_\\mathrm{v}+2\\lambda\\alpha+2\\lambda\\beta-\\beta\\gamma d_\\mathrm{v}}\\right].\\)</p> <p>Since the diameter of the particles is a few microns and this is much longer than the mean free path of air molecules at STP \\(\\lambda\\approx 0.066\\ \\mu\\mathrm{m}\\), we can ignore the terms with \\(\\lambda\\).</p> <p>\\( \\frac{d_{\\mathrm{m}}}{d_{\\mathrm{va}}} = \\frac{\\chi^{2}\\rho_\\mathrm{0}}{\\rho_\\mathrm{p}}\\frac{d_\\mathrm{v}}{d_\\mathrm{m}}\\left[\\frac{d_\\mathrm{m}-\\beta\\gamma d_\\mathrm{m}}{d_\\mathrm{v}-\\beta\\gamma d_\\mathrm{v}}\\right] = \\frac{\\chi^{2}\\rho_\\mathrm{0}}{\\rho_\\mathrm{p}}\\frac{d_\\mathrm{v}}{d_\\mathrm{m}}\\frac{d_\\mathrm{m}}{d_\\mathrm{v}}\\left[\\frac{1-\\beta\\gamma}{1-\\beta\\gamma}\\right] = \\frac{\\chi^{2}\\rho_\\mathrm{0}}{\\rho_\\mathrm{p}}\\)</p> <p>Using the values of \\(\\chi\\), \\(\\rho_\\mathrm{0}\\) and \\(\\rho_\\mathrm{p}\\) given in the question, \\(d_{\\mathrm{m}}/d_{\\mathrm{va}} \\approx 1.5\\) so in this case the electric mobility diameter is larger than the vacuum aerodynamic diameter. However, mobility spectrometers rarely operate at super-micron sizes.</p>",
           "options": [
@@ -278,7 +270,7 @@
         },
         {
           "id": "question-m03",
-          "prompt": "An aircraft campaign uses a variety of online instruments to measure aerosol and clouds. Suggest the best format to store and share the resulting data and, by researching beyond the book, suggest a Python package which is ideally suited to analysing data in this format. Why would CSV files be an inappropriate choice?",
+          "prompt": "An aircraft campaign uses a variety of online instruments to measure aerosol and clouds. Suggest the best format to store and share the resulting data and, by researching beyond the book, suggest a Python package which is ideally suited to analysing data in the format. Why would CSV files be an inappropriate choice?",
           "answer": "NetCDF files allow multi-dimensional data. This means that the time, latitude, longitude and altitude of measurements can all be indexed alongside the measurement, meaning that it is easy for anyone analysing the data to quickly identify trends according to location. Additionally, since multiple data arrays can be stored in a single NetCDF file, different instruments easily can be compared at the same time, so it is trivial to, for instance, create size distributions using two instruments measuring different aerosol size ranges. NetCDFs also allow flexible metadata, meaning all information relating to the dataset can be stored in a single file. The Python package xarray allows users to make such plots with single lines of code, and allows filtering of data across multiple axes. Using CSVs would require a large amount of preparatory work to handle input and output and makes it difficult to track data."
         }
       ]
