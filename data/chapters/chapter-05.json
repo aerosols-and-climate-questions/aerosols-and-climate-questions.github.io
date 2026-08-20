@@ -28,6 +28,29 @@
         },
         {
           "id": "question-r02",
+          "parts": [
+            {
+              "prompt": "Approximately what fraction of cloud condensation nuclei (CCN) in the lower atmosphere are formed from nucleation of new particles?",
+              "label": "(a)",
+              "type": "multiple-choice",
+              "answer": "Approximately 50% of cloud condensation nuclei (CCN) in the lower atmosphere are formed from nucleation of new particles. The fraction will vary depending on the definition of CCN and how you define lower atmosphere.",
+              "options": [
+                "1%",
+                "10%",
+                "50%",
+                "90%"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "prompt": "What is this estimate of the fraction of CCN formed from nucleation based on?",
+              "label": "(b)",
+              "answer": "This estimate is based on models (see Table 5.1). Although there are a lot of measurements of nucleation events across the world (See section 5.2.2, especially Kerminen et al. (2018)), it is not possible to directly estimate the fraction of CCN formed from nucleation on a global scale. Nevertheless, models that include nucleation and growth of new particles have been evaluated against measurements and can be used to estimate the fraction of CCN formed from nucleation. See section 5.2.2 for more details."
+            }
+          ]
+        },
+        {
+          "id": "question-r03",
           "prompt": "Formation and initial growth of new particles is often described as 'banana events'. Use information in Sections 5.2.2 and 5.2.3 to explain why this is the case.",
           "answer": "Measurements are usually shown as 2-dimensional plots of particle concentration (particles per size class) with a vertical axis of particle log diameter and horizontal axis of time (e.g., Fig. 5.4). For small particles, molecular condensation occurs in the kinetic regime (Eq. 5.6), where the growth rate (\\(dr_p/dt) is independent of particle size. When plotted on a log diameter axis, a constant growth rate produces a curved line that looks like a banana.",
           "author": [
@@ -35,7 +58,7 @@
           ]
         },
         {
-          "id": "question-r03",
+          "id": "question-r04",
           "type": "numeric",
           "prompt": "What fraction of a gas will be present in the particulate phase if it has an effective Henry’s law constant of 1 mol m\\(^{-3}\\) Pa\\(^{-1}\\), the temperature is 283 K and the particle concentration in air is 10 \\(\\mu\\)g m\\(^{-3}\\)? Assume a particle density of 1400 kg m\\(^{-3}\\).",
           "hint": "See box 5.2",
@@ -45,7 +68,7 @@
           "answer": 0.1
         },
         {
-          "id": "question-r04",
+          "id": "question-r05",
           "type": "multiple-choice",
           "prompt": "Which of the following descriptions of the behaviour of sulphuric acid (H\\(_2\\)SO\\(_4\\)) is correct?",
           "hint": "Equation 5.9 and section 5.2.1.1 will help.",
@@ -62,7 +85,7 @@
           "correctIndex": 2
         },
         {
-          "id": "question-r05",
+          "id": "question-r06",
           "parts": [
             {
               "prompt": "What is the steady state gas phase concentration of H\\(_2\\)SO\\(_4\\) if it is produced by reaction of SO\\(_2\\) with OH (rate constant = …, OH concentration = 10\\(^{-6}\\) cm\\(^{-3}\\)) and condenses on particles with a surface area of xx? Assume that gas-particle transfer is in the kinetic regime.",
@@ -80,7 +103,7 @@
           ]
         },
         {
-          "id": "question-r06",
+          "id": "question-r07",
           "type": "numeric",
           "prompt": "A particle contains 50% by volume of sodium chloride with kappa of 1.3 and 50% by volume of organic compounds with kappa of 0.1. What is the particle diameter growth factor at 90% RH? (Needs an answer)",
           "author": [
@@ -92,7 +115,7 @@
           "tolerance": 0.02
         },
         {
-          "id": "question-r07",
+          "id": "question-r08",
           "author": [
             "Ken Carslaw"
           ],
@@ -113,7 +136,7 @@
           ]
         },
         {
-          "id": "question-r08",
+          "id": "question-r09",
           "author": [
             "Ken Carslaw"
           ],
@@ -138,7 +161,7 @@
           ]
         },
         {
-          "id": "question-r09",
+          "id": "question-r10",
           "type": "multiple-choice",
           "prompt": "Put these processes in order of the typical timescale on which they alter the properties of aerosol (fastest first). (1) Growth of the accumulation mode particles, (2) Equilibration of nucleation mode particles with soluble gas phase species, (3) Coagulation of coarse mode particles, (4) Growth of Aitken mode particles.",
           "answer": "The fastest process is equilibration of nucleation mode particles with soluble gas phase species, which occurs on the timescale of seconds to minutes. Growth of Aitken mode particles occurs on the timescale of minutes to hours. Growth of accumulation mode particles occurs on the timescale of hours to days. Coagulation of coarse mode particles occurs on the timescale of days to weeks. See Fig. 5.10 for a summary of the timescales of these processes.",
@@ -154,7 +177,7 @@
           "correctIndex": 1
         },
         {
-          "id": "question-r10",
+          "id": "question-r11",
           "type": "multiple-choice",
           "prompt": "Aerosol particles in air containing 1 \\(\\mu g~m^{-3}\\) of aerosol sulfate and 2 \\(\\mu g~m^{-3}\\) of total ammonia (gas plus particle phase) are measured to have a chemical composition of ammonium sulphate (i.e., a molar ratio of 2:1 ammonium to sulphate). Which of the following correctly describes what happens to the particle composition if the total ammonia concentration is reduced to 0.1 \\(\\mu g~m^{-3}\\) and increased to 10 \\(\\mu g~m^{-3}\\)?",
           "answer": "The particle composition is ammonium sulphate when the total ammonia concentration is 2 \\(\\mu g~m^{-3}\\). If the total ammonia concentration is reduced to 0.1 \\(\\mu g~m^{-3}\\), there is insufficient ammonia to fully neutralise the sulphate, so the molar ratio of ammonium to sulphate will be less than 2:1. If the total ammonia concentration is increased to 10 \\(\\mu g~m^{-3}\\), there is excess ammonia beyond what is required to neutralise the sulphate, so the molar ratio of ammonium to sulphate will remain at 2:1. So for both 2 \\(\\mu g~m^{-3}\\) and 10 \\(\\mu g~m^{-3}\\) of total ammonia, the particle composition is ammonium sulphate (NH\\(_4\\))\\(_2\\)SO\\(_4\\)). Essentially, there is no chemical reason for the excess ammonia to condense onto the particles once the chemical binding with the acidic sulphate is complete. Fig 5.6 shows the relationship between total ammonia and particle composition.",
@@ -170,7 +193,7 @@
           "correctIndex": 1
         },
         {
-          "id": "question-r11",
+          "id": "question-r12",
           "type": "multiple-choice",
           "prompt": "Air at 298 K contains 1 \\(\\mu g~m^{-3}\\) of aerosol sulphate as well as 0.15 \\(\\mu g~m^{-3}\\) of total ammonia (gas plus particle phase). Which of the following most accurately describes the chemical state?",
           "answer": "Most of the ammonia partitions into the particle phase, leaving only a small percentage in the gas phase. The total ammonia concentration is insufficient to fully neutralise the sulphate, so the particles are mostly sulphuric acid with some ammonium sulphate (close to what is called ammonium bisulphate, NH\\(_4\\)HSO\\(_4\\)). To work this out, you need to consider the molar ratio of ammonia to sulphate. Unfortunately, most measurements are reported in \\(\\mu g~m^{-3}\\), which obscures the true chemical composition. 1 \\(\\mu g~m^{-3}\\) of H\\(_2\\)SO\\(_4\\) equates to about 0.01 \\(\\mu mol~m^{-3}\\) and 0.15 \\(\\mu g~m^{-3}\\) of ammonia is slightly less than 0.01 \\(\\mu mol~m^{-3}\\) (H\\(_2\\)SO\\(_4\\) has a molar mass of 98.08 g/mol and NH\\(_3\\) has a molar mass of 17.03 g/mol). When nitric acid is added to the air, it does not partition into the particles, which are too acidic and there is no free ammonia to bind to it. Ammonium nitrate would start forming only when NH\\(_3~>2~\\times\\) the H\\(_2\\)SO\\(_4\\) concentration (in moles, not \\(\\mu g~m^{-3}\\)), under which conditions there is free ammonia to bind to the HNO\\(_3\\). See section 5.2.5 and Fig. 5.6 for more details.",
@@ -183,7 +206,7 @@
           "correctIndex": 0
         },
         {
-          "id": "question-r12",
+          "id": "question-r13",
           "type": "numeric",
           "prompt": "Calculate the ratio of particle wet to dry diameter for a pure sulphuric acid particle at a relative humidity of 80%.",
           "author": [
@@ -195,7 +218,7 @@
           "tolerance": 0.02
         },
         {
-          "id": "question-r13",
+          "id": "question-r14",
           "type": "numeric",
           "prompt": "A particle contains 50% by volume of sodium chloride with kappa of 1.3 and 50% by volume of organic compounds with kappa of 0.1. What is the particle diameter growth factor at 90% RH? (Needs an answer)",
           "author": [
@@ -251,22 +274,6 @@
             "Cloud processing"
           ],
           "correctIndex": 2
-        },
-        {
-          "id": "question-a03",
-          "type": "multiple-choice",
-          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
-          "answer": "It's forcings, shown on the x-axis",
-          "image": {
-            "src": "../imgs/forcings.png",
-            "alt": "Sample forcing chart used to demonstrate image questions",
-            "caption": "Images stay inside the question box and keep their proportions."
-          },
-          "options": [
-            "Feedbacks",
-            "Forcings"
-          ],
-          "correctIndex": 1
         }
       ]
     },
@@ -275,46 +282,23 @@
       "name": "Mastery",
       "questions": [
         {
-          "id": "template-m01",
+          "id": "question-m01",
           "parts": [
             {
-              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "prompt": "Design a field campaign to study new particle formation and the potential effects on climate. What would you measure?",
               "label": "(a)",
-              "answer": "A multi-part question has two or more subquestions that are answered separately."
+              "answer": "Section 5.2.2 describes the chemical and physical processes involved in nucleation. Depending on the environment of interest, you would want to measure the chemical compounds potentially involved in nucleation and growth, which should include sulphuric acid and volatile organic carbon compounds (VOCs). Etc. You would also need to measure particle size distributions from nanometres up to a few hundred nanometres. You should also measure cloud condensation nuclei to relate the size distribution to the potential of the particles to form cloud droplets. To understand that process, you would also need to measure particle chemical composition. In addition to aerosol particles and chemistry, you would need to measure environmental conditions relevant to the processes, such as temperature and solar radiation fluxes (nucleation is temperature dependent and the precursor gases are produced through photochemical processes). Etc."
             },
             {
-              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
+              "prompt": "Using information in Chapter 9, which instruments would you include in your campaign?",
               "label": "(b)",
-              "type": "numeric",
-              "answer": 9,
-              "tolerance": 0
+              "answer": "Lots (to be completed)"
+            },
+            {
+              "prompt": "Where would you choose to make the measurements?",
+              "label": "(c)",
+              "answer": "Somewhere new. Would need to be sure that the environmental conditions were likely to be conducive - e.g., sufficient vapours etc."
             }
-          ]
-        },
-        {
-          "id": "template-m02",
-          "type": "numeric",
-          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
-          "answer": 9.81,
-          "answerInfo": "This is the conventional standard gravity.",
-          "units": "m s^-2",
-          "tolerance": 0.01
-        },
-        {
-          "id": "template-m03",
-          "type": "select-multiple",
-          "prompt": "Which of the following are greenhouse gases?",
-          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
-          "options": [
-            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
-            "Methane (\\(\\mathrm{CH}_4\\))",
-            "Oxygen (\\(\\mathrm{O}_2\\))",
-            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
-          ],
-          "correctIndex": [
-            0,
-            1,
-            3
           ]
         }
       ]
