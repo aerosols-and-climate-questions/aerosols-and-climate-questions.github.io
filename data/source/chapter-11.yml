@@ -30,6 +30,63 @@ categories:
         tolerance: 0.02
         hint: Use Fig 11.14
         answerInfo: This is an approximate answer based on the data in the figure. The figure shows that for a aerosol with a single-scatter albedo of 1.0 (purely scattering) and a cloud fraction of 0.7, the radiative effect at the TOA is about -2 W m\(^{-2}\). Decreasing the single-scatter albedo to 0.8 would cause the aerosol layer to have a positive radiative effect.
+
+      - id: question-r04
+        type: multiple-choice
+        prompt: A layer of absorbing aerosol is measured to have a single-scattering albedo of 0.8. The layer is above a cloud with an albedo of 0.7. What is the most likely radiative effect of the aerosol layer at the top of the atmosphere?
+        options:
+          - Positive, because the aerosol layer is absorbing and the cloud below is highly reflective
+          - Negative, because the aerosol layer is less absorbing than the cloud below
+          - Positive, because the aerosol layer is absorbing and therefore heats the atmosphere, leading to more longwave emission to space
+          - Negative, because the aerosol layer is absorbing and the cloud below is highly reflective, but only if the cloud fraction is less than 0.5
+        correctIndex: 0
+        answer: Positive, because the aerosol layer is absorbing and the cloud below is highly reflective. The absorption by the aerosol layer reduces the amount of solar radiation reflected by the cloud below, leading to a net positive radiative effect at TOA. (Needs more explanation).  
+
+  - id: application
+    name: Application
+    questions:
+
+      - id: question-a01
+        parts:
+          - label: (a)
+            type: numeric
+            prompt: What is the effective radius of a lognormal aerosol size distribution with a geometric mean radius of 0.1 μm and a geometric standard deviation of 1.5?
+            answer: 0.15
+            tolerance: 0.02
+            hint: Use the equations in Box 4.1.
+            answerInfo: The effective radius of a distribution is the area-weighted mean radius \(\int_{0}^{\infty} r\cdot r^2 \, dr/\int_{0}^{\infty} r^2 \, dr)\). These integrals for a lognormal aerosol size distribution are given in Box 4.1 as \(r_m^3 \exp\left(\frac{9}{2}\ln^2 \sigma\right)\) and \(r_m^2 \exp\left(2\ln^2 \sigma\right)\). The effective radius can be calculated as the ratio of these two integrals, which simplifies to \(r_e = r_m \exp\left(\frac{5}{2}\ln^2 \sigma\right)\).
+          - label: (b)
+            type: basic
+            prompt: Thining about the basic physics of the effective radius, would it increase or decrease if the geometric standard deviation of the size distribution were increased to 2.0?
+            answer: It would increase. The effective radius is an area-weighted mean radius, so increasing the geometric standard deviation of the size distribution would increase the contribution of larger particles to the effective radius, leading to an overall increase in the effective radius.
+
+      - id: question-a02
+        type: basic
+        prompt: The Ångström exponent is a measure of the wavelength dependence of aerosol optical depth. With aerosol optical depth measured at three wavelengths, explain whether it is possible to precisely determine the effective radius of the aerosol size distribution.
+        answer: It is not possible to precisely determine the effective radius of the aerosol size distribution. The Ångström exponent provides information about the relative contributions of different particle sizes to the overall aerosol optical depth, but it does not provide enough information to uniquely determine the effective radius. Additional measurements or assumptions about the size distribution are needed to accurately estimate the effective radius. The key piece of missing information is refractive index, in particular the imaginary part that determines absorption, which affects the radius dependence of the scattering efficiency. See Fig 11.4.
+            
+      - id: question-a03
+        type: multiple-choice
+        prompt: A layer of absorbing aerosol is measured to have a single-scattering albedo of 0.8. The layer is above a cloud with an albedo of 0.7. What is the most likely radiative effect of the aerosol layer at the top of the atmosphere?
+        options:
+          - Positive, because the aerosol layer is absorbing and the cloud below is highly reflective
+          - Negative, because the aerosol layer is less absorbing than the cloud below
+          - Positive, because the aerosol layer is absorbing and therefore heats the atmosphere, leading to more longwave emission to space
+          - Negative, because the aerosol layer is absorbing and the cloud below is highly reflective, but only if the cloud fraction is less than 0.5
+        correctIndex: 0
+        answer: Positive, because the aerosol layer is absorbing and the cloud below is highly reflective. The absorption by the aerosol layer reduces the amount of solar radiation reflected by the cloud below, leading to a net positive radiative effect at TOA. (Needs more explanation).
+
+      - id: question-a04
+        type: multiple-choice
+        prompt: A measurement shows that the extinction coefficient of an aerosol is nearly independent of wavelength between 440 nm and 870 nm. What can you infer about the dominant particles?
+        options:
+          - The dominant particles are much smaller than the wavelengths
+          - The dominant particles are much larger than the wavelengths
+          - The dominant particles have sizes comparable to the wavelengths
+          - The dominant particles have a narrow size distribution
+        correctIndex: 1
+        answer: The dominant particles are much larger than the wavelengths. In the geometric optics regime, the extinction coefficient becomes nearly independent of wavelength, leading to a more uniform scattering behavior across the visible spectrum. This would be the case for large dust particles or cloud droplets, which are much larger than the wavelengths of visible light. See Fig 11.4.
+
   - id: mastery
     name: Mastery
     questions:
