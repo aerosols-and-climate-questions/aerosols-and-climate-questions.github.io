@@ -3,8 +3,24 @@ categories:
   - id: review
     name: Review
     questions:
-
       - id: question-r01
+        parts:
+          - label: (a)
+            type: numeric
+            prompt: What radiance would be measured by a sensor if 100 W m\(^{-2}\) passed vertically through an atmosphere with an aerosol optical depth of 0.5?
+            answer: 60.7
+            tolerance: 1.0
+            units: W m\(^{-2}\)
+            answerInfo: The radiance follows the Beer-Lambert law \(I = I_0 e^{-\tau_a}\).
+          - label: (b)
+            type: numeric
+            prompt: What would the radiance be for the same atmosphere but viewed at 60° zenith angle?
+            answer: 36.8
+            tolerance: 1.0
+            units: W m\(^{-2}\)
+            answerInfo: The radiance follows the Beer-Lambert law, but this time including the cosine of the zenith angle to adjust the path length through the atmosphere. So \(I = I_0 e^{-\tau_a/\cos{60^\circ}}\).
+
+      - id: question-r02
         type: multiple-choice
         prompt: Why does retrieval of aerosol optical depth remain underdetermined even for a well-calibrated multi-angle, multispectral instrument?
         options:
@@ -15,7 +31,7 @@ categories:
         correctIndex: 1
         answer: Answer
 
-      - id: question-r02
+      - id: question-r03
         type: multiple-choice
         prompt: An investigator uses satellite AOD as a proxy for CCN concentration. Which criticism is strongest?
         options:
@@ -27,7 +43,7 @@ categories:
         answer: Much of the CCN-relevant number distribution lies below the range well constrained by satellite remote sensing. See Fig. 5.9 for typical CCN sizes. Aerosol particles need to have an appreciable scattering efficiency at visible wavelengths to be detected in measurements of radiances. Fig 5.11 shows that the scattering efficiency is small for small particles typical of CCN. 
 
 
-      - id: question-r03
+      - id: question-r04
         type: multiple-choice
         prompt: Why can UV measurements detect absorbing aerosols over land more effectively than visible measurements?
         options:
@@ -38,7 +54,7 @@ categories:
         correctIndex: 0
         answer: Answer.
 
-      - id: question-r04
+      - id: question-r05
         type: multiple-choice
         prompt: Which inference would be least defensible from satellite retrievals alone?
         options:
@@ -49,7 +65,7 @@ categories:
         correctIndex: 2
         answer: Answer.        
 
-      - id: question-r05
+      - id: question-r06
         type: multiple-choice
         prompt: A researcher finds that CALIOP and MISR report different plume heights for the same wildfire. Which explanation is most likely?
         options:
@@ -60,7 +76,7 @@ categories:
         correctIndex: 1
         answer: Lidar may detect thin elevated layers while MISR tends to track optically prominent portions of the plume.
 
-      - id: question-r06
+      - id: question-r07
         type: multiple-choice
         prompt: A retrieval algorithm assumes a prior climatology of aerosol microphysical properties. What is the principal risk with this approach?
         options:
@@ -71,7 +87,7 @@ categories:
         correctIndex: 1
         answer: Answer
 
-      - id: question-r07
+      - id: question-r08
         type: multiple-choice
         prompt: Which statement best captures the chapter's central epistemological challenge for satellite aerosol remote sensing?
         options:
@@ -86,25 +102,25 @@ categories:
   - id: application
     name: Application
     questions:
-      - id: template-a01
-        type: numeric
-        prompt: What is the value of π (pi)?
-        answer: 3.14
-        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
-        tolerance: 0.01
-        hint: Optional hint for numeric questions.
-      - id: template-a02
+      - id: question-a01
+        type: basic
+        prompt: A large elevated plume at around 5 km altitude is observed to have high AOD, an Angstrom exponent of 0.3 and strong depolarization. What is the most likely aerosol type?
+        answer: The low Angstrom exponent indicates that the plume is dominated by large particles, while the strong depolarization indicates that the particles are non-spherical. This combination of properties is characteristic of mineral dust.
+
+      - id: question-a02
         type: multiple-choice
-        prompt: Is this chart about radiative forcings or climate feedbacks?
+        prompt: Match each observed aerosol layer (A-E) to the most likely aerosol types.
         image:
-          src: ../imgs/forcings.png
-          alt: Sample forcing chart used to demonstrate image questions
-          caption: Images stay inside the question box and keep their proportions.
+          src: ../imgs/aerosol optical properties table.png
+          alt: Aerosol optical properties table
+          caption: Observed aerosol properties for five layers (A-E) are shown in the table. Match each layer to the most likely aerosol type from the list.
         options:
-          - Feedbacks
-          - Forcings
-        correctIndex: 1
-        answer: It's forcings, shown on the x-axis
+          - A = Mineral dust, B = Biomass burning smoke, C = Urban/industrial pollution, D = Marine aerosol (sea salt), E = Sulfate aerosol
+          - A = Volcanic ash, B = Sulfate aerosol, C = Biomass burning smoke, D = Marine aerosol (sea salt), E = Urban/industrial pollution
+          - A = Marine aerosol (sea salt), B = Urban/industrial pollution, C = Biomass burning smoke, D = Sulfate aerosol, E = Mineral dust
+          - A = Mineral dust, B = Urban/industrial pollution, C = Biomass burning smoke, D = Sulfate aerosol, E = Marine aerosol (sea salt)
+        correctIndex: 0
+        answer: A = Mineral dust, B = Biomass burning smoke, C = Urban/industrial pollution, D = Marine aerosol (sea salt), E = Sulfate aerosol.
   - id: mastery
     name: Mastery
     questions:

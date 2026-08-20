@@ -31,12 +31,36 @@ categories:
             tolerance: 0.02
             hint: The specific water content is the ratio of the mass of liquid water to the total mass of the air, which includes the dry air, the water vapor and the condensed water. The book presents equations for calculating the specific water content of a cloud using \(\rho_l\) and the density of the air (\(\rho_a\)) at a 'virtual' temperature that accounts for the presence of water.
             answerInfo: (This answer is wrong and needs to be calculated by the reviewer).
+
       - id: question-r03
         type: basic
         prompt: List three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number. For each property, state whether it primarily affects terrestrial or solar radiation and whether an increase in the cloud property causes a positive or negative effective radiative forcing at the top of the atmosphere.   
         answer: Three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number are:- 1) Cloud liquid water content or liquid water path (the vertically integrated water content), which can be affected by changes in precipitation or entrainment. Liquid water path primarily affects solar radiation, and an increase causes a negative effective radiative forcing through an increase in cloud albedo (Eq. 12.13). The effect on terrestrial radiation is generally smaller for optically thick clouds (Eq. 12.26). 2) Cloud height or top temperature, which primarily affects terrestrial radiation (Eq. 12.24) and causes a positive effective radiative forcing. 3) Cloud fraction, which affects solar radiation (through changes in planetary albedo, Eq. 12.16) and terrestrial radiation (Eq. 12.22). The net effect of an increase in cloud fraction depends on the balance between the solar and terrestrial effects.
 
-  - id: application
+      - id: question-r04
+        type: multiple-choice
+        prompt: Which of the following is a correct statement about the sensitivity of cloud albedo to changes in droplet number concentration?
+        options:
+          - The sensitivity is independent of cloud optical depth
+          - The sensitivity is highest for optically thick clouds
+          - The sensitivity is highest for optically thin clouds
+          - The sensitivity is highest for clouds with larger droplet radii
+        correctIndex: 2
+        answer: The sensitivity of cloud albedo to changes in droplet number concentration is highest for optically thin clouds, as indicated by Eq. xx and the discussion in Section yy.
+
+      - id: question-r05
+        type: select-multiple
+        prompt: Which of these creates a major challenge in satellite studies of aerosol-cloud interactions? Select all that apply.
+        options:
+          - CCN cannot be measured directly from space
+          - Meteorology can covary with both aerosols and clouds
+          - Aerosol properties cannot be retrieved in the presence of clouds
+          - The greatest radiative effects occur for clouds that are optically thin, which are difficult to observe from space
+          - The greatest radiative effects occur over land, where they are difficult to observe from space
+        correctIndex: [0,1,2]
+        answer: Distinguishing aerosol effects from meteorological covariability is one of the central challenges in aerosol-cloud studies. CCN cannot be measured directly from space, and aerosol properties cannot be retrieved in the presence of clouds. Mor explanation needed. See section 12.3.3.
+        
+  - id: application 
     name: Application
     questions:
       - id: question-a01
@@ -49,6 +73,8 @@ categories:
         answerInfo: The most susceptible albedo occurs when the derivative of albedo with respect to droplet number is maximized, which is at \(A_c = 0.5\). Then use Eq. 12.10 to translate \(A_c\) to \(\tau_c\) assuming g = 0.85 (given in the text). The answer is \(\tau_c = 13.3\). Then use Eq. 12.48 to translate \(\tau_c\) to \(L\). The answer is \(L = 70\) g m\(^{-2}\).
         tolerance: 0.01
         hint: Optional hint for numeric questions.
+        author: Johannes Quaas
+        reviewer: Ken Carslaw
 
   - id: mastery
     name: Mastery
@@ -59,11 +85,14 @@ categories:
         prompt: Typically, cloud-top droplet effective radius and cloud optical depth are retrieved by satellites (Section 12.3.2). The MODerate Imaging Spectroradiometer retrievals of these are reported at level-3 (aggregate over time and space) as joint-histograms. An example NetCDF file is provided. What is the average drop number concentration in that level-3 pixel when assuming adiabatic clouds?
         answer: The average drop number concentration in that level-3 pixel is xx cm\(^{-3}\).
         answerInfo: Use Eq. 12.49 (and the numbers given in the line below) and also replace \(L\) in it using Eq. 12.48. Then take the average \(\tau_c\) and \(r_e\) in each bin of the joint histogram to compute the \(N_d\) for that joint-histogram bin. Finally weigh each bin by the frequency of occurrence and integrate.
+        author: Johannes Quaas
 
       - id: question-m02
         type: basic
         prompt: Most assessments of aerosol-cloud radiative forcing assume that the longwave component is negligible compared to the shortwave component. Based on the equations in this chapter, plot \(dF/dN_d\) for these two components as a function of cloud optical depth. Based on information you find outside the book, for which kinds of clouds does longwave aerosol forcing become important? 
         answer: Section 12.1.3.1. Quite a low optical depth is needed for the longwave component to become important. The longwave component becomes important for optically thin clouds, such as cirrus clouds, and for clouds with a high cloud-top temperature, such as low-level stratus clouds. (Need to provide a calculation).
+        author: Ken Carslaw
+        reviewer: Nobody
 
       - id: question-m03
         parts:
@@ -75,4 +104,14 @@ categories:
             type: basic
             prompt: Assuming an albedo of the cloud of 0.5, what is the equivalent sensitivity of reflected solar radiation assuming an incoming solar flux of 400 W m\(^{-2}\)? 
             answer: (Need to provide a calculation). The solar sensitivity is much higher than the calculated LW sensitivity, which is why the LW component is often neglected in assessments of aerosol-cloud radiative forcing.
-         
+            author: Johannes Quaas
+            reviewer: Nobody
+
+      - id: question-m04
+        type: basic
+        prompt: Compute the radiative forcing due to aerosol-cloud interactions for different values of the drop number sensitivity to aerosol, \(\partial\ln N_d / \partial\ln \tau_a\), and for different relative perturbations in aerosol optical depth. Use files with geographical distributions of cloud fraction \(f_{cld}\), incoming radiation \(R^\downarrow\), cloud optical thickness \(\tau_c\), as well as \(\tau_a\). In simplification of Eq. 12.17 assume \(A_{cloudy} = A_c\).  
+        answer: Need to provide files and a calculation.
+        hint: Make use of Eq. 12.10 to get \(A_c\) from \(\tau_c\) and of Eq. 12.14 to get \(\partial A/\partial N_d\). Then evaluate Eq. 12.51.
+        author: Johannes Quaas
+        reviewer: Nobody
+
