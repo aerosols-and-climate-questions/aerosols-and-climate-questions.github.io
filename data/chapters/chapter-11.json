@@ -20,6 +20,19 @@
         },
         {
           "id": "question-r02",
+          "type": "multiple-choice",
+          "prompt": "Which one of the following defines the particle effective radius?",
+          "answer": "The effective radius is defined as the area-weighted mean radius of the particle size distribution. It is used to describe the size of cloud droplets and aerosol particles in climate models and remote sensing applications. It is defined mathematically as \\(r_e = \\frac{\\int r \\pi r^2 n(r) dr}{\\int \\pi r^2 n(r) dr}\\), where \\(n(r)\\) is the number distribution of particles with radius \\(r\\).",
+          "options": [
+            "The particle radius at which the scattering efficiency is maximized",
+            "The area-weighted mean radius of the particle size distribution",
+            "The volume-weighted mean radius of the particle size distribution",
+            "The radius of a sphere with the same volume as an irregularly shaped particle"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r03",
           "type": "numeric",
           "prompt": "An aerosol layer with single-scatter albedo of 0.8 above a black surface (albedo of zero) causes a negative radiative effect at the top of the atmosphere (TOA) of -2 W m\\(^{-2}\\). The cloud fraction is 0.7. What surface albedo would cause this aerosol layer to have a positive radiative forcing?",
           "hint": "Use Fig 11.14",
@@ -28,7 +41,7 @@
           "tolerance": 0.02
         },
         {
-          "id": "question-r03",
+          "id": "question-r04",
           "type": "numeric",
           "prompt": "A sulfate aerosol layer with single-scattering albedo of 1.0 above a soil surface (albedo of 0.25) causes a negative radiative effect at TOA of -2 W m\\(^{-2}\\). The cloud fraction is 0.7. What single-scattering albedo would cause this aerosol layer to have a positive radiative effect?",
           "hint": "Use Fig 11.14",
