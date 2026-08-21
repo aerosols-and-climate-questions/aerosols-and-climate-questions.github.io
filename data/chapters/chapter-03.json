@@ -4,17 +4,244 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-r01",
+          "type": "multiple-choice",
+          "prompt": "Which aerosol source contributes the largest mass flux to the atmosphere globally?",
+          "answer": "Mineral dust is the dominant aerosol source by mass globally and plays a major role in biogeochemical cycles.",
+          "options": [
+            "Dimethyl sulfide-derived sulfate",
+            "Biomass burning aerosol",
+            "Mineral dust",
+            "Primary biogenic aerosol"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r02",
+          "type": "multiple-choice",
+          "prompt": "In high-nutrient low-chlorophyll (HNLC) ocean regions, biological productivity is most commonly limited by which nutrient?",
+          "answer": "Iron is the nutrient that commonly limits biological productivity in HNLC regions.",
+          "options": [
+            "Sulphate",
+            "Nitrogen",
+            "Phosphorus",
+            "Iron"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "question-r03",
+          "type": "multiple-choice",
+          "prompt": "Anthropogenic reactive nitrogen emissions to the atmosphere have increased by approximately what factor since preindustrial times?",
+          "answer": "Reactive nitrogen emissions have increased by roughly a factor of ten relative to preindustrial conditions.",
+          "options": [
+            "2",
+            "5",
+            "10",
+            "25"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r04",
+          "type": "multiple-choice",
+          "prompt": "Model estimates suggest anthropogenic nitrogen deposition enhances terrestrial carbon uptake by approximately how much?",
+          "answer": "Model studies suggest anthropogenic nitrogen deposition enhances terrestrial carbon uptake by approximately 0.24–0.7 Pg C yr⁻¹.",
+          "options": [
+            "0.02–0.07 Pg C yr⁻¹",
+            "0.24–0.7 Pg C yr⁻¹",
+            "2–7 Pg C yr⁻¹",
+            "10–20 Pg C yr⁻¹"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r05",
+          "type": "multiple-choice",
+          "prompt": "Atmospheric deposition of which nutrient in aerosols has been proposed as important for sustaining productivity in Amazonian ecosystems?",
+          "answer": "Atmospheric phosphorus deposition, particularly from African dust and biomass burning, is thought to help sustain Amazonian productivity.",
+          "options": [
+            "Nitrogen",
+            "Sulphur",
+            "Phosphorus",
+            "Chlorine"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r06",
+          "type": "multiple-choice",
+          "prompt": "The estimated radiative forcing associated with aerosol impacts on land and ocean biogeochemistry is approximately how much?",
+          "answer": "Biogeochemical effects of aerosols are estimated to alter radiative forcing by approximately 0–0.5 W m⁻².",
+          "options": [
+            "0–0.05 W m⁻²",
+            "0–0.5 W m⁻²",
+            "1–2 W m⁻²",
+            "5–10 W m⁻²"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r07",
+          "type": "multiple-choice",
+          "prompt": "Mineral dust contains approximately what fraction of iron by mass?",
+          "answer": "Mineral dust contains approximately 3.5% iron by mass.",
+          "options": [
+            "0.35%",
+            "3.5%",
+            "10%",
+            "35%"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r08",
+          "type": "multiple-choice",
+          "prompt": "Relative to desert dust iron, how soluble is iron emitted from combustion sources generally?",
+          "answer": "Iron from combustion sources is substantially more soluble than iron contained in mineral dust.",
+          "options": [
+            "Less soluble",
+            "Equally soluble",
+            "More soluble",
+            "Insoluble"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r09",
+          "type": "multiple-choice",
+          "prompt": "Human activities have altered total atmospheric phosphorus deposition by approximately what factor relative to preindustrial conditions?",
+          "answer": "Atmospheric phosphorus deposition is estimated to have increased by approximately a factor of 1.4 since preindustrial times.",
+          "options": [
+            "1.05",
+            "1.4",
+            "5",
+            "10"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r10",
+          "type": "multiple-choice",
+          "prompt": "According to model estimates, increased soluble iron deposition over the twentieth century enhanced ocean carbon uptake by approximately how much?",
+          "answer": "Increased soluble iron deposition is estimated to have enhanced ocean carbon uptake by approximately 0.07 Pg C yr⁻¹.",
+          "options": [
+            "0.007 Pg C yr⁻¹",
+            "0.07 Pg C yr⁻¹",
+            "0.7 Pg C yr⁻¹",
+            "7 Pg C yr⁻¹"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r11",
+          "type": "multiple-choice",
+          "prompt": "Which statement best describes the current scientific assessment of the CLAW feedback?",
+          "answer": "Current evidence suggests that the CLAW feedback is likely weak at the global scale.",
+          "options": [
+            "It is one of the strongest known climate feedbacks",
+            "It is likely weak on the global scale",
+            "It has had a major influence on twentieth-century climate change",
+            "It has been disproven by observations"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r12",
+          "type": "multiple-choice",
+          "prompt": "What is the estimated radiative effect of climate-driven changes in natural aerosol emissions?",
+          "answer": "Climate-driven changes in natural aerosol emissions are estimated to generate a radiative effect of approximately -0.15 W m⁻² per degree",
+          "options": [
+            "-0.15 W m⁻² K⁻¹",
+            "-1.5 W m⁻² K⁻¹",
+            "+0.15 W m⁻² K⁻¹",
+            "+1.5 W m⁻² K⁻¹"
+          ],
+          "correctIndex": 0
+        }
+      ]
     },
     {
       "id": "application",
       "name": "Application",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-a01",
+          "type": "numeric",
+          "prompt": "What is the value of π (pi)?",
+          "hint": "Optional hint for numeric questions.",
+          "answer": 3.14,
+          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-a02",
+          "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
+          "image": {
+            "src": "../imgs/forcings.png",
+            "alt": "Sample forcing chart used to demonstrate image questions",
+            "caption": "Images stay inside the question box and keep their proportions."
+          },
+          "options": [
+            "Feedbacks",
+            "Forcings"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-m01",
+          "parts": [
+            {
+              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "label": "(a)",
+              "answer": "A multi-part question has two or more subquestions that are answered separately."
+            },
+            {
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
+              "label": "(b)",
+              "type": "numeric",
+              "answer": 9,
+              "tolerance": 0
+            }
+          ]
+        },
+        {
+          "id": "template-m02",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": 9.81,
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-m03",
+          "type": "select-multiple",
+          "prompt": "Which of the following are greenhouse gases?",
+          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
+          "options": [
+            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
+            "Methane (\\(\\mathrm{CH}_4\\))",
+            "Oxygen (\\(\\mathrm{O}_2\\))",
+            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
+          ]
+        }
+      ]
     }
   ]
 }
