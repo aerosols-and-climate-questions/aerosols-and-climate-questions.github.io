@@ -87,13 +87,9 @@
       "name": "Application",
       "questions": [
         {
-          "id": "template-a01",
-          "type": "numeric",
-          "prompt": "What is the value of π (pi)?",
-          "hint": "Optional hint for numeric questions.",
-          "answer": 3.14,
-          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
-          "tolerance": 0.01
+          "id": "question-a01",
+          "prompt": "In a warming climate, it is considered that the cloud-phase feedback of shallow, mixed-phase clouds over the ocean is negative. If INP emissions also increase as the climate warms, while INP removal and other atmospheric processing stay the same, how would the cloud-phase feedback change compared to a future without any INP emission change?",
+          "answer": "The cloud-phase feebback would be less negative or positive, depending on if the emitted INP offsets the decrease in INP concentration from an increasing temperature. If the emission increase only partially offsets the temperature effect, liquid water path in these clouds still rises with warming but by less than in the future without emission change of INPs, so the feedback stays negative but is weaker in magnitude. If the emission increases more than compensates, the net INP concentration can rise with warming, which leads to clouds glaciate more with less albedo, hence a positive cloud-phase feedback."
         },
         {
           "id": "template-a02",
