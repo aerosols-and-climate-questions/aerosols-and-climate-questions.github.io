@@ -8,26 +8,26 @@
         {
           "id": "question-r01",
           "type": "multiple-choice",
-          "prompt": "Ice nucleation is fundamentall a stochastic time-dependent process. However, models usually do not describe droplet freezing in this way. Why not?",
-          "answer": "Atmospheric particles have too much variability in their freezing properties, so a time-dependent description is not feasible.",
+          "prompt": "Ice nucleation is fundamentally a stochastic time-dependent process. However, models usually do not describe heterogeneous ice nucleation using a single time-dependent description. Why not?",
+          "answer": "Atmospheric particles have too much variability in their freezing properties, so a single time-dependent description is not adequate.",
           "options": [
-            "Time dependence is not important for cloud microphysics, so it is ignored in models",
-            "Atmospheric particles have too much variability in their freezing properties, so a time-dependent description is not feasible",
-            "The time dependence is too complex to include in models, so a simpler description is used",
-            "Laboratory measurements have been unable to capture time-dependent behavior"
+            "Time dependence is not important for ice nucleation, so it is ignored in models",
+            "Atmospheric particles have too much variability in their freezing properties, so a single time-dependent description is not adequate",
+            "Even a single time-dependent description is too complex to include in models, so a simpler description is used",
+            "Laboratory measurements have been unable to capture time-dependent behavior of ice nucleation"
           ],
           "correctIndex": 1
         },
         {
           "id": "question-r02",
           "type": "multiple-choice",
-          "prompt": "An increase in INPs causes earlier glaciation of a supercooled cloud. Which radiative consequence is most likely?",
+          "prompt": "An increase in INPs causes earlier glaciation of a shallow supercooled cloud. Which radiative consequence is most likely?",
           "answer": "The cloud will reflect less solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit less terrestrial (longwave) radiation because cloud cover is decreased.",
           "options": [
             "The cloud will reflect more solar radiation because the ice crystals have higher scattering efficiency than liquid droplets",
             "The cloud will emit more terrestrial (longwave) radiation because cloud depth is increased",
             "The cloud will reflect less solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit less terrestrial (longwave) radiation because cloud cover is decreased",
-            "The cloud will reflect more solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit more terrestrial (longwave) radiation because cloud cover is increased"
+            "The cloud will reflect more solar radiation because the ice crystals have higher scattering efficiency than liquid droplets and it will emit more terrestrial (longwave) radiation because cloud cover is increased"
           ],
           "correctIndex": 2
         },
@@ -55,7 +55,7 @@
           "answer": "Explain",
           "options": [
             "A function of temperature only, with no link to aerosol properties",
-            "A function of the number concentration of aerosol particles larger than a definced diameter, with no link to particle composition",
+            "A function of the number concentration of aerosol particles larger than a defined diameter, with no link to particle composition",
             "A function of the surface active site density of various aerosol particles measured in the laboratory",
             "Using classical nucleation theory and the nucleation rate coefficient",
             "Using parameterisations of particle to particle chemical diversity incorporating stocahstic functions for the freezing time dependence"
@@ -70,8 +70,8 @@
         {
           "id": "question-r05",
           "type": "multiple-choice",
-          "prompt": "What is the typical maximum measured concentration of INPs in the atmosphere at temperatures below -20°C?",
-          "answer": "The typical maximum measured concentration of INPs in the atmosphere at temperatures below -20°C is around 0.10 cm⁻³, or 100 L⁻¹.",
+          "prompt": "What is the typical maximum measured concentration of INPs in the atmosphere at temperatures of -20°C?",
+          "answer": "The typical maximum measured concentration of INPs in the atmosphere at temperatures of -20°C is around 0.10 cm⁻³, or 100 L⁻¹.",
           "options": [
             "100 cm⁻³",
             "10 cm⁻³",
