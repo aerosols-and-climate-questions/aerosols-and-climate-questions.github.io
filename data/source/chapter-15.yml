@@ -42,7 +42,7 @@ categories:
         prompt: Which of the following parameterisations have been used in models to describe ice nucleation? Select all correct statements.
         options:
           - A function of temperature only, with no link to aerosol properties
-          - A function of the number concentration of aerosol particles larger than a definced diameter, with no link to particle composition
+          - A function of the number concentration of aerosol particles larger than a defined diameter, with no link to particle composition
           - A function of the surface active site density of various aerosol particles measured in the laboratory 
           - Using classical nucleation theory and the nucleation rate coefficient
           - Using parameterisations of particle to particle chemical diversity incorporating stocahstic functions for the freezing time dependence
