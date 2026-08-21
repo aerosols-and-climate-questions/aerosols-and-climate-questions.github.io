@@ -17,28 +17,56 @@ categories:
         author: Ken Carslaw
         reviewer: Erin Raif
       - id: question-r02
-        type: multiple-choice
-        prompt: How many quantities would a model need to transport if it represented aerosol as a sectional particle size distribution with size 20 bins, with each bin carrying the chemical species sulfate, nitrate and black carbon?
+        type: select-multiple
+        prompt: Select all of the correct statements about internal and external mixing.
         options:
-          - "20"
-          - "60"
-          - "80"
-          - "120"
-        correctIndex: 1
-        answer: The model would need to transport 60 quantities - the number concentrations of each species in each bin. There are 20 bins which have fixed diameters and each bin carries 3 chemical species, so the total number of tracers is 20 * 3 = 60. There is no need for information about the size modes - with small enough size bins, this will emerge naturally as a result of the size-dependent processes.
+          - Aerosols from a single source in a pristine environment are always externally mixed.
+          - Aerosols from a single source in a pristine environment are always internally mixed.
+          - Externally mixed aerosols will always remain externally mixed.
+          - Internally mixed aerosols have multiple chemical components in the same particle.
+        correctIndex: [3]
+        answer: The only correct statement is that internally mixed particles have multiple chemical components in the same particle. Over time, external mixes of particles can become internally mixed through processes such as coagulation. However, even at emission, aerosols can be either internally or externally mixed, depending on the source. For instance, sea-spray aerosol is often an internal mix of marine organic matter and sea salt (Burrows, et al, 2022). While internal mixing means that there are multiple chemical components in the same particle, it's worth noting that external mixing doesn't always mean the exact opposite. Sometimes, "external mixing" to describe the relationship between species of aerosols with different sources but these external mixes of aerosols may themselves contain internally mixed components.
+        reference: >-
+          Burrows, S. M., Easter, R. C., Liu, X., Ma, P.-L., Wang, H., Elliott, S. M., Singh, B., Zhang, K., and Rasch, P. J.: OCEANFILMS (Organic Compounds from Ecosystems to Aerosols: Natural Films and Interfaces via Langmuir Molecular Surfactants) sea spray organic aerosol emissions – implementation in a global climate model and impacts on clouds, Atmos. Chem. Phys., 22, 5223–5251, https://doi.org/10.5194/acp-22-5223-2022, 2022
+        author: Erin Raif
+      - id: question-r03
+        type: select-multiple
+        prompt: There are several ways of representing aerosol-size distributions in models. Select all which represent aerosol as internally mixed.
+        options:
+          - Mass-only models
+          - Modal models
+          - Bin (sectional) models
+          - Size-composition resolved
+        correctIndex: [0, 3]
+        answer: There
+        hint: Figure 6.8 may be helpful.
+        author: Erin Raif
+      - id: question-r04
+        parts:
+        - label: (a)
+          type: multiple-choice
+          prompt: An aerosol model represents three aerosol species - sulfate, nitrate and black carbon, and includes processes for aerosol growth and nucleation. The model represents aerosol as 3 lognormal particle size distributions of varying number concentration and size but constant shape. The model simulates the species sulfate, nitrate and black carbon. How many quantities would a model need to transport to represent this aerosol?
+          options:
+            - "9"
+            - "12"
+            - "18"
+            - "36"
+          correctIndex: 1
+          hint: First, identify whether this model is mass-only, modal, bin (sectional) or resolved.
+          answer: A modal aerosol model represents aerosol as internally mixed. This means that each of the three modes will require three tracers for the mass of each chemical species (which specifies the size of the aerosol as mass is related to diameter). We also need to transport the total number of particles in each mode to represent processes like nucleation. If we didn't, then adding mass to a mode as aerosol nucleates would make the average size bigger. That means each mode will require 4 tracers (3 for the mass of each species and 1 for the total number of particles). Since there are 3 modes, the total number of quantities that need to be transported is 3 * 4 = 12. Note that we don't need to transport the number of particles for each species because the model assumes that the aerosol is internally mixed.
+        - label: (b)
+          type: multiple-choice
+          prompt: A modeller wants to represent the same aerosol as in part (a) but with a bin (sectional) model that has 20 size bins. How many quantities would a model need to transport to represent this aerosol?
+          options:
+            - "20"
+            - "60"
+            - "80"
+            - "120"
+          correctIndex: 2
+          answer: Like the modal model, the aerosol in a sectional model is internally mixed. Like the modes before, each bin will require tracers for the mass of each chemical species and the total number of particles in each bin. As there are 20 bins, this is 20 * (3 + 1) = 80 quantites to be transported. 
         author: Ken Carslaw
         reviewer: Erin Raif
-      - id: question-r03
-        type: multiple-choice
-        prompt: How many quantities would a model need to transport if it represented aerosol as 3 lognormal particle size distributions of varying number concentration and size but constant shape, with each bin carrying the chemical species sulfate, nitrate and black carbon?
-        options:
-          - "9"
-          - "12"
-          - "18"
-          - "36"
-        correctIndex: 1
-        answer: For a given species, there are three modes. We know that the size of each mode can change but the shape of the mode is fixed, so the model needs to transport the mean size of each mode. We might assume that the number concentration will also need to be tracked for each mode. However, the fixed mode shapes mean that if we know the total number concentration across all of the modes, the relative amount of aerosol in each mode can be calculated just by knowing the mean size of each mode. That means that for every species, we need 3 size quantities and 1 total number concentration quantity, for a total of 4 quantities per species. Since there are 3 species, the total number of quantities that need to be transported is 4 * 3 = 12.
-      - id: question-r04
+      - id: question-r06
         type: multiple-choice
         prompt: Which of the following describes how aerosols are treated in an atmosphere-only climate model?
         options:
@@ -48,7 +76,7 @@ categories:
         correctIndex: 1
         answer: Aerosols are transported by 3-D fields of atmospheric motion calculated each time step by the model. The first option describes a chemical transport model (CTM) and the third option describes a coupled atmosphere-ocean model.
         author: Ken Carslaw
-      - id: question-r05
+      - id: question-r07
         type: multiple-choice
         prompt: Which of the following is always true of a two-moment cloud microphysics model?
         options:
@@ -85,5 +113,5 @@ categories:
         author: Ken Carslaw
         reviewer: Erin Raif
       - id: question-m02
-        prompt: In a global model, it is common to treat the particle size distribution as modes of varying size and number concentration, with each mode carrying all chemical components. In reality, as air containing sulfate aerosol passes over ocean it picks up sea salt particles that don’t immediately mix with the sulfate particles. Assuming the particles are all the same size, what is the consequence for cloud drop concentrations of treating the particles as an “internal” mixture (all components in the same particles) versus treating it as an “external” mixture?
+        prompt: In a global model, it is common to treat the particle size distribution as modes of varying size and number concentration, with each mode carrying all chemical components. In reality, as air containing sulfate aerosol passes over ocean it picks up sea salt particles that don't immediately mix with the sulfate particles. Assuming the particles are all the same size, what is the consequence for cloud drop concentrations of treating the particles as an “internal” mixture (all components in the same particles) versus treating it as an “external” mixture?
         answer: Not sure how to answer this.
