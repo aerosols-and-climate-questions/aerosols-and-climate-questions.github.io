@@ -5,36 +5,68 @@ categories:
     questions:
       - id: question-r01
         type: multiple-choice
-        prompt: If you wanted to quantify the aerosol radiative forcing including atmospheric adjustments in a global model (i.e., the effective radiative forcing, or ERF), which model would you use and why?
+        prompt: If you wanted to quantify the aerosol radiative forcing including atmospheric adjustments in a global model (i.e., the effective radiative forcing, or ERF), which model experiment would be most suitable?
         options:
-          - A chemical transport model because the 3-D fields of atmospheric motion are fully specified and unaffected by the aerosol, so you can easily compare simulations with different aerosol emissions.
-          - A 20-year run of an atmosphere-only climate model because the aerosol effects on the atmosphere that are relevant to aerosol forcing take at least a decade to occur.
-          - An ensemble of 5-year simulations of an atmosphere-only climate model because the…
-          - A coupled atmosphere-ocean climate model because the full effects of aerosol on surface temperatures needs to be simulated for the adjustments to be realistic.
-          - A nudged atmosphere-only climate model.
-        correctIndex: 2
-        answer: You would ideally use an ensemble of 5-year simulations of an atmosphere-only climate model. The aerosol forcing including atmospheric adjustments is defined as the change in net downward radiative flux at the top of atmosphere caused by a radiative perturbation to the Earth including adjustments to the atmosphere without a change in surface temperature (which elminates the option of using a fully coupled atmosphere-ocean model). The adjustments to the atmosphere occur on timescales of days to months, so a 5-year simulation is sufficient to capture these effects. A single 5-year simulation would be insufficient because the internal variability of the climate system would make it difficult to distinguish the aerosol forcing from natural variability. An ensemble of simulations allows you to average over this internal variability and obtain a more robust estimate of the aerosol forcing. A chemical transport model would not be appropriate because it does not allow for the atmosphericadjustments. A 20-year run of an atmosphere-only climate model would be unnecessary because the adjustments to the atmosphere occur on much shorter timescales. Nudged models are often used for quantifing ERFs. Nudging is used to keep the model close to observed meteorology, which can be useful for comparing with observations, but it is not necessary for quantifying ERFs, and such simulations have the disadvantage that some adjustments may not be properly represented. 
+          - A chemical transport model with simulations of different aerosol emission scenarios.
+          - A 20-year run of an atmosphere-only climate model without nudging.
+          - A 20-year run of a coupled atmosphere-ocean climate model nudged to observed meteorology.
+          - An ensemble of 5-year simulations of a coupled atmosphere-ocean climate model.
+          - An ensemble of 5-year simulations of an atmosphere-only climate model.
+        correctIndex: 4
+        answer: You would ideally use an ensemble of 5-year simulations of an atmosphere-only climate model. The aerosol forcing including atmospheric adjustments is defined as the change in net downward radiative flux at the top of atmosphere caused by a radiative perturbation to the Earth including adjustments to the atmosphere without a change in surface temperature (which elminates the option of using a fully coupled atmosphere-ocean model). A chemical transport model would not be appropriate because it does not allow for the atmospheric adjustments. The adjustments to the atmosphere occur on timescales of days to months, so a 5-year simulation is sufficient to capture these effects. A 20-year run of an atmosphere-only climate model would be unnecessary because the adjustments to the atmosphere occur on much shorter timescales. A single 5-year simulation would be insufficient because the internal variability of the climate system would make it difficult to distinguish the aerosol forcing from natural variability. An ensemble of simulations allows you to average over this internal variability and obtain a more robust estimate of the aerosol forcing. Nudged models are often used for quantifing ERFs. Nudging is used to keep the model close to observed meteorology, which can be useful for comparing with observations, but it is not necessary for quantifying ERFs, and such simulations have the disadvantage that some adjustments may not be properly represented. 
+        author: Ken Carslaw
+        reviewer: Erin Raif
       - id: question-r02
-        type: multiple-choice
-        prompt: How many quantities would a model need to transport if it represented aerosol as a sectional particle size distribution with size 20 bins, with each bin carrying the chemical species sulfate, nitrate and black carbon?
+        type: select-multiple
+        prompt: Select all of the correct statements about internal and external mixing.
         options:
-          - "20"
-          - "60"
-          - "80"
-          - "120"
-        correctIndex: 2
-        answer: A model would need to transport 80 quantities. This is because there are 20 bins, and each bin carries 3 chemical species, so the total number of chemical tracers is 20 * 3 = 60. However, to specify the size distribution, the model also needs to transport the total number of particles in each bin, which adds an additional 20 quantities. Therefore, the total number of quantities that need to be transported is 60 + 20 = 80.
+          - Aerosols from a single source in a pristine environment are always externally mixed.
+          - Aerosols from a single source in a pristine environment are always internally mixed.
+          - Externally mixed aerosols will always remain externally mixed.
+          - Internally mixed aerosols have multiple chemical components in the same particle.
+        correctIndex: [3]
+        answer: The only correct statement is that internally mixed particles have multiple chemical components in the same particle. Over time, external mixes of particles can become internally mixed through processes such as coagulation. However, even at emission, aerosols can be either internally or externally mixed, depending on the source. For instance, sea-spray aerosol is often an internal mix of marine organic matter and sea salt (Burrows, et al, 2022). While internal mixing means that there are multiple chemical components in the same particle, it's worth noting that external mixing doesn't always mean the exact opposite. Sometimes, "external mixing" to describe the relationship between species of aerosols with different sources but these external mixes of aerosols may themselves contain internally mixed components.
+        reference: >-
+          Burrows, S. M., Easter, R. C., Liu, X., Ma, P.-L., Wang, H., Elliott, S. M., Singh, B., Zhang, K., and Rasch, P. J.: OCEANFILMS (Organic Compounds from Ecosystems to Aerosols: Natural Films and Interfaces via Langmuir Molecular Surfactants) sea spray organic aerosol emissions – implementation in a global climate model and impacts on clouds, Atmos. Chem. Phys., 22, 5223–5251, https://doi.org/10.5194/acp-22-5223-2022, 2022
+        author: Erin Raif
       - id: question-r03
-        type: multiple-choice
-        prompt: How many quantities would a model need to transport if it represented aerosol as 3 lognormal particle size distributions of varying number concentration and size but constant shape, with each bin carrying the chemical species sulfate, nitrate and black carbon?
+        type: select-multiple
+        prompt: There are several ways of representing aerosol-size distributions in models. Select all which represent aerosol as internally mixed.
         options:
-          - "12"
-          - "15"
-          - "24"
-          - "36"
-        correctIndex: 0
-        answer: A model would need to transport 3 quantities for each of the 3 lognormal particle size distributions, totaling 3 * 3 = 9 quantities. However, to specify the size distribution, the model also needs to transport the total number of particles in each distribution, which adds an additional 3 quantities. Therefore, the total number of quantities that need to be transported is 9 + 3 = 12.
+          - Mass-only models
+          - Modal models
+          - Bin (sectional) models
+          - Size-composition resolved
+        correctIndex: [0, 3]
+        answer: There
+        hint: Figure 6.8 may be helpful.
+        author: Erin Raif
       - id: question-r04
+        parts:
+        - label: (a)
+          type: multiple-choice
+          prompt: An aerosol model represents three aerosol species - sulfate, nitrate and black carbon, and includes processes for aerosol growth and nucleation. The model represents aerosol as 3 lognormal particle size distributions of varying number concentration and size but constant shape. The model simulates the species sulfate, nitrate and black carbon. How many quantities would a model need to transport to represent this aerosol?
+          options:
+            - "9"
+            - "12"
+            - "18"
+            - "36"
+          correctIndex: 1
+          hint: First, identify whether this model is mass-only, modal, bin (sectional) or resolved.
+          answer: A modal aerosol model represents aerosol as internally mixed. This means that each of the three modes will require three tracers for the mass of each chemical species (which specifies the size of the aerosol as mass is related to diameter). We also need to transport the total number of particles in each mode to represent processes like nucleation. If we didn't, then adding mass to a mode as aerosol nucleates would make the average size bigger. That means each mode will require 4 tracers (3 for the mass of each species and 1 for the total number of particles). Since there are 3 modes, the total number of quantities that need to be transported is 3 * 4 = 12. Note that we don't need to transport the number of particles for each species because the model assumes that the aerosol is internally mixed.
+        - label: (b)
+          type: multiple-choice
+          prompt: A modeller wants to represent the same aerosol as in part (a) but with a bin (sectional) model that has 20 size bins. How many quantities would a model need to transport to represent this aerosol?
+          options:
+            - "20"
+            - "60"
+            - "80"
+            - "120"
+          correctIndex: 2
+          answer: Like the modal model, the aerosol in a sectional model is internally mixed. Like the modes before, each bin will require tracers for the mass of each chemical species and the total number of particles in each bin. As there are 20 bins, this is 20 * (3 + 1) = 80 quantites to be transported. 
+        author: Ken Carslaw
+        reviewer: Erin Raif
+      - id: question-r06
         type: multiple-choice
         prompt: Which of the following describes how aerosols are treated in an atmosphere-only climate model?
         options:
@@ -43,7 +75,8 @@ categories:
           - Aerosols are transported by 3-D fields of atmospheric motion calculated each time step by the model. The model calculates the aerosol chemical, microphysical and radiative properties online, which generates 3-D time-resolved model outputs. These calculated properties alter the atmospheric dynamics of the model. The ocean is simulated, so the surface temperature is free to evolve and feeds back on the aerosol properties.    
         correctIndex: 1
         answer: Aerosols are transported by 3-D fields of atmospheric motion calculated each time step by the model. The first option describes a chemical transport model (CTM) and the third option describes a coupled atmosphere-ocean model.
-      - id: question-r05
+        author: Ken Carslaw
+      - id: question-r07
         type: multiple-choice
         prompt: Which of the following is always true of a two-moment cloud microphysics model?
         options:
@@ -53,6 +86,8 @@ categories:
           - It can simulate all the properties of a particle size distribution.
         correctIndex: 2
         answer: A two-moment cloud microphysics model can simulate an evolving particle size distribution, but some properties of the distribution still need to be specified. The two moments typically represent the total number of particles and the total mass of particles, which allows the model to simulate changes in the size distribution over time. However, with just two moments, other properties of the distribution may still need to be specified or assumed. For example, a lognormal aerosol distribution is fully specified by three quantities (mean, standard deviation, and total number), so a two-moment model does not fully capture all properties. A two-moment model does not always simulate particle number and mass, as it depends on how the moments are defined. A two-moment model is not always necessary to calculate aerosol-cloud interaction forcing, as some single-moment models can also simulate the effect of aerosol on droplet number.
+        author: Ken Carslaw
+        reviewer: Erin Raif
   - id: application
     name: Application
     questions:
@@ -60,13 +95,23 @@ categories:
         type: basic
         prompt: You are involved in a field campaign to measure aerosol properties in the Arctic in order to understand their impact on climate. You have a budget to deploy either a single instrument that measures aerosol size distribution or a single instrument that measures aerosol chemical composition. Which would you choose and why?
         answer: I would choose to deploy the instrument that measures aerosol size distribution. This is because the size distribution of aerosols is a key factor in determining their effect on solar radiation (Figure 2.7, section 4.1.2 and section 11.1.2.2) and their ability to act as cloud condensation nuclei (CCN, section 4.1.2, 5.4.1 and 12.2.1.2). Additionally, the size distribution can provide insights into the sources and processes affecting aerosols in the Arctic, such as long-range transport, local emissions, and atmospheric processing. Chemical composition is also important for particle hygroscopicity and therefore size, scattering efficiency (Fig 5.7) and droplet formation (Fig 5.9), understanding the size distribution is crucial for assessing the overall climate impact of aerosols in this region.
-      - id: question-a02
-        type: basic
-        prompt: As a modeller, you are involved in a field campaign to measure aerosol and cloud properties over a marine region. You aim to use the measurements to evaluate and improve your model and quantify the effect on estimates of global mean aerosol forcing. What modelling approach would you choose and why?
-        answer: I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions and their impact on effective radiative forcing (ERF), while also being computationally efficient and suitable for evaluation against field measurements. The model would need to be run in two different ways. Firstly, for evaluation against measurements made under specific meteorological conditions, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense. For the forcing calculation, this same model could be run without nudging for 5 years. For further information, see section 6.2 and Box 6.1
   - id: mastery
     name: Mastery
     questions:
       - id: question-m01
-        prompt: In a global model, it is common to treat the particle size distribution as modes of varying size and number concentration, with each mode carrying all chemical components. In reality, as air containing sulfate aerosol passes over ocean it picks up sea salt particles that don’t immediately mix with the sulfate particles. Assuming the particles are all the same size, what is the consequence for cloud drop concentrations of treating the particles as an “internal” mixture (all components in the same particles) versus treating it as an “external” mixture?
+        prompt: As a modeller, you are involved in a field campaign to measure aerosol and cloud properties over a marine region. What type of model would you use and how would you run this model to achieve the following aims?
+        hint: In each case, you should consider whether or not it would be helpful to use nudging, and whether or not an ensemble would be helpful.
+        parts:
+          - label: (a)
+            type: basic
+            prompt: Evaluating the model against the measurements made to improve the model processes.
+            answer: I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions while also being computationally efficient and suitable for evaluation against field measurements. For this purpose, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense.
+          - label: (b)
+            type: basic
+            prompt: Quantifying the effect of the model improvements on estimates of global mean aerosol forcing.
+            answer: I would use the same atmosphere-only climate model, but run an ensemble of simulations without nudging for 5 years to quantify the effect of the model improvements on estimates of global mean aerosol forcing. See review question 1 for a reminder of why this is the most suitable model experiment for quantifying aerosol forcing.
+        author: Ken Carslaw
+        reviewer: Erin Raif
+      - id: question-m02
+        prompt: In a global model, it is common to treat the particle size distribution as modes of varying size and number concentration, with each mode carrying all chemical components. In reality, as air containing sulfate aerosol passes over ocean it picks up sea salt particles that don't immediately mix with the sulfate particles. Assuming the particles are all the same size, what is the consequence for cloud drop concentrations of treating the particles as an “internal” mixture (all components in the same particles) versus treating it as an “external” mixture?
         answer: Not sure how to answer this.
