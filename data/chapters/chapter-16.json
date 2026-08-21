@@ -4,17 +4,166 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-r01",
+          "type": "multiple-choice",
+          "prompt": "Which statement best describes the seasonal source pattern of Arctic aerosol?",
+          "answer": "Arctic aerosol is dominated by long-range transport in winter and local sources in summer.",
+          "options": [
+            "Arctic aerosol is dominated by local sources in winter and long-range transport in summer",
+            "Arctic aerosol is dominated by long-range transport in winter and local sources in summer",
+            "Arctic aerosol is dominated by local sources year-round",
+            "Arctic aerosol is dominated by long-range transport year-round"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r02",
+          "type": "multiple-choice",
+          "prompt": "What is Arctic haze primarily associated with?",
+          "answer": "Arctic haze is primarily associated with long-range transport of pollution from mid-latitudes.",
+          "options": [
+            "High summer humidity and cloud cover",
+            "Long-range transport of pollution from mid-latitudes",
+            "Local emissions from Arctic shipping and oil exploration",
+            "Seasonal melting of Arctic sea ice and release of biogenic aerosols"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r03",
+          "type": "multiple-choice",
+          "prompt": "Which of the following best describes the importance of aerosol-cloud interactions in the Arctic?",
+          "answer": "Increased cloud condensation nuclei (CCN) from aerosols can lead to brighter clouds that reflect more sunlight, contributing to cooling of the surface. However, the contrast between the albedo of the snow-covered surface and the cloud is very low, so this is a weak effect at the top of the atmosphere. In the Arctic, aerosol-cloud interactions primarily affect longwave radiation, contributing to surface warming due to the trapping of heat by clouds. See Fig. 16.11 in Box 16.2.",
+          "options": [
+            "Increased cloud condensation nuclei (CCN) from air pollution leads to clouds with higher albedo, contributing to a a globally important negative radiative forcing",
+            "Aerosol-cloud interactions are negligible in the Arctic due to low aerosol concentrations",
+            "Aerosol-cloud interactions in the Arctic primarily lead to increased precipitation and snow cover",
+            "Aerosol-cloud interactions in the Arctic primarily affect longwave radiation, contributing to surface warming"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "question-r04",
+          "type": "multiple-choice",
+          "prompt": "Which of the following best describes how aerosols have affected Arctic surface temperatures?",
+          "answer": "See Box 16.1 on polar amplification. Most of the effect of aerosols on Arctic surface temperatures is through changes at mid-latitudes, which then affect Arctic temperatures through heat transport. Local effects of aerosols on Arctic surface temperatures have not been well documented.",
+          "options": [
+            "Most of the effect of aerosols on Arctic surface temperatures is through changes in natural aerosol emissions and deposition",
+            "Most of the effect of aerosols on Arctic surface temperatures is through changes in anthropogenic aerosols transported and deposited in the Arctic",
+            "Aerosols have had little effect on Arctic surface temperatures",
+            "Most of the effect of aerosols on Arctic surface temperatures is through changes at mid-latitudes, which then affect Arctic temperatures through heat transport"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "id": "question-r05",
+          "type": "multiple-choice",
+          "prompt": "Which of the following best describes the meteorology of the Arctic?",
+          "answer": "The Arctic is strongly influenced by mid-latitude weather systems in winter, but is more isolated from mid-latitude regions in summer. This seasonal pattern affects the transport of aerosols and other pollutants into the Arctic.",
+          "options": [
+            "The Arctic is strongly isolated from mid-latitude regions for most of the year, preventing long-range transport of aerosols and other pollutants",
+            "The Arctic is strongly influenced by mid-latitude weather systems year-round, leading to frequent long-range transport of aerosols and other pollutants",
+            "The Arctic is strongly influenced by mid-latitude weather systems in winter, but is more isolated from mid-latitude regions in summer",
+            "The Arctic is strongly influenced by mid-latitude weather systems in summer, but is more isolated from mid-latitude regions in winter"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r06",
+          "type": "multiple-choice",
+          "prompt": "Which of the following best describes transport of aerosols to the Arctic from lower-latitude regions?",
+          "answer": "Describe polar dome. Were else in the chapter other than 16.1.2.2 do we describe this?",
+          "options": [
+            "Aerosol is transported to the Arctic primarily at low levels, leading to strong deposition and removal from the atmosphere",
+            "Aerosol is transported to the Arctic primarily at high levels in winter and lower levels in summer",
+            "Aerosol is transported to the Arctic primarily at high levels year round, leading to weak deposition and long residence times in the atmosphere",
+            "Aerosol is transported to the Arctic primarily at low levels in winter and higher levels in summer"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "application",
       "name": "Application",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-a01",
+          "type": "numeric",
+          "prompt": "What is the value of π (pi)?",
+          "hint": "Optional hint for numeric questions.",
+          "answer": 3.14,
+          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "question-a02",
+          "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
+          "image": {
+            "src": "../imgs/forcings.png",
+            "alt": "Sample forcing chart used to demonstrate image questions",
+            "caption": "Images stay inside the question box and keep their proportions."
+          },
+          "options": [
+            "Feedbacks",
+            "Forcings"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-m01",
+          "parts": [
+            {
+              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "label": "(a)",
+              "answer": "A multi-part question has two or more subquestions that are answered separately."
+            },
+            {
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
+              "label": "(b)",
+              "type": "numeric",
+              "answer": 9,
+              "tolerance": 0
+            }
+          ]
+        },
+        {
+          "id": "template-m02",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": 9.81,
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-m03",
+          "type": "select-multiple",
+          "prompt": "Which of the following are greenhouse gases?",
+          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
+          "options": [
+            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
+            "Methane (\\(\\mathrm{CH}_4\\))",
+            "Oxygen (\\(\\mathrm{O}_2\\))",
+            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
+          ]
+        }
+      ]
     }
   ]
 }
