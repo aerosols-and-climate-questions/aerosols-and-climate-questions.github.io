@@ -4,17 +4,163 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-r01",
+          "type": "multiple-choice",
+          "prompt": "Ice nucleation is fundamentally a stochastic time-dependent process. However, models usually do not describe heterogeneous ice nucleation using a single time-dependent description. Why not?",
+          "answer": "Atmospheric particles have too much variability in their freezing properties, so a single time-dependent description is not adequate.",
+          "options": [
+            "Time dependence is not important for ice nucleation, so it is ignored in models",
+            "Atmospheric particles have too much variability in their freezing properties, so a single time-dependent description is not adequate",
+            "Even a single time-dependent description is too complex to include in models, so a simpler description is used",
+            "Laboratory measurements have been unable to capture time-dependent behavior of ice nucleation"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r02",
+          "type": "multiple-choice",
+          "prompt": "An increase in INPs causes earlier glaciation of a shallow supercooled cloud. Which radiative consequence is most likely?",
+          "answer": "The cloud will reflect less solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit less terrestrial (longwave) radiation because cloud cover is decreased.",
+          "options": [
+            "The cloud will reflect more solar radiation because the ice crystals have higher scattering efficiency than liquid droplets",
+            "The cloud will emit more terrestrial (longwave) radiation because cloud depth is increased",
+            "The cloud will reflect less solar radiation because the ice crystals have lower scattering efficiency than liquid droplets and it will emit less terrestrial (longwave) radiation because cloud cover is decreased",
+            "The cloud will reflect more solar radiation because the ice crystals have higher scattering efficiency than liquid droplets and it will emit more terrestrial (longwave) radiation because cloud cover is increased"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r03",
+          "type": "select-multiple",
+          "prompt": "Which of the following is correct for mixed-phase clouds? Select all correct statements.",
+          "answer": "Explain",
+          "options": [
+            "Ice nucleation occurs at a higher temperature than homogeneous freezing",
+            "The INP concentration increases by orders of magnitude as the temperature decreases below 0°C",
+            "Close to the homogeneous freezing temperature, the INP concentration becomes high enough that most droplets freeze",
+            "The INP concentration in the atmosphere is so low that most droplets do not freeze by heterogeneous nucleation, even at temperatures well below 0°C"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "question-r04",
+          "type": "select-multiple",
+          "prompt": "Which of the following parameterisations have been used in models to describe ice nucleation? Select all correct statements.",
+          "answer": "Explain",
+          "options": [
+            "A function of temperature only, with no link to aerosol properties",
+            "A function of the number concentration of aerosol particles larger than a defined diameter, with no link to particle composition",
+            "A function of the surface active site density of various aerosol particles measured in the laboratory",
+            "Using classical nucleation theory and the nucleation rate coefficient",
+            "Using parameterisations of particle to particle chemical diversity incorporating stocahstic functions for the freezing time dependence"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "question-r05",
+          "type": "multiple-choice",
+          "prompt": "What is the typical maximum measured concentration of INPs in the atmosphere at temperatures of -20°C?",
+          "answer": "The typical maximum measured concentration of INPs in the atmosphere at temperatures of -20°C is around 0.10 cm⁻³, or 100 L⁻¹.",
+          "options": [
+            "100 cm⁻³",
+            "10 cm⁻³",
+            "1 cm⁻³",
+            "0.10 cm⁻³"
+          ],
+          "correctIndex": 3
+        }
+      ]
     },
     {
       "id": "application",
       "name": "Application",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-a01",
+          "type": "numeric",
+          "prompt": "What is the value of π (pi)?",
+          "hint": "Optional hint for numeric questions.",
+          "answer": 3.14,
+          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-a02",
+          "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
+          "image": {
+            "src": "../imgs/forcings.png",
+            "alt": "Sample forcing chart used to demonstrate image questions",
+            "caption": "Images stay inside the question box and keep their proportions."
+          },
+          "options": [
+            "Feedbacks",
+            "Forcings"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-m01",
+          "parts": [
+            {
+              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "label": "(a)",
+              "answer": "A multi-part question has two or more subquestions that are answered separately."
+            },
+            {
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
+              "label": "(b)",
+              "type": "numeric",
+              "answer": 9,
+              "tolerance": 0
+            }
+          ]
+        },
+        {
+          "id": "template-m02",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": 9.81,
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-m03",
+          "type": "select-multiple",
+          "prompt": "Which of the following are greenhouse gases?",
+          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
+          "options": [
+            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
+            "Methane (\\(\\mathrm{CH}_4\\))",
+            "Oxygen (\\(\\mathrm{O}_2\\))",
+            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
+          ]
+        }
+      ]
     }
   ]
 }

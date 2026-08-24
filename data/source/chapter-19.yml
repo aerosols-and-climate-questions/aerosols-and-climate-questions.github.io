@@ -1,0 +1,26 @@
+chapterTitle: Chapter 19
+categories:
+  - id: review
+    name: Review
+    questions:
+      - id: question-r01
+        type: select-multiple
+        prompt: Which of the following are short-lived climate forcers?
+        options:
+          - Sulphur dioxide (SO\(_2\))
+          - Ozone (O\(_3\))
+          - Ammonia (NH\(_3\))
+          - Organic carbon (OC)
+          - Nitrous oxide (N\(_2\)O)
+        correctIndex: [0, 1, 2, 3]   
+        answer: Short-lived climate forcers (SLCFs) are gases and aerosols that have a much shorter lifetime in the atmosphere than typical climate change policy horizons of decades. They remain in the atmosphere for days to a few years compared to centuries for some greenhouse gases. In this list, nitrous oxide is a very long-lived greenhouse gas, not to be confused with nitrogen dioxide (NO\(_2\)), which forms nitric acid and affects aerosol.
+
+      - id: question-r02
+        type: multiple-choice
+        prompt: Carbon dioxide and aerosol precursor gases like sulphur dioxide are often co-emitted by industry. What would happen if the emission of both of these gases were suddenly reduced by 10%?
+        options:
+          - Both the positive radiative forcing of CO\(_2\) and the negative radiative forcing of sulphate aerosol would decline within a few days
+          - The positive radiative forcing of CO\(_2\) would continue to rise and the negative radiative forcing of sulphate aerosol would decline within a few days
+          - The positive radiative forcing of CO\(_2\) and the negative radiative forcing of sulphate aerosol would decline by about 10% over a few years.
+        correctIndex: 1
+        answer: Carbon dioxide radiative forcing would continue to rise and the negative radiative forcing of sulphate aerosol would decline within a few days. About half of the emitted carbon dioxide remains in the atmosphere (the rest taken up by the ocean and land), so a 10% reduction in emissions would reduce the rate of rise by about 5%. Both sulphur dioxide and the sulphate aerosol that it produces are shortlived (see typical timescales in Fig. 5.10), so within a few days to weeks the global sulphate aerosol abundance would have fallen by 10% to a new steady level. The difference in timescales is important for climate policy and carbon budgets. Reduced aerosol emissions require lower carbon emissions for the same climate change target. 

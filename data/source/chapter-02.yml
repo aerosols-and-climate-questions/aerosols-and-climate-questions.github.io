@@ -12,8 +12,9 @@ categories:
           - "1950-1980"
           - "1980-2010"
         correctIndex: 2
-        answer: To add more detail.
+        answer: Between the 1960s and the early 1980s, there was an observed dip in Northern Hemisphere temperatures (Fig 2.4) which correlated with strong air pollution. Hegerl et al. (2019) show that the cooling effect of anthropogenic aerosol offset the warming effect of greenhouse gases during this period. See section 2.2 and Fig 2.5.
         author: Erin Raif
+        reference: Hegerl, G. C., et al. (2019). Causes of climate change over the historical record. Environ. Res. Lett. 14, 123006. https://doi.org/10.1088/1748-9326/ab4557
       - id: question-r02
         type: multiple-choice
         prompt: Under cloud-free conditions, aerosol reduces the solar radiation at the surface by approximately 8.5 W m\(^{-2}\). Approximately what percentage of this is due to scattering and what percentage is due to absorption?
@@ -27,6 +28,7 @@ categories:
         answer: Note that there is a difference between clear-sky (cloud-free) conditions and all-sky (partly cloudy) conditions (like Earth as a whole). The numbers in Ch 2 are from Fig 2.6 and refer to cloud-free conditions. The quantities are developed further in Ch 11 (sections 11.3.3 for cloud-free and 11.3.4 for all-sky).
         author: Erin Raif
         reviewer: Ken Carslaw
+
       - id: question-r03
         prompt: How does the Planck feedback behave in response to
         parts:
@@ -47,6 +49,7 @@ categories:
             correctIndex: 0
             answer: Greenhouse gases have a warming effect on the climate system, so the amount of longwave emission by Earth will increase.
         author: Erin Raif
+
       - id: question-r04
         type: multiple-choice
         prompt: Which of these statements defines effective radiative forcing (ERF)?
@@ -56,7 +59,22 @@ categories:
           - The change in net downward radiative flux at the top of atmosphere caused by a radiative perturbation to the Earth system excluding any other changes to the Earth system
           - The change in net downward radiative flux at the top of atmosphere caused by a radiative perturbation to the Earth including adjustments to the atmosphere without a change in surface temperature
         correctIndex: 3
+        answer: There are several similar but subtly different types of "radiative forcing". See section 2.3.3 and Boxes 2.1 and 2.2 for more discussion. 
         author: Erin Raif
+
+      - id: question-r08
+        type: multiple-choice
+        prompt: Why did the introduction of Effective Radiative Forcing (ERF) improve comparisons among forcing agents?
+        options:
+          - It removed several sources of model uncertainty
+          - It removes cloud effects, which were a major source of uncertainty
+          - It includes atmospheric adjustments occurring before surface warming
+          - It measures forcing at the top of the atmosphere rather than at the top of the stratosphere
+        correctIndex: 2
+        answer: ERFs take into account atmospheric adjustments. Adjustments are processes that occur on timescales faster than the surface temperature response. For aerosols these are mostly changes in cloud properties, which alter the instantaneous radiative forcing caused by changes in atmospheric radiation and cloud droplet concentrations. This 'adjusted' or effective forcing is what causes the change in temperature, so neglecting them meant that temperature responses were not so comparable across forcing agents. Note that such adjustments don't apply just to aerosols; changes in carbon dioxide can also cause cloud adjustments, as explained in the book. See Box 2.2 and related text.    
+        author: Ken Carslaw
+        reviewer: Erin Raif
+
       - id: question-r05
         type: multiple-choice
         prompt: Two aerosol species produce identical global mean effective radiative forcing. Which statement is most accurate?
@@ -69,6 +87,111 @@ categories:
         answer: The same global mean forcing can produce different regional climate responses because aerosol location, absorption characteristics, and atmospheric adjustments influence circulation and precipitation patterns.
         author: Ken Carslaw
         reviewer: Erin Raif
+
+      - id: question-r06
+        type: multiple-choice
+        prompt: Which one of the following aerosols most strongly causes a fast precipitation response and why?
+        options:
+          - Secondary organic aerosol because it cools the land surface
+          - Black carbon because it heats the atmosphere
+          - Sulfate aerosol because it most strongly affects cloud droplet concentrations
+          - Sea spray aerosol because it strongly affects planetary albedo
+        correctIndex: 1
+        author: Ken Carslaw
+        reviewer: Erin Raif
+        answer: Black carbon aerosol most strongly causes a fast precipitation response because it heats the atmosphere. The fast 'forcing-driven' precipitation response to a change in aerosol occurs without any change in surface temperature (by definition). Heating of the atmosphere, which is very fast, above an unchanged surface stabilises the atmosphere and reduces water vertical transport and precipitation. An alternative explanation is that atmospheric heating from black carbon is balanced by a reduction in latent heating of the atmosphere from water condensation in order to restore atmospheric energy balance. In contrast to black carbon, sulfate is a scattering aerosol, so no additional heat is absorbed in the atmosphere. On longer time scales, sulfate suppresses precipitation by decreasing global temperature. See section 2.5.3 for more discussion on this topic.  
+
+      - id: question-r09
+        type: multiple-choice
+        prompt: Two climate models reproduce the observed 20th-century warming equally well. Model A has a strongly negative aerosol forcing, while Model B has a weaker aerosol forcing. What is the most likely implication?
+        options:
+          - Model A probably has a lower climate sensitivity
+          - Model A probably has a higher climate sensitivity
+          - Aerosol forcing does not influence temperature simulations
+          - Future temperature projections of the two models will be very similar
+        correctIndex: 1
+        answer: Model A probably has a higher climate sensitivity. Model A has a strongly negative aerosol radiative forcing, which will offset a larger fraction of the greenhouse gas forcing over the industrial period. Model A therefore has a smaller positive forcing than model B. For model A to simulate the same change in temperature over the industrial period as model B, it must have a higher climate sensitivity (\(\mathrm{d}T/\mathrm{d}F\)) to cause the same \(\Delta T\) with a smaller \(\Delta F\). See section 2.3.5.
+        author: Ken Carslaw
+        reviewer: Erin Raif
+
+      - id: question-r10
+        type: multiple-choice
+        prompt: A proposed climate policy would remove anthropogenic aerosol emissions over 20 years and cause carbon dioxide emission rates to stabilise. Which outcome would be most likely?
+        options:
+          - Gradual global cooling as the rate of carbon dioxide emissions has stopped increasing
+          - No climatic response because the two radiative forcings continue to balance
+          - Acceleration of warming as the masking effect of aerosol is removed
+          - Rapid decrease in climate sensitivity as there is a significant change to the Earth system
+        correctIndex: 2
+        answer: Removal of aerosol emissions over 20 years would remove the negative aerosol radiative forcing that aerosols are currently causing. Stabilisation of carbon dioxide emissions would cause atmospheric concentrations to still increase, albeit more slowly. The net effect would be an acceleration of warming. Climate sensitivity would be unchanged as this is the response to a given forcing, such as aerosol or CO\(_2\) emissions. See section 2.3.5.
+        author: Ken Carslaw
+        reviewer: Erin Raif
+
+      - id: question-r11
+        type: multiple-choice
+        prompt: Which of the following equations defines the equilibrium climate sensitivity? \(\lambda\) is the climate sensitivity parameter in \(\mathrm{K/Wm^{-2}}\), \(\Delta F\) is a radiative forcing, and \(\Delta T\) is the change in global mean surface temperature.
+        options:
+          - \(\mathrm{ECS} = \lambda \Delta F\)
+          - \(\mathrm{ECS} = \lambda \Delta F_{\mathrm{CO_2}}\)
+          - \(\mathrm{ECS} = \lambda \Delta F_{2\times \mathrm{CO_2}}\)
+          - \(\mathrm{ECS} = \frac{\Delta T}{\Delta F}\)
+        correctIndex: 2
+        answer: ECS is defined as the change in global mean surface temperature at equilibrium after a doubling of atmospheric CO\(_2\) concentration. The radiative forcing associated with a doubling of CO\(_2\) is \(\Delta F_{2\times \mathrm{CO_2}}\), and the climate sensitivity parameter \(\lambda\) relates the forcing to the temperature response. ECS is a misonomer in that it is actually a temperature (in K) rather than a sensitivity.
+        author: Ken Carslaw
+        Reviewer: Erin Raif
+
+      - id: question-r12
+        type: multiple-choice
+        prompt: Which of the following equations defines the efficacy of a radiative forcing agent \(f\)?
+        options:
+          - \({\rm Efficacy}_f = \frac{\Delta T_f}{\Delta F_f}\)
+          - \({\rm Efficacy}_f = \lambda \Delta F_f\)
+          - \({\rm Efficacy}_f = (\Delta T_f/\Delta F_f)/(\Delta T_{2 \times \mathrm{CO_2}}/\Delta F_{2\times \mathrm{CO_2}})\)
+          - \({\rm Efficacy}_f = \frac{\Delta T_f}{\Delta T_{2 \times \mathrm{CO_2}}}\)
+        correctIndex: 2
+        answer: The efficacy of a radiative forcing is defined as the change in global mean surface temperature per unit radiative forcing relative to a doubling of CO\(_2\).
+        author: Ken Carslaw
+        Reviewer: Erin Raif
+
+      - id: question-r13
+        type: multiple-choice
+        prompt: The effective radiative forcing of CO\(_2\) is approximately 2 \(\mathrm{W m^{-2}}\) over the industrial period. This is about 5% of the effect of all CO\(_2\) in the atmosphere (35 \(\mathrm{W m^{-2}}\)) if all naturally occurring CO\(_2\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere?
+        options:
+          - 0.1%
+          - 1%
+          - 10%
+          - 50%
+        correctIndex: 2
+        answer: The anthropogenic aerosol radiative forcing under cloud-free conditions is very uncertain, but is of the order -0.4 \(\mathrm{W m^{-2}}\). (This is \(\Delta F_{\mathrm{ari}^{\mathrm{eff}}\ in Table 2.1). In the natural atmosphere, aerosols reflect about 4 \(\mathrm{W m^{-2}}\) (Fig. 2.6), so the answer is about 10%.
+        author: Ken Carslaw
+        Reviewer: Erin Raif
+
+      - id: question-r14
+        type: multiple-choice
+        prompt: Long-term measurements of surface solar radiation provide one line of evidence for the effect of anthropogenic aerosols on Earth's energy budget. Over a polluted region like Europe, by approximately how much did surface solar radiation decline from the 1950s to the 1980s?
+        options:
+          - No evidence for a decline
+          - A possible decline, but difficult to detect above natural variability
+          - A decline of a fraction of a percent
+          - A decline of a few percent
+        correctIndex: 3
+        answer: Compilation of long-term measurements over Europe show a decline of a few percent in surface solar radiation. See Fig 2.3.
+        author: Ken Carslaw
+        Reviewer: Erin Raif
+
+      - id: question-r15
+        type: multiple-choice
+        prompt: At what wavelengths is the scattering effect of aerosols highest?
+        options:
+          - Ultraviolet and blue wavelengths (0.3-0.4 \(\mu\)m)
+          - Visible wavelengths (0.5-1.0 \(\mu\)m)
+          - Near-infrared wavelengths (2-5 \(\mu\)m)
+          - In the atmospheric window region (8-14 \(\mu\)m)
+        correctIndex: 1
+        answer: Aerosol scattering occurs in the UV and visible wavelengths. However, transmission through of radiation through the atmosphere is much stronger for visible wavelengths than UV, so the scattering effect of aerosols is strongest in the visible.  See Fig 2.7.
+        author: Ken Carslaw
+        Reviewer: Erin Raif
+
   - id: application
     name: Application
     questions:
@@ -92,6 +215,7 @@ categories:
             answerInfo: "5%"
         answer: >-
           Reflectivity scales with \(\sqrt[3]{N_\mathrm{d}}\). To calculate the fractional change, we can do \(\sqrt[3]{\frac{N_\mathrm{old}+N_\mathrm{new}}{N_\mathrm{old}}}\), where \(N_\mathrm{old}\) is the droplet number before the entrainment and \(N_\mathrm{new}\) is the droplet number after the entrainment.
+        author: Erin Raif
 
 
         
