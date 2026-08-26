@@ -81,26 +81,21 @@
         },
         {
           "id": "question-r06",
-          "prompt": "Explain the main reasons why only a fraction of available aerosol particles activate to form cloud droplets in a rising air parcel.",
-          "answer": "The first key point is that the supersaturation required for a given aerosol particle to activate depends on the particle size and composition. Larger particles and more hygroscopic particles require lower supersaturation to activate. The second key point is that the maximum supersaturation achieved in a rising air parcel is limited by the cooling rate of the parcel and the condensation of water vapor onto already activated droplets. As a result, only a fraction of available aerosol particles will experience sufficient supersaturation to activate and form cloud droplets."
-        },
-        {
-          "id": "question-r07",
           "prompt": "Explain why the sensitivity of cloud albedo to changes in droplet number concentration is highest for optically thin clouds.",
           "answer": "For optically thin clouds, a small increase in droplet number can lead to a relatively large increase in albedo, while for optically thick clouds, the albedo is already close to its maximum value and additional droplets therefore have a smaller effect. Ultimately, for a very thick cloud with an albedo close to its maximum (1.0), the dependence of albedo on droplet number concentration becomes zero. This is reflected in the mathematical relationship between cloud albedo and droplet number concentration (Eq 12.14), where the derivative of albedo with respect to droplet number concentration is larger for lower optical depths."
         },
         {
-          "id": "question-r08",
+          "id": "question-r07",
           "prompt": "Explain the main reasons why only a fraction of available aerosol particles activate to form cloud droplets in a rising air parcel.",
           "answer": "The first key point is that the supersaturation required for a given aerosol particle to activate depends on the particle size and composition (see later question and Fig. 12.6). Larger particles and more hygroscopic particles require lower supersaturation to activate (i.e., they have lower critical supersaturations). The second key point is that in a rising air parcel, the supersaturation reaches a maximum value when the increase in humidity caused by cooling is balanced by the decraese in humidity caused by condensation of water vapor onto already activated droplets. As a result, only a fraction of available aerosol particles will experience sufficient supersaturation to activate and form cloud droplets (particles that have a critical supersaturation lower than the maximum supersaturation in the parcel) before the humidity stops rising. This is the basic picture, but there are some other things going on as well. For example, as developed in Eq. 12.37, the falling air pressure and the release of latent heat during condensation can also affect the maximum supersaturation in a rising air parcel."
         },
         {
-          "id": "question-r09",
+          "id": "question-r08",
           "prompt": "Explain why more droplets are activated in a rising air parcel with a higher updraft velocity.",
           "answer": "A higher updraft velocity leads to a faster cooling rate, which increases the supersaturation in the rising air parcel. This higher supersaturation allows more aerosol particles to reach their critical supersaturation and activate to form cloud droplets. Think of it in terms of production and loss of supersaturation. \\(\\frac{dS}{dt} = \\frac{dS}{dt}_{prod} - \\frac{dS}{dt}_{loss}\\). As shown in Eq. 12.37 the production term is proportional to the updraft velocity."
         },
         {
-          "id": "question-r10",
+          "id": "question-r09",
           "prompt": "What is the main physical explanation for why the the number of activated droplets in a rising air parcel does not increase linearly with the number of available aerosol particles?",
           "answer": "As new droplets are activated, they grow by condensation of water vapor, which reduces the supersaturation in the rising air parcel. This reduction in supersaturation means that fewer of the additional aerosol particles can reach their critical supersaturation and activate to form droplets. Therefore, the number of activated droplets does not increase linearly with the number of available aerosol particles, as the activation process is self-limiting due to the feedback between droplet growth and supersaturation."
         }
@@ -147,9 +142,10 @@
           "id": "question-m02",
           "parts": [
             {
-              "prompt": "Plot the Köhler curve (Eq. 12.34) for a hygroscopic aerosol particle with a dry radius of 0.05 μm and a hygroscopicity parameter of 0.6 (ammonium sulphate). Use  \\(\\hat{A}\\) = 10\\(^{-3}\\) \\(\\mu\\)m. Hint:- you will need to zoom into a small range of saturation ratios to see the critical supersaturation. If you don't have plotting code, AI can help you plot this Python function:- S = ((r**3 - ra**3) / (r**3 - ra**3 * (1 - kappa))) * math.exp(A / r).",
+              "prompt": "Plot the Köhler curve (Eq. 12.34) for a hygroscopic aerosol particle with a dry radius of 0.05 μm and a hygroscopicity parameter of 0.6 (ammonium sulphate). Use  \\(\\hat{A}\\) = 10\\(^{-3}\\) \\(\\mu\\)m.",
               "label": "(a)",
-              "answer": "To check your plots, the a dry radius should give you a curve that crosses 1 at 0.27 \\(\\mu\\)m, and the critical supersaturation should be about 1.0014."
+              "answer": "To check your plots, the a dry radius should give you a curve that crosses 1 at 0.27 \\(\\mu\\)m, and the critical supersaturation should be about 1.0014.",
+              "hint": "You will need to zoom into a small range of saturation ratios to see the critical supersaturation. If you don't have plotting code, AI can help you plot this Python function:- S = ((r**3 - ra**3) / (r**3 - ra**3 * (1 - kappa))) * math.exp(A / r)."
             },
             {
               "prompt": "Replot for a range of dry particle radii from 0.01 μm to 0.1 μm and a range of hygroscopicity parameters from 0.1 to 1.0. How does the critical supersaturation depend on the dry particle radius and hygroscopicity parameter?",
@@ -165,11 +161,30 @@
         },
         {
           "id": "question-m03",
-          "prompt": "Using the equations for the saturation ratio over a solution droplet (Eq. 12.34), show that the critical radius \\(r_c\\) depends approximately on the dry particle radius \\(r_a\\) to the power -3/2 and on the square-root of the hygroscopicity parameter \\(\\kappa\\).",
-          "answer": "Starting from the $\\kappa$-Köhler equation,\\[S(r)=\\frac{r^3-r_a^3}{r^3-r_a^3(1-\\kappa)}\\exp\\left(\\frac{\\hat A}{r}\\right),\\]take logarithms \\[\\ln S=\\ln(r^3-r_a^3)-\\ln\\!\\Bigl(r^3-r_a^3(1-\\kappa)\\Bigr)+\\frac{\\hat A}{r}.\\] Differentiate \\[\\frac{d\\ln S}{dr}=\\frac{3r^2}{r^3-r_a^3}-\\frac{3r^2}{r^3-r_a^3(1-\\kappa)}-\\frac{\\hat A}{r^2}.\\] At the critical radius \\(r_c\\), \\(\\frac{d\\ln S}{dr}=0,\\) so \\[\\frac{3r_c^2\\kappa r_a^3}{(r_c^3-r_a^3)\\left[r_c^3-r_a^3(1-\\kappa)\\right]} =\\frac{\\hat A}{r_c^2}.\\] Since activation occurs for \\(r_c \\gg r_a\\),\\[r_c^3-r_a^3 \\approx r_c^3,\\qquad r_c^3-r_a^3(1-\\kappa) \\approx r_c^3,\\] giving \\[\\frac{3\\kappa r_a^3 r_c^2}{r_c^6}=\\frac{\\hat A}{r_c^2}.\\]  Therefore \\[r_c^2=\\frac{3\\kappa r_a^3}{\\hat A}.\\] Therefore \\[r_c \\propto \\kappa^{-1/2}r_a^{-3/2}.\\]"
+          "prompt": "The \"kappa\" form of the Köhler equation (Eq. 12.34) \\[S(r)=\\frac{r^3-r_a^3}{r^3-r_a^3(1-\\kappa)}\\exp\\left(\\frac{\\hat A}{r}\\right),\\] is very convenient because it is based on \\(\\kappa\\) values that are readily available in the literature for many aerosol components (see section 5.2.6). However, a much more common form exists in many textbooks:- \\[s(r)=S(r)-1=\\frac{a}{r}+ \\frac{b}{r^3},\\] where \\(s\\) is the 'supersaturation' (\\(S-1\\)) and \\(a\\) and \\(b\\) are constants that depend on the temperature, surface tension, and solute properties. Show that this form can be derived from Eq. 12.34.",
+          "hint": "Start from Eq. 12.34 and use the approximation that \\(r^3 \\gg r_a^3\\) and \\(\\exp\\left(\\frac{\\hat A}{r}\\right) \\approx 1 + \\frac{\\hat A}{r}\\) for small \\(\\hat A/r\\).",
+          "answer": "Starting from the \\(\\kappa\\)-Köhler equation, we have \\[S(r)=\\frac{r^3-r_a^3}{r^3-r_a^3(1-\\kappa)}\\exp\\left(\\frac{\\hat A}{r}\\right).\\] For \\(r^3 \\gg r_a^3\\), we can approximate \\(\\frac{r^3-r_a^3}{r^3-r_a^3(1-\\kappa)} \\approx 1 + \\frac{\\kappa r_a^3}{r^3}\\). Also, for small \\(\\hat A/r\\), we can use the approximation \\(\\exp\\left(\\frac{\\hat A}{r}\\right) \\approx 1 + \\frac{\\hat A}{r}\\). Therefore, we can write \\[S(r) \\approx \\left(1 + \\frac{\\kappa r_a^3}{r^3}\\right)\\left(1 + \\frac{\\hat A}{r}\\right) = 1 + \\frac{\\hat A}{r} + \\frac{\\kappa r_a^3}{r^3} + O\\left(\\frac{1}{r^4}\\right).\\] Thus, the supersaturation \\(s(r) = S(r) - 1\\) can be expressed as \\[s(r) = \\frac{\\hat A}{r} + \\frac{\\kappa r_a^3}{r^3},\\] which is of the form \\(s(r) = \\frac{a}{r} + \\frac{b}{r^3}\\), where \\(a = \\hat A\\) and \\(b = \\kappa r_a^3\\).",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Nobody"
+          ]
         },
         {
           "id": "question-m04",
+          "prompt": "Using the classical form of the Köhler equation, show that the critical supersaturation \\(s_c\\) is proportional to \\(\\kappa^{-1/2} r_a^{-3/2}\\).",
+          "hint": "Start from the classical form of the Köhler equation \\(s(r) = \\frac{a}{r} + \\frac{b}{r^3}\\) and find the critical radius \\(r_c\\) by setting the derivative of \\(s(r)\\) with respect to \\(r\\) equal to zero. Then substitute \\(r_c\\) back into the equation for \\(s(r)\\) to find \\(s_c\\). You'll also need to use \\( b = \\kappa r_a^3 \\) from the previous question.",
+          "answer": "Starting from the classical Köhler equation, \\[ s(r) = \\frac{a}{r} - \\frac{b}{r^3}, \\] the maximum supersaturation occurs at the critical radius \\(r_c\\), for which \\[ \\frac{ds}{dr} = -\\frac{a}{r^2} + \\frac{3b}{r^4} = 0, \\] giving \\[ r_c^2 = \\frac{3b}{a}. \\] Substituting \\(r_c\\) into \\(s(r)\\), \\[ s_{\\max} = \\frac{a}{r_c} - \\frac{b}{r_c^3} = \\frac{2a}{3r_c}. \\] Using \\(r_c=(3b/a)^{1/2}\\), \\[ s_{\\max} = \\frac{2}{3\\sqrt{3}}\\frac{a^{3/2}}{b^{1/2}}, \\] so that \\[ s_{\\max} \\propto b^{-1/2}. \\] For \\(\\kappa\\)-Köhler theory, \\[ b=\\kappa r_a^3, \\] therefore \\[ s_{\\max} \\propto (\\kappa r_a^3)^{-1/2} = \\kappa^{-1/2}r_a^{-3/2}. \\]",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "reviewer": [
+            "Nobody"
+          ]
+        },
+        {
+          "id": "question-m05",
           "prompt": "Typically, cloud-top droplet effective radius and cloud optical depth are retrieved by satellites (Section 12.3.2). The MODerate Imaging Spectroradiometer retrievals of these are reported at level-3 (aggregate over time and space) as joint-histograms. An example NetCDF file is provided. What is the average drop number concentration in that level-3 pixel when assuming adiabatic clouds?",
           "answer": "The average drop number concentration in that level-3 pixel is xx cm\\(^{-3}\\).",
           "author": [
@@ -177,7 +192,7 @@
           ]
         },
         {
-          "id": "question-m05",
+          "id": "question-m06",
           "prompt": "Most assessments of aerosol-cloud radiative forcing assume that the longwave component is negligible compared to the shortwave component. Based on the equations in this chapter, plot \\(dF/dN_d\\) for these two components as a function of cloud optical depth. Based on information you find outside the book, for which kinds of clouds does longwave aerosol forcing become important?",
           "answer": "Section 12.1.3.1. Quite a low optical depth is needed for the longwave component to become important. The longwave component becomes important for optically thin clouds, such as cirrus clouds, and for clouds with a high cloud-top temperature, such as low-level stratus clouds. (Need to provide a calculation).",
           "author": [
@@ -188,7 +203,7 @@
           ]
         },
         {
-          "id": "question-m06",
+          "id": "question-m07",
           "parts": [
             {
               "prompt": "Most assessments of aerosol-cloud radiative forcing assume that the longwave component is negligible compared to the shortwave component. Based on the equations in this chapter, plot \\(dF/dN_d\\) for these two components as a function of cloud optical depth.",
@@ -203,7 +218,7 @@
           ]
         },
         {
-          "id": "question-m07",
+          "id": "question-m08",
           "prompt": "Compute the radiative forcing due to aerosol-cloud interactions for different values of the drop number sensitivity to aerosol, \\(\\partial\\ln N_d / \\partial\\ln \\tau_a\\), and for different relative perturbations in aerosol optical depth. Use files with geographical distributions of cloud fraction \\(f_{cld}\\), incoming radiation \\(R^\\downarrow\\), cloud optical thickness \\(\\tau_c\\), as well as \\(\\tau_a\\). In simplification of Eq. 12.17 assume \\(A_{cloudy} = A_c\\).",
           "hint": "Make use of Eq. 12.10 to get \\(A_c\\) from \\(\\tau_c\\) and of Eq. 12.14 to get \\(\\partial A/\\partial N_d\\). Then evaluate Eq. 12.51.",
           "answer": "Need to provide files and a calculation.",
