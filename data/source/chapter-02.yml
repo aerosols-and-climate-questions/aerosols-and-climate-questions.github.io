@@ -154,8 +154,34 @@ categories:
         Reviewer: Erin Raif
 
       - id: question-r13
+        parts:
+          - label: (a)
+            type: multiple-choice
+            prompt: What fraction of the reflection by the clear (cloud-free) atmosphere is due to aerosols (both natural and anthropogenic)?
+            options:
+              - 0.15%
+              - 1.5%
+              - 15%
+              - 50%
+            correctIndex: 2
+            answer: The clear sky reflects about 27.2 W m\(^{-2}\) of solar radiation (Fig 2.6). Aerosols reflect about 4 W m\(^{-2}\) of this, which is about 15%.
+          - label: (b)
+            type: multiple-choice
+            prompt: Assuming that aerosols have a negligible effect on reflectivity in cloudy skies, what fraction of Earth's reflection is due to aerosols?
+            options:
+              - 0.04%
+              - 0.4%
+              - 4%
+              - 40%
+            correctIndex: 2
+            answer: The total reflection of solar radiation by Earth is about 100 W m\(^{-2}\) (Fig 2.6). Aerosols reflect about 4 W m\(^{-2}\) of this, which is about 4%.
+        author: Ken Carslaw
+        Reviewer: Nobody
+
+      - id: question-r14
+        parts:
         type: multiple-choice
-        prompt: The effective radiative forcing of CO\(_2\) is approximately 2 \(\mathrm{W m^{-2}}\) over the industrial period. This is about 5% of the effect of all CO\(_2\) in the atmosphere (35 \(\mathrm{W m^{-2}}\)) if all naturally occurring CO\(_2\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere?
+        prompt: The effective radiative forcing of CO\(_2\) is approximately 2 \(\mathrm{W m^{-2}}\) over the industrial period. This is about 5% of the effect of all CO\(_2\) in the atmosphere (35 \(\mathrm{W m^{-2}}\)) if all naturally occurring CO\(_2\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere (i.e., anthropogenic aerosols as a fraction of all aerosols)?
         options:
           - 0.1%
           - 1%
@@ -166,7 +192,7 @@ categories:
         author: Ken Carslaw
         Reviewer: Erin Raif
 
-      - id: question-r14
+      - id: question-r15
         type: multiple-choice
         prompt: Long-term measurements of surface solar radiation provide one line of evidence for the effect of anthropogenic aerosols on Earth's energy budget. Over a polluted region like Europe, by approximately how much did surface solar radiation decline from the 1950s to the 1980s?
         options:
@@ -179,7 +205,7 @@ categories:
         author: Ken Carslaw
         Reviewer: Erin Raif
 
-      - id: question-r15
+      - id: question-r16
         type: multiple-choice
         prompt: At what wavelengths is the scattering effect of aerosols highest?
         options:

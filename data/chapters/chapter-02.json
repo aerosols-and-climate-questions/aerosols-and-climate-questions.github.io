@@ -220,8 +220,42 @@
         },
         {
           "id": "question-r13",
+          "author": [
+            "Ken Carslaw"
+          ],
+          "parts": [
+            {
+              "prompt": "What fraction of the reflection by the clear (cloud-free) atmosphere is due to aerosols (both natural and anthropogenic)?",
+              "label": "(a)",
+              "type": "multiple-choice",
+              "answer": "The clear sky reflects about 27.2 W m\\(^{-2}\\) of solar radiation (Fig 2.6). Aerosols reflect about 4 W m\\(^{-2}\\) of this, which is about 15%.",
+              "options": [
+                "0.15%",
+                "1.5%",
+                "15%",
+                "50%"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "prompt": "Assuming that aerosols have a negligible effect on reflectivity in cloudy skies, what fraction of Earth's reflection is due to aerosols?",
+              "label": "(b)",
+              "type": "multiple-choice",
+              "answer": "The total reflection of solar radiation by Earth is about 100 W m\\(^{-2}\\) (Fig 2.6). Aerosols reflect about 4 W m\\(^{-2}\\) of this, which is about 4%.",
+              "options": [
+                "0.04%",
+                "0.4%",
+                "4%",
+                "40%"
+              ],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "id": "question-r14",
           "type": "multiple-choice",
-          "prompt": "The effective radiative forcing of CO\\(_2\\) is approximately 2 \\(\\mathrm{W m^{-2}}\\) over the industrial period. This is about 5% of the effect of all CO\\(_2\\) in the atmosphere (35 \\(\\mathrm{W m^{-2}}\\)) if all naturally occurring CO\\(_2\\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere?",
+          "prompt": "The effective radiative forcing of CO\\(_2\\) is approximately 2 \\(\\mathrm{W m^{-2}}\\) over the industrial period. This is about 5% of the effect of all CO\\(_2\\) in the atmosphere (35 \\(\\mathrm{W m^{-2}}\\)) if all naturally occurring CO\\(_2\\) were removed). What is the equivalent approximate percentage for the effect of anthropogenic aerosols in the cloud-free part of the atmosphere (i.e., anthropogenic aerosols as a fraction of all aerosols)?",
           "answer": "The anthropogenic aerosol radiative forcing under cloud-free conditions is very uncertain, but is of the order -0.4 \\(\\mathrm{W m^{-2}}\\). (This is \\(\\Delta F_{\\mathrm{ari}^{\\mathrm{eff}}\\ in Table 2.1). In the natural atmosphere, aerosols reflect about 4 \\(\\mathrm{W m^{-2}}\\) (Fig. 2.6), so the answer is about 10%.",
           "author": [
             "Ken Carslaw"
@@ -235,7 +269,7 @@
           "correctIndex": 2
         },
         {
-          "id": "question-r14",
+          "id": "question-r15",
           "type": "multiple-choice",
           "prompt": "Long-term measurements of surface solar radiation provide one line of evidence for the effect of anthropogenic aerosols on Earth's energy budget. Over a polluted region like Europe, by approximately how much did surface solar radiation decline from the 1950s to the 1980s?",
           "answer": "Compilation of long-term measurements over Europe show a decline of a few percent in surface solar radiation. See Fig 2.3.",
@@ -251,7 +285,7 @@
           "correctIndex": 3
         },
         {
-          "id": "question-r15",
+          "id": "question-r16",
           "type": "multiple-choice",
           "prompt": "At what wavelengths is the scattering effect of aerosols highest?",
           "answer": "Aerosol scattering occurs in the UV and visible wavelengths. However, transmission through of radiation through the atmosphere is much stronger for visible wavelengths than UV, so the scattering effect of aerosols is strongest in the visible.  See Fig 2.7.",
