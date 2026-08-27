@@ -6,7 +6,7 @@ categories:
 
       - id: question-r01
         type: select-multiple
-        prompt: Select which of the following are aerosol precursor gases. Select all that apply.
+        prompt: Which of the following are aerosol precursor gases? Select all that apply.
         options:
           - SO\(_2\)
           - NO\(_2\)
@@ -193,11 +193,10 @@ categories:
               - The pH of cloud droplets is too low in the model
               - The pH of cloud droplets is too high in the model
         correctIndex: 3
-        answer: The pH of cloud droplets is too high in the model. A higher pH (lower acidity) would increase the rate of sulphate production from SO\(_2\) oxidation by ozone (O\(_3\)) in cloud droplets. This effect is more pronounced in winter when there is less photochemical activity, which makes SO\(_2\) oxidation by O\(_3\)) in cloud droplets more important than by hydrogen peroxide (H\(_2\)O\(_2\)). See section 5.4.2 on cloud processing. The condensation rate of gas-phase sulphuric acid onto particles is unlikely to be too fast in the model, as this process is well understood and the model is likely to be using a reasonable value. Also, it's a fast process, so in steady state about 99% of H\(_2\)SO\(_4\) is in the particles, so adjusting the rate will not change this much (section 5.1.1.1). The amount of particulate ammonium doesn't affect particulate sulphate. Gas phase H\(_2\)SO\(_4\) has effectively zero volatility (section 5.2.1.1), so the amount of particulate sulphate is not affected by changes in ammonium; on the contrary, the semi-volatile ammonium is strongly affected by the sulphate present (section 5.2.5).
-
+        answer: The pH of cloud droplets is too high in the model. A higher pH (lower acidity) would increase the rate of sulphate production from SO\(_2\) oxidation by ozone (O\(_3\)) in cloud droplets. This effect is more pronounced in winter when there is less photochemical activity, which makes SO\(_2\) oxidation by O\(_3\) in cloud droplets more important than by hydrogen peroxide (H\(_2\)O\(_2\)) (section 5.4.2). The condensation rate of gas-phase sulphuric acid onto particles is unlikely to be responsible because it is a well-understood process and is typically so fast that about 99% of H\(_2\)SO\(_4\) resides in particles at steady state. As a result, changes to the condensation rate would have only a small effect on particulate sulphate concentrations (section 5.2.1.1). The amount of particulate ammonium doesn't affect particulate sulphate. Gas phase H\(_2\)SO\(_4\) has effectively zero volatility (section 5.2.1), so the amount of particulate sulphate is not affected by changes in ammonium; on the contrary, the semi-volatile ammonium is strongly affected by the sulphate present (section 5.2.5).
       - id: question-a04
         type: select-multiple
-        prompt: ((Bug reported by Erin means this currently needs to be separate question)). After the cloud pH is improved in the model, which of the following aspects of the model should be investigated to understand the effects of the change? Select all that apply.
+        prompt: ((Bug reported by Erin means this currently needs to be separate question)). After the cloud pH is improved in the model, which of the following aspects of the model may be affected and should be re-evaluated? Select all that apply.
         options:
               - Particle size distribution
               - Particle hygroscopicity
@@ -206,7 +205,7 @@ categories:
               - Gas phase SO\(_2\) concentration
               - Particulate ammonium nitrate concentration
         correctIndex: [0,1,2,3,4,5]
-        answer: All of these aspects of the model should be investigated to understand the effects of the change in cloud pH. The particle size distribution will be affected by the change in in-cloud sulphate production, which releases 'cloud-processed' aerosol when they evporate (usually a shift of the accumulation mode to larger sizes, section 5.4.2), which will affect the particle hygroscopicity (section 5.2.6) and hence the CCN concentration. The gas phase SO\(_2\) concentration will be affected by the change in sulphate production, as more SO\(_2\) will be oxidised to sulphate. The particulate ammonium nitrate concentration will also be affected, as the amount of particulate ammonium is strongly affected by the amount of sulphate present (section 5.2.5). The single scattering albedo will be affected by the change in particle size distribution and composition if the particles contain some light-absorbing components like black carbon (section 11.1.4.2).
+        answer: All of these aspects of the model will be affected and should be re-evaluated. The particle size distribution will be affected by the change in in-cloud sulphate production, which releases 'cloud-processed' aerosol when they evaporate (usually a shift of the accumulation mode to larger sizes, section 5.4.2). In addition, because sulphate is highly hygroscopic, changes in sulphate mass alter aerosol composition and therefore particle hygroscopicity (section 5.2.6). Changes in both size and hygroscopicity will affect the CCN concentration. The gas phase SO\(_2\) concentration will be affected by the change in sulphate production, as more SO\(_2\) will be oxidised to sulphate. The particulate ammonium nitrate concentration will also be affected, as the amount of particulate ammonium is strongly affected by the amount of sulphate present (section 5.2.5). The single scattering albedo will be affected by the change in particle size distribution and composition if the particles contain some light-absorbing components like black carbon (section 11.1.4.2).
         author: Ken Carslaw
         reviewer: Nobody
 
