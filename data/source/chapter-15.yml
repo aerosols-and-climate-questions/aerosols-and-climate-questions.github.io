@@ -63,12 +63,7 @@ categories:
   - id: application
     name: Application
     questions:
-      - id: question-a01
-        type: basic
-        prompt: In a warming climate, it is considered that the cloud-phase feedback of shallow, mixed-phase clouds over the ocean is negative. If INP emissions also increase as the climate warms, while INP removal and other atmospheric processing stay the same, how would the cloud-phase feedback change compared to a future without any INP emission change?
-        answer: The cloud-phase feebback would be less negative or positive, depending on if the emitted INP offsets the decrease in INP concentration from an increasing temperature. If the emission increase only partially offsets the temperature effect, liquid water path in these clouds still rises with warming but by less than in the future without emission change of INPs, so the feedback stays negative but is weaker in magnitude. If the emission increases more than compensates, the net INP concentration can rise with warming, which leads to clouds glaciate more with less albedo, hence a positive cloud-phase feedback.
-      
-      - id: template-a02
+      - id: template-a01
         type: multiple-choice
         prompt: Is this chart about radiative forcings or climate feedbacks?
         image:
@@ -80,19 +75,22 @@ categories:
           - Forcings
         correctIndex: 1
         answer: It's forcings, shown on the x-axis
+  
   - id: mastery
     name: Mastery
     questions:
-      - id: template-m01
+      - id: question-m01
         parts:
           - label: (a)
-            prompt: Write one short sentence explaining what makes a question multi-part.
-            answer: A multi-part question has two or more subquestions that are answered separately.
+            type: basic
+            prompt: In a warming climate, the cloud-phase feedback of shallow, mixed-phase clouds over the ocean is considered negative. Briefly explain the physical mechanism behind this negative feedback.
+            answer: In a warming climate, there will be a shift upward in the isotherms and a shift to less ice and more supercooled water. Clouds With more supercooled water and less ice have a greater albedo. Therefore, this shift leads to more solar radiation being reflected back into space and a negative feedback.
+            hint: Section 15.2.1 discusses the shallow mixed-phase cloud feedbacks.
           - label: (b)
-            type: numeric
-            prompt: Evaluate \(\ 2^3 + 1 \).
-            answer: 9
-            tolerance: 0
+            type: basic
+            prompt: Suppose INP emissions also increase as the climate warms, while INP removal and other atmospheric processing stay the same. How would the cloud-phase feedback change compared to a future with no INP emission change?
+            answer: The cloud-phase feebback would be less negative or positive, depending on if the emitted INP offsets the decrease in INP concentration from an increasing temperature. If the emission increase only partially offsets the temperature effect, liquid water path in these clouds still rises with warming but by less than in the future without emission change of INPs, so the feedback stays negative but is weaker in magnitude. If the emission increases more than compensates, the net INP concentration can rise with warming, which leads to clouds glaciate more with less albedo, hence a positive cloud-phase feedback.
+            hint: Cloud feedbacks dependent on the cloud properties in both present-day and future climates. Think about how INP affect the properties of shallow mixed-phase clouds (Section 15.1.1) and how the change of INP in a warming climate affects the properties of futrue clouds.
       - id: template-m02
         type: numeric
         prompt: What is the standard acceleration due to gravity at Earth's surface?
