@@ -60,6 +60,17 @@ categories:
         correctIndex: 3
         answer: The typical maximum measured concentration of INPs in the atmosphere at temperatures of -20°C is around 0.10 cm⁻³, or 100 L⁻¹.
 
+      - id: question-r06
+        type: multiple-choice
+        prompt: Which nucleation pathway is identified as the most common route to primary ice formationin mixed-phase clouds in practice?
+        options:
+          - Deposition freezing on dry INPs without prior droplet formation
+          - Contact freezing of raindrops in the melting layer
+          - CCN activation to form cloud droplets, followed by immersion freezing on INPs inside those droplets
+          - Homogeneous freezing of pure water droplets at \(-35^\circ\mathrm{C}\).
+        correctIndex: 2
+        answer: In practice, it appears that the most common pathway to nucleation inmixed-phase clouds is the formation of cloud droplets via the activation of CCN followed by nuceation on INP immersed within those cloud droplets.
+
   - id: application
     name: Application
     questions:
