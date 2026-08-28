@@ -97,7 +97,7 @@ categories:
             prompt: >-
               If the same INP profile were encountered in a much stronger updraft in this cloud, how would the likelihood of homogeneous freezing change?
             options:
-              - Homogeneous freezing would become less likely because stronger ascent always removes all liquid before \(-35^\circ\mathrm{C}\).
+              - Homogeneous freezing would become less likely because stronger updraft always removes all liquid before \(-35^\circ\mathrm{C}\).
               - Homogeneous freezing would become more likely because there is less time for ice formed from heterogeneous nucleation to deplete liquid water.
               - updraft speed does not affect the competition between heterogeneous and homogeneous freezing.
               - updraft speed only affects the heterogeneous nucleation, not homogeneous nucleation.
@@ -120,21 +120,3 @@ categories:
             prompt: Suppose INP emissions also increase as the climate warms, while INP removal and other atmospheric processing stay the same. How would the cloud-phase feedback change compared to a future with no INP emission change?
             answer: The cloud-phase feebback would be less negative or positive, depending on if the emitted INP offsets the decrease in INP concentration from an increasing temperature. If the emission increase only partially offsets the temperature effect, liquid water path in these clouds still rises with warming but by less than in the future without emission change of INPs, so the feedback stays negative but is weaker in magnitude. If the emission increases more than compensates, the net INP concentration can rise with warming, which leads to clouds glaciate more with less albedo, hence a positive cloud-phase feedback.
             hint: Cloud feedbacks dependent on the cloud properties in both present-day and future climates. Think about how INP affect the properties of shallow mixed-phase clouds (Section 15.1.1) and how the change of INP in a warming climate affects the properties of futrue clouds.
-      
-      - id: template-m02
-        type: numeric
-        prompt: What is the standard acceleration due to gravity at Earth's surface?
-        units: m s^-2
-        answer: 9.81
-        answerInfo: This is the conventional standard gravity.
-        tolerance: 0.01
-      - id: template-m03
-        type: select-multiple
-        prompt: Which of the following are greenhouse gases?
-        options:
-          - Carbon dioxide (\(\mathrm{CO}_2\))
-          - Methane (\(\mathrm{CH}_4\))
-          - Oxygen (\(\mathrm{O}_2\))
-          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
-        correctIndex: [0, 1, 3]
-        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.
