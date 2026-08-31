@@ -73,14 +73,14 @@ categories:
 
       - id: question-r07
         type: multiple-choice
-        prompt: Desert dust is often described as a "highly ice-active" aerosol. What refinement to this description does this chapter emphasize regarding when and where dust dominates the INP population?
+        prompt: Desert dust is recognised as an important source of INPs. What refinement to this description does this chapter emphasize regarding when and where dust dominates the INP population?
         options:
-          - Dust is highly ice-active at all mixed-phase temperatures, and biological INPs are negligible over land.
-          - Dust (especially K-feldspar) is important globally, but its strong activity is mainly below about \(-15^\circ\mathrm{C}\); at warmer temperatures biological particles often dominate terrestrial INP populations.
+          - Dust is highly active at all temperatures relavent for mixed-phase clouds, and biological INPs are negligible over land.
+          - Dust (especially K-feldspar) is important globally, but its strong activity is mainly below about \(-15^\circ\mathrm{C}\). At warmer temperatures biological particles often dominate terrestrial INP populations.
           - Dust only nucleates ice in the cirrus regime via pore condensation and never in immersion mode.
           - Dust also defines the INP population in remoate marine environments, such as the Southern Ocean, because of long-range transport and long lifetime of dust.
         correctIndex: 1
-        answer: Dust (especially K-feldspar) is important globally, but its strong activity is mainly below about \(-15^\circ\mathrm{C}\); at warmer temperatures biological particles often dominate terrestrial INP populations.
+        answer: Dust (especially K-feldspar) is important globally, but its strong activity is mainly below about \(-15^\circ\mathrm{C}\). At warmer temperatures biological particles often dominate terrestrial INP populations.
 
 
   - id: application
