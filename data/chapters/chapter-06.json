@@ -87,14 +87,20 @@
           "answer": "I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions and their impact on effective radiative forcing (ERF), while also being computationally efficient and suitable for evaluation against field measurements. The model would need to be run in two different ways. Firstly, for evaluation against measurements made under specific meteorological conditions, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense. For the forcing calculation, this same model could be run without nudging for 5 years. For further information, see section 6.2 and Box 6.1"
         },
         {
-          "id": "question-a04",
-          "prompt": "Equation X on page Y presents the Khairoutdinov and Kogan autoconversion rate parametrisation, in which the autoconversion rate depends on cloud liquid water and cloud droplet number concentration, N<sub>d</sub>. Suppose the exponent controlling the dependence on N<sub>d</sub> is modified, and a series of one-at-a-time sensitivity experiments is performed in which only N<sub>d</sub> is varied while all other variables are held constant. <br> <br> How would you expect the sensitivity of the model output to changes in N<sub>d</sub> to change as the exponent on N<sub>d</sub> becomes more negative (i.e. its magnitude increases), and as it becomes less negative (i.e. moves closer to zero)? Explain your reasoning in terms of the mathematical form of the parametrisation and the physical processes represented.",
-          "answer": "Making the exponent on N<sub>d</sub> more negative increases the sensitivity of the model output to droplet number concentration. For a given increase in N<sub>d</sub>, autoconversion is suppressed more strongly, leading to larger changes in precipitation and cloud water. Making the exponent less negative weakens this dependence, so the same change in N<sub>d</sub> produces a smaller response. As the exponent approaches zero, autoconversion becomes increasingly insensitive to N<sub>d</sub>, and in the limit of a zero exponent the autoconversion rate is independent of droplet number concentration.",
+          "id": "question-a03",
+          "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
           "image": {
             "src": "../imgs/forcings.png",
             "alt": "Sample forcing chart used to demonstrate image questions",
             "caption": "Images stay inside the question box and keep their proportions."
-          }
+          },
+          "options": [
+            "Feedbacks",
+            "Forcings"
+          ],
+          "correctIndex": 1
         }
       ]
     },
@@ -132,6 +138,12 @@
             1,
             3
           ]
+        },
+        {
+          "id": "question-m04",
+          "prompt": "Equation 6.20 on page 216 presents the Khairoutdinov and Kogan autoconversion rate parametrisation, in which the autoconversion rate depends on cloud liquid water, q<sub>c</sub> and cloud droplet number concentration, N<sub>d</sub>. The exponent, x = -1.79 controls the dependence of the autoconversion rate on N<sub>d</sub>. Relative to the control value, how would you expect the sensitivity of the model output to changes in N<sub>d</sub> to vary as a) x -> -∞, b) x -> 0? <br> <br>  Explain your reasoning in terms of the mathematical form of the parametrisation and the physical processes represented.",
+          "hint": "Use an online graph plotting software to visualise the functional form of the autoconversion rate parametrisation.",
+          "answer": "a) As x -> -∞, the exponent on N<sub>d</sub> becomes more negative which increases the sensitivity of the model output to droplet number concentration. For larger N<sub>d</sub>, autoconversion is suppressed more strongly, leading to larger changes in precipitation and cloud water. <br> <br> b) As x -> 0, autoconversion becomes increasingly insensitive to N<sub>d</sub>, and in the limit of a zero exponent the autoconversion rate is independent of droplet number concentration."
         }
       ]
     }
