@@ -1,0 +1,99 @@
+chapterTitle: Chapter 08
+categories:
+  - id: review
+    name: Review
+    questions:
+
+      - id: question-r01
+        type: multiple-choice
+        prompt: "Most biomass-burning particle mass is:"
+        options:
+          - black carbon
+          - sulfate
+          - organic matter
+          - dust
+        correctIndex: 2
+        answer: Most of the particulate material (by mass) emitted from fires is organic. Smaller amounts of BC and SO₂ are also emitted.
+        author: Léa Prévost
+        reviewer: Nobody
+
+      - id: question-r02
+        type: multiple-choice
+        prompt: A global model reproduces observed atmospheric black carbon (BC) concentrations accurately. Which conclusion is least justified?
+        options:
+          - BC emissions are approximately correct
+          - Emissions may be too high while removal is too high
+          - Emissions may be too low while removal is too weak
+          - Agreement does not uniquely constrain emissions
+        correctIndex: 0
+        answer: The chapter repeatedly stresses compensating errors among emissions, transport, chemistry, and removal. 
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-r03
+        type: multiple-choice
+        prompt: Why is anthropogenic aerosol radiative forcing especially sensitive to assumptions about natural emissions?
+        options:
+          - Aerosol lifetimes are centuries long
+          - Forcing is defined relative to a baseline natural state
+          - Aerosols from natural emissions interact with anthropogenic emissions and affect their atmospheric lifetimes
+          - Natural emissions dominate anthropogenic emissions, even in the present day
+        correctIndex: 1
+        answer: Radiative forcing depends on the difference between present-day and preindustrial conditions. Errors in the baseline propagate directly into forcing estimates. This senstivity arises primarily in the aerosol-cloud interaction forcing. See section 12.1.2.2. 
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-r04
+        type: multiple-choice
+        prompt: An inventory reports OC emissions while a climate model simulates OA. A modeller wrongly uses the OC emission data in the model? What will be the consequence?
+        options:
+          - The organic aerosol mass in the model will be overestimated
+          - The organic aerosol mass in the model will be underestimated
+          - The organic aerosol particle size in the model will be underestimated
+          - The organic aerosol hygroscopicity will be overestimated
+          - Several importnat sources of OA will be neglected
+        correctIndex: 1
+        answer: OC is organic carbon (literally, C) while OA is organic aerosol containing the carbon as well as other atoms that are found in organic molecules, like H, O and N. The mass of OA emissions is therefore considerably greater than OC, by a factor 1.4 to 1.6 or so at the point of emission (and often exceeding 2.0 after the OA compounds have been further oxidised after spending time in the atmosphere). Therefore, the mistake will underestimate the mass of organic aerosol in the model.    
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-r05
+        type: multiple-choice
+        prompt: Why are future aerosol emission projections generally more uncertain than future greenhouse gas projections?
+        options:
+          - CO₂ emissions are easier to measure than aerosol emissions
+          - Aerosol emissions will become progressively dominated by natural processes
+          - Aerosol emissions depend strongly on technological choices and pollution controls
+          - Aerosol emissions will be too small to quantify accurately
+        correctIndex: 2
+        answer: Emissions of many aerosol species depend on future technologies, regulations, and end-of-pipe controls rather than just energy consumption. When we refer to aerosol 'emission projections', we are referring to anthropogenic emission inventories. Natural emissions are usually calculated by the Earth system model, or assumed to be constant.  
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-r06
+        type: multiple-choice
+        prompt: A researcher evaluates a global aerosol-climate model using only PM\(_{2.5}\) measurements. What is the major limitation?
+        options:
+          - PM\(_{2.5}\) cannot be measured accurately
+          - PM\(_{2.5}\) does not uniquely constrain modelled aerosol composition
+          - PM\(_{2.5}\) excludes secondary organic aerosol (SOA)
+          - PM\(_{2.5}\) is not calculated by a model
+        correctIndex: 1
+        answer: PM\(_{2.5}\) is just a measure of aerosol particle mass for diameters less than 2.5 \(\mu\)m. There is no direct information about chemical composition. It can certainly be calculated in a model from the simulated aerosol size distribution (Eq. 4.8).
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-r07
+        type: multiple-choice
+        prompt: An Earth System Model predicts lower atmospheric sulphate aerosol concentrations in future despite increasing ocean productivity. Which explanation is most consistent with this result?
+        options:
+        - Sulphate aerosol is mostly anthropogenic
+        - Ocean productivity is not related to emissions to the atmosphere
+        - Primary marine aerosol emissions declined
+        - Gas fluxes depend on both biogeochemistry and air-sea exchange
+        correctIndex: 3
+        answer: See section 8.3.2. The emission of marine gases to the atmosphere doesn't just depend on the production rate in the water. They also depend on the sea-air flux, which depends on temperature and wind speed.
+        author: Ken Carslaw
+        reviewer: Nobody
+
+

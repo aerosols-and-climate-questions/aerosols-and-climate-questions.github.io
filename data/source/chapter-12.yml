@@ -31,11 +31,58 @@ categories:
             tolerance: 0.02
             hint: The specific water content is the ratio of the mass of liquid water to the total mass of the air, which includes the dry air, the water vapor and the condensed water. The book presents equations for calculating the specific water content of a cloud using \(\rho_l\) and the density of the air (\(\rho_a\)) at a 'virtual' temperature that accounts for the presence of water.
             answerInfo: (This answer is wrong and needs to be calculated by the reviewer).
+
       - id: question-r03
         type: basic
         prompt: List three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number. For each property, state whether it primarily affects terrestrial or solar radiation and whether an increase in the cloud property causes a positive or negative effective radiative forcing at the top of the atmosphere.   
         answer: Three physical properties of a cloud that are considered ‘adjustments’ in response to changes in droplet number are:- 1) Cloud liquid water content or liquid water path (the vertically integrated water content), which can be affected by changes in precipitation or entrainment. Liquid water path primarily affects solar radiation, and an increase causes a negative effective radiative forcing through an increase in cloud albedo (Eq. 12.13). The effect on terrestrial radiation is generally smaller for optically thick clouds (Eq. 12.26). 2) Cloud height or top temperature, which primarily affects terrestrial radiation (Eq. 12.24) and causes a positive effective radiative forcing. 3) Cloud fraction, which affects solar radiation (through changes in planetary albedo, Eq. 12.16) and terrestrial radiation (Eq. 12.22). The net effect of an increase in cloud fraction depends on the balance between the solar and terrestrial effects.
-  - id: application
+
+      - id: question-r04
+        type: multiple-choice
+        prompt: Which of the following is a correct statement about the sensitivity of cloud albedo to changes in droplet number concentration?
+        options:
+          - The sensitivity is independent of cloud optical depth
+          - The sensitivity is highest for optically thick clouds
+          - The sensitivity is highest for optically thin clouds
+          - The sensitivity is highest for clouds with larger droplet radii
+        correctIndex: 2
+        answer: The sensitivity of cloud albedo to changes in droplet number concentration is highest for optically thin clouds, as indicated by Eq. xx and the discussion in Section yy.
+
+      - id: question-r05
+        type: select-multiple
+        prompt: Which of these creates a major challenge in satellite studies of aerosol-cloud interactions? Select all that apply.
+        options:
+          - CCN cannot be measured directly from space
+          - Meteorology can covary with both aerosols and clouds
+          - Aerosol properties cannot be retrieved in the presence of clouds
+          - The greatest radiative effects occur for clouds that are optically thin, which are difficult to observe from space
+          - The greatest radiative effects occur over land, where they are difficult to observe from space
+        correctIndex: [0,1,2]
+        answer: Distinguishing aerosol effects from meteorological covariability is one of the central challenges in aerosol-cloud studies. CCN cannot be measured directly from space, and aerosol properties cannot be retrieved in the presence of clouds. Mor explanation needed. See section 12.3.3.
+        
+      - id: question-r06
+        type: basic
+        prompt: Explain why the sensitivity of cloud albedo to changes in droplet number concentration is highest for optically thin clouds.
+        answer: For optically thin clouds, a small increase in droplet number can lead to a relatively large increase in albedo, while for optically thick clouds, the albedo is already close to its maximum value and additional droplets therefore have a smaller effect. Ultimately, for a very thick cloud with an albedo close to its maximum (1.0), the dependence of albedo on droplet number concentration becomes zero. This is reflected in the mathematical relationship between cloud albedo and droplet number concentration (Eq 12.14), where the derivative of albedo with respect to droplet number concentration is larger for lower optical depths.
+
+      - id: question-r07
+        type: basic
+        prompt: Explain the main reasons why only a fraction of available aerosol particles activate to form cloud droplets in a rising air parcel.
+        answer: The first key point is that the supersaturation required for a given aerosol particle to activate depends on the particle size and composition (see later question and Fig. 12.6). Larger particles and more hygroscopic particles require lower supersaturation to activate (i.e., they have lower critical supersaturations). The second key point is that in a rising air parcel, the supersaturation reaches a maximum value when the increase in humidity caused by cooling is balanced by the decraese in humidity caused by condensation of water vapor onto already activated droplets. As a result, only a fraction of available aerosol particles will experience sufficient supersaturation to activate and form cloud droplets (particles that have a critical supersaturation lower than the maximum supersaturation in the parcel) before the humidity stops rising. This is the basic picture, but there are some other things going on as well. For example, as developed in Eq. 12.37, the falling air pressure and the release of latent heat during condensation can also affect the maximum supersaturation in a rising air parcel. 
+
+      - id: question-r08
+        type: basic
+        prompt: Explain why more droplets are activated in a rising air parcel with a higher updraft velocity.
+        answer: A higher updraft velocity leads to a faster cooling rate, which increases the supersaturation in the rising air parcel. This higher supersaturation allows more aerosol particles to reach their critical supersaturation and activate to form cloud droplets. Think of it in terms of production and loss of supersaturation. \(\frac{dS}{dt} = \frac{dS}{dt}_{prod} - \frac{dS}{dt}_{loss}\). As shown in Eq. 12.37 the production term is proportional to the updraft velocity.
+
+      - id: question-r09
+        type: basic
+        prompt: What is the main physical explanation for why the the number of activated droplets in a rising air parcel does not increase linearly with the number of available aerosol particles? 
+        answer: As new droplets are activated, they grow by condensation of water vapor, which reduces the supersaturation in the rising air parcel. This reduction in supersaturation means that fewer of the additional aerosol particles can reach their critical supersaturation and activate to form droplets. Therefore, the number of activated droplets does not increase linearly with the number of available aerosol particles, as the activation process is self-limiting due to the feedback between droplet growth and supersaturation. The relationship becomes sub-linear at high aerosol numbers (i.e., the number of activated droplets increases at a slower rate than the number of available aerosol particles, Fig. 12.6b). Unlike the relationship between cloud albedo and droplet number concentration, which has a simple analytical form (section 12.1.2.2), the relationship between droplet number and aerosol particle number generally cannot be solved analytically except in some limiting cases.
+        author: Ken Carslaw
+        reviewer: Nobody
+
+  - id: application 
     name: Application
     questions:
       - id: question-a01
@@ -48,23 +95,82 @@ categories:
         answerInfo: The most susceptible albedo occurs when the derivative of albedo with respect to droplet number is maximized, which is at \(A_c = 0.5\). Then use Eq. 12.10 to translate \(A_c\) to \(\tau_c\) assuming g = 0.85 (given in the text). The answer is \(\tau_c = 13.3\). Then use Eq. 12.48 to translate \(\tau_c\) to \(L\). The answer is \(L = 70\) g m\(^{-2}\).
         tolerance: 0.01
         hint: Optional hint for numeric questions.
+        author: Johannes Quaas
+        reviewer: Ken Carslaw
+
+      - id: question-a02
+        type: basic
+        prompt: Based on the relationships between aerosol particle number concentration, droplet number concentration and cloud albedo, explain why a large fraction of the uncertainty in model simulations of ACI radiative forcing stems from aerosol properties in the pre-industrial atmosphere.
+        answer: (Incomplete) Explain that droplet number versus aerosol number and the relationship between cloud albedo and droplet number concentration are both sub-linear. Therefore, the uncertainty in aerosol properties in the pre-industrial atmosphere has a large effect on the uncertainty in ACI radiative forcing.  
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-a03
+        type: basic
+        prompt: Explain the terms 'updraft-limited' and 'aerosol-limited' regimes of cloud microphysics.
+        answer: The 'updraft-limited' regime refers to a situation where the number of activated cloud droplets is primarily determined by the strength of the updraft in the rising air parcel. The aerosol concentration is high in this regime, so \(dN_d/dN_a \rightarrow 0\). Therefore, the maximum supersaturation that can be achieved (and therefore the number of droplets that can form) is limited by the updraft velocity. The 'aerosol-limited' regime refers to a situation where the number of activated cloud droplets is primarily determined by the concentration of aerosol particles available for activation. The aerosol concentration is low in this regime, so \(dN_d/dN_a \rightarrow 1\). In this regime, the updraft velocity is strong enough to achieve high supersaturation, but the number of available aerosol particles limits the number of droplets that can form.
 
   - id: mastery
     name: Mastery
     questions:
-      
+
       - id: question-m01
+        type: basic
+        prompt: The water saturation ratio (relative humidity) over a hygroscopic aerosol particle determines droplet formation in clouds. It is given by the Köhler equation, which is the saturation ratio of a solution droplet (a particle containing a dissolved substance in water) modified by the Kelvin term to account for the effect of the droplet curvature. In the book, the saturation ratio of a solution droplet \(S\) is expressed in terms of the hygroscopicity parameter \(\kappa\) and the dry particle radius \(r_a\) as \(S=\frac{r^3-r_a^3}{r^3-r_a^3(1-\kappa)}\). Show that this expression is just a rearranged form of the definition of \(\kappa\) in Eq 5.21 in Ch. 5.
+        answer: The definition of the hygroscopicity parameter \(\kappa\) in Eq. 5.21 is given by \(V_w/V_S = \kappa(RH/(100-RH))\), where \(V_w\) is the volume of water and \(V_S\) is the volume of the dry solute particle. The volume of water in the droplet is \(V_w = (4/3)\pi(r^3 - r_a^3)\), where \(r\) is the radius of the droplet and \(r_a\) is the radius of the dry particle. The volume of the dry solute particle is \(V_S = (4/3)\pi r_a^3\). Rearranging the definition of \(\kappa\) gives \(RH=100\kappa V_S/(V_w + \kappa V_S)\). Substituting the expressions for \(V_w\) and \(V_S\) into this equation and using the saturation ratio \(S=RH/100\) gives \(S = \frac{r^3-r_a^3}{r^3-r_a^3(1-\kappa)}\).
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-m02
+        parts:
+          - label: (a)
+            type: basic
+            prompt: Plot the Köhler curve (Eq. 12.34) for a hygroscopic aerosol particle with a dry radius of 0.05 μm and a hygroscopicity parameter of 0.6 (ammonium sulphate). Use  \(\hat{A}\) = 10\(^{-3}\) \(\mu\)m. 
+            hint: You will need to zoom into a small range of saturation ratios to see the critical supersaturation. If you don't have plotting code, AI can help you plot this Python function:- S = ((r**3 - ra**3) / (r**3 - ra**3 * (1 - kappa))) * math.exp(A / r).
+            answer: To check your plots, the a dry radius should give you a curve that crosses 1 at 0.27 \(\mu\)m, and the critical supersaturation should be about 1.0014.
+          - label: (b)
+            type: basic
+            prompt: Replot for a range of dry particle radii from 0.01 μm to 0.1 μm and a range of hygroscopicity parameters from 0.1 to 1.0. How does the critical supersaturation depend on the dry particle radius and hygroscopicity parameter?  
+            answer: An increase in the dry particle radius leads to a decrease in the critical supersaturation, while an increase in the hygroscopicity parameter leads to a decrease in the critical supersaturation. This is because larger particles and more hygroscopic particles require lower supersaturation to activate and form cloud droplets.
+          - label: (c)
+            type: basic
+            prompt: How will your plotted dependence of critical supersaturation on dry particle radius affect how the number of activated droplets in a rising air parcel depends on the aerosol particle number concentration?
+            answer: The critical supersaturation increases non linearly with decreasing dry particle radius, which means that smaller particles require increasingly higher supersaturation to activate. The number of activated droplets does not increase linearly with the number of available aerosol particles mainly because the supersaturation is increasingly suppressed by the growth of existing droplets. However, the non-linear increase in critical supersaturation with decreasing dry particle radius strengthens this effect.
+            author: Ken Carslaw
+            reviewer: Nobody
+
+#      - id: question-m03
+#        type: basic
+#        prompt: Using the equations for the saturation ratio over a solution droplet (Eq. 12.34), show that the critical radius \(r_c\) depends approximately on the dry particle radius \(r_a\) to the power -3/2 and on the square-root of the hygroscopicity parameter \(\kappa\).
+#        answer: Starting from the $\kappa$-Köhler equation,\[S(r)=\frac{r^3-r_a^3}{r^3-r_a^3(1-\kappa)}\exp\left(\frac{\hat A}{r}\right),\]take logarithms \[\ln S=\ln(r^3-r_a^3)-\ln\!\Bigl(r^3-r_a^3(1-\kappa)\Bigr)+\frac{\hat A}{r}.\] Differentiate \[\frac{d\ln S}{dr}=\frac{3r^2}{r^3-r_a^3}-\frac{3r^2}{r^3-r_a^3(1-\kappa)}-\frac{\hat A}{r^2}.\] At the critical radius \(r_c\), \(\frac{d\ln S}{dr}=0,\) so \[\frac{3r_c^2\kappa r_a^3}{(r_c^3-r_a^3)\left[r_c^3-r_a^3(1-\kappa)\right]} =\frac{\hat A}{r_c^2}.\] Since activation occurs for \(r_c \gg r_a\),\[r_c^3-r_a^3 \approx r_c^3,\qquad r_c^3-r_a^3(1-\kappa) \approx r_c^3,\] giving \[\frac{3\kappa r_a^3 r_c^2}{r_c^6}=\frac{\hat A}{r_c^2}.\]  Therefore \[r_c^2=\frac{3\kappa r_a^3}{\hat A}.\] Therefore \[r_c \propto \kappa^{-1/2}r_a^{-3/2}.\]
+#        author: Ken Carslaw
+#        reviewer: Nobody
+
+      - id: question-m03
+        type: basic
+        prompt: The "kappa" (\(\kappa\)) form of the Köhler equation (Eq. 12.34) \[S(r)=\frac{r^3-r_a^3}{r^3-r_a^3(1-\kappa)}\exp\left(\frac{\hat A}{r}\right),\] is very convenient because it is based on \(\kappa\) values that are readily available in the literature for many aerosol components (see section 5.2.6). However, a much more common form exists in many textbooks:- \[s(r)=S(r)-1=\frac{a}{r}+ \frac{b}{r^3},\] where \(s\) is the 'supersaturation' (\(S-1\)) and \(a\) and \(b\) are constants that depend on the temperature, surface tension, and solute properties. Show that this form can be derived from Eq. 12.34.
+        hint: Start from Eq. 12.34 and use the approximation that \(r^3 \gg r_a^3\) and \(\exp\left(\frac{\hat A}{r}\right) \approx 1 + \frac{\hat A}{r}\) for small \(\hat A/r\).
+        answer: Starting from the \(\kappa\)-Köhler equation, we have \[S(r)=\frac{r^3-r_a^3}{r^3-r_a^3(1-\kappa)}\exp\left(\frac{\hat A}{r}\right).\] For \(r^3 \gg r_a^3\), we can approximate \(\frac{r^3-r_a^3}{r^3-r_a^3(1-\kappa)} \approx 1 + \frac{\kappa r_a^3}{r^3}\). Also, for small \(\hat A/r\), we can use the approximation \(\exp\left(\frac{\hat A}{r}\right) \approx 1 + \frac{\hat A}{r}\). Therefore, we can write \[S(r) \approx \left(1 + \frac{\kappa r_a^3}{r^3}\right)\left(1 + \frac{\hat A}{r}\right) = 1 + \frac{\hat A}{r} + \frac{\kappa r_a^3}{r^3} + O\left(\frac{1}{r^4}\right).\] Thus, the supersaturation \(s(r) = S(r) - 1\) can be expressed as \[s(r) = \frac{\hat A}{r} + \frac{\kappa r_a^3}{r^3},\] which is of the form \(s(r) = \frac{a}{r} + \frac{b}{r^3}\), where \(a = \hat A\) and \(b = \kappa r_a^3\).
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-m04
+        type: basic
+        prompt: Using the classical form of the Köhler equation, show that the critical supersaturation \(s_c\) is proportional to \(\kappa^{-1/2} r_a^{-3/2}\).
+        hint: Start from the classical form of the Köhler equation \(s(r) = \frac{a}{r} + \frac{b}{r^3}\) and find the critical radius \(r_c\) by setting the derivative of \(s(r)\) with respect to \(r\) equal to zero. Then substitute \(r_c\) back into the equation for \(s(r)\) to find \(s_c\). You'll also need to use \( b = \kappa r_a^3 \) from the previous question.
+        answer: Starting from the classical Köhler equation, \[ s(r) = \frac{a}{r} - \frac{b}{r^3}, \] the maximum supersaturation occurs at the critical radius \(r_c\), for which \[ \frac{ds}{dr} = -\frac{a}{r^2} + \frac{3b}{r^4} = 0, \] giving \[ r_c^2 = \frac{3b}{a}. \] Substituting \(r_c\) into \(s(r)\), \[ s_{\max} = \frac{a}{r_c} - \frac{b}{r_c^3} = \frac{2a}{3r_c}. \] Using \(r_c=(3b/a)^{1/2}\), \[ s_{\max} = \frac{2}{3\sqrt{3}}\frac{a^{3/2}}{b^{1/2}}, \] so that \[ s_{\max} \propto b^{-1/2}. \] For \(\kappa\)-Köhler theory, \[ b=\kappa r_a^3, \] therefore \[ s_{\max} \propto (\kappa r_a^3)^{-1/2} = \kappa^{-1/2}r_a^{-3/2}. \] This is a very useful and simple result that encapsulates the two fundamental ways that aerosol properties affect cloud droplet activation:- larger particles and more-hygroscopic particles (larger \(\kappa\)) are activated at lower supersaturation.
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-m05
         type: basic
         prompt: Typically, cloud-top droplet effective radius and cloud optical depth are retrieved by satellites (Section 12.3.2). The MODerate Imaging Spectroradiometer retrievals of these are reported at level-3 (aggregate over time and space) as joint-histograms. An example NetCDF file is provided. What is the average drop number concentration in that level-3 pixel when assuming adiabatic clouds?
         answer: The average drop number concentration in that level-3 pixel is xx cm\(^{-3}\).
         answerInfo: Use Eq. 12.49 (and the numbers given in the line below) and also replace \(L\) in it using Eq. 12.48. Then take the average \(\tau_c\) and \(r_e\) in each bin of the joint histogram to compute the \(N_d\) for that joint-histogram bin. Finally weigh each bin by the frequency of occurrence and integrate.
+        author: Johannes Quaas
+        reviewer: Nobody
 
-      - id: question-m02
-        type: basic
-        prompt: Most assessments of aerosol-cloud radiative forcing assume that the longwave component is negligible compared to the shortwave component. Based on the equations in this chapter, plot \(dF/dN_d\) for these two components as a function of cloud optical depth. Based on information you find outside the book, for which kinds of clouds does longwave aerosol forcing become important? 
-        answer: Section 12.1.3.1. Quite a low optical depth is needed for the longwave component to become important. The longwave component becomes important for optically thin clouds, such as cirrus clouds, and for clouds with a high cloud-top temperature, such as low-level stratus clouds. (Need to provide a calculation).
-
-      - id: question-m03
+      - id: question-m06
         parts:
           - label: (a)
             type: basic
@@ -74,4 +180,14 @@ categories:
             type: basic
             prompt: Assuming an albedo of the cloud of 0.5, what is the equivalent sensitivity of reflected solar radiation assuming an incoming solar flux of 400 W m\(^{-2}\)? 
             answer: (Need to provide a calculation). The solar sensitivity is much higher than the calculated LW sensitivity, which is why the LW component is often neglected in assessments of aerosol-cloud radiative forcing.
-         
+            author: Ken Carslaw
+            reviewer: Nobody
+
+      - id: question-m07
+        type: basic
+        prompt: Compute the radiative forcing due to aerosol-cloud interactions for different values of the drop number sensitivity to aerosol, \(\partial\ln N_d / \partial\ln \tau_a\), and for different relative perturbations in aerosol optical depth. Use files with geographical distributions of cloud fraction \(f_{cld}\), incoming radiation \(R^\downarrow\), cloud optical thickness \(\tau_c\), as well as \(\tau_a\). In simplification of Eq. 12.17 assume \(A_{cloudy} = A_c\).  
+        answer: Need to provide files and a calculation.
+        hint: Make use of Eq. 12.10 to get \(A_c\) from \(\tau_c\) and of Eq. 12.14 to get \(\partial A/\partial N_d\). Then evaluate Eq. 12.51.
+        author: Johannes Quaas
+        reviewer: Ken Carslaw
+
