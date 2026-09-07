@@ -3,20 +3,33 @@ categories:
   - id: review
     name: Review
     questions:
-      - id: chp16-question-r01
+      - id: chp16-question-r00
         type: basic
-        prompt: Test question here 
-        answer: This is the answer .
-        hint: Test hint here 
+        prompt: Why is the Arctic warming faster than the global average?  
+        answer: Several feedback mechanisms contribute to Arctic amplification, including the ice-albedo feedback, where melting ice and snow reduce surface reflectivity, leading to increased absorption of solar radiation and further warming. Additionally, changes in cloud cover, water vapour, and heat transport from lower latitudes also play significant roles in accelerating Arctic warming (See Box 16.1).
+        #hint: Consider the role of melting ice and snow in feedback processes. 
+
+      - id: chp16-question-r01
+        type: multiple-choice
+        prompt: Why does Arctic aerosol mass concentration typically reach its maximum during winter and spring?
+        options:
+          - Enhanced local biogenic activity and DMS emissions
+          - Efficient wet deposition of transported aerosol allows local pollution sources to dominate aerosol populations
+          - Long-range transport of anthropogenic aerosol combined with weak scavenging processes
+          - Increased new particle formation from iodic acid
+        correctIndex: 3
+        answer: Aerosol populations in winter-spring are dominated by long-range transport of anthropogenic aerosol emissions from North America, Europe and Eurasia. These accumulate over time and build Arctic hazedue to inefficient scavenging of mixed-phase/ice clouds.
+
       - id: chp16-question-r02
         type: multiple-choice
-        prompt: What is the third letter of the Greek alphabet?
+        prompt: What is the net surface radiative effect of low-level clouds in the Arctic? 
         options:
-          - \(\alpha\)
-          - \(\beta\)
-          - \(\gamma\)
-        correctIndex: 2
-        answer: It's \(\gamma\), which is the third letter of the Greek alphabet.
+          - Warming
+          - Cooling
+          - Neutral effect 
+        correctIndex: 1
+        answer: Arctic clouds sit above an extremely cold surface and often within temperature inversions, allowing relatively warm, highly-emissive cloud layers to absorb and re-emit  substantial longwave radiation to the surface which would otherwise escape to space (particularly in dry Arctic atmospheres). The shortwave cooling effect is comparatively weak as Arctic solar insolation is low for much of the year and snow and ice covered surfaces have a high albedo.
+
   - id: application
     name: Application
     questions:

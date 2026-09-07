@@ -6,22 +6,34 @@
       "name": "Review",
       "questions": [
         {
+          "id": "chp16-question-r00",
+          "prompt": "Why is the Arctic warming faster than the global average?",
+          "answer": "Several feedback mechanisms contribute to Arctic amplification, including the ice-albedo feedback, where melting ice and snow reduce surface reflectivity, leading to increased absorption of solar radiation and further warming. Additionally, changes in cloud cover, water vapour, and heat transport from lower latitudes also play significant roles in accelerating Arctic warming (See Box 16.1)."
+        },
+        {
           "id": "chp16-question-r01",
-          "prompt": "Test question here",
-          "hint": "Test hint here",
-          "answer": "This is the answer ."
+          "type": "multiple-choice",
+          "prompt": "Why does Arctic aerosol mass concentration typically reach its maximum during winter and spring?",
+          "answer": "Aerosol populations in winter-spring are dominated by long-range transport of anthropogenic aerosol emissions from North America, Europe and Eurasia. These accumulate over time and build Arctic hazedue to inefficient scavenging of mixed-phase/ice clouds.",
+          "options": [
+            "Enhanced local biogenic activity and DMS emissions",
+            "Efficient wet deposition of transported aerosol allows local pollution sources to dominate aerosol populations",
+            "Long-range transport of anthropogenic aerosol combined with weak scavenging processes",
+            "Increased new particle formation from iodic acid"
+          ],
+          "correctIndex": 3
         },
         {
           "id": "chp16-question-r02",
           "type": "multiple-choice",
-          "prompt": "What is the third letter of the Greek alphabet?",
-          "answer": "It's \\(\\gamma\\), which is the third letter of the Greek alphabet.",
+          "prompt": "What is the net surface radiative effect of low-level clouds in the Arctic?",
+          "answer": "Arctic clouds sit above an extremely cold surface and often within temperature inversions, allowing relatively warm, highly-emissive cloud layers to absorb and re-emit  substantial longwave radiation to the surface which would otherwise escape to space (particularly in dry Arctic atmospheres). The shortwave cooling effect is comparatively weak as Arctic solar insolation is low for much of the year and snow and ice covered surfaces have a high albedo.",
           "options": [
-            "\\(\\alpha\\)",
-            "\\(\\beta\\)",
-            "\\(\\gamma\\)"
+            "Warming",
+            "Cooling",
+            "Neutral effect"
           ],
-          "correctIndex": 2
+          "correctIndex": 1
         }
       ]
     },
