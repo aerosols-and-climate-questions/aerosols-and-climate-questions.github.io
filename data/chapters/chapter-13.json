@@ -4,17 +4,210 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-r01",
+          "type": "multiple-choice",
+          "prompt": "What is the effect of Northern Hemisphere aerosol cooling on the Intertropical Convergence Zone (ITCZ)?",
+          "answer": "Cooling concentrated in the Northern Hemisphere causes the ITCZ to shift southward toward the relatively warmer hemisphere.",
+          "options": [
+            "Shifts northward",
+            "Shifts southward",
+            "Becomes more intense",
+            "Reduces seasonal variability"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r02",
+          "type": "multiple-choice",
+          "prompt": "What is the change in the interhemispheric temperature difference that is attributed to anthropogenic aerosol during the twentieth century?",
+          "answer": "Anthropogenic aerosol contributed to an interhemispheric temperature difference of roughly 0.1 K.",
+          "options": [
+            "0.01 K",
+            "0.1 K",
+            "1.0 K",
+            "5.0 K"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r03",
+          "type": "multiple-choice",
+          "prompt": "During the mid-1980s Sahel drought, rainfall fell to approximately what fraction of its climatological mean?",
+          "answer": "Sahel rainfall during the major drought period fell to roughly 60% of its long-term mean.",
+          "options": [
+            "90%",
+            "80%",
+            "60%",
+            "20%"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r04",
+          "type": "multiple-choice",
+          "prompt": "Northern Hemisphere aerosol emissions are generally associated with what effect on Northern Hemisphere monsoons?",
+          "answer": "Northern Hemisphere aerosol cooling weakens monsoon circulations and reduces monsoon rainfall.",
+          "options": [
+            "Strengthening precipitation",
+            "No effect",
+            "Weakening precipitation",
+            "Reversal of seasonal winds"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "question-r05",
+          "type": "multiple-choice",
+          "prompt": "Model studies indicate that anthropogenic aerosol contributed approximately what reduction in Northern Hemisphere monsoon precipitation between 1951 and 2005?",
+          "answer": "Simulations suggest aerosol forcing reduced Northern Hemisphere monsoon precipitation by about 5–11%.",
+          "options": [
+            "1–3%",
+            "5–11%",
+            "20–30%",
+            ">50%"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r06",
+          "type": "multiple-choice",
+          "prompt": "An observed drying trend over South Asia from 1950 to 2002 has been attributed largely to anthropogenic aerosol. What is the approximate magnitude of this drying trend?",
+          "answer": "The South Asian monsoon exhibited a drying trend of approximately 0.18 mm day⁻¹ decade⁻¹.",
+          "options": [
+            "0.018 mm day⁻¹ decade⁻¹, about 0.7%",
+            "0.18 mm day⁻¹ decade⁻¹, about 7%",
+            "0.58 mm day⁻¹ decade⁻¹, about 22.5%",
+            "1.8 mm day⁻¹ decade⁻¹, about 70%"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r07",
+          "type": "select-multiple",
+          "prompt": "Aerosol forcing is considered important for understanding variability in which of the following climate phenomena? Select all that apply.",
+          "answer": "Aerosol forcing has been implicated in all of these components of climate variabilty. See section 13.4.",
+          "options": [
+            "Atlantic Multidecadal Variability (AMV)",
+            "Atlantic Meridional Overturning Circulation (AMOC)",
+            "ENSO",
+            "Pacific Decadal Oscillation (PDO)"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "question-r08",
+          "type": "multiple-choice",
+          "prompt": "Aerosol cooling in the Pacific is associated with which one of the following changes in Pacific climate variability?",
+          "answer": "Aerosol-induced cooling can strengthen trade winds and alter Pacific climate variability.",
+          "options": [
+            "weaker trade winds",
+            "stronger trade winds",
+            "elimination of ENSO",
+            "stronger thermohaline circulation only"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r09",
+          "type": "multiple-choice",
+          "prompt": "Which statement best describes aerosol-driven climate responses?",
+          "answer": "Aerosol forcing is spatially heterogeneous and can influence distant regions through atmospheric teleconnections.",
+          "options": [
+            "The effects are mostly local and do not influence distant regions",
+            "They are patchy and can produce remote teleconnections",
+            "They only affect locations directly above emissions",
+            "They operate only through changes in clouds and precipitation"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "application",
       "name": "Application",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-a01",
+          "type": "numeric",
+          "prompt": "What is the value of π (pi)?",
+          "hint": "Optional hint for numeric questions.",
+          "answer": 3.14,
+          "answerInfo": "Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-a02",
+          "type": "multiple-choice",
+          "prompt": "Is this chart about radiative forcings or climate feedbacks?",
+          "answer": "It's forcings, shown on the x-axis",
+          "image": {
+            "src": "../imgs/forcings.png",
+            "alt": "Sample forcing chart used to demonstrate image questions",
+            "caption": "Images stay inside the question box and keep their proportions."
+          },
+          "options": [
+            "Feedbacks",
+            "Forcings"
+          ],
+          "correctIndex": 1
+        }
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "template-m01",
+          "parts": [
+            {
+              "prompt": "Write one short sentence explaining what makes a question multi-part.",
+              "label": "(a)",
+              "answer": "A multi-part question has two or more subquestions that are answered separately."
+            },
+            {
+              "prompt": "Evaluate \\(\\ 2^3 + 1 \\).",
+              "label": "(b)",
+              "type": "numeric",
+              "answer": 9,
+              "tolerance": 0
+            }
+          ]
+        },
+        {
+          "id": "template-m02",
+          "type": "numeric",
+          "prompt": "What is the standard acceleration due to gravity at Earth's surface?",
+          "answer": 9.81,
+          "answerInfo": "This is the conventional standard gravity.",
+          "units": "m s^-2",
+          "tolerance": 0.01
+        },
+        {
+          "id": "template-m03",
+          "type": "select-multiple",
+          "prompt": "Which of the following are greenhouse gases?",
+          "answer": "The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.",
+          "options": [
+            "Carbon dioxide (\\(\\mathrm{CO}_2\\))",
+            "Methane (\\(\\mathrm{CH}_4\\))",
+            "Oxygen (\\(\\mathrm{O}_2\\))",
+            "Water vapor (\\(\\mathrm{H}_2\\mathrm{O}\\))"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            3
+          ]
+        }
+      ]
     }
   ]
 }

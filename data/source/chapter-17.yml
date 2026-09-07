@@ -15,7 +15,7 @@ categories:
         answer: They neglect longwave absorption and stratospheric heating by sulphate aerosol. Volcanic sulphate aerosol not only reflects solar radiation (causing a cooling effect) but also absorbs terrestrial and near-IR radiation, offsetting part of the cooling effect.
       - id: question-r02
         type: multiple-choice
-        prompt: Two eruptions inject the same mass of SO\(_2\) into the atmosphere. Eruption A occurs in the tropical stratosphere, while Eruption B occurs at high latitude in the Northern Hemisphere. Which is most likely?
+        prompt: Two eruptions inject the same mass of SO\(_2\) into the stratosphere. Eruption A occurs in the tropical stratosphere close to the equator, while Eruption B occurs at high latitude in the Northern Hemisphere. Which is most likely?
         options:
           - Both produce identical global aerosol lifetimes.
           - Eruption B produces a longer-lasting global aerosol perturbation.
@@ -23,55 +23,3 @@ categories:
           - Latitude has little influence once SO₂ reaches the stratosphere.
         correctIndex: 2
         answer: Eruption A produces a longer-lasting and more globally distributed aerosol cloud. This is because aerosol injected into the tropical stratosphere is transported more widely and remains in the atmosphere longer. An eruption at high latitude is more likely to be confined to the hemisphere of the eruption and to be removed more quickly by stratosphere-troposphere exchange.
-  - id: application
-    name: Application
-    questions:
-      - id: template-a01
-        type: numeric
-        prompt: What is the value of π (pi)?
-        answer: 3.14
-        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
-        tolerance: 0.01
-        hint: Optional hint for numeric questions.
-      - id: template-a02
-        type: multiple-choice
-        prompt: Is this chart about radiative forcings or climate feedbacks?
-        image:
-          src: ../imgs/forcings.png
-          alt: Sample forcing chart used to demonstrate image questions
-          caption: Images stay inside the question box and keep their proportions.
-        options:
-          - Feedbacks
-          - Forcings
-        correctIndex: 1
-        answer: It's forcings, shown on the x-axis
-  - id: mastery
-    name: Mastery
-    questions:
-      - id: template-m01
-        parts:
-          - label: (a)
-            prompt: Write one short sentence explaining what makes a question multi-part.
-            answer: A multi-part question has two or more subquestions that are answered separately.
-          - label: (b)
-            type: numeric
-            prompt: Evaluate \(\ 2^3 + 1 \).
-            answer: 9
-            tolerance: 0
-      - id: template-m02
-        type: numeric
-        prompt: What is the standard acceleration due to gravity at Earth's surface?
-        units: m s^-2
-        answer: 9.81
-        answerInfo: This is the conventional standard gravity.
-        tolerance: 0.01
-      - id: template-m03
-        type: select-multiple
-        prompt: Which of the following are greenhouse gases?
-        options:
-          - Carbon dioxide (\(\mathrm{CO}_2\))
-          - Methane (\(\mathrm{CH}_4\))
-          - Oxygen (\(\mathrm{O}_2\))
-          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
-        correctIndex: [0, 1, 3]
-        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.

@@ -64,38 +64,9 @@ categories:
         type: basic
         prompt: As a modeller, you are involved in a field campaign to measure aerosol and cloud properties over a marine region. You aim to use the measurements to evaluate and improve your model and quantify the effect on estimates of global mean aerosol forcing. What modelling approach would you choose and why?
         answer: I would choose an atmosphere-only climate model because it allows for the simulation of aerosol-cloud interactions and their impact on effective radiative forcing (ERF), while also being computationally efficient and suitable for evaluation against field measurements. The model would need to be run in two different ways. Firstly, for evaluation against measurements made under specific meteorological conditions, the model could be nudged to match a reanalysis, such as from ECMWF. You would also prescribe sea-surface temperatures to match the period. Without nudging, the model would still be useful for understanding the general behavior of aerosol-cloud interactions, but the free-running atmospheric dynamics would not enable comparison with measurements except in a general statistical sense. For the forcing calculation, this same model could be run without nudging for 5 years. For further information, see section 6.2 and Box 6.1
-      - id: question-a03
-        type: multiple-choice
-        prompt: Is this chart about radiative forcings or climate feedbacks?
-        image:
-          src: ../imgs/forcings.png
-          alt: Sample forcing chart used to demonstrate image questions
-          caption: Images stay inside the question box and keep their proportions.
-        options:
-          - Feedbacks
-          - Forcings
-        correctIndex: 1
-        answer: It's forcings, shown on the x-axis
   - id: mastery
     name: Mastery
     questions:
       - id: question-m01
         prompt: In a global model, it is common to treat the particle size distribution as modes of varying size and number concentration, with each mode carrying all chemical components. In reality, as air containing sulfate aerosol passes over ocean it picks up sea salt particles that don’t immediately mix with the sulfate particles. Assuming the particles are all the same size, what is the consequence for cloud drop concentrations of treating the particles as an “internal” mixture (all components in the same particles) versus treating it as an “external” mixture?
         answer: Not sure how to answer this.
-      - id: question-m02
-        type: numeric
-        prompt: What is the standard acceleration due to gravity at Earth's surface?
-        units: m s^-2
-        answer: 9.81
-        answerInfo: This is the conventional standard gravity.
-        tolerance: 0.01
-      - id: question-m03
-        type: select-multiple
-        prompt: Which of the following are greenhouse gases?
-        options:
-          - Carbon dioxide (\(\mathrm{CO}_2\))
-          - Methane (\(\mathrm{CH}_4\))
-          - Oxygen (\(\mathrm{O}_2\))
-          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
-        correctIndex: [0, 1, 3]
-        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.

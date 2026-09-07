@@ -1,5 +1,6 @@
 chapterTitle: Chapter 04
 categories:
+
   - id: application
     name: Application
     questions:
@@ -17,6 +18,7 @@ categories:
         hint: Aerosol size modes are approximately lognormally distributed. Be careful to check you're using the correct units and remember that the question has told you the diameter.
         author: Ken Carslaw
         reviewer: Erin Raif
+
       - id: question-a02
         type: numeric
         prompt: (Need to convert to parts). The quantity \(N_{50}\) (the number of particles larger than a dry diameter of 50 nm) is often used as a proxy for the cloud condensation nucleus (CCN) concentration. (a) Calculate \(N_{50}\) for a lognormal accumulation mode distribution of median diameter = 200 nm, width \(\sigma\) = 1.6 and number concentration = 100 cm\(^{-3}\). (b) The N50 concentration assumes that the particles are dry (zero water content) but the particles in the measured size distribution actually contained 30% water by mass. Would this unaccounted-for water increase or decrease N50?
@@ -26,6 +28,32 @@ categories:
         tolerance: 1.9
         hint: Use the erf function defined in table 4.1.
         author: Ken Carslaw
+
+      - id: question-a03
+        type: numeric
+        prompt: The following lognormal particle distribution has width \(\sigma=1.8\) and a peak value of 200 cm\(^{-3}\). What is the number of particles in the mode? [Insert figure]
+        answer: 294.7 
+        tolerance: 1.0
+        units: cm\(^{-3}\) 
+        answerInfo: The lognormal distribution function is \(\frac{dN}{d\ln D} = \frac{N_{\rm mode}}{\sqrt{2\pi}\,\ln \sigma} \exp\!\left[ -\frac{\left(\ln D-\ln D_m\right)^2} {2(\ln \sigma)^2} \right]\). The peak value of the function occurs when \(D=D_m\), so \(\left(\frac{dN}{d\ln D}\right)_{\max} = \frac{N_{\rm mode}}{\sqrt{2\pi}\,\ln \sigma}\). Rearrange and insert the the peak value and \(\sigma\).
+        hint: At what value of \(D\) does the exponential term reach a maximum? 
+        author: Ken Carslaw
+        reviewer: Nobody
+
+      - id: question-a04
+        type: multiple-choice
+        prompt: Two models reproduce observed present-day aerosol optical depth equally well. Model A achieves this with many small accumulation-mode particles, while Model B achieves it with fewer larger particles. Which statement is most defensible?
+        options:
+          - Both models should produce the same aerosol-cloud forcing
+          - Model A will likely predict stronger aerosol-cloud forcing
+          - Model B will likely produce stronger aerosol-cloud forcing
+          - The information is insufficient to say anything about aerosol-cloud forcing
+        correctIndex: 1
+        answer: TBD
+        author: Ken Carslaw
+        reviewer: Nobody
+
+
   - id: mastery
     name: Mastery
     questions:

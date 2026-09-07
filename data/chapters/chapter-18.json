@@ -4,17 +4,58 @@
     {
       "id": "review",
       "name": "Review",
-      "questions": []
+      "questions": [
+        {
+          "id": "question`-r01",
+          "prompt": "What colour is the sky?",
+          "hint": "Look up! (Unless you're doing this at night, in which case go to bed.)",
+          "answer": "Blue."
+        },
+        {
+          "id": "question-r02",
+          "type": "multiple-choice",
+          "prompt": "What is the third letter of the Greek alphabet?",
+          "answer": "It's \\(\\gamma\\), which is the third letter of the Greek alphabet.",
+          "options": [
+            "\\(\\alpha\\)",
+            "\\(\\beta\\)",
+            "\\(\\gamma\\)"
+          ],
+          "correctIndex": 2
+        }
+      ]
     },
     {
       "id": "application",
       "name": "Application",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-a01",
+          "prompt": "Identify three important differences between reducing greenhouse-gas emissions and deploying aerosol climate engineering as approaches for limiting climate change.",
+          "answer": "TBD"
+        }
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
-      "questions": []
+      "questions": [
+        {
+          "id": "question-m01",
+          "prompt": "A policymaker claims that \"If climate engineering can restore global temperature to preindustrial levels, it solves climate change.\" Give four scientific arguments that support or challenge this statement.",
+          "answer": "Ocean acidification would continue. Regional precipitation patterns may remain altered. Monsoon systems may respond differently from temperature. Termination shock remains a major risk."
+        },
+        {
+          "id": "question-m02",
+          "prompt": "Choose seven chapters from this book and explain how understanding them contributes to evaluating climate engineering proposals. In each case, explain how the chapter contributes to evaluating climate engineering proposals and what the limitations of that knowledge are.",
+          "answer": "Chapter 4 (Aerosol properties). Chapter 5 (Aerosol Processes). Chapter 11 (Aerosol-Radiation Interactions). Chapter 12 (Aerosol-Cloud Interactions). Chapter 13 (Dynamical Responses). Chapter 14 (Climate Models). Chapter 17 (Stratospheric Aerosols). Each chapter contributes to evaluating climate engineering proposals by providing knowledge of the current (baseline) physical and chemical properties of aerosols, their interactions with clouds and radiation, the dynamical responses of the climate system, and the capabilities and limitations of climate models. However, there are limitations to this knowledge, particularly because climate engineering would introduce changes to aerosols that exceed current variability. Etc."
+        },
+        {
+          "id": "question-m03",
+          "prompt": "Several studies suggest that aerosol-based climate engineering may affect precipitation differently from temperature. Explain why restoring temperature does not guarantee restoration of the global hydrological cycle.",
+          "answer": "The global hydrological cycle is driven by the energy balance of the Earth system, which is affected by both temperature and precipitation. Aerosol-based climate engineering can alter cloud properties and atmospheric circulation patterns, leading to changes in precipitation that are not directly correlated with temperature. For example, changes in cloud albedo or cloud lifetime can affect regional rainfall patterns, even if global temperatures are restored to preindustrial levels. Additionally, aerosol-induced changes in atmospheric stability and moisture transport can further decouple temperature and precipitation responses."
+        }
+      ]
     }
   ]
 }
