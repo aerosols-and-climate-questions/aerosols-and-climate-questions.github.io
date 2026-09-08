@@ -51,7 +51,7 @@
           "type": "select-multiple",
           "prompt": "There are several ways of representing aerosol-size distributions in models. Select all which represent aerosol as internally mixed.",
           "hint": "Figure 6.8 may be helpful.",
-          "answer": "There",
+          "answer": "Modal models and bin (sectional) models represent aerosol as internally mixed.",
           "author": [
             "Erin Raif"
           ],
@@ -62,8 +62,8 @@
             "Size-composition resolved"
           ],
           "correctIndex": [
-            0,
-            3
+            1,
+            2
           ]
         },
         {
@@ -181,11 +181,11 @@
         {
           "id": "question-m02",
           "prompt": "In a global model, it is common to treat the particle size distribution as modes of varying size and number concentration, with each mode carrying all chemical components. In reality, as air containing sulfate aerosol passes over ocean it picks up sea salt particles that don't immediately mix with the sulfate particles. Assuming the particles are all the same size, what is the consequence for cloud drop concentrations of treating the particles as an “internal” mixture (all components in the same particles) versus treating it as an “external” mixture?",
-          "answer": "Not sure how to answer this."
+          "answer": "TBC."
         },
         {
           "id": "question-m04",
-          "prompt": "Equation 6.20 on page 216 presents the Khairoutdinov and Kogan autoconversion rate parametrisation, in which the autoconversion rate depends on cloud liquid water, \\(q_\\mathrm{c}\\) and cloud droplet number concentration, \\(N_\\mathrm{d}\\). The exponent, \\(x = -1.79\\) controls the dependence of the autoconversion rate on \\(N_\\mathrm{d}\\). Relative to the control value, how would you expect the sensitivity of the model output to changes in \\(N_\\mathrm{d}\\) to vary as a) \\(x \\rightarrow \\infty\\) and b) \\(x \\rightarrow 0\\)? <br> <br> Explain your reasoning in terms of the mathematical form of the parametrisation and the physical processes represented.",
+          "prompt": "Equation 6.20 presents the Khairoutdinov and Kogan autoconversion rate parametrisation, in which the autoconversion rate depends on cloud liquid water, \\(q_\\mathrm{c}\\) and cloud droplet number concentration, \\(N_\\mathrm{d}\\). The exponent, \\(x = -1.79\\) controls the dependence of the autoconversion rate on \\(N_\\mathrm{d}\\). Relative to the control value, how would you expect the sensitivity of the model output to changes in \\(N_\\mathrm{d}\\) to vary as a) \\(x \\rightarrow \\infty\\) and b) \\(x \\rightarrow 0\\)? <br> <br> Explain your reasoning in terms of the mathematical form of the parametrisation and the physical processes represented.",
           "hint": "Use an online graph plotting software to visualise the functional form of the autoconversion rate parametrisation.",
           "answer": "a) As \\(x \\rightarrow \\infty\\), the exponent on \\(N_\\mathrm{d}\\) becomes more negative which increases the sensitivity of the model output to droplet number concentration. For larger \\(N_\\mathrm{d}\\), autoconversion is suppressed more strongly, leading to larger changes in precipitation and cloud water. <br> <br> b) As \\(x \\rightarrow 0\\), autoconversion becomes increasingly insensitive to \\(N_\\mathrm{d}\\), and in the limit of a zero exponent the autoconversion rate is independent of droplet number concentration."
         }
