@@ -63,7 +63,7 @@
           "prompt": "Which of the following best describes the meteorology of the Arctic?",
           "answer": "The Arctic is strongly influenced by mid-latitude weather systems in winter, but is more isolated from mid-latitude regions in summer. This seasonal pattern affects the transport of aerosols and other pollutants into the Arctic.",
           "options": [
-            "The Arctic is strongly isolated from mid-latitude regions for most of the year, preventing long-range transport of aerosols and other pollutants",
+            "The Arctic is strongly isolated from mid-latitude regions for most of the year, preventing long-range transport of aerosols and other pollutants.",
             "The Arctic is strongly influenced by mid-latitude weather systems year-round, leading to frequent long-range transport of aerosols and other pollutants",
             "The Arctic is strongly influenced by mid-latitude weather systems in winter, but is more isolated from mid-latitude regions in summer",
             "The Arctic is strongly influenced by mid-latitude weather systems in summer, but is more isolated from mid-latitude regions in winter"
