@@ -1,0 +1,156 @@
+chapterTitle: Chapter 14
+categories:
+  - id: review
+    name: Review
+    questions:
+      - id: question-r01
+        type: multiple-choice
+        prompt: Why can ultrafine aerosol particles (<50 nm) influence deep convective clouds despite often being too small to activate in shallow clouds?
+        options:
+          - Ultrafine particles can grow rapidly in size due to condensation of vapours in the updrafts of deep convective clouds, allowing them to activate and form cloud droplets
+          - Ultrafine particles are more likely to be transported to the upper troposphere by deep convective clouds, where they can influence cloud formation
+          - Ultrafine particles can act as ice nuclei in deep convective clouds, leading to enhanced precipitation
+          - Deep convective clouds produce very high supersaturations
+        correctIndex: 3
+        answer: Deep convective clouds produce very high supersaturations, which can allow ultrafine particles to activate and form cloud droplets, even if they are too small to activate in shallow clouds. The effect of particle size on cloud droplet activation is explained fully in Ch. 12 and the associated questions.
+
+      - id: question-r02
+        type: multiple-choice
+        prompt: An increase in CCN concentration typically causes what change in the mixed-phase region of deep convective clouds?
+        options:
+          - Smaller mixed-phase region
+          - Higher glaciation temperature
+          - Expanded mixed-phase region and reduced glaciation temperature
+          - Immediate warm-rain enhancement
+        correctIndex: 2
+        answer: Increased CCN suppresses warm rain and transports more liquid water above 0°C, expanding the mixed-phase layer and lowering glaciation temperature.
+
+      - id: question-r03
+        type: multiple-choice
+        prompt: Why does increasing CCN often suppress warm-rain formation in deep convective clouds?
+        options:
+          - Smaller droplets reduce collision-coalescence efficiency
+          - Ice nucleation is enhanced because of the higher supersaturation in the cloud
+          - Cloud water content increases, which reduces the cloud's buoyancy
+          - Updrafts are weakened by the increased number of droplets, which reduces the cloud's ability to produce rain
+        correctIndex: 0
+        answer: Smaller droplets collide and coalesce less efficiently, delaying warm-rain production.
+
+      - id: question-r04
+        type: multiple-choice
+        prompt: What does secondary nucleation in deep convective clouds refer to?
+        options:
+          - Production of new cloud particles from ice-ice collisions
+          - Activation of aerosol particles above cloud base in strong supersaturation
+          - Formation of secondary cold pools
+          - Raindrop breakup and production of new cloud droplets
+        correctIndex: 1
+        answer: Activation of aerosol particles above cloud base in strong supersaturation is called secondary nucleation. This can produce new cloud droplets that are smaller than the original droplets, which can then grow and contribute to precipitation formation.
+
+      - id: question-r05
+        type: multiple-choice
+        prompt: Which process describes ice growth at the expense of evaporating liquid droplets?
+        options:
+          - Riming
+          - Accretion
+          - Wegener-Bergeron-Findeisen process
+          - Heterogeneous nucleation
+        correctIndex: 2
+        answer: The Wegener-Bergeron-Findeisen process describes ice growth at the expense of evaporating liquid droplets. This process occurs when ice crystals grow by collecting water vapour from surrounding liquid droplets, leading to the formation of precipitation. This occurs because ice has a lower saturation vapour pressure than liquid water, so water vapour will preferentially deposit onto ice crystals rather than remaining in the liquid phase.
+
+      - id: question-r06
+        type: multiple-choice
+        prompt: An increase in CCN commonly produces what change in convective anvils?
+        options:
+          - Smaller anvil coverage because of faster ice sedimentation
+          - Larger anvil coverage due to smaller ice particles
+          - Faster ice sedimentation
+          - Complete cloud glaciation
+        correctIndex: 1
+        answer: An increase in CCN can lead to smaller ice particles in convective anvils, which reduces the rate of ice sedimentation and allows the anvil to spread out more, increasing its coverage.
+
+      - id: question-r07
+        type: multiple-choice
+        prompt: Which statement best describes the effect of increased aerosol on precipitation intensity distributions in deep convective clouds?
+        options:
+          - More light rain and less heavy rain
+          - No systematic changes
+          - Less light rain and more heavy rain
+          - Complete suppression of precipitation
+        correctIndex: 2
+        answer: Increased aerosol can lead to less light rain and more heavy rain in deep convective clouds. This is because increased CCN can suppress warm-rain formation, leading to more water being transported above the freezing level, which can enhance ice processes and lead to heavier precipitation events.
+
+      - id: question-r08
+        type: multiple-choice
+        prompt: Why is it difficult to establish causal links between aerosol loading and deep convective cloud responses using observations alone?
+        options:
+          - Aerosols and meteorological conditions often covary
+          - Satellite measurements cannot observe the key cloud properties affected by aerosols
+          - Aerosol effects are too small to be detected in the presence of natural variability
+          - Aerosol effects are often masked by the effects of other pollutants
+        correctIndex: 0
+        answer: It is difficult to establish causal links between aerosol loading and deep convective cloud responses using observations alone because aerosols and meteorological conditions often covary. This means that changes in cloud properties may be due to changes in meteorology rather than changes in aerosol loading, making it challenging to isolate the effects of aerosols on clouds.
+
+      - id: question-r09
+        type: multiple-choice
+        prompt: Why are current estimates of the climate impact of aerosol-deep convective cloud interactions considered more uncertain than estimates for many low-cloud aerosol effects?
+        options:
+          - Deep convective clouds have a small radiative effect on climate
+          - The microphysical-dynamical feedbacks in deep convective clouds are more complex and difficult to observe and model
+          - Deep convective clouds are less sensitive to aerosol perturbations than low clouds
+          - Aerosol concentrations usually have much lower variability in regions with deep convective clouds, making their effects harder to detect
+        correctIndex: 1
+        answer: The microphysical-dynamical feedbacks in deep convective clouds are more complex and difficult to observe and model, making current estimates of the climate impact of aerosol-deep convective cloud interactions more uncertain than estimates for many low-cloud aerosol effects. Deep convective clouds involve a wide range of processes, including strong updrafts, ice formation, and precipitation, which can interact with aerosols in complex ways that are challenging to quantify accurately.
+
+  - id: application
+    name: Application
+    questions:
+      - id: template-a01
+        type: numeric
+        prompt: What is the value of π (pi)?
+        answer: 3.14
+        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
+        tolerance: 0.01
+        hint: Optional hint for numeric questions.
+      - id: template-a02
+        type: multiple-choice
+        prompt: Is this chart about radiative forcings or climate feedbacks?
+        image:
+          src: ../imgs/forcings.png
+          alt: Sample forcing chart used to demonstrate image questions
+          caption: Images stay inside the question box and keep their proportions.
+        options:
+          - Feedbacks
+          - Forcings
+        correctIndex: 1
+        answer: It's forcings, shown on the x-axis
+  - id: mastery
+    name: Mastery
+    questions:
+      - id: template-m01
+        parts:
+          - label: (a)
+            prompt: Write one short sentence explaining what makes a question multi-part.
+            answer: A multi-part question has two or more subquestions that are answered separately.
+          - label: (b)
+            type: numeric
+            prompt: Evaluate \(\ 2^3 + 1 \).
+            answer: 9
+            tolerance: 0
+      - id: template-m02
+        type: numeric
+        prompt: What is the standard acceleration due to gravity at Earth's surface?
+        units: m s^-2
+        answer: 9.81
+        answerInfo: This is the conventional standard gravity.
+        tolerance: 0.01
+      - id: template-m03
+        type: select-multiple
+        prompt: Which of the following are greenhouse gases?
+        options:
+          - Carbon dioxide (\(\mathrm{CO}_2\))
+          - Methane (\(\mathrm{CH}_4\))
+          - Oxygen (\(\mathrm{O}_2\))
+          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
+        correctIndex: [0, 1, 3]
+        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.
