@@ -6,7 +6,7 @@ categories:
 
       - id: question-r01
         type: select-multiple
-        prompt: Select which of the following are aerosol precursor gases.
+        prompt: Which of the following are aerosol precursor gases? Select all that apply.
         options:
           - SO\(_2\)
           - NO\(_2\)
@@ -49,7 +49,7 @@ categories:
 
       - id: question-r05
         type: multiple-choice
-        prompt: Which of the following descriptions of the behaviour of sulphuric acid (H\(_2\)SO\(_4\)) is correct? 
+        prompt: Which one of the following descriptions of the behaviour of sulphuric acid (H\(_2\)SO\(_4\)) is correct? 
         options:
           - SO\(_2\) oxidation in the gas phase by OH radicals produces gas phase H2SO4 on the timescale of a few days. The H\(_2\)SO\(_4\) is effectively 100% soluble in aerosol particles, therefore only about 0.00001% of the H\(_2\)SO\(_4\) remains in the gas phase.
           - SO\(_2\) oxidation in the gas phase by OH radicals produces gas phase H\(_2\)SO\(_4\) on the timescale of a few days. The H\(_2\)SO\(_4\) condenses on aerosol particles on the timescale of hours, therefore only a few percent of the H\(_2\)SO\(_4\) remains in the gas phase in steady state.
@@ -82,22 +82,7 @@ categories:
         answerInfo: Use Eq. 5.22 to calculate the growth factor (\(g(RH)=(1+\kappa RH/(100-RH))^{1/3}\)).
         author: Ken Carslaw
 
-
       - id: question-r08
-        parts:
-          - label: (a)
-            type: numeric
-            prompt: What is the steady state gas phase concentration of H\(_2\)SO\(_4\) if it is produced by reaction of SO\(_2\) with OH (rate constant = …, OH concentration = 10\(^{-6}\) cm\(^{-3}\)) and condenses on particles with a surface area of xx? Assume that gas-particle transfer is in the kinetic regime. (Question needs completing).
-            answer: 1.0e5
-            units: molecules cm\(^{-3}\)
-            tolerance: 1
-          - label: (b) 
-            type: basic
-            prompt: For the same surface area, how would the steady state concentration be affected if the particles were sufficiently large for gas transport to be in the diffusive regime?
-            answer: The steady state concentration would be higher because the condensation rate would be slower in the diffusive regime.
-        author: Ken Carslaw
-
-      - id: question-r09
         parts: 
           - label: (a)
             type: multiple-choice
@@ -114,7 +99,7 @@ categories:
             answer: The distribution shifts to larger size and the distribution narrows also on a linear size axis. The condensation rate in the diffusive regime is faster for smaller particles than for larger particles, so the smaller particles grow proportionally more than the larger particles. This narrows the distribution width when plotted on a linear scale. On a logarithmic scale, the distribution width would narrow even more.
         author: Ken Carslaw
 
-      - id: question-r10
+      - id: question-r09
         type: multiple-choice
         prompt: Put these processes in order of the typical timescale on which they alter the properties of aerosol (fastest first). (1) Growth of the accumulation mode particles, (2) Equilibration of nucleation mode particles with soluble gas phase species, (3) Coagulation of coarse mode particles, (4) Growth of Aitken mode particles.
         options:
@@ -127,9 +112,9 @@ categories:
         author: Ken Carslaw
  
 
-      - id: question-r11
+      - id: question-r10
         type: multiple-choice
-        prompt: Aerosol particles in air containing 1 \(\mu g~m^{-3}\) of aerosol sulfate and 2 \(\mu g~m^{-3}\) of total ammonia (gas plus particle phase) are measured to have a chemical composition of ammonium sulphate (i.e., a molar ratio of 2:1 ammonium to sulphate). Which of the following correctly describes what happens to the particle composition if the total ammonia concentration is reduced to 0.1 \(\mu g~m^{-3}\) and increased to 10 \(\mu g~m^{-3}\)?
+        prompt: Aerosol particles in air containing 1 \(\mu g~m^{-3}\) of aerosol sulfate and 2 \(\mu g~m^{-3}\) of total ammonia (gas plus particle phase) are measured to have a chemical composition of ammonium sulphate (i.e., a molar ratio of 2:1 ammonium to sulphate). Which one of the following correctly describes what happens to the particle composition if the total ammonia concentration is reduced to 0.1 \(\mu g~m^{-3}\) and increased to 10 \(\mu g~m^{-3}\)?
         options:
           - "Decrease: molar ratio of ammonium to sulphate < 2:1, Increase: molar ratio of ammonium to sulphate > 2:1"
           - "Decrease: molar ratio of ammonium to sulphate < 2:1, Increase: molar ratio of ammonium to sulphate = 2:1"
@@ -139,9 +124,9 @@ categories:
         answer: The particle composition is ammonium sulphate when the total ammonia concentration is 2 \(\mu g~m^{-3}\). If the total ammonia concentration is reduced to 0.1 \(\mu g~m^{-3}\), there is insufficient ammonia to fully neutralise the sulphate, so the molar ratio of ammonium to sulphate will be less than 2:1. If the total ammonia concentration is increased to 10 \(\mu g~m^{-3}\), there is excess ammonia beyond what is required to neutralise the sulphate, so the molar ratio of ammonium to sulphate will remain at 2:1. So for both 2 \(\mu g~m^{-3}\) and 10 \(\mu g~m^{-3}\) of total ammonia, the particle composition is ammonium sulphate (NH\(_4\))\(_2\)SO\(_4\)). Essentially, there is no chemical reason for the excess ammonia to condense onto the particles once the chemical binding with the acidic sulphate is complete. Fig 5.6 shows the relationship between total ammonia and particle composition.
         author: Ken Carslaw
 
-      - id: question-r12
+      - id: question-r11
         type: multiple-choice
-        prompt: Air at 298 K contains 1 \(\mu g~m^{-3}\) of aerosol sulphate as well as 0.15 \(\mu g~m^{-3}\) of total ammonia (gas plus particle phase). Which of the following most accurately describes the chemical state?
+        prompt: Air at 298 K contains 1 \(\mu g~m^{-3}\) of aerosol sulphate as well as 0.15 \(\mu g~m^{-3}\) of total ammonia (gas plus particle phase). Which one of the following most accurately describes the chemical state?
         options:
           - Most of the ammonia partitions into the particle phase, leaving only a small percentage in the gas phase.
           - The particles are composed of aqueous ammonium sulphate (NH\(_4\))\(_2\)SO\(_4\)).
@@ -150,7 +135,7 @@ categories:
         correctIndex: 0
         answer: Most of the ammonia partitions into the particle phase, leaving only a small percentage in the gas phase. The total ammonia concentration is insufficient to fully neutralise the sulphate, so the particles are mostly sulphuric acid with some ammonium sulphate (close to what is called ammonium bisulphate, NH\(_4\)HSO\(_4\)). To work this out, you need to consider the molar ratio of ammonia to sulphate. Unfortunately, most measurements are reported in \(\mu g~m^{-3}\), which obscures the true chemical composition. 1 \(\mu g~m^{-3}\) of H\(_2\)SO\(_4\) equates to about 0.01 \(\mu mol~m^{-3}\) and 0.15 \(\mu g~m^{-3}\) of ammonia is slightly less than 0.01 \(\mu mol~m^{-3}\) (H\(_2\)SO\(_4\) has a molar mass of 98.08 g/mol and NH\(_3\) has a molar mass of 17.03 g/mol). When nitric acid is added to the air, it does not partition into the particles, which are too acidic and there is no free ammonia to bind to it. Ammonium nitrate would start forming only when NH\(_3~>2~\times\) the H\(_2\)SO\(_4\) concentration (in moles, not \(\mu g~m^{-3}\)), under which conditions there is free ammonia to bind to the HNO\(_3\). See section 5.2.5 and Fig. 5.6 for more details.
 
-      - id: question-r13
+      - id: question-r12
         type: numeric
         prompt: Calculate the ratio of particle wet to dry diameter for a pure sulphuric acid particle at a relative humidity of 80%.  
         answer: 1.44
@@ -159,7 +144,7 @@ categories:
         answerInfo: Use the data in Table 5.5 to find the kappa (\(\kappa\)) value for sulphuric acid. Then use Eq. 5.22 to calculate the growth factor (\(g(RH)=(1+\kappa RH/(100-RH))^{1/3}\)).
         author: Ken Carslaw
 
-      - id: question-r14
+      - id: question-r13
         type: numeric
         prompt: A particle contains 50% by volume of sodium chloride with kappa of 1.3 and 50% by volume of organic compounds with kappa of 0.1. What is the particle diameter growth factor at 90% RH? (Needs an answer) 
         answer: 1.0
@@ -167,14 +152,15 @@ categories:
         units: dimensionless
         answerInfo: Use Eq. 5.22 to calculate the growth factor (\(g(RH)=(1+\kappa RH/(100-RH))^{1/3}\)).
         author: Ken Carslaw
-
+        reviewer: Nobody
 
   - id: application
     name: Application
     questions:
+
       - id: question-a01
         type: select-multiple
-        prompt: In observations, the median diameter of particles in the accumulation mode is found to have increased between a coastal urban area and an inland receptor site. Which of the following could in principle account for the growth?
+        prompt: In observations, the median diameter of particles in the accumulation mode is found to have increased between a coastal urban area and an inland receptor site. Which of the following could in principle account for the growth? Select all that apply.
         options:
           - Urban NO\(_2\) emissions
           - Marine dimethyl sulphide emissions
@@ -197,6 +183,35 @@ categories:
         correctIndex: 2
         answer: Dry deposition is the most likely process to account for the change in accumulation mode particle concentrations, as it preferentially removes small and large particles from the atmosphere (section 5.3). Condensation of SOA would grow the particles but not affect their number concentration. Coagulation would reduce the number concentration of all modes, but it is a slow process for accumulation and coarse mode-size particles. Wet deposition would remove particles that had been in the cloud droplets, so mainly accumulation and coarse modes. Cloud processing would also mainly affect accumulation and coarse modes, and would not remove Aitken mode particles.
         author: Ken Carslaw
+
+      - id: question-a03
+        type: multiple-choice
+        prompt: A modeller is trying to explain why the simulated sulphate aerosol mass concentration is too high compared to measurements. The bias is greatest in the winter. What is the most likely process responsible for this model bias?
+        options:
+              - The model is missing a source of ammonium aerosol to balance the sulphate
+              - The condensation rate of gas-phase sulphuric acid onto particles is too fast in the model
+              - The pH of cloud droplets is too low in the model
+              - The pH of cloud droplets is too high in the model
+        correctIndex: 3
+        answer: The pH of cloud droplets is too high in the model. A higher pH (lower acidity) would increase the rate of sulphate production from SO\(_2\) oxidation by ozone (O\(_3\)) in cloud droplets. This effect is more pronounced in winter when there is less photochemical activity, which makes SO\(_2\) oxidation by O\(_3\) in cloud droplets more important than by hydrogen peroxide (H\(_2\)O\(_2\)) (section 5.4.2). The condensation rate of gas-phase sulphuric acid onto particles is unlikely to be responsible because it is a well-understood process and is typically so fast that about 99% of H\(_2\)SO\(_4\) resides in particles at steady state (section 5.2.1.1). As a result, changes to the condensation rate would have only a small effect on particulate sulphate concentrations. The amount of particulate ammonium doesn't affect particulate sulphate. Gas phase H\(_2\)SO\(_4\) has effectively zero volatility (section 5.2.1), so the amount of particulate sulphate is not affected by changes in ammonium; on the contrary, the semi-volatile ammonium is strongly affected by the sulphate present (section 5.2.5).
+        author: Ken Carslaw
+        reviewer: Léa Prévost
+
+      - id: question-a04
+        type: select-multiple
+        prompt: ((Bug reported by Erin means this currently needs to be separate question)). After the cloud pH is improved in the model, which of the following aspects of the model may be affected and should be re-evaluated? Select all that apply.
+        options:
+              - Particle size distribution
+              - Particle hygroscopicity
+              - Particle single scattering albedo
+              - CCN concentration
+              - Gas phase SO\(_2\) concentration
+              - Particulate ammonium nitrate concentration
+        correctIndex: [0,1,2,3,4,5]
+        answer: All of these aspects of the model could be affected and should therefore be re-evaluated. The particle size distribution will be affected by the change in in-cloud sulphate production. Clouds release 'cloud-processed' aerosol when they evaporate, usually resulting in a shift of the accumulation mode to larger sizes caused by the additional sulphate (section 5.4.2). In addition, because sulphate is highly hygroscopic, changes in sulphate mass alter aerosol composition and therefore particle hygroscopicity (section 5.2.6). Changes in both size and hygroscopicity will affect the CCN concentration. The gas phase SO\(_2\) concentration will be affected by the change in sulphate production, as more SO\(_2\) will be oxidised to sulphate. The particulate ammonium nitrate concentration will also be affected, as the amount of particulate ammonium is strongly affected by the amount of sulphate present (section 5.2.5). The single scattering albedo could be affected by the change in particle size distribution and composition if the particles contain some light-absorbing components like black carbon (section 11.1.4.2). This will change the scattering to absorption ratio. If the particles were initially purely scattering (i.e., no absorbing components), the single scattering albedo would be 1.0 and would not be affected by the change in sulphate production.
+        author: Ken Carslaw
+        reviewer: Léa Prévost
+
 
   - id: mastery
     name: Mastery
