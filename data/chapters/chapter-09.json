@@ -198,7 +198,7 @@
         {
           "id": "question-a03",
           "prompt": "An IAGOS aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 s cm\\(^{-3}\\).",
-          "answer": "Aerosol measurements cannot be understood independently from the atmospheric conditions they were made in!",
+          "answer": "Aerosol measurements cannot be understood independently from the atmospheric conditions that they were made in!",
           "author": [
             "Erin Raif"
           ],
