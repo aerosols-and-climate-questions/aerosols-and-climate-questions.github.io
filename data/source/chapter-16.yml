@@ -3,82 +3,150 @@ categories:
   - id: review
     name: Review
     questions:
-      - id: chp16-question-r00
-        type: basic
-        prompt: Why is the Arctic warming faster than the global average?  
-        answer: Several feedback mechanisms contribute to Arctic amplification, including the ice-albedo feedback, where melting ice and snow reduce surface reflectivity, leading to increased absorption of solar radiation and further warming. Additionally, changes in cloud cover, water vapour, and heat transport from lower latitudes also play significant roles in accelerating Arctic warming (See Box 16.1).
-        #hint: Consider the role of melting ice and snow in feedback processes. 
+    - id: question-r01
+      type: multiple-choice
+      prompt: Which statement best describes the seasonal source pattern of Arctic aerosol?
+      options:
+        - Arctic aerosol is dominated by local sources in winter and long-range transport in summer
+        - Arctic aerosol is dominated by long-range transport in winter and local sources in summer
+        - Arctic aerosol is dominated by local sources year-round
+        - Arctic aerosol is dominated by long-range transport year-round
+      correctIndex: 1
+      answer: Arctic aerosol is dominated by long-range transport in winter and local sources in summer.
+      
+    - id: question-r02
+      type: multiple-choice
+      prompt: What is Arctic haze primarily associated with?
+      options:
+        - High summer humidity and cloud cover
+        - Long-range transport of pollution from mid-latitudes
+        - Local emissions from Arctic shipping and oil exploration
+        - Seasonal melting of Arctic sea ice and release of biogenic aerosols
+      correctIndex: 1
+      answer: Arctic haze is primarily associated with long-range transport of pollution from mid-latitudes.
 
-      - id: chp16-question-r01
-        type: multiple-choice
-        prompt: Why does Arctic aerosol mass concentration typically reach its maximum during winter and spring?
-        options:
-          - Enhanced local biogenic activity and DMS emissions
-          - Efficient wet deposition of transported aerosol allows local pollution sources to dominate aerosol populations
-          - Long-range transport of anthropogenic aerosol combined with weak scavenging processes
-          - Increased new particle formation from iodic acid
-        correctIndex: 3
-        answer: Aerosol populations in winter-spring are dominated by long-range transport of anthropogenic aerosol emissions from North America, Europe and Eurasia. These accumulate over time and build Arctic hazedue to inefficient scavenging of mixed-phase/ice clouds.
+    - id: question-r03
+      type: multiple-choice
+      prompt: Which of the following best describes the importance of aerosol-cloud interactions in the Arctic?
+      options:
+        - Increased cloud condensation nuclei (CCN) from air pollution leads to clouds with higher albedo, contributing to a a globally important negative radiative forcing
+        - Aerosol-cloud interactions are negligible in the Arctic due to low aerosol concentrations
+        - Aerosol-cloud interactions in the Arctic primarily lead to increased precipitation and snow cover
+        - Aerosol-cloud interactions in the Arctic primarily affect longwave radiation, contributing to surface warming
+      correctIndex: 3
+      answer: Increased cloud condensation nuclei (CCN) from aerosols can lead to brighter clouds that reflect more sunlight, contributing to cooling of the surface. However, the contrast between the albedo of the snow-covered surface and the cloud is very low, so this is a weak effect at the top of the atmosphere. In the Arctic, aerosol-cloud interactions primarily affect longwave radiation, contributing to surface warming due to the trapping of heat by clouds. See Fig. 16.11 in Box 16.2.
 
-      - id: chp16-question-r02
-        type: multiple-choice
-        prompt: What is the net surface radiative effect of low-level clouds in the Arctic? 
-        options:
-          - Warming
-          - Cooling
-          - Neutral effect 
-        correctIndex: 1
-        answer: Arctic clouds sit above an extremely cold surface and often within temperature inversions, allowing relatively warm, highly-emissive cloud layers to absorb and re-emit  substantial longwave radiation to the surface which would otherwise escape to space (particularly in dry Arctic atmospheres). The shortwave cooling effect is comparatively weak as Arctic solar insolation is low for much of the year and snow and ice covered surfaces have a high albedo.
+    - id: question-r04
+      type: multiple-choice
+      prompt: Which of the following best describes how aerosols have affected Arctic surface temperatures?
+      options:
+        - Most of the effect of aerosols on Arctic surface temperatures is through changes in natural aerosol emissions and deposition
+        - Most of the effect of aerosols on Arctic surface temperatures is through changes in anthropogenic aerosols transported and deposited in the Arctic
+        - Aerosols have had little effect on Arctic surface temperatures
+        - Most of the effect of aerosols on Arctic surface temperatures is through changes at mid-latitudes, which then affect Arctic temperatures through heat transport
+      correctIndex: 3
+      answer: See Box 16.1 on polar amplification. Most of the effect of aerosols on Arctic surface temperatures is through changes at mid-latitudes, which then affect Arctic temperatures through heat transport. Local effects of aerosols on Arctic surface temperatures have not been well documented.
+
+    - id: question-r05
+      type: multiple-choice
+      prompt: Which of the following best describes the meteorology of the Arctic?
+      options:
+        - The Arctic is strongly isolated from mid-latitude regions for most of the year, preventing long-range transport of aerosols and other pollutants
+        - The Arctic is strongly influenced by mid-latitude weather systems year-round, leading to frequent long-range transport of aerosols and other pollutants
+        - The Arctic is strongly influenced by mid-latitude weather systems in winter, but is more isolated from mid-latitude regions in summer
+        - The Arctic is strongly influenced by mid-latitude weather systems in summer, but is more isolated from mid-latitude regions in winter
+      correctIndex: 2
+      answer: The Arctic is strongly influenced by mid-latitude weather systems in winter, but is more isolated from mid-latitude regions in summer. This seasonal pattern affects the transport of aerosols and other pollutants into the Arctic. 
+
+    - id: question-r06
+      type: multiple-choice
+      prompt: Which of the following best describes transport of aerosols to the Arctic from lower-latitude regions?
+      options:
+        - Aerosol is transported to the Arctic primarily at low levels, leading to strong deposition and removal from the atmosphere
+        - Aerosol is transported to the Arctic primarily at high levels in winter and lower levels in summer
+        - Aerosol is transported to the Arctic primarily at high levels year round, leading to weak deposition and long residence times in the atmosphere
+        - Aerosol is transported to the Arctic primarily at low levels in winter and higher levels in summer
+      correctIndex: 1
+      answer: Describe polar dome. Were else in the chapter other than 16.1.2.2 do we describe this?
+
+    - id: chp16-question-r07
+      type: basic
+      prompt: Why is the Arctic warming faster than the global average?  
+      answer: Several feedback mechanisms contribute to Arctic amplification, including the ice-albedo feedback, where melting ice and snow reduce surface reflectivity, leading to increased absorption of solar radiation and further warming. Additionally, changes in cloud cover, water vapour, and heat transport from lower latitudes also play significant roles in accelerating Arctic warming (See Box 16.1).
+      #hint: Consider the role of melting ice and snow in feedback processes. 
+
+    - id: chp16-question-r08
+      type: multiple-choice
+      prompt: Why does Arctic aerosol mass concentration typically reach its maximum during winter and spring?
+      options:
+        - Enhanced local biogenic activity and DMS emissions
+        - Efficient wet deposition of transported aerosol allows local pollution sources to dominate aerosol populations
+        - Long-range transport of anthropogenic aerosol combined with weak scavenging processes
+        - Increased new particle formation from iodic acid
+      correctIndex: 3
+      answer: Aerosol populations in winter-spring are dominated by long-range transport of anthropogenic aerosol emissions from North America, Europe and Eurasia. These accumulate over time and build Arctic hazedue to inefficient scavenging of mixed-phase/ice clouds.
+
+    - id: chp16-question-r09
+      type: multiple-choice
+      prompt: What is the net surface radiative effect of low-level clouds in the Arctic? 
+      options:
+        - Warming
+        - Cooling
+        - Neutral effect 
+      correctIndex: 1
+      answer: Arctic clouds sit above an extremely cold surface and often within temperature inversions, allowing relatively warm, highly-emissive cloud layers to absorb and re-emit  substantial longwave radiation to the surface which would otherwise escape to space (particularly in dry Arctic atmospheres). The shortwave cooling effect is comparatively weak as Arctic solar insolation is low for much of the year and snow and ice covered surfaces have a high albedo.
+
+    - id: chp16-question-r10
+      type: basic
+      prompt: Atmospheric aerosol mass concentrations typically peak during spring in the Arctic but during summer in Antarctica. Explain how the dominant aerosol sources in the Arctic and Antarctic contribute to the different seasonal cycles.
+      answer: In the Arctic, aerosol mass concentrations are highest during spring because long-range transport of anthropogenic pollution from lower latitudes is efficient and removal processes are relatively weak, leading to the accumulation of Arctic haze. In Antarctica, aerosol mass concentrations are highest during summer because increased biological activity in the Southern Ocean enhances emissions of dimethyl sulfide (DMS), which forms sulfate aerosol through atmospheric oxidation.
+
 
   - id: application
     name: Application
     questions:
-      - id: template-a01
-        type: numeric
-        prompt: What is the value of π (pi)?
-        answer: 3.14
-        answerInfo: Pi is the ratio of a circle's circumference to its diameter, so it is dimensionless.
-        tolerance: 0.01
-        hint: Optional hint for numeric questions.
-      - id: template-a02
-        type: multiple-choice
-        prompt: Is this chart about radiative forcings or climate feedbacks?
-        image:
-          src: ../imgs/forcings.png
-          alt: Sample forcing chart used to demonstrate image questions
-          caption: Images stay inside the question box and keep their proportions.
-        options:
-          - Feedbacks
-          - Forcings
-        correctIndex: 1
-        answer: It's forcings, shown on the x-axis
+      - id: chp16-question-a01
+        type: basic
+        prompt: Black carbon deposited onto snow can reduce surface albedo and contribute to Arctic amplification. Atmospheric black carbon concentrations are typically highest in the Arctic during winter and spring, yet black carbon deposition to snow peaks during summer. Explain why the seasonality of atmospheric black carbon concentration differs from the seasonality of black carbon deposition.
+        answer: Atmospheric black carbon concentrations peak during winter and spring because long-range transport into the Arctic is efficient and removal by ice- and mixed-phase wet deposition is relatively weak, allowing concentrations to accumulate and produce Arctic haze conditions. In contrast, black carbon deposition is greatest in summer, when increased warm-cloud cover enables effective liquid wet scavenging which efficiently removes black carbon from the atmosphere. As a result, maximum atmospheric concentrations occur during the Arctic haze season, whereas maximum deposition occurs when deposition processes are strongest.
+
+      - id: chp16-question-a02
+        type: basic 
+        prompt: A research scientist in the Southern Ocean observed the size distributions of two aerosol populations after several days of persistent low-level cloud cover. Population A has a Hoppel Minimum diameter of 55nm, and Population B has a Hoppel Minimum diameter of 85nm. What could you infer about the chemical composition or number concentration of Population A and B? 
+        answer: The smaller Hoppel minimum diameter in Population A suggests that smaller aerosols were able to activate into cloud droplets. This could indicate more hygroscopic aerosol (such as sulfate aerosols), or lower particle number concentrations leading to less competition for water vapour. A larger Hoppel minimum diameter in Population B suggests that larger particles activated, which could indicate less hygroscopic aerosol (e.g. a greater organic aerosol fraction) or higher particle number concentrations suppressing supersaturation. 
+
+      - id: chp16-question-a03
+        type: basic 
+        prompt: Stand in question for ammonia parameterisation question 
+        answer: Stand in answer here 
+        
   - id: mastery
     name: Mastery
     questions:
-      - id: template-m01
-        parts:
-          - label: (a)
-            prompt: Write one short sentence explaining what makes a question multi-part.
-            answer: A multi-part question has two or more subquestions that are answered separately.
-          - label: (b)
-            type: numeric
-            prompt: Evaluate \(\ 2^3 + 1 \).
-            answer: 9
-            tolerance: 0
-      - id: template-m02
-        type: numeric
-        prompt: What is the standard acceleration due to gravity at Earth's surface?
-        units: m s^-2
-        answer: 9.81
-        answerInfo: This is the conventional standard gravity.
-        tolerance: 0.01
-      - id: template-m03
-        type: select-multiple
-        prompt: Which of the following are greenhouse gases?
-        options:
-          - Carbon dioxide (\(\mathrm{CO}_2\))
-          - Methane (\(\mathrm{CH}_4\))
-          - Oxygen (\(\mathrm{O}_2\))
-          - Water vapor (\(\mathrm{H}_2\mathrm{O}\))
-        correctIndex: [0, 1, 3]
-        answer: The greenhouse gases are carbon dioxide, methane, and water vapor. Oxygen is not a greenhouse gas.
+      - id: chp16-question-m01
+        type: basic 
+        prompt: Arctic aerosol populations are projected to change substantially in a warming climate. Describe how changing aerosol sources will alter the number and composition of aerosol sources in a future climate, and explain how these changes would affect aerosol-radiation interactions.
+        hint: Consider both natural and anthropogenic aerosol sources in future scenarios. 
+        answer: Arctic sea ice extent is projected to substantially decrease over coming decades, with ice-free summers predicted in the future.* *Retreating Arctic sea ice would expose more open water, increasing primary emissions of sea-spray and aerosol precursors such as DMS, which can increase sulfate aerosols. Sea-salt, sulfate and some organic aerosols can effeciently scatter incoming solar radiation, producing a direct negative radiative effect (cooling), although their impact on the radiative balance is linked to aerosol size and associated atmospheric lifetime. Increased boreal wildfire activity is likely to increase emissions of black carbon (absorbing) and organic aerosols, while growing shipping activity in reduced ice scenarios could add both black-carbon and sulfur-containing emissions. Black carbon is  absorbing, and when deposited on snow, can reduce surface albedo and provide additional warming mechanisms leading to further sea-ice melt. The net effect on aerosol-radiation interactions is highly uncertain and depends on the relative strength of these competing sources, transport pathways, deposition, and implications for associated feedback mechanisms.
+
+      - id: chp16-question-m02
+        type: basic
+        prompt: "Figure X shows four aerosol size distributions (A-D) measured during an Arctic field campaign using a Scanning Mobility Particle Sizer (SMPS). Each distribution is associated with one of the following aerosol populations or atmospheric processes: Cloud-processing, new particle formation, Arctic haze and marine biogenic aerosols. Match each size distribution (A-D) to the most likely aerosol population or atmospheric process. Justify your choices using evidence from the shape of each size distribution. Bonus: Rank the aerosol populations (A-D) in order of expected cloud condensation nuclei (CCN) concentration, from highest to lowest."
+        image:
+          src: /Users/imogenwadlow/Library/CloudStorage/OneDrive-UniversityofLeeds/aerosol_climate_questions/aerosols-and-climate-questions.github.io/imgs/dummy_Arctic_SMPS_distributions.png
+          alt: Example SMPS size distributions of Arctic aerosol populations. The distributions are labelled A-D and correspond to different aerosol populations or atmospheric processes.
+          caption: Example SMPS size distributions of Arctic aerosol populations.
+
+          answer: A = A new particle formation and growth event. The distribution is dominated by very small particles, with the peak occurring near the lower detection limit of the SMPS, suggesting that the nucleation mode likely originated at sizes smaller than those measured and is growing into the observed size range. 
+                    B = A bimodal marine biogenic aerosol population. The presence of both Aitken- and accumulation-mode particles indicates particle growth following new particle formation, likely driven by condensable vapours from marine biogenic emissions.
+                    
+                    C A cloud-processed aerosol population. The pronounced Hoppel minimum separating the Aitken and accumulation modes indicates that particles large enough to activate as cloud droplets have undergone cloud processing and subsequently grown into the accumulation mode.
+                    
+                    D = Arctic haze aerosol population. The broad accumulation-mode peak and absence of significant nucleation-mode particles are characteristic of aged, long-range transported aerosol that has undergone atmospheric processing.
+
+                    Bonus = D > C > B > A
+
+      - id: chp16-question-m03
+        type: basic 
+        prompt: A scientist deploys a tethered balloon equipped with an optical particle size spectrometer at an Arctic site during summer. Simultaneous aerosol measurements are collected at the surface. Both instruments measure N<sub>150</sub>, the number concentration of particles with a diameter greater than 150nm. The surface measurement is 50 cm<sup>-3</sup>, while the measured concentration at 600m altitude is 400 cm<sup>-3</sup>. What atmospheric processes could explain the large difference in aerosol concentration between the surface and aloft? What additional measurements would you use to support your hypothesis?
+        answer: The difference could be caused by a temperature inversion that separates the surface air from an elevated aerosol layer aloft. Under stable conditions, the inversion suppresses vertical mixing which decouples surface aerosols from those aloft. The elevated layer may contain aerosols transported into the region by long-range transport or associated with enhanced horizontal transport within a low-level jet. To test this hypothesis, vertical profiles of temperature, pressure, and wind speed/direction obtained from the tethered balloon or radiosondes could be used to identify the presence, strength, and altitude of the inversion and the stability of the atmosphere.
