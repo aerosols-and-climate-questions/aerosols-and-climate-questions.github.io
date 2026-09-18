@@ -17,6 +17,8 @@ categories:
         author:
           - Erin Raif
           - Ken Carslaw
+        reviewer:
+          - James Allan
         reference:
           - >-
             Rosenberg, P. D., Dean, A. R., Williams, P. I., Dorsey, J. R., Minikin, A., Pickering, M. A., and Petzold, A.: Particle sizing calibration with refractive index correction for light scattering optical particle counters and impacts upon PCASP and CDP data collected during the Fennec campaign, Atmos. Meas. Tech., 5, 1147-1163, https://doi.org/10.5194/amt-5-1147-2012, 2012. 
@@ -33,7 +35,9 @@ categories:
         correctIndex: 0
         answer: The SP2 (Single Particle Soot Photometer) selectively vaporises black carbon in individual particles, making it ideal for measuring soot mass concentrations. A nepelometer measures the scattering of light by particles, which is not specific to soot. An AMS (Aerosol Mass Spectrometer) measures the mass of non-refractory aerosol components (soluble ions), which does not include black carbon. The NAIS (Neutral cluster and Air Ion Spectrometer) measures the size distribution of ions and small aerosol particles, which is not specific to soot.
         author: Ken Carslaw
-        reviewer: Erin Raif
+        reviewer:
+        - Erin Raif
+        - James Allan
       - id: question-r03
         type: multiple-choice
         prompt: Which combination of instruments would be most appropriate for measuring new particle formation
@@ -50,6 +54,7 @@ categories:
         reviewer:
           - Ken Carslaw
           - Erin Raif
+          - James Allan
 
       - id: question-r04
         type: multiple-choice
@@ -63,21 +68,23 @@ categories:
         answer: A PSAP (Particle Soot Absorption Photometer), an SP2 (Single Particle Soot Photometer) and an AMS (Aerosol Mass Spectrometer) are the most appropriate combination of instruments for understanding the aerosol processes relevant to aerosol-radiation interaction forcing (ARI). The PSAP measures the absorption of light by particles, which is important for understanding the direct radiative effect of aerosols. The AMS measures the mass of non-refractory aerosol components (soluble ions), which is important for understanding the chemistry of the particles, which could be linked to the sources. The HTDMA measures the hygroscopic properties of aerosols, which is important for understanding the aerosol-radiation interaction since water uptake strongly affects particle size and light scattering efficiency (Ch. 4 and 5). What's missing in this combination is a instrument that measures the optical properties of aerosols, such as a nephelometer. The next best combination is the HTDMA, a nephelometer and a PSAP. However, this combination misses the measurement of particle composition, which is important for understanding particle sources and processes.
         author:
           - Ken Carslaw
-          - Nobody
+        reviewer:
+          - James Allan
 
       - id: question-r05
         type: multiple-choice
-        prompt: An air sampler uses a PM2.5 filter. What proportion of aerosols with diameter 2.5 µm would you expect to pass through this PM2.5 filter?
+        prompt: An air sampler uses a PM2.5 inlet. What proportion of aerosols with diameter 2.5 µm would you expect to pass through this PM2.5 inlet?
         options:
           - 0%
           - 50%
           - 100%
-        hint: Consider how the transmission rate changes as the diameter changes, and how this applies to the PM2.5 filter.
+        hint: Consider how the transmission rate changes as the diameter changes, and how this applies to the PM2.5 inlet.
         correctIndex: 1
         answer: 50%. People commonly mistakenly think this is 0%.
         author: Erin Raif
-        reviewer: Ken Carslaw
-
+        reviewer:
+          - Ken Carslaw
+          - James Allan
       - id: question-r06
         type: multiple-choice
         prompt: A technique to measure INPs (ice-nucleating particles) involves applying droplets of purified water to a filter which collects aerosols. Is this technique online or offline?
@@ -87,7 +94,9 @@ categories:
         correctIndex: 1
         answer: Offline, the analysis is performed after collection.
         author: Erin Raif
-        reviewer: Ken Carslaw
+        reviewer:
+          - Ken Carslaw
+          - James Allan
 
       - id: question-r07
         type: multiple-choice
@@ -98,7 +107,9 @@ categories:
           - The time between the collection of the filter and the analysis of the filter
         correctIndex: 0
         author: Erin Raif
-        reviewer: Ken Carslaw
+        reviewer:
+          - Ken Carslaw
+          - James Allan
 
       - id: question-r08
         prompt: A scientist is measuring coarse-mode aerosol using an instrument that uses a sampling line.
@@ -120,7 +131,9 @@ categories:
             answer: A straight vertical line.
         answer: Different physical processes dominate particle losses depending on the particle size.
         author: Erin Raif
-        reviewer: Ken Carslaw
+        reviewer:
+          - Ken Carslaw
+          - James Allan
 
         
   - id: application
@@ -134,25 +147,27 @@ categories:
 
       - id: question-a02
         type: basic
-        prompt: Why might a single air inlet to measure aerosol utilise both a PM2.5 filter and a PM10 filter in series?
-        answer: To avoid larger particles clogging the instrument.
-        lastUpdated: "2026-06-27"
+        prompt: Why might a single air inlet to measure aerosol utilise both a PM2.5 inlet and a PM10 inlet in series?
+        answer: To avoid larger particles clogging the inlet, so the PM2.5 cyclone needs cleaning less often.
+        lastUpdated: "2026-09-18"
         author: Erin Raif
-        reviewer: Ken Carslaw
+        reviewer:
+          - Ken Carslaw
+          - James Allan
 
       - id: question-a03
-        prompt: An IAGOS aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 s cm\(^{-3}\).
+        prompt: An aircraft measurement of a wildfire plume at the tropopause reports a black carbon concentration of 154 \(\mathrm{s\ cm}^{-3}\).
         parts:  
           - label: (a)
             type: numeric
             prompt: Given that the measurement was made at 250 hPa and -19.0 °C, calculate the ambient concentration recorded by the instrument. 
             answer: 40.8
-            units: cm\(^{-3}\)
+            units: \(\mathrm{cm}^{-3}\)
             tolerance: 0.1
-            answerInfo: 40.8 cm\(^{-3}\). Using the ideal gas law, \(PV=nRT\), the ratio between the volume of ambient air and air at STP is \(T_{\mathrm{amb.}}P_{\mathrm{STP}}/T_{\mathrm{STP}}P_{\mathrm{amb.}}\). To convert between STP and ambient concentrations, divide by this ratio. Since this was IAGOS data, found on EDAS (Sec. 9.3.2), the value of STP is 1013 hPa. If you used the IUPAC value of 1000 hPa, you would have calculated 41.3 cm\(^{-3}\). That's probably close enough for our purposes, but it could lead to confusion in some cases!
+            answerInfo: 40.8 \(\mathrm{cm}^{-3}\). Using the ideal gas law, \(PV=nRT\), the ratio between the volume of ambient air and air at STP is \(T_{\mathrm{amb.}}P_{\mathrm{STP}}/T_{\mathrm{STP}}P_{\mathrm{amb.}}\). To convert between STP and ambient concentrations, divide by this ratio. Since this was IAGOS data, found on EDAS (Sec. 9.3.2), the value of STP is 1013 hPa. If you used the IUPAC value of 1000 hPa, you would have calculated 41.3 \(\mathrm{cm}^{-3}\). That's probably close enough for our purposes, but it could lead to confusion in some cases!
           - label: (b)
             type: basic
-            prompt: When using these measurements to set a vertical profile of aerosol concentration, a modeller fails to spot that the concentration is in s cm\(^{-3}\), instead thinking it is in cm\(^{-3}\). What would be the consequence of this error?
+            prompt: When using these measurements to set a vertical profile of aerosol concentration, a modeller fails to spot that the concentration is in \(\mathrm{s\ cm}^{-3}\), instead thinking it is in \(\mathrm{cm}^{-3}\). What would be the consequence of this error?
             answer: The aerosol concentration would be increasingly overestimated with altitude as the air density decreases.
         answer: Aerosol measurements cannot be understood independently from the atmospheric conditions that they were made in!
         author: Erin Raif
@@ -183,12 +198,8 @@ categories:
         \reviewer: Ken Carslaw
 
       - id: question-m02
-        type: multiple-choice
-        prompt: A mineral dust particle which is known to have a volume-equivalent diameter of a few microns has properties \(\rho_{\mathrm{p}} = 2.6\ \mathrm{g\ cm^{-3}}\) and \(\chi = 2\) (a dimensionless shape factor). Would its electric mobility diameter (measured at STP) be larger or smaller than its vacuum aerodynamic diameter? Assume that \(\rho_{\mathrm{0}} = 1\ \mathrm{g\ cm^{-3}}\). <i>You will probably find it useful to use the first-order Taylor approximation,</i> \(e^{x}= 1+x\).
-        options:
-          - Larger
-          - Smaller
-        correctIndex: 0
+        type: basic
+        prompt: In the book, it is stated that the Cunningham slip factor correction is insiginificant for larger particles. Consider a mineral dust particle which is known to have a volume-equivalent diameter of a few microns has properties \(\rho_{\mathrm{p}} = 2.6\ \mathrm{g\ cm^{-3}}\) and \(\chi = 2\) (a dimensionless shape factor). Show that its electric mobility diameter (measured at STP) is larger than its vacuum aerodynamic diameter. Assume that \(\rho_{\mathrm{0}} = 1\ \mathrm{g\ cm^{-3}}\). <i>You will probably find it useful to use the first-order Taylor approximation,</i> \(e^{x}= 1+x\).
         hint: Take the ratio of the two diameters. After making a Taylor expansion, consider the relative magnitude of the terms in the Taylor expansion and eliminate those which are small.
         answer: >-
           <p>The electric mobility diameter (\(d_{\mathrm{m}}\)) is larger than the vacuum aerodynamic diameter (\(d_{\mathrm{va}}\)). Referring to Eq. 9.2 and Eq. 9.4 of the book to take the ratio of the two diameters,</p>
