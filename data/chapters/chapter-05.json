@@ -210,6 +210,84 @@
           "answerInfo": "Use Eq. 5.22 to calculate the growth factor (\\(g(RH)=(1+\\kappa RH/(100-RH))^{1/3}\\)).",
           "units": "dimensionless",
           "tolerance": 0.02
+        },
+        {
+          "id": "question-r14",
+          "type": "multiple-choice",
+          "prompt": "Two aerosol particles have identical chemical composition and hygroscopicity, but one has a larger dry diameter. Which particle activates into a cloud droplet at the lower supersaturation?",
+          "answer": "The larger particle activates at a lower supersaturation because it has lower curvature, so the Kelvin effect is weaker. Smaller particles have greater curvature, which increases the equilibrium vapour pressure and makes activation more difficult. A is incorrect because the stronger Kelvin effect on the smaller particle outweighs the enhanced Raoult effect. C is incorrect because activation depends on particle size as well as composition. D is incorrect because activation is controlled by equilibrium thermodynamics rather than condensation rates.",
+          "author": [
+            "Léa Prévost"
+          ],
+          "options": [
+            "The smaller particle, because its higher solute concentration strengthens the Raoult effect.",
+            "The larger particle, because the Kelvin effect is weaker for particles with larger diameters.",
+            "Both particles activate at the same supersaturation because activation depends only on composition.",
+            "The smaller particle, because condensation occurs more rapidly onto small particles in the kinetic regime."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r15",
+          "type": "multiple-choice",
+          "prompt": "A humid summer day and a cool autumn day have identical concentrations of NH\\(_3\\) and HNO\\(_3\\). On which day would you expect the highest concentration of particulate ammonium nitrate?",
+          "answer": "Ammonium nitrate is semi-volatile and exists in equilibrium with gas-phase NH\\(_3\\) and HNO\\(_3\\). Lower temperatures favour partitioning into the particle phase because ammonium nitrate becomes less volatile as temperature decreases. A is incorrect because humidity can favour nitrate partitioning, but ammonium nitrate is more sensitive to temperature than to relative humidity. C is incorrect because particulate ammonium nitrate depends on environmental conditions as well as NH\\(_3\\) and HNO\\(_3\\) concentrations. D is incorrect because the difference between the two days is due to gas-particle partitioning, not increased production of HNO\\(_3\\).",
+          "author": [
+            "Léa Prévost"
+          ],
+          "options": [
+            "The humid summer day, because higher relative humidity always favours aerosol nitrate formation.",
+            "The cool autumn day, because lower temperatures favour partitioning of ammonium nitrate into the particle phase.",
+            "Both days, because particulate ammonium nitrate depends only on NH\\(_3\\) and HNO\\(_3\\) concentrations.",
+            "The cool autumn day, because lower temperatures increase the production rate of HNO\\(_3\\) from NO\\(_2\\) oxidation."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "question-r16",
+          "type": "multiple-choice",
+          "prompt": "Why is N\\(_2\\)O\\(_5\\) hydrolysis often an efficient nighttime source of particulate nitrate?",
+          "answer": "At night, NO\\(_3\\) radicals are no longer rapidly destroyed by sunlight, so they accumulate and react with NO\\(_2\\) to form N\\(_2\\)O\\(_5\\). N\\(_2\\)O\\(_5\\) then hydrolyses on wet aerosol particles to produce HNO\\(_3\\), which can partition into the particle phase as nitrate. B is incorrect because OH-driven oxidation of NO\\(_2\\) is primarily a daytime pathway. C is incorrect because nitrate formation requires hydrolysis of N\\(_2\\)O\\(_5\\); direct uptake alone does not produce nitrate. D is incorrect because lower temperatures can favour partitioning of nitrate to the particle phase, but they do not explain why N\\(_2\\)O\\(_5\\) hydrolysis is an efficient nighttime nitrate production mechanism.",
+          "author": [
+            "Léa Prévost"
+          ],
+          "options": [
+            "At night, NO\\(_3\\) radicals accumulate because photolysis ceases, which allows formation of N\\(_2\\)O\\(_5\\) that hydrolyses on wet aerosol particles to produce HNO\\(_3\\).",
+            "At night, OH concentrations increase, which accelerates oxidation of NO\\(_2\\) to HNO\\(_3\\), which then forms particulate nitrate.",
+            "At night, N\\(_2\\)O\\(_5\\) accumulates because it is no longer photolysed, and its direct uptake by particles converts it into nitrate without requiring hydrolysis.",
+            "At night, lower temperatures cause gaseous HNO\\(_3\\) to convert quantitatively into particulate nitrate, which makes N\\(_2\\)O\\(_5\\) hydrolysis the dominant nitrate source."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "question-r17",
+          "type": "select-multiple",
+          "prompt": "An air mass experiences repeated cloud cycles over several days. Which changes would you expect in the aerosol population as a result of cloud processing? Select all that apply.",
+          "answer": "Cloud processing can increase sulphate mass because SO\\(_2\\) dissolves into cloud droplets and is oxidised to sulphate in the aqueous phase. When the droplets evaporate, the sulphate remains in the particles. The added sulphate increases particle mass and grows accumulation-mode particles to larger diameters. Sulphate is highly hygroscopic, so particle hygroscopicity will also increase. Increased coarse sea-salt concentration is not expected because sea-salt particles are produced primarily by mechanical generation at the ocean surface rather than by cloud chemistry. Reduced ability to act as CCN is not expected because larger, more hygroscopic particles generally activate more readily as cloud droplets. Increased Aitken-mode particle concentration is not expected because cloud processing tends to grow existing particles into the accumulation mode rather than create new Aitken-mode particles.",
+          "author": [
+            "Léa Prévost"
+          ],
+          "options": [
+            "Increased accumulation-mode diameter",
+            "Increased particle hygroscopicity",
+            "Increased sulphate mass",
+            "Increased coarse sea-salt concentration",
+            "Reduced ability to act as CCN",
+            "Increased Aitken-mode particle concentration"
+          ],
+          "correctIndex": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "question-r18",
+          "prompt": "Two regions have identical sulphuric acid production rates. Region A has a very high aerosol surface area while Region B has a very low aerosol surface area. In which region is new particle formation most likely and why?",
+          "answer": "New particle formation is most likely in Region B, where the aerosol surface area is low. Existing particles provide a condensation sink for sulphuric acid vapour and newly formed clusters. A high aerosol surface area therefore removes vapours and clusters more efficiently, so reduces the likelihood that new particles form and survive. In Region B, the smaller condensation sink means there is more sulphuric acid available for nucleation and particle growth.",
+          "author": [
+            "Léa Prévost"
+          ]
         }
       ]
     },
